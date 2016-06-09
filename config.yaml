@@ -1,3 +1,5 @@
 baseurl: "http://archive.bufferbloat.net/"
 languageCode: "en-us"
 title: "Bufferbloat.net archive"
+params:
+  author: The Bufferbloat community
