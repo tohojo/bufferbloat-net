@@ -1,0 +1,47 @@
+body {
+    margin-top: 75px; /* 100px is double the height of the navbar - I made it a big larger for some more space - keep it at 50px at least if you want to use the fixed top nav */
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.panel-heading {
+    padding: 5px;
+}
+
+.panel-heading img {
+    float: right;
+    margin-top: 5px;
+}
+
+.panel-body h4 {
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+}
+
+.container {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .col-md-9 {
+        width: calc(100% - 20em);
+        float: left;
+    }
+
+    .col-md-3 {
+        width: 20em;
+        float: left;
+    }
+}
+
+figure img {
+    max-width: 100%;
+}
+
+code.has-jax {font: inherit;
+              font-size: 100%;
+              background: inherit;
+              border: inherit;
+              color: #515151;}
