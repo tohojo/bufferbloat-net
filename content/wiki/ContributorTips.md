@@ -26,7 +26,7 @@ the center of the universe.
 Eating our own dogfood
 ----------------------
 
-We believe in <link>Dogfood\_Principle|earing our own dogfood</link>.
+We believe in [Dogfood Principle]({{< relref "wiki/Dogfood_Principle.md" >}}).
 The bufferbloat servers are tuned and administered using the same
 bufferbloat-mitigation techniques we develop for others to use.
 
@@ -34,4 +34,4 @@ IPv6
 ----
 
 The Bufferbloat project servers are fully IPv6 enabled. Dave Taht
-describes the recipe he used <link>IPv6|here</link>.
+describes the recipe he used [IPv6]({{< relref "wiki/IPv6.md" >}}).

@@ -7,10 +7,10 @@ lastmod: 2012-11-20T12:48:36
 Bloated Device Drivers
 ======================
 
-Reducing your <link>Dark Buffers</link> requires some work analyzing the
+Reducing your [Dark Buffers]({{< relref "wiki/Dark_buffers.md" >}}) requires some work analyzing the
 device drivers involved. The amount of default buffering the device
 driver does can be deduced from looking at the source code, or inferred
-by performing <link>Experiments</link> on your systems.
+by performing [Experiments]({{< relref "wiki/Experiments.md" >}}) on your systems.
 
 Please help us improve this list!
 

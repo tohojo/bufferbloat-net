@@ -77,4 +77,4 @@ Tutorial Day 2
 -   fire off the build
     -   make -j8 V=99
 
-<link>Lab Users</link>
+[Lab Users]({{< relref "wiki/Lab_Users.md" >}})

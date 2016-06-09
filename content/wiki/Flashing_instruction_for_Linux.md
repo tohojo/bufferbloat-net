@@ -47,6 +47,6 @@ Flashing Instructions for Linux
     or continue using the web interface
 11. Connect the WAN port on the router to your ISP uplink and reboot
     the router.
-12. See <link>Further Configuration for wndr3700</link> for the next
+12. See [Further Configuration for wndr3700]({{< relref "wiki/Further_Configuration_for_wndr3700.md" >}}) for the next
     steps
 

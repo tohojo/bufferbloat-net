@@ -7,8 +7,7 @@ lastmod: 2014-03-18T11:04:13
 SQM
 ===
 
-See: <link>Smart Queue Management</link> for a description of why we're
+See: [Smart Queue Management]({{< relref "wiki/Smart_Queue_Management.md" >}}) for a description of why we're
 adopting the name SQM.
 
-See: <link>Setting up SQM for CeroWrt 310|Setting up SQM for CeroWrt
-3.10</link> if you just want to set up your CeroWrt router.
+See: [Setting up SQM for CeroWrt 310]({{< relref "wiki/Setting_up_SQM_for_CeroWrt_310.md" >}}) if you just want to set up your CeroWrt router.

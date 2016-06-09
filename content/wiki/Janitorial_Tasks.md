@@ -31,7 +31,7 @@ BQL has generally been shown to be a win on every driver it has been
 implemented on. It is a very few lines of code to add, however that code
 requires having the device in front of you and rigorous testing, thus
 BQL support entering the kernel has been fairly slow, with only a few
-dozen <link>BQL enabled drivers</link> out of the hundreds of devices
+dozen [BQL enabled drivers]({{< relref "wiki/BQL_enabled_drivers.md" >}}) out of the hundreds of devices
 "out there". Scratching this itch is a good introduction to kernel
 programming, and a net win for fighting bufferbloat, and thus folk doing
 a teeny bit of work on this here and there will gradually make a
@@ -135,17 +135,17 @@ OSX](https://developer.apple.com/videos/wwdc/2015/?id=719) in the hope
 that this will also drive demand and deployment of network queueing
 algorithms that will mark, rather than drop, packets.
 
-ECN can be <link>cerowrt:Enable ECN|easily enabled for many OSes</link>.
+ECN can be [Enable ECN]({{< relref "wiki/Enable_ECN.md" >}}).
 
 But without a qdisc on the bottleneck links that respect it, turning it
 on on the tcps has little effect.
 
 fq\_codel enables ECN by default, but this is presently turned off in
 openwrt's qos-scripts and in some circumstances in the
-<link>cerowrt:sqm</link> case, and off by default in pie and red.
+[sqm]({{< relref "wiki/SQM.md" >}}) case, and off by default in pie and red.
 Particularly on higher bandwidth links, we are reasonably confident that
 ecn marking behaviors are sane in fq\_codel, pie, and red, (but not
-codel by itself as presently implemented). <link>codel:Cake</link> does
+codel by itself as presently implemented). [Cake]({{< relref "wiki/Cake.md" >}}) does
 ecn marking by default with good overflow protection and is also on by
 default. As more ecn rolls out, we expect to have to improve ECN
 behaviors across all queue algorithms.
@@ -198,11 +198,10 @@ Public work on quic is in the chrome web browser codebase and public
 work on a [library, client and server is taking place on
 github](https://github.com/devsisters/)
 
-Fq\_codel or <link>codel:cake</link> on edge routers
+Fq\_codel or [cake]({{< relref "wiki/Cake.md" >}}) on edge routers
 ----------------------------------------------------
 
-We've spent tons of time on trying to get <link>cerowrt:sqm|smart queue
-management</link>
+We've spent tons of time on trying to get [sqm]({{< relref "wiki/SQM.md" >}})
 [right](http://snapon.lab.bufferbloat.net/~d/Presos/nznog-dave-taht-bufferbloat-jan-28.pdf)
 - most recently defeated by GRO offloads in new routers, which is only
-fixed in sch\_tbf and <link>codel:cake</link>, as yet.
+fixed in sch\_tbf and [cake]({{< relref "wiki/Cake.md" >}}), as yet.

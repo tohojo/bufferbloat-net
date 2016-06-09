@@ -25,8 +25,8 @@ OpenWrt and CeroWrt:
 -   all interfaces are routed, not bridged,
 -   there is a full blown dns server, with mDNS/Bonjour enabled for ease
     of device/service discovery,
--   the <link>device\_naming\_scheme|default naming scheme</link> and
-    <link>default\_network\_numbering|default numbering scheme</link>
+-   the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) and
+    [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}})
     differ significantly from what you may be used to.
 
 The [Onboard
@@ -62,7 +62,7 @@ default - this allows 30 addresses per interface, a sensible limit for
 home/edge routers.
 
 It is ironic that this is the last piece of 'free' IP address space
-left. See also <link>bloat:BANA</link>.
+left. See also [BANA]({{< relref "wiki/BANA.md" >}}).
 
 If you find this IP hard to remember or type, dns is enabled by default
 for a virtual subdomain of 'home.lan. You should be able to get to it
@@ -75,13 +75,13 @@ If you are running this inside your network, and not as your default gw,
 configure your default gw to statically assign an ip address, and route
 your subnet to the CeroWrt router, and turn off NAT.
 
-See also the <link>device\_naming\_scheme|default naming scheme</link>
-and <link>default\_network\_numbering|default numbering scheme</link>
+See also the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})
+and [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}})
 pages for more information.
 
 ### Device/Interface Naming
 
-We use an unusual <link>device naming scheme</link> to manage multiple
+We use an unusual [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) to manage multiple
 kinds of wireless devices. Instead of using eth0, eth1, wlan0, etc. the
 interfaces have names that more accurately reflect their actual use.
 Prefixes use Wireless vs. Ethernet and Secure, Guest/Gateway, or DMZ. As
@@ -93,15 +93,15 @@ noted above, each of these interfaces has a /27 subnet assigned. Thus:
 -   gw10 is a Guest Wireless interface at 5.x GHz;
 -   etc.
 
-See also the <link>device\_naming\_scheme|default naming scheme</link>
-and <link>default\_network\_numbering|default numbering scheme</link>
+See also the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})
+and [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}})
 pages for more information.
 
 ### QoS - Be sure to set it
 
 QoS processing is turned **off** by default in CeroWrt. Your performance
 may be bad until you set the parameters as described in the first
-question of the <link>FAQ</link>.
+question of the [FAQ]({{< relref "wiki/FAQ.md" >}}).
 
 ### IPv6 is enabled **BY DEFAULT**.
 
@@ -117,4 +117,4 @@ Multiple services are enabled 'in' by default, notably http, https, ssh,
 & rsync. DNS allows in the entire 2002 address range into the 'us' DNS
 view, this should be restricted to just your 2002/48 lan.
 
-From here, please move on to the <link>installation guide</link>.
+From here, please move on to the [installation guide]({{< relref "wiki/Installation_Guide.md" >}}).

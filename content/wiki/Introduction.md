@@ -16,7 +16,7 @@ network-crippling latency spikes."
 The bad news is that bufferbloat is everywhere, in more devices and
 programs than you can shake a stick at. The good news is, bufferbloat is
 now, after 4 years of research, development and deployment, relatively
-easy to fix. See: fq\_codel: <link>codel:wiki</link>. The even better
+easy to fix. See: fq\_codel: [wiki]({{< relref "wiki/Wiki.md" >}}). The even better
 news is that fixing it may solve a lot of the service problems now
 addressed by bandwidth caps and metering, making the Internet faster and
 less expensive for both users and providers.
@@ -27,7 +27,7 @@ learning about bufferbloat via van jacobson's
 model instead. Although the traffic analogy is close to what actually
 happens... in the real world, you can't evaporate the excessive cars on
 the road, which is what we actually do with systems like fq\_codel
-<link>codel:wiki</link>.
+[wiki]({{< relref "wiki/Wiki.md" >}}).
 
 Still, onward to the blow.
 

@@ -9,7 +9,7 @@ OCEAN CITY README
 
 ### THIS DOCUMENT IS OBSOLETE
 
-See the <link>OCEAN CITY</link> page.
+See the [OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}}) page.
 
 Thx for trying to help solve some of the most difficult problems facing
 the future of the Internet!

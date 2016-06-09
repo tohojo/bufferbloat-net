@@ -24,7 +24,7 @@ tcp data under congestion.
 
 Enabling ECN does not much good unless both hosts on the path have it
 enabled, and the congested router on the path is running
-<link>SQM</link> and supports ECN. But see above for how good the end
+[SQM]({{< relref "wiki/SQM.md" >}}) and supports ECN. But see above for how good the end
 result can be...
 
 Many servers do support ECN negotiation already, but few clients do.
@@ -62,7 +62,7 @@ suffer extra delay).
 
 In CeroWrt, at least, is presently recommended that ECN be disabled on
 low bandwidth links, and enabled for high bandwidth ones. Thus the
-<link>SQM</link> system in CeroWrt, typically used in scenarios where
+[SQM]({{< relref "wiki/SQM.md" >}}) system in CeroWrt, typically used in scenarios where
 there is a high rate down and a slow rate up, enables ECN asymmetrically
 by default - ECN is on on the high speed down, and off on the slow speed
 up.

@@ -11,8 +11,7 @@ CeroWrt **routes** by default, not bridges. This brings in some
 complexity in setup but large gains in latency.
 
 For information on bridging, rather than routing, see <link>Setting up
-CeroWrt to bridge</link>. See also <link>Tuning your CeroWrt default
-gateway</link>.
+CeroWrt to bridge</link>. See also [Tuning your CeroWrt default gateway]({{< relref "wiki/Tuning_your_CeroWrt_default_gateway.md" >}}).
 
 Nobody remembers how the Internet works. *Internet addressing without
 NAT requires unique IP addresses.* Always has. Don't forget.
@@ -153,7 +152,7 @@ gw01 to the "secure" firewall zone... and hard code in DNS servers.
 You can use your internal DNS server via specifying the ip number(s) in
 a "dns" line for ge00.
 
-(we used to use the <link>AHCP</link> protocol to distribute DNS
+(we used to use the [AHCP]({{< relref "wiki/AHCP.md" >}}) protocol to distribute DNS
 servers. The <link>HNETD</link> replacement is not yet ready)
 
 If you are going to connect your second router via the WAN port, you
@@ -167,7 +166,7 @@ IPv6 brings in new headaches...
 
 ### Set Name Server
 
-We previously used the <link>AHCP</link> protocol to distribute DNS
+We previously used the [AHCP]({{< relref "wiki/AHCP.md" >}}) protocol to distribute DNS
 servers. The <link>HNETD</link> replacement is not yet ready,
 unfortunately. So you have to manually configure your name services by
 editing the file /etc/config/dhcp and add the line:
@@ -272,7 +271,7 @@ occur if you try!
 ### Some devices don't like /27 subnets
 
 The Sony line of blue-ray players are known to not like the /27 subnets
-CeroWrt uses. This is discussed on the <link>Sony BlueRay Bugs</link>
+CeroWrt uses. This is discussed on the [Sony BlueRay Bugs]({{< relref "wiki/Sony_BlueRay_Bugs.md" >}})
 page.
 
 ### Chromecast only works on the local WiFi interface

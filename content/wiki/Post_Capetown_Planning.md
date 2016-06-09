@@ -38,7 +38,7 @@ Features
 ### Router Software
 
 -   D-ITG
--   <link>VPN solutions under evaluation</link>
+-   [VPN solutions under evaluation]({{< relref "wiki/VPN_solutions_under_evaluation.md" >}})
 -   Improved web interface
 
 ### Router hardware

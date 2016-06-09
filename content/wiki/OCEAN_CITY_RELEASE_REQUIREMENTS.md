@@ -10,16 +10,16 @@ CEROWRT 'OCEAN CITY' RELEASE REQUIREMENTS
 THIS DOCUMENT IS OBSOLETE
 -------------------------
 
-See the <link>OCEAN CITY</link> page.
+See the [OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}}) page.
 
 Objective: Provide a viable substrate for future releases of
-<link>bismark:wiki|Bismark</link>, <link>iscwrt:wiki|ISCWRT</link>, and
-<link>wisp6:Wiki|WISP6</link>.
+[wiki]({{< relref "wiki/Wiki.md" >}}), [wiki]({{< relref "wiki/Wiki.md" >}}), and
+[Wiki]({{< relref "wiki/Wiki.md" >}}).
 
 Core Requirements
 -----------------
 
-Support more <link>targets</link>, notably those with 8MB of flash:
+Support more [targets]({{< relref "wiki/Targets.md" >}}), notably those with 8MB of flash:
 wndr3700v1, nanostation M5.
 
 New features

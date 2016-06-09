@@ -7,4 +7,4 @@ lastmod: 2011-05-28T08:19:09
 Ideas
 =====
 
-Tracking <link>protocol usage with iptables</link>
+Tracking [protocol usage with iptables]({{< relref "wiki/Protocol_usage_with_iptables.md" >}})

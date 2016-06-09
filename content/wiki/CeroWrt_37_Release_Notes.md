@@ -7,8 +7,7 @@ lastmod: 2014-07-25T02:46:56
 CeroWrt 3.7 Release Notes
 =========================
 
-This release is obsolete. Please See the <link>CeroWrt 310 Release
-Notes</link> for the current release.
+This release is obsolete. Please See the [CeroWrt 310 Release Notes]({{< relref "wiki/CeroWrt_310_Release_Notes.md" >}}) for the current release.
 
 CeroWrt is a routing OS built on the [OpenWrt
 firmware](http://openwrt.org) . It is a research project intended to

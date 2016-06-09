@@ -27,7 +27,7 @@ Gargoyle (A fork of openwrt)
 ### Wondershaper
 
 Wondershaper's big claim to fame was it's simplicity. It pioneered
-<link>ACK prioritization</link> for ssh traffic, and did its work in
+[ACK prioritization]({{< relref "wiki/ACK_prioritization.md" >}}) for ssh traffic, and did its work in
 only 4 TC rules.
 
 ### Nanog

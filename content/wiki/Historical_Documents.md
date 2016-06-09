@@ -30,10 +30,8 @@ features and offer significantly improved performance.
 -   CeroWrt 3.3 Release Notes:
     http://www.bufferbloat.net/projects/cerowrt/wiki/CeroWrt\_33\_Release\_Notes
 -   Download from: http://huchra.bufferbloat.net/\~cero1/3.3/3.3.8-26/
--   Read This First for CeroWrt 3.3 and earlier: <link>READ THIS
-    FIRST</link>
--   CeroWrt (Sugarland and earlier) benefitted from <link>Setting
-    QoS</link>
+-   Read This First for CeroWrt 3.3 and earlier: [READ THIS FIRST]({{< relref "wiki/READ_THIS_FIRST.md" >}})
+-   CeroWrt (Sugarland and earlier) benefitted from [Setting QoS]({{< relref "wiki/Setting_QoS.md" >}})
 -   First CeroWrt build to incorporate fq\_codel was 3.3.6-3,
     14May2012 (https://lists.bufferbloat.net/pipermail/cerowrt-devel/2012-May/000233.html)
 
@@ -43,7 +41,7 @@ BQL builds
 The bql-smoketest builds provided a good improvement to the buffer bloat
 problem from November 2011 through February 2012. However, all their
 major improvements have been implemented in the Linux 3.3 kernel. You
-can read the <link>BQL series release notes</link>. bql-smoketests:
+can read the [BQL series release notes]({{< relref "wiki/BQL_series_release_notes.md" >}}). bql-smoketests:
 http://huchra.bufferbloat.net/\~cero1/bql-smoketests/
 
 OCEAN CITY builds
@@ -58,33 +56,33 @@ http://huchra.bufferbloat.net/\~cero1/cerowrt-wndr3700-1.0rc6/
 
 Any remaining references to an Ocean City on these pages are being
 changed to align with the more important goals set out above. The
-<link>OCEAN CITY</link> page lists obsolete information.
+[OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}}) page lists obsolete information.
 
 Other documents
 ---------------
 
 The following may be incomplete or outdated.
 
-<link>Architecture Notes</link>
+[Architecture Notes]({{< relref "wiki/Architecture_Notes.md" >}})
 
-<link>targets</link>
+[targets]({{< relref "wiki/Targets.md" >}})
 
-<link>Building CeroWrt on your own machine</link>
+[Building CeroWrt on your own machine]({{< relref "wiki/Building_Cerowrt_on_your_own_machine.md" >}})
 
-<link>Using the CeroWrt test tools</link>
+[Using the CeroWrt test tools]({{< relref "wiki/Using_the_CeroWrt_test_tools.md" >}})
 
 ### Packages developed during Bismark boot camp
 
-<link>netperf</link>
+[netperf]({{< relref "wiki/Netperf.md" >}})
 
-<link>uftp</link>
+[uftp]({{< relref "wiki/Uftp.md" >}})
 
 ### Test Labs
 
-<link>BloatLab 1</link> (isc.org)
+[BloatLab 1]({{< relref "wiki/BloatLab_1.md" >}}) (isc.org)
 
 <link>pdsh</link>
 
-<link>bloat:BANA</link>
+[BANA]({{< relref "wiki/BANA.md" >}})
 
-<link>scratch</link>
+[scratch]({{< relref "wiki/Scratch.md" >}})

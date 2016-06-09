@@ -9,8 +9,7 @@ Setting up a wndr3700 toolchain at home
 
 These instructions are for setting up a toolchain on your **own**
 machine assuming you have an <link>account on
-huchra.bufferbloat.net</link> and <link>ssh configured on port
-222</link>.
+huchra.bufferbloat.net</link> and [ssh configured on port 222]({{< relref "wiki/Ssh_configured_on_port_222.md" >}}).
 
     cd ~
     mkdir src
@@ -62,7 +61,7 @@ the router and will no longer be able to use opkg to install your
 generated packages. You can usually do a feeds update safely without
 breaking an existing router.
 
-You can customize your <link>uberwrt:openwrt build overlays</link> to
+You can customize your [openwrt build overlays]({{< relref "wiki/Openwrt_Build_Overlays.md" >}}) to
 make your default install come closer to "just working".
 
 See also <link>Working within the bismark feed</link> and <link>Pushing

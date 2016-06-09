@@ -22,7 +22,7 @@ the 172.16.0.0/12 range to play in. The default address for the router
 is 172.30.42.1.
 
 It is ironic that this is the last piece of 'free' IP address space
-left. See also <link>bloat:BANA</link>.
+left. See also [BANA]({{< relref "wiki/BANA.md" >}}).
 
 If you find this IP hard to remember or type, DNS is enabled by default
 for a virtual subdomain of *home.lan*. You should be able to get to it
@@ -33,7 +33,7 @@ site name, if you want!
 Changing the default ip address ranges is difficult to do via the web
 interface and we suggest you stick with it for a while until you
 understand the reasoning, firewall, routing, and naming rules. If you
-really must, read <link>Changing\_your\_cerowrt\_ip\_addresses</link>.
+really must, read [Changing your cerowrt ip addresses]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}}).
 
 If you are running CeroWrt inside your network, and not as your default
 gw, configure your default gw to statically assign an ip address, and
@@ -92,7 +92,6 @@ split across multiple subnetworks like this.
 
 ### See also
 
-<link>Device naming scheme|Default naming scheme</link>\
-<link>Changing\_your\_cerowrt\_ip\_addresses|Changing IP, DNS, and
-SSID</link>\
-<link>Automated Configuration of CeroWrt</link>
+[Device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})\
+[Changing your cerowrt ip addresses]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}})\
+[Automated Configuration of CeroWrt]({{< relref "wiki/Automated_Configuration_of_CeroWrt.md" >}})

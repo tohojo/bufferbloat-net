@@ -36,8 +36,7 @@ certainly.
 
 That said, I will document some of the differences here. After
 witnessing the collapse of OLPC, I'd given the Wisp6 project no
-publicity. After all the effort sunk into trying to make a <link>perfect
-wireless router</link> I kept my goals high and expectations low, while
+publicity. After all the effort sunk into trying to make a [perfect wireless router]({{< relref "wiki/Perfect_wireless_router.md" >}}) I kept my goals high and expectations low, while
 throwing out a lot of conventions that have become bad "standards", for
 example, the lack of an integral proxy component and continued wide-band
 2.4 ghz usage.

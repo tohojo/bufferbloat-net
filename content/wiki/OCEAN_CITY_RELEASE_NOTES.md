@@ -9,7 +9,7 @@ CEROWRT-1.0 "OCEAN CITY" RELEASE NOTES
 
 ### THIS DOCUMENT IS OBSOLETE
 
-See the <link>OCEAN CITY</link> page.
+See the [OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}}) page.
 
 ### CEROWRT-RC6
 
@@ -86,8 +86,7 @@ bandwidth performance.
     forwarder to handle the case of a home network using MDNS to
     locate services. "A little multicast can ruin your whole day
     on wireless".
-8.  Note that the router is configured with <link>default network
-    numbering</link> to use network 172 addresses to try to stay out of
+8.  Note that the router is configured with [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}}) to use network 172 addresses to try to stay out of
     your existing network's way. This may make renumbering if you have
     an existing static numbering plan in your house somewhat
     a challenge. We plan changes in RC7 so that the low addresses are
@@ -114,7 +113,7 @@ bandwidth performance.
     in CeroWrt builds; it awaits some further testing.
 11. QoS enabled by default; you *should* tune your QOS settings for your
     connection as covered in the
-    <link>OCEAN\_CITY\_FAQ\#How-can-I-improve-latency-problems-with-a-Cerowrt-router</link>,
+    [OCEAN CITY FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}}),
     or you **will** have performance problems of some sort.
 12. Something like 20+ new packages are now available, including
     [dibbler](https://github.com/tomaszmrugalski/dibbler/tree/master/doc),

@@ -7,16 +7,16 @@ lastmod: 2015-09-28T10:45:22
 Scratch
 =======
 
-<link>BQL enabled drivers</link>
+[BQL enabled drivers]({{< relref "wiki/BQL_enabled_drivers.md" >}})
 
 <link>Gathering 2013 Overview</link>
 
 <link>Gathering 2013 Long Period Bloat</link>
 
-<link>Upcoming Talks</link>
+[Upcoming Talks]({{< relref "wiki/Upcoming_Talks.md" >}})
 
-<link>Janitorial Tasks</link>
+[Janitorial Tasks]({{< relref "wiki/Janitorial_Tasks.md" >}})
 
-<link>Advice for ISPS</link>
+[Advice for ISPS]({{< relref "wiki/Advice_for_ISPS.md" >}})
 
-<link>Daves Media Guidance</link>
+[Daves Media Guidance]({{< relref "wiki/Daves_Media_Guidance.md" >}})

@@ -28,7 +28,7 @@ Naming scheme (binaries)
 ------------------------
 
 Future releases will be named after the kernel they are based on. Using
-'codenames' like <link>OCEAN CITY</link> or <link>Paris</link> will be
+'codenames' like [OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}}) or <link>Paris</link> will be
 dropped.
 
 One of the core goals of cerowrt is to track the main kernel trees as

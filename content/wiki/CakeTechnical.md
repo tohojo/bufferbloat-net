@@ -17,7 +17,7 @@ presently required to effectively tackle the bufferbloat problem at the
 network edge.
 
 For installation and configuration instructions, please see the main
-<link>Cake</link> page.
+[Cake]({{< relref "wiki/Cake.md" >}}) page.
 
 Philosophy
 ----------

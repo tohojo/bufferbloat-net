@@ -8,9 +8,9 @@ Tools
 =====
 
 -   <link>iperf</link>
--   <link>netperf</link>
+-   [netperf]({{< relref "wiki/Netperf.md" >}})
 -   <link>nttcp</link>
--   <link>Sampling via curl</link>
+-   [Sampling via curl]({{< relref "wiki/Sampling_via_curl.md" >}})
 -   <link>http://tie.comics.unina.it/doku.php?id=start|Tie</link>
 -   curl
 -   shaperprobe

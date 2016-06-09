@@ -35,7 +35,7 @@ Does capetown "phone home"?
 
 A: Yes, it does. If you do not wish to participate in the bismark study,
 DO remove the bismark packages from your installation, or install
-<link>uberwrt:Wiki|cerowrt</link> instead. If, instead, you wish to help
+[Wiki]({{< relref "wiki/Wiki.md" >}}) instead. If, instead, you wish to help
 the bismark project identify more problems on the edge of the internet,
 please register your router and information at the [Network
 Dashboard](http://networkdashboard.org)
@@ -69,7 +69,7 @@ when possible, and also keep your own network safe.
 What's this babel thing?
 ------------------------
 
-A: <link>wisp6:Wiki|Wireless mesh networking</link>. It doesn't work
+A: [Wiki]({{< relref "wiki/Wiki.md" >}}). It doesn't work
 (yet) in this release.
 
 How do I disable the guest/babel interfaces? <link>\#148</link>
@@ -102,4 +102,4 @@ use of a universal [Network Dashboard](http://networkdashboard.org)
 This is cool! What else can this puppy do?
 ------------------------------------------
 
-A: See: <link>Cool things to do with a bismark router</link>
+A: See: [Cool things to do with a bismark router]({{< relref "wiki/Cool_things_to_do_with_a_bismark_router.md" >}})

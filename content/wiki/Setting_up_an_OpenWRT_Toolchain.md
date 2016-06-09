@@ -7,13 +7,12 @@ lastmod: 2011-05-28T06:39:07
 Setting up an OpenWRT Toolchain (on huchra)
 ===========================================
 
-<link>Repository structure</link>
+[Repository structure]({{< relref "wiki/Repository_structure.md" >}})
 
 These instructions are for setting up a toolchain assuming you have an
 account on huchra.bufferbloat.net.\
 If you wish to do development on your laptop or another machine, here
-are instructions for <link>setting up a wndr3700 toolchain at
-home</link>.
+are instructions for [setting up a wndr3700 toolchain at home]({{< relref "wiki/Setting_up_a_wndr3700_toolchain_at_home.md" >}}).
 
 Go to wherever you want the toolchain (on huchra) and run the following
 commands:

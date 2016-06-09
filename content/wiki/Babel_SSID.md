@@ -12,7 +12,7 @@ is just a convention, any ad-hoc SSID would do. Other users use "mesh"
 or something generic like that.
 
 Cerowrt's mesh networking uses an alternative address distribution
-protocol (<link>AHCP</link>), rather than dhcp, which supports
+protocol ([AHCP]({{< relref "wiki/AHCP.md" >}})), rather than dhcp, which supports
 distributing ipv4, ipv6, ntp, and dns server information. It is how
 cerowrt routers (or any device using ahcp and babel) mesh together, if
 two are in range of each other, and on the same channel.

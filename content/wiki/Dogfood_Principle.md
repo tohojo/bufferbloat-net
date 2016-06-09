@@ -30,7 +30,7 @@ Linux. Into your /etc/sysctl.conf you can put\
 net.ipv4.tcp\_sack=1\
 net.ipv4.tcp\_dsack=1@
 
-<link>IPv6</link> is enabled in primary DNS and as part of the main
+[IPv6]({{< relref "wiki/IPv6.md" >}}) is enabled in primary DNS and as part of the main
 website(s) themselves. IPv6 behavior is potentially worse, as IPv6
 doesn't get anywhere near as much attention from developers, ISPs, or
 hardware vendors. It's potentially better in that less stuff (NAT,
@@ -63,7 +63,7 @@ All major bits of code (e.g. redmine) are running under a form of
 fastcgi (fcgid), which load balances and scales up and down well with
 minimal memory use.
 
-<link>Experiment\_-\_TCP\_cubic\_vs\_TCP\_vegas|TCP Vegas</link> is
+[Experiment - TCP cubic vs TCP vegas]({{< relref "wiki/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}}) is
 under consideration.
 
 The (low-power) dedicated servers currently running are donated by
@@ -71,4 +71,4 @@ The (low-power) dedicated servers currently running are donated by
 
 If you encounter problems, please send an email to support AT
 bufferbloat.net, detailing your configuration, and a traceroute.You can
-also take steps to <link>Experiments|Diagnose your bufferbloat</link>.
+also take steps to [Experiments]({{< relref "wiki/Experiments.md" >}}).

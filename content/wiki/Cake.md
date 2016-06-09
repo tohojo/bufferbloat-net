@@ -15,11 +15,11 @@ use more help from others that care about speeding up the internet.
 {{&gt;toc}}
 
 Cake is the rollup of 3 years of deployment experience of the htb +
-fq\_codel based sqm-scripts <link>cerowrt:SQM</link> for aqm/fq/qos
+fq\_codel based sqm-scripts [SQM]({{< relref "wiki/SQM.md" >}}) for aqm/fq/qos
 inbound and outbound bufferbloat management. For input into the design
 and implementation, please join the [cake mailing
 list](https://lists.bufferbloat.net/listinfo/cake) . For an alternative
-approach to inbound traffic management, see <link>Bobbie</link>.
+approach to inbound traffic management, see [Bobbie]({{< relref "wiki/Bobbie.md" >}}).
 
 Slides from a recent talk on Cake, at Battlemesh v8:
 attachment:cake-battlemesh-v8.pdf
@@ -319,7 +319,7 @@ on the outbound device. We added "peeling" to fix this so you no longer
 have to turn off offloads like thiese.
 
 There are numerous other traps for the unwary, documented in
-<link>codel:Best\_practices\_for\_benchmarking\_Codel\_and\_FQ\_Codel</link>
+[Best practices for benchmarking Codel and FQ Codel]({{< relref "wiki/Best_practices_for_benchmarking_Codel_and_FQ_Codel.md" >}})
 - we are trying to make those traps less dangerous in cake, for example,
 we came up with a way to "peel" apart TSO/GSO/GRO offloads to deal with
 packets rather than superpackets.

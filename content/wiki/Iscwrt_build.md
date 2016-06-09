@@ -12,7 +12,7 @@ Only the wndr3700v2 is supported.
 
 Get it from: http://huchra.bufferbloat.net/\~each/iscwrt/ar71xx/
 
-This build is a lot closer to the final <link>Build Configuration</link>
+This build is a lot closer to the final [Build Configuration]({{< relref "wiki/Build_configuration.md" >}})
 than the others, at present.
 
 (and consequently, more borken)

@@ -11,7 +11,7 @@ Setting QoS Properly
 --------------------
 
 **Note:** This process is no longer needed in CeroWrt. See the
-<link>Setting up AQM</link> page for a better procedure.
+[Setting up AQM]({{< relref "wiki/Setting_up_AQM.md" >}}) page for a better procedure.
 
 Open the Web LuCI interface. Go to the Network -&gt; QoS page.
 

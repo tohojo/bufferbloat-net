@@ -82,7 +82,7 @@ available, only the squashfs version works for wndr3700v2 and wndr3800.
 I note that the wndr3700v3 has hit the stores and IS NOT compatible with
 the v2. Get a 3800 if you want to be future proofed.
 
-The standard <link>Installation Guide</link> otherwise applies.
+The standard [Installation Guide]({{< relref "wiki/Installation_Guide.md" >}}) otherwise applies.
 
 ### Features:
 

@@ -8,7 +8,7 @@ Build configuration
 ===================
 
 There will be several different builds for different
-<link>targets</link> as time goes by, but these are the core changes to
+[targets]({{< relref "wiki/Targets.md" >}}) as time goes by, but these are the core changes to
 the openwrt build that uberwrt enabled builds will have.
 
 We will build both mainline openwrt and the following branches under
@@ -76,7 +76,7 @@ Mandatory features
 Under debate
 ------------
 
--   <link>perfect wireless router</link>
+-   [perfect wireless router]({{< relref "wiki/Perfect_wireless_router.md" >}})
 
 Optional
 --------
@@ -91,4 +91,4 @@ Futures
 -------
 
 Ultimately some of this may incorporate the more radical changes from
-the <link>wisp6</link> project
+the [wisp6]({{< relref "wiki/Wisp6.md" >}}) project

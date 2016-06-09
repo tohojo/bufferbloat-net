@@ -29,7 +29,7 @@ extra delays, limiting the speed of internet connections. Other network
 protocols are also affected, including UDP-based protocols, partly
 because they share buffers in the router with TCP/IP connections. This
 can cause problems by restricting the speed of connections, affecting
-interactive applications, <link>gaming</link> and <link>VoIP</link>. It
+interactive applications, <link>gaming</link> and [VoIP]({{< relref "wiki/VOIP.md" >}}). It
 has only become apparent in recent years, as more modern network
 equipment implements larger buffers as memory prices fall.
 
@@ -63,7 +63,7 @@ The problem also affects other protocols. The router's buffer can easily
 build up several seconds worth of data before packets start to drop.
 Those packets in the queue block (can be ahead of) interactive
 applications and cause problems for <link>DNS</link>, <link>ARP</link>,
-<link>NTP</link>, <link>DHCP</link>, gamers and <link>VoIP</link>. This
+<link>NTP</link>, <link>DHCP</link>, gamers and [VoIP]({{< relref "wiki/VOIP.md" >}}). This
 is even the case with DiffServ, which has multiples buffers (queues).
 HTTP and VoIP may be buffered independently, but each buffer will still
 be independently susceptible to bufferbloat.
@@ -103,7 +103,7 @@ See also
 --------
 
 -   [Bufferbloat wikipedia](http://en.wikipedia.org/wiki/Bufferbloat)
-    ,<link>Dark Buffers</link>
+    ,[Dark Buffers]({{< relref "wiki/Dark_buffers.md" >}})
 -   [The Buffer Bloat Project](/projects/bloat)
 -   [CoDel](http://www.bufferbloat.net/projects/codel/wiki) and
     fq\_codel

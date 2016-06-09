@@ -12,12 +12,12 @@ Testers
 
   ----------- ------------------- ---------------------- -------- --------------------------------------------
   Who         What                Where                  When     Status
-  Dave Täht   Core routing        <link>testlab</link>   Friday   Need lab setup and PDUS <link>\#164</link>
-  Dave Täht   Wireless            <link>testlab</link>   Friday   
-  Dave Täht   DHCP                <link>testlab</link>   Friday   
-  Dave Täht   Firewall            <link>testlab</link>   Friday   
-  Dave Täht   Web Server          <link>testlab</link>   Friday   
-  Dave Täht   Uptime              <link>testlab</link>   Friday   
+  Dave Täht   Core routing        [testlab]({{< relref "wiki/Testlab.md" >}})   Friday   Need lab setup and PDUS <link>\#164</link>
+  Dave Täht   Wireless            [testlab]({{< relref "wiki/Testlab.md" >}})   Friday   
+  Dave Täht   DHCP                [testlab]({{< relref "wiki/Testlab.md" >}})   Friday   
+  Dave Täht   Firewall            [testlab]({{< relref "wiki/Testlab.md" >}})   Friday   
+  Dave Täht   Web Server          [testlab]({{< relref "wiki/Testlab.md" >}})   Friday   
+  Dave Täht   Uptime              [testlab]({{< relref "wiki/Testlab.md" >}})   Friday   
               DITG                                                <link>\#50</link>
               BISMARK-ACTIVE                                      
               BISMARK-PASSIVE                                     

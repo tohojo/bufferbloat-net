@@ -9,8 +9,8 @@ Architecture Notes
 
 http://www.mips.com/media/files/MD00565-2B-MIPS32-QRC-01.01.pdf
 
-<link>OCEAN CITY FAQ</link>
+[OCEAN CITY FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}})
 
-<link>scratch</link>
+[scratch]({{< relref "wiki/Scratch.md" >}})
 
-<link>OCEAN CITY INSTALLATION GUIDE</link>
+[OCEAN CITY INSTALLATION GUIDE]({{< relref "wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})

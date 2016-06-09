@@ -7,8 +7,7 @@ lastmod: 2011-05-18T10:24:41
 Bismark "CAPETOWN" RELEASE NOTES
 ================================
 
-Please see the <link>Capetown FAQ</link> and <link>Capetown Installation
-Guide</link>
+Please see the [Capetown FAQ]({{< relref "wiki/Capetown_FAQ.md" >}}) and [Capetown Installation Guide]({{< relref "wiki/CAPETOWN_INSTALLATION_GUIDE.md" >}})
 
 Features
 --------

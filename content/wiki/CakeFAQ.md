@@ -10,7 +10,7 @@ Cake FAQ
 \[cake\] is the comprehensive queue management system the bufferbloat
 project has been working on since 2013 and is nearing release. It is the
 rollup of 3 years of deployment experience using the htb + fq\_codel
-based <link>sqm</link>-scripts.
+based [sqm]({{< relref "wiki/SQM.md" >}})-scripts.
 
 What was the origin of the name?
 --------------------------------

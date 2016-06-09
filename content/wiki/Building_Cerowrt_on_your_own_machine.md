@@ -104,5 +104,5 @@ I do), do integration, and builds, and not bother the ongoing work in
 your release process. Doing continuous integration is difficult, but
 necessary if you wish to advance the state of the art.
 
-<link>changing your cerowrt ip addresses</link> <link>changing your dns
+[changing your cerowrt ip addresses]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}}) <link>changing your dns
 domain</link>

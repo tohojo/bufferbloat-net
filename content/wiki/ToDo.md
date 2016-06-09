@@ -126,38 +126,36 @@ Dave Taht's to-do list:
 
 -   <link>Myths</link>
 -   <link>Controversies</link>
--   <link>Conferences</link>
+-   [Conferences]({{< relref "wiki/Conferences.md" >}})
 -   <link>Linux Traffic Shapers</link>
 -   <link>Device Driver Buffering</link>
 -   <link>Linux Patches</link>
--   <link>Linux Tips</link>
+-   [Linux Tips]({{< relref "wiki/Linux_Tips.md" >}})
 -   <link>Mac Tips</link>
--   <link>Windows Tips</link>
--   <link>Bloated Driver List</link>
--   <link>IPv6</link>
--   <link>Glossary</link> <link>Dark Buffers</link> <link>Latency</link>
+-   [Windows Tips]({{< relref "wiki/Windows_Tips.md" >}})
+-   [Bloated Driver List]({{< relref "wiki/Bloated_Driver_List.md" >}})
+-   [IPv6]({{< relref "wiki/IPv6.md" >}})
+-   [Glossary]({{< relref "wiki/Glossary.md" >}}) [Dark Buffers]({{< relref "wiki/Dark_buffers.md" >}}) <link>Latency</link>
     <link>RTT</link> <link>TXQUEUELEN</link> <link>DMA\_TX\_QUEUE</link>
     <link>spiky latency</link>
--   <link>Experiments</link>
--   <link>Equations</link>
+-   [Experiments]({{< relref "wiki/Experiments.md" >}})
+-   [Equations]({{< relref "wiki/Equations.md" >}})
 -   <link>Qdiscs</link>
--   <link>Papers</link>
+-   [Papers]({{< relref "wiki/Papers.md" >}})
 -   <link>Mitigations</link>
--   <link>Dogfood Principle</link>
--   <link>Good blog discussions</link>
+-   [Dogfood Principle]({{< relref "wiki/Dogfood_Principle.md" >}})
+-   [Good blog discussions]({{< relref "wiki/Good_blog_discussions.md" >}})
 -   <link>What (bad) stuff happens on a congested network?</link>
 -   <link>Mesh Networks</link>
--   <link>Talks</link>
--   <link>Experts</link>
--   <link>sandbox</link>
--   <link>Quotes</link>
+-   [Talks]({{< relref "wiki/Talks.md" >}})
+-   [Experts]({{< relref "wiki/Experts.md" >}})
+-   [sandbox]({{< relref "wiki/Sandbox.md" >}})
+-   [Quotes]({{< relref "wiki/Quotes.md" >}})
 -   <link>SACK hall of Fame</link> <link>SACK hall of Shame</link>
 -   <link>ECN Hall of Fame</link> <link>ECN hall of Shame</link>
--   <link>dtaht tasks</link>
--   <link>humor</link>
+-   [dtaht tasks]({{< relref "wiki/Dtaht_tasks.md" >}})
+-   [humor]({{< relref "wiki/Humor.md" >}})
 -   Gettys blogs reformatted\
-    <link>Mitigations and Solutions</link> <link>Mitigations and
-    solutions for Broadband</link> <link>Mitigations and solutions for
-    Wireless</link> <link>Mitigations and Solutions for Home
-    Gateways</link>
+    [Mitigations and Solutions]({{< relref "wiki/Mitigations_and_Solutions.md" >}}) [Mitigations and solutions for Broadband]({{< relref "wiki/Mitigations_and_solutions_for_Broadband.md" >}}) <link>Mitigations and solutions for
+    Wireless</link> [Mitigations and Solutions for Home Gateways]({{< relref "wiki/Mitigations_and_Solutions_for_Home_Gateways.md" >}})
 

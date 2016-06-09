@@ -33,7 +33,7 @@ decisions.
 keep the public conversation(s) on track, and recruiting
 <link>helpers</link> which is eating far more of my time than I'd like.
 
-<link>RFC Improving DSCP support in Linux</link>
+[RFC Improving DSCP support in Linux]({{< relref "wiki/RFC_Improving_DSCP_support_in_Linux.md" >}})
 
 <link>latency</link>
 
@@ -42,13 +42,13 @@ stack.
 
 I can be found in the \#bufferbloat channel(s) on irc.
 
-<link>Save the Mice</link> <link>Diffserv statistics</link>
+<link>Save the Mice</link> [Diffserv statistics]({{< relref "wiki/Diffserv_statistics.md" >}})
 
-<link>Dtaht test rig</link>
+[Dtaht test rig]({{< relref "wiki/Dtaht_test_rig.md" >}})
 
-<link>Experiment - TCP cubic vs TCP vegas</link>
+[Experiment - TCP cubic vs TCP vegas]({{< relref "wiki/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}})
 
-<link>Experiment - Bloated LAGN vs debloated WNDR5700</link>
+[Experiment - Bloated LAGN vs debloated WNDR5700]({{< relref "wiki/Experiment_-_Bloated_LAGN_vs_debloated_WNDR5700.md" >}})
 
 <link>Improving DSCP support in Linux</link>
 
@@ -116,7 +116,7 @@ http://www1.sce.umkc.edu/\~sohrabyk/papers/TcomReport.pdf
 
 http://portal.acm.org/citation.cfm?id=1219649
 
-<link>VOIP</link>
+[VOIP]({{< relref "wiki/VOIP.md" >}})
 
 &gt;\
 &gt; Also, PLUGFEST![]()! Sounds like a good spot to do some testing in\
@@ -132,14 +132,14 @@ need; but the task of educating them will make that clear.
 See: http://www.iol.unh.edu/\
 - Jim
 
--   <link>Network Analysis Tools</link>
+-   [Network Analysis Tools]({{< relref "wiki/Network_Analysis_Tools.md" >}})
 
 <!-- -->
 
--   <link>Bufferbloat and Freeswitch Conference Call March 9</link>
+-   [Bufferbloat and Freeswitch Conference Call March 9]({{< relref "wiki/Bufferbloat_and_Freeswitch_Conference_Call_March_9.md" >}})
 
-<link>Enable ECN on multiple operating systems</link>
+[Enable ECN on multiple operating systems]({{< relref "wiki/Enable_ECN_on_multiple_operating_systems.md" >}})
 
-<link>irc clients</link>
+[irc clients]({{< relref "wiki/Irc_clients.md" >}})
 
-<link>BANA</link>
+[BANA]({{< relref "wiki/BANA.md" >}})

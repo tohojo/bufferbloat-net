@@ -9,15 +9,14 @@ OCEAN CITY FAQ
 
 ### THIS DOCUMENT IS OBSOLETE
 
-See the <link>OCEAN CITY</link> page.
+See the [OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}}) page.
 
 How can I improve latency problems with a Cerowrt router?
 ---------------------------------------------------------
 
 A: The router is configured with <link>QoS</link> (Quality of service)
 **OFF**, and the defaults more suitable for US cable than elsewhere. You
-should go to the Network-&gt;Qos screen on the <link>cerowrt router
-configuration</link> page, turn off <link>QoS</link>, run a suitable
+should go to the Network-&gt;Qos screen on the [cerowrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) page, turn off <link>QoS</link>, run a suitable
 [bandwidth performance test](http://speedtest.net) and then re-enable
 QoS with more suitable up/download values a few percentage points less
 than what the bandwidth test shows you. This is "bandwidth" shaping the
@@ -69,7 +68,7 @@ A: The characteristics of wired and wireless, as well as the
 sufficiently different to warrant making a clear distinction between
 them for <link>uberwrt:internal QoS</link> to work well.
 
-See also <link>device naming scheme</link> for more details.
+See also [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) for more details.
 
 How is routing done in CeroWrt, since the interfaces are routed rather than bridged?
 ------------------------------------------------------------------------------------
@@ -112,8 +111,7 @@ If your client (laptop, whatever) supports 5Ghz operation, you really
 want to use that SSID (clearly delineated by a "5" postfix) to get
 higher performance operation.
 
-You can make all the SSIDs be the same if you like in the <link>Cerowrt
-router configuration</link> pages, but nanog recomends training users
+You can make all the SSIDs be the same if you like in the [Cerowrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) pages, but nanog recomends training users
 "to choose the one on 5".
 
 Why guest interfaces?
@@ -125,7 +123,7 @@ when possible, and also keep your own network safe.
 What's this babel thing?
 ------------------------
 
-A: <link>wisp6:Wiki|Wireless mesh networking</link>.
+A: [Wiki]({{< relref "wiki/Wiki.md" >}}).
 
 How do I disable the guest/babel interfaces?
 --------------------------------------------
@@ -153,4 +151,4 @@ A: This is a research project. We hope to make things simpler.
 This is cool! What else can this puppy do?
 ------------------------------------------
 
-A: See: <link>Cool things to do with a cerowrt router</link>
+A: See: [Cool things to do with a cerowrt router]({{< relref "wiki/Cool_things_to_do_with_a_cerowrt_router.md" >}})

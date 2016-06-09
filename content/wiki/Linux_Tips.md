@@ -7,7 +7,7 @@ lastmod: 2013-07-27T11:50:28
 Linux Tips
 ==========
 
-The <link>Dogfood Principle</link> page covers the settings on the
+The [Dogfood Principle]({{< relref "wiki/Dogfood_Principle.md" >}}) page covers the settings on the
 bufferbloat.net servers, which run Linux.
 
 Some people note that in some bufferbloat experiments we set the
@@ -21,11 +21,11 @@ generally aren't but that's another story) it IS the right thing...
 Please, please, don't just blindly go twisting knobs without
 understanding what you are doing... and we've mostly settled on
 fq\_codel as being the best answer yet, see the
-<link>cerowrt:Bloat-videos</link> page for some details on that.
+[Bloat-videos]({{< relref "wiki/Bloat-videos.md" >}}) page for some details on that.
 
 So the remainder of this web page is very old... and we haven't actually
 updated the main bufferbloat web servers to any huge extent lately,
-we're running the <link>cerowrt:Yurtlab</link> instead, (and we are
+we're running the [Yurtlab]({{< relref "wiki/Yurtlab.md" >}}) instead, (and we are
 doing several large scale test deployments...)
 
 ... so for historical reasons... read on...
@@ -132,8 +132,7 @@ going as low as this:
 @ ethtool -G eth0 tx 4\
 ethtool -G wlan0 tx 4@
 
-But many can get to 20 or below. See also: <link>Bloated Driver
-List|Known Bloated Drivers</link> for more information and patches.
+But many can get to 20 or below. See also: [Bloated Driver List]({{< relref "wiki/Bloated_Driver_List.md" >}}) for more information and patches.
 
 You can observe your existing settings with:
 
@@ -143,7 +142,7 @@ ethtool -g wlan0@
 Reduce transmit queue length
 ----------------------------
 
-NOTE: with <link>codel:Wiki|codel</link>, this is no longer needed
+NOTE: with [Wiki]({{< relref "wiki/Wiki.md" >}}), this is no longer needed
 either.
 
 This is a separate setting for each network interface. Examples:
@@ -178,7 +177,7 @@ bit) useful](http://mirrors.bufferbloat.net/Builds/)). Note that this
 kernel is also built preempt, as Dave likes to do music. Additionally,
 you might like something more graceful to set your wireless queue length
 to something more sensible for that kernel; a Debian
-/etc/networks/if-up.d <link>wlan script</link> for this is available.
+/etc/networks/if-up.d [wlan script]({{< relref "wiki/Wlan_script.md" >}}) for this is available.
 
 References
 ----------

@@ -13,7 +13,7 @@ Bismark Next Steps
     -   Requirements: Easy to use
 -   KVM
 -   Router flashing
-    -   <link>Parallel device flashing from factory firmware</link>
+    -   [Parallel device flashing from factory firmware]({{< relref "wiki/Parallel_device_flashing_from_factory_firmware.md" >}})
 -   TIE/passive measurement packaging
 -   Level3 Deployment
 -   Data format/Protobuf

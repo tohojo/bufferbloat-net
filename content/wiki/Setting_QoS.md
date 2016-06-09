@@ -14,7 +14,7 @@ them here for historical reasons.
 Setting QoS: Improve latency problems with a CeroWrt router
 -----------------------------------------------------------
 
-**Note:** These have been superseded by the <link>Setting up AQM</link>
+**Note:** These have been superseded by the [Setting up AQM]({{< relref "wiki/Setting_up_AQM.md" >}})
 page.
 
 CeroWrt has the ability to solve latency using a number of mechanisms.
@@ -36,8 +36,7 @@ values:
 
 **To set up QoS for CeroWrt:**
 
--   Go to the Network-&gt;QOS screen on to see the <link>CeroWrt router
-    configuration</link> page.
+-   Go to the Network-&gt;QOS screen on to see the [CeroWrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) page.
 -   Turn off <link>QoS</link> by un-checking the box labeled **Enable**
     and clicking **Save and Apply** at the lower-right corner. (It may
     already be unchecked: if so, skip this step.)
@@ -55,7 +54,7 @@ use\
 netperf to various sites supporting it to get a reasonable value.
 
 -   Use these values to fill in the Download and Upload speed fields in
-    the <link>CeroWrt router configuration|CeroWrt web GUI.</link> It is
+    the [CeroWrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) It is
     best to use values a few percentage points lower than what the
     bandwidth test shows you. For example, if the value is 2450
     kbit/sec, you could set it for 2300 kbit/sec.
@@ -65,8 +64,7 @@ netperf to various sites supporting it to get a reasonable value.
 AQM doesn't seem to do any good! I can't do a big upload/download and make a phone call!
 ----------------------------------------------------------------------------------------
 
-Decrease the Upload and Download speeds somewhat <link>CeroWrt router
-configuration|in the web GUI</link> until you can do both. You should
+Decrease the Upload and Download speeds somewhat [CeroWrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) until you can do both. You should
 make adjustments in 256kb increments (or do a binary search between 60%
 and 100% of your provisioned bandwidth).
 

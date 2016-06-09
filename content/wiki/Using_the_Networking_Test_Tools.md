@@ -80,12 +80,12 @@ fping
 fprobe
 ------
 
-For more details, see <link>Monitoring CeroWrt</link>
+For more details, see [Monitoring CeroWrt]({{< relref "wiki/Monitoring_CeroWrt.md" >}})
 
 snmpd
 -----
 
-For more details, see <link>Monitoring CeroWrt</link>
+For more details, see [Monitoring CeroWrt]({{< relref "wiki/Monitoring_CeroWrt.md" >}})
 
 DitG (user installable)
 -----------------------
@@ -95,5 +95,4 @@ Bismark related tools (user installable)
 
 We co-operate with this project, although their focus is on measuring
 the internet, and ours is on fixing it. As they use the same hardware as
-cerowrt, we plan to make available at least some of the <link>Bismark
-Tools</link>.
+cerowrt, we plan to make available at least some of the [Bismark Tools]({{< relref "wiki/Bismark_Tools.md" >}}).

@@ -29,12 +29,12 @@ Dave Taht's todo list
 
 <link>Mount a hard disk or USB stick</link>
 
-<link>sandbox</link>
+[sandbox]({{< relref "wiki/Sandbox.md" >}})
 
 <link>openvpn on Linux</link>
 
-<link>openvpn on Mac</link>
+[openvpn on Mac]({{< relref "wiki/Openvpn_on_Mac.md" >}})
 
 <link>openvpn on the router</link>
 
-<link>Using oprofile</link>
+[Using oprofile]({{< relref "wiki/Using_oprofile.md" >}})

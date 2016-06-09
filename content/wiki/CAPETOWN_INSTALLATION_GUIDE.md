@@ -16,10 +16,9 @@ flashed with Bismark firmware, so you can proceed to Step 1
 Step 0. Flashing the router
 ---------------------------
 
-If you are not installing a preflashed <link>Capetown</link> release of
-the router hardware, please see the <link>Capetown flashing
-instructions|flashing instructions</link> for how to install the
-Capetown Bismark build on your <link>Wndr3700v2</link> Router.
+If you are not installing a preflashed [Capetown]({{< relref "wiki/Capetown.md" >}}) release of
+the router hardware, please see the [Capetown flashing instructions]({{< relref "wiki/Capetown_flashing_instructions.md" >}}) for how to install the
+Capetown Bismark build on your [Wndr3700v2]({{< relref "wiki/Wndr3700v2.md" >}}) Router.
 
 Step 1. Configuring and Installing the Router
 ---------------------------------------------
@@ -35,12 +34,12 @@ Step 1. Configuring and Installing the Router
     address from the 192.168.42.0/24 subnet.
 3.  **Configure your router's default password.** In your web browser,
     go to the router configuration screen at http://192.168.42.1:81 (see
-    also <link>why 81</link>?) Enter in a new password for the router.
+    also [why 81]({{< relref "wiki/Why_81.md" >}})?) Enter in a new password for the router.
     **Write this password down somewhere.** The login will be "root",
     and the password that you set should be something difficult.
 4.  **Secure your wireless interfaces** Go to the *Network-&gt;Wireless*
     configuration page, and change the SSIDs of the various interfaces
-    to suit your liking. (See also <link>Capetown FAQ|FAQ</link>) Enable
+    to suit your liking. (See also [Capetown FAQ]({{< relref "wiki/Capetown_FAQ.md" >}})) Enable
     WPA2 encryption on the LAN interfaces, and if you wish your guest
     interfaces to be secured, do the same there, too. Choose unique
     passwords for the lan and guest interfaces.
@@ -62,15 +61,14 @@ Important Configuration Notes:
     by default. They are also set to the **United States regulatory
     wireless spectrum** by default. You should address these issues
     before connecting the router to the Internet.
--   <link>QoS</link> is turned **ON** by default.(see <link>Capetown
-    FAQ|FAQ</link>). You should address this issue after connecting to
+-   <link>QoS</link> is turned **ON** by default.(see [Capetown FAQ]({{< relref "wiki/Capetown_FAQ.md" >}})). You should address this issue after connecting to
     the internet.
 
 Step 2. Fine-tuning your QoS Settings
 -------------------------------------
 
 By default, the Cape Town Bismark Router is configured for slow Internet
-connections. See the <link>Capetown FAQ|FAQ</link> for how to set it
+connections. See the [Capetown FAQ]({{< relref "wiki/Capetown_FAQ.md" >}}) for how to set it
 appropriately for your network connection. This is a very important
 step!
 
@@ -98,8 +96,8 @@ Thanks!
 -------
 
 You should now be on the Internet using the latest and greatest code
-from the <link>bismark:Wiki|Bismark</link> Project, the
-<link>cerowrt:Wiki|Bufferbloat Cerowrt</link> project, and
+from the [Wiki]({{< relref "wiki/Wiki.md" >}}) Project, the
+[Wiki]({{< relref "wiki/Wiki.md" >}}) project, and
 [OpenWrt](http://www.openwrt.org) .
 
 We hope that your experience will be exceptional. Please send us your
@@ -108,6 +106,4 @@ feedback and comments by registering and posting to the
 mailing list. You can also file bugs and feature requests in our [Bug
 Tracker](http://www.bufferbloat.net/projects/bismark/issues)
 
-See also the <link>Capetown FAQ|FAQ</link>, the <link>CAPETOWN RELEASE
-NOTES</link> and <link>Cool things to do with your Bismark
-router</link>.
+See also the [Capetown FAQ]({{< relref "wiki/Capetown_FAQ.md" >}}), the [CAPETOWN RELEASE NOTES]({{< relref "wiki/CAPETOWN_RELEASE_NOTES.md" >}}) and [Cool things to do with your Bismark router]({{< relref "wiki/Cool_things_to_do_with_your_bismark_router.md" >}}).

@@ -7,7 +7,7 @@ lastmod: 2011-06-04T05:35:04
 Using oprofile
 ==============
 
-There is a development build of <link>cerowrt:wiki|Cerowrt</link>
+There is a development build of [wiki]({{< relref "wiki/Wiki.md" >}})
 available at:
 
 http://huchra.bufferbloat.net/\~cerowrt/cerowrt-dbg
@@ -58,6 +58,6 @@ skewing your test) and more fragile.
 Some sample oprofiles
 ---------------------
 
-<link>wireless oprofile</link>
+[wireless oprofile]({{< relref "wiki/Wireless_oprofile.md" >}})
 
-<link>wired oprofile with alignment trap</link>
+[wired oprofile with alignment trap]({{< relref "wiki/Wired_oprofile_with_alignment_trap.md" >}})

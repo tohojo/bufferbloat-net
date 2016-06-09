@@ -18,8 +18,7 @@ the assumptions of ipv4 + nat.
 So I sat down one day last year (june, 2011), and tried to design a
 firewall architecture that did ipv6 first, and treated NAT as an
 afterthought, allowing for security within a home, but a nearly default
-free zone to share with guests. Part of it is the <link>device naming
-scheme</link>, and the other part is the limited pattern matching
+free zone to share with guests. Part of it is the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}), and the other part is the limited pattern matching
 facility in iptables (the "+" symbol for a tail match). I'd also hoped
 to get to where upnp and pcp could be made to work correctly, and
 sanely.
@@ -145,7 +144,7 @@ Routing ipv6 with ipv4 natted interfaces
 
 It is impossible at present to detect if nat is on an interface. CeroWrt
 assumes that ge00 is natted, and that there is nobody listening for ipv6
-routes on the outside interface. In <link>Bloatlab 1</link>, that's not
+routes on the outside interface. In [Bloatlab 1]({{< relref "wiki/BloatLab_1.md" >}}), that's not
 the case, and uncommenting the ge00 interface in /etc/config/babel, and
 prepending these two lines here to the /etc/babeld.conf file
 

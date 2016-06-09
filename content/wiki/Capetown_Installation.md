@@ -10,13 +10,13 @@ Bismark "Capetown" Installation Guide
 Capetown releases can be had (Currently) at
 http://huchra.bufferbloat.net/\~bismark/capetown
 
-<link>Capetown QA</link> <link>Capetown Issues</link> <link>Capetown
+[Capetown QA]({{< relref "wiki/CAPETOWN_QA.md" >}}) <link>Capetown Issues</link> <link>Capetown
 Testing</link> <link>South Africa Locations</link>
 
 -   Please remember that to configure the router, you will need to go to
     the address:81, at least at present.
 
-<link>WNDR3700v2</link>
+[WNDR3700v2]({{< relref "wiki/Wndr3700v2.md" >}})
 -----------------------
 
 New (factory firmware) routers can be installed via the standard Netgear

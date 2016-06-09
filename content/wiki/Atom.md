@@ -17,7 +17,7 @@ atom:
 
 [Installation
 instructions](http://wiki.openwrt.org/toh/netgear/wndr3700#oem.easy.installation)\
-Specific <link>Flashing instruction for Mac</link>.
+Specific [Flashing instruction for Mac]({{< relref "wiki/Flashing_instruction_for_Mac.md" >}}).
 
 If you need additional packages, you will need to remove /etc/opkg/\*\
 then edit the /etc/opkg.conf file to point to either

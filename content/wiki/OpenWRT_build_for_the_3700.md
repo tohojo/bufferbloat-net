@@ -17,5 +17,4 @@ system directly.
 
 If you wish to do your own builds, see:
 
-<link>Setting up an OpenWRT Toolchain</link> or <link>Setting up a
-wndr3700 Toolchain at home</link>
+[Setting up an OpenWRT Toolchain]({{< relref "wiki/Setting_up_an_OpenWRT_Toolchain.md" >}}) or [Setting up a wndr3700 Toolchain at home]({{< relref "wiki/Setting_up_a_wndr3700_toolchain_at_home.md" >}})

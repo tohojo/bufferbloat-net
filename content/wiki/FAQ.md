@@ -12,7 +12,7 @@ What about QoS/AQM?
 
 Prior to the Modena build (February 2013), CeroWrt benefitted from
 setting QoS parameters. The defaults in Modena work pretty well, and
-using the procedure described on the <link>Setting up AQM</link> page
+using the procedure described on the [Setting up AQM]({{< relref "wiki/Setting_up_AQM.md" >}}) page
 works even better.
 
 Does Cerowrt "phone home"?
@@ -34,8 +34,8 @@ A: The characteristics of wired and wireless, as well as the
 sufficiently different to warrant making a clear distinction between
 them for <link>uberwrt:internal QoS</link> to work well.
 
-See the <link>device\_naming\_scheme|default naming scheme</link> and
-<link>default\_network\_numbering|default numbering scheme</link> pages
+See the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) and
+[default network numbering]({{< relref "wiki/Default_network_numbering.md" >}}) pages
 for more information.
 
 How is routing done in CeroWrt, since the interfaces are routed rather than bridged?
@@ -77,8 +77,7 @@ If your client (laptop, whatever) supports 5Ghz operation, you really
 want to use that SSID (clearly delineated by a "5" postfix) to get
 higher performance operation.
 
-You can make all the SSIDs be the same if you like in the <link>CeroWrt
-router configuration</link> pages, but NANOG recommends training users
+You can make all the SSIDs be the same if you like in the [CeroWrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) pages, but NANOG recommends training users
 "to choose the one on 5".
 
 Why guest interfaces?
@@ -98,13 +97,12 @@ router' to include your own web pages and interfaces.
 Why 172.30.42.0/27 subnet?
 --------------------------
 
-A: Please refer to the <link>Default\_network\_numbering|default network
-numbering</link> page.
+A: Please refer to the [Default network numbering]({{< relref "wiki/Default_network_numbering.md" >}}) page.
 
 What's this babel thing?
 ------------------------
 
-A: <link>wisp6:Wiki|Wireless mesh networking</link>.
+A: [Wiki]({{< relref "wiki/Wiki.md" >}}).
 
 How do I disable the guest/babel interfaces?
 --------------------------------------------
@@ -132,7 +130,7 @@ A: This is a research project. We hope to make things simpler.
 This is cool! What else can this puppy do?
 ------------------------------------------
 
-A: See: <link>Cool things to do with a cerowrt router</link>
+A: See: [Cool things to do with a cerowrt router]({{< relref "wiki/Cool_things_to_do_with_a_cerowrt_router.md" >}})
 
 How to close default open firewall ports?
 -----------------------------------------

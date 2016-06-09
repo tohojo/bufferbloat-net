@@ -8,7 +8,7 @@ Jupiter
 =======
 
 Jupiter is a Cerowrt router configured to act as a gateway to the
-<link>testlab</link>.
+[testlab]({{< relref "wiki/Testlab.md" >}}).
 
 It has a real internet connection, has ipv6 support, provides a subnet
 to 3 other routers, and has a USB stick mounted that serves as a local

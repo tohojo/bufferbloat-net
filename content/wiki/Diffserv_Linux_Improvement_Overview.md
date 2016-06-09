@@ -57,7 +57,7 @@ describe!
 
 Anyway, it is interesting and useful to try classifying your own traffic
 using the diffserv\_dbg script as provided in the Diffserv repository. I
-would appreciate <link>Diffserv Statistics|a look at your results</link>
+would appreciate [Diffserv Statistics]({{< relref "wiki/Diffserv_statistics.md" >}})
 (particularly the ANT packets overall, and icmpv6 packets) via
 
     iptables -v -t mangle -L

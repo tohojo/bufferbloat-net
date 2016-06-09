@@ -36,10 +36,10 @@ ipsec-tools, just put out a promising looking, lighter weight release.
 1.  Establish a working certificate authority on
     <link>bismark-testbed:callisto</link>
 2.  Establish a server on a x86 and/or bismark router. Currently there
-    is one on <link>bismark-testbed:jupiter</link>, it may make sense to
+    is one on [jupiter]({{< relref "wiki/Jupiter.md" >}}), it may make sense to
     try <link>bismark-testbed:metis</link>
 3.  Establish working tunnels in the
-    <link>bismark-testbed:testlab</link> (there is already an openvpn
+    [testlab]({{< relref "wiki/Testlab.md" >}}) (there is already an openvpn
     tunnel using psk at teklibre.com)
 4.  Establish working tunnels to other locations
 5.  Test performance, scalability, security and reliability
@@ -51,7 +51,7 @@ been obsoleted by a change to openssl and openwrt regarding how to
 generate client certs properly.
 
 openvpn appeared to be working with psk between
-<link>bismark-testbed:jupiter</link> and
+[jupiter]({{< relref "wiki/Jupiter.md" >}}) and
 <link>bismark-testbed:aitne</link>. Certs are better, as in particular,
 they can be revoked after a compromise. Theoretically.
 

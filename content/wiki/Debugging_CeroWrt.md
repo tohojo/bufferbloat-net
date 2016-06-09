@@ -10,12 +10,12 @@ Debugging CeroWrt
 If you wish to help us debug CeroWrt, we recommend that you use the
 *cerostats.sh* script to collect configuration and diagnostic
 information from the router. This script is part of the
-<link>CeroWrtScripts|CeroWrtScripts bundle.</link>
+[CeroWrtScripts]({{< relref "wiki/CeroWrtScripts.md" >}})
 
 The easiest way to use the script is to clone the
-<link>CeroWrtScripts|bundle</link> onto the router ahead of time, so you
+[CeroWrtScripts]({{< relref "wiki/CeroWrtScripts.md" >}}) onto the router ahead of time, so you
 can run the script when trouble arises.
-The <link>CeroWrtScripts|CeroWrtScripts page</link> describes how to
+The [CeroWrtScripts]({{< relref "wiki/CeroWrtScripts.md" >}}) describes how to
 clone those files into your router. When it's there, you can enter these
 commands:
 

@@ -74,7 +74,7 @@ What can I do about Bufferbloat?
 --------------------------------
 
 We have created a set of recommendations for eliminating Bufferbloat at
-<link>What to do about Bufferbloat</link>
+[What to do about Bufferbloat]({{< relref "wiki/What_to_do_about_Bufferbloat.md" >}})
 
 Other tools for measuring network performance and latency
 ---------------------------------------------------------
@@ -92,9 +92,9 @@ Other tools for measuring network performance and latency
     It is better, though, because it continually monitors your ping
     latency, and thus lets you know the performance and latency of each
     direction of data transfer. It is part of the
-    <link>CeroWrtScripts|CeroWrtScripts bundle.</link>
+    [CeroWrtScripts]({{< relref "wiki/CeroWrtScripts.md" >}})
 3.  The **netperfrunner.sh** script (also part of the
-    <link>CeroWrtScripts|CeroWrtScripts bundle</link>) simulates the
+    [CeroWrtScripts]({{< relref "wiki/CeroWrtScripts.md" >}})) simulates the
     [RRUL
     test](https://www.bufferbloat.net/projects/codel/wiki/RRUL_test_suite)
     by creating four simultaneous upload and download streams. This

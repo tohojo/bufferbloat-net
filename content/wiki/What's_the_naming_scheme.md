@@ -7,8 +7,8 @@ lastmod: 2011-08-11T15:46:03
 What's the naming scheme?
 =========================
 
-All <link>testlab</link> machines orbit around the gateway box,
-<link>Jupiter</link>. When I setup the first testlab in May, Jupiter had
+All [testlab]({{< relref "wiki/Testlab.md" >}}) machines orbit around the gateway box,
+[Jupiter]({{< relref "wiki/Jupiter.md" >}}). When I setup the first testlab in May, Jupiter had
 only 63 moons. [Now Jupiter has 64
 moons](http://en.wikipedia.org/wiki/Moons_of_Jupiter) (mostly captured
 asteriods), so I would hope that would be enough names to use.

@@ -16,7 +16,7 @@ amount of driver support to enable.
 
 This is a partial list of the known BQL-enabled device drivers for Linux
 as of version 3.14. Also see the list at
-<link>codel:Best\_practices\_for\_benchmarking\_Codel\_and\_FQ\_Codel\#Enabling-Byte-Queue-Limits</link>
+[Best practices for benchmarking Codel and FQ Codel]({{< relref "wiki/Best_practices_for_benchmarking_Codel_and_FQ_Codel.md" >}})
 
 -   Intel e1000e, e1000, ixgbe, ivb40evf,i40e
 -   Atheros ar71xx, alx
