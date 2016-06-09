@@ -1,6 +1,6 @@
 
 ---
-title: Optimizing_for_80211n
+title: Optimizing for 80211n
 date: 2011-11-01T23:01:11
 lastmod: 2011-11-02T01:01:55
 ---

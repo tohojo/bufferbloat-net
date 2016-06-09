@@ -1,6 +1,6 @@
 
 ---
-title: Setting_up_a_Measurement_Server
+title: Setting up a Measurement Server
 date: 2011-04-19T11:16:14
 lastmod: 2011-04-28T09:08:39
 ---

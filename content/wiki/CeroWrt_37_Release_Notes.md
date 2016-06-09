@@ -1,6 +1,6 @@
 
 ---
-title: CeroWrt_37_Release_Notes
+title: CeroWrt 37 Release Notes
 date: 2013-03-11T07:13:57
 lastmod: 2014-07-25T02:46:56
 ---

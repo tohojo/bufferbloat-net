@@ -1,6 +1,6 @@
 
 ---
-title: Fq_Codel_on_Wireless
+title: Fq Codel on Wireless
 date: 2012-07-03T14:07:50
 lastmod: 2014-08-03T08:36:08
 ---

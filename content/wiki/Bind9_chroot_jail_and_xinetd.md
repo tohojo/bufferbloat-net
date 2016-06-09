@@ -1,6 +1,6 @@
 
 ---
-title: Bind9_chroot_jail_and_xinetd
+title: Bind9 chroot jail and xinetd
 date: 2011-09-05T10:48:10
 lastmod: 2011-09-05T10:48:10
 ---

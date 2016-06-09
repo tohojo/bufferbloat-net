@@ -1,6 +1,6 @@
 
 ---
-title: Mitigations_and_Solutions_for_Home_Gateways
+title: Mitigations and Solutions for Home Gateways
 date: 2011-02-02T17:47:22
 lastmod: 2011-02-02T17:47:22
 ---

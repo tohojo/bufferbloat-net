@@ -1,6 +1,6 @@
 
 ---
-title: Reconciling_codel_variants
+title: Reconciling codel variants
 date: 2012-08-11T21:53:21
 lastmod: 2012-08-13T15:13:18
 ---

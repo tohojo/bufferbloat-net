@@ -1,6 +1,6 @@
 
 ---
-title: Ssh_configured_on_port_222
+title: Ssh configured on port 222
 date: 2011-04-19T05:50:01
 lastmod: 2011-04-19T05:52:02
 ---

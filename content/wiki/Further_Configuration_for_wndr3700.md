@@ -1,6 +1,6 @@
 
 ---
-title: Further_Configuration_for_wndr3700
+title: Further Configuration for wndr3700
 date: 2011-07-09T09:31:29
 lastmod: 2011-07-09T09:37:15
 ---

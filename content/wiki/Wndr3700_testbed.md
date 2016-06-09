@@ -1,6 +1,6 @@
 
 ---
-title: Wndr3700_testbed
+title: Wndr3700 testbed
 date: 2011-04-07T07:15:10
 lastmod: 2011-04-07T09:54:29
 ---

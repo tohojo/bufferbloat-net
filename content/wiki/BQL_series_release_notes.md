@@ -1,6 +1,6 @@
 
 ---
-title: BQL_series_release_notes
+title: BQL series release notes
 date: 2012-01-30T14:20:17
 lastmod: 2012-03-01T18:19:59
 ---

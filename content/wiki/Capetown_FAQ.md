@@ -1,6 +1,6 @@
 
 ---
-title: Capetown_FAQ
+title: Capetown FAQ
 date: 2011-05-18T10:43:58
 lastmod: 2011-05-18T12:02:13
 ---

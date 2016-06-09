@@ -1,6 +1,6 @@
 
 ---
-title: How_is_CeroWrt_different_from_OpenWrt
+title: How is CeroWrt different from OpenWrt
 date: 2013-03-16T11:51:40
 lastmod: 2014-07-29T14:56:05
 ---

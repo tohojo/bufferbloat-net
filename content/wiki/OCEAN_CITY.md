@@ -1,6 +1,6 @@
 
 ---
-title: OCEAN_CITY
+title: OCEAN CITY
 date: 2011-07-09T08:20:38
 lastmod: 2012-03-17T09:32:25
 ---

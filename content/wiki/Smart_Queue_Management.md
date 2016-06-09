@@ -1,6 +1,6 @@
 
 ---
-title: Smart_Queue_Management
+title: Smart Queue Management
 date: 2013-12-29T01:38:45
 lastmod: 2014-03-23T00:50:14
 ---

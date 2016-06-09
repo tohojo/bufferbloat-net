@@ -1,6 +1,6 @@
 
 ---
-title: Flashing_instruction_for_Linux
+title: Flashing instruction for Linux
 date: 2011-05-28T07:47:25
 lastmod: 2011-07-18T15:06:42
 ---

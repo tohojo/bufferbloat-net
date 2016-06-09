@@ -1,6 +1,6 @@
 
 ---
-title: Everything_you_wanted_to_know_about_Link_Layer_Adaptation
+title: Everything you wanted to know about Link Layer Adaptation
 date: 2014-01-11T07:30:01
 lastmod: 2014-01-11T08:43:18
 ---

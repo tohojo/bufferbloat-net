@@ -1,6 +1,6 @@
 
 ---
-title: Setting_QoS_If_You_Can't_Use_CoDel
+title: Setting QoS If You Can't Use CoDel
 date: 2013-04-03T13:52:15
 lastmod: 2014-03-18T11:05:42
 ---

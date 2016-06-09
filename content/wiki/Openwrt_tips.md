@@ -1,6 +1,6 @@
 
 ---
-title: Openwrt_tips
+title: Openwrt tips
 date: 2011-05-08T10:45:26
 lastmod: 2011-05-08T10:45:26
 ---

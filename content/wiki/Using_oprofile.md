@@ -1,6 +1,6 @@
 
 ---
-title: Using_oprofile
+title: Using oprofile
 date: 2011-06-04T05:27:50
 lastmod: 2011-06-04T05:35:04
 ---

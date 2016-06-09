@@ -1,6 +1,6 @@
 
 ---
-title: Setting_up_an_interior_gateway_router
+title: Setting up an interior gateway router
 date: 2014-03-26T09:01:50
 lastmod: 2014-09-12T13:23:36
 ---

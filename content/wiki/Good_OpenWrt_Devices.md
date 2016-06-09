@@ -1,6 +1,6 @@
 
 ---
-title: Good_OpenWrt_Devices
+title: Good OpenWrt Devices
 date: 2012-06-13T08:54:06
 lastmod: 2015-06-26T07:31:38
 ---

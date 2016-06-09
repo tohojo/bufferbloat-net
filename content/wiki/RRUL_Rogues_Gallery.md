@@ -1,6 +1,6 @@
 
 ---
-title: RRUL_Rogues_Gallery
+title: RRUL Rogues Gallery
 date: 2013-01-14T13:13:11
 lastmod: 2013-08-11T17:28:30
 ---

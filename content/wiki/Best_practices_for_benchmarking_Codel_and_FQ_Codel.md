@@ -1,6 +1,6 @@
 
 ---
-title: Best_practices_for_benchmarking_Codel_and_FQ_Codel
+title: Best practices for benchmarking Codel and FQ Codel
 date: 2012-12-11T05:35:13
 lastmod: 2015-05-26T16:19:09
 ---

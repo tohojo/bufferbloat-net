@@ -1,6 +1,6 @@
 
 ---
-title: Device_naming_scheme
+title: Device naming scheme
 date: 2011-07-09T11:10:04
 lastmod: 2013-03-16T11:19:18
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Setting_up_AQM_for_CeroWrt_310
+title: Setting up AQM for CeroWrt 310
 date: 2013-12-18T19:11:23
 lastmod: 2014-03-18T10:59:22
 ---

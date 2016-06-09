@@ -1,6 +1,6 @@
 
 ---
-title: Minstrel_Wireless_Rate_Selection
+title: Minstrel Wireless Rate Selection
 date: 2012-07-08T12:42:28
 lastmod: 2012-07-08T12:42:28
 ---

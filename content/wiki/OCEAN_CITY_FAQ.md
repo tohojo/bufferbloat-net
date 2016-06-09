@@ -1,6 +1,6 @@
 
 ---
-title: OCEAN_CITY_FAQ
+title: OCEAN CITY FAQ
 date: 2011-06-24T13:33:52
 lastmod: 2012-01-28T17:59:31
 ---

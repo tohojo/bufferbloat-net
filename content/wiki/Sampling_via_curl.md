@@ -1,6 +1,6 @@
 
 ---
-title: Sampling_via_curl
+title: Sampling via curl
 date: 2011-04-04T08:30:33
 lastmod: 2011-04-04T08:30:33
 ---

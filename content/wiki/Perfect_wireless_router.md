@@ -1,6 +1,6 @@
 
 ---
-title: Perfect_wireless_router
+title: Perfect wireless router
 date: 2011-03-22T06:20:17
 lastmod: 2011-04-21T04:20:16
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Automated_Configuration_of_CeroWrt
+title: Automated Configuration of CeroWrt
 date: 2013-03-16T11:08:06
 lastmod: 2014-05-29T13:06:27
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Dtaht_test_rig
+title: Dtaht test rig
 date: 2011-02-03T07:41:48
 lastmod: 2011-02-03T07:41:48
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Building_Cerowrt_on_your_own_machine
+title: Building Cerowrt on your own machine
 date: 2011-07-31T10:33:54
 lastmod: 2013-06-27T12:31:45
 ---

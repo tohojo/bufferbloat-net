@@ -1,6 +1,6 @@
 
 ---
-title: Cool_things_to_do_with_your_bismark_router
+title: Cool things to do with your bismark router
 date: 2011-05-19T16:47:18
 lastmod: 2011-05-19T16:47:18
 ---

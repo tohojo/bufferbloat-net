@@ -1,6 +1,6 @@
 
 ---
-title: Huchra_openwrt_build_procedure
+title: Huchra openwrt build procedure
 date: 2011-05-13T07:08:39
 lastmod: 2011-05-13T07:11:18
 ---

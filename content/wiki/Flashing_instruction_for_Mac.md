@@ -1,6 +1,6 @@
 
 ---
-title: Flashing_instruction_for_Mac
+title: Flashing instruction for Mac
 date: 2011-04-06T10:47:38
 lastmod: 2011-05-29T06:15:22
 ---

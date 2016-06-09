@@ -1,6 +1,6 @@
 
 ---
-title: Irc_clients
+title: Irc clients
 date: 2011-07-08T12:41:58
 lastmod: 2011-07-08T12:41:58
 ---

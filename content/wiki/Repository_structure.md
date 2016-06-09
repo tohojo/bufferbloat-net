@@ -1,6 +1,6 @@
 
 ---
-title: Repository_structure
+title: Repository structure
 date: 2011-05-28T06:39:42
 lastmod: 2011-05-28T06:40:16
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Daves_Media_Guidance
+title: Daves Media Guidance
 date: 2015-09-28T11:11:19
 lastmod: 2015-10-15T09:33:20
 ---

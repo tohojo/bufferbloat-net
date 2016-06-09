@@ -1,6 +1,6 @@
 
 ---
-title: Experiment_-_TCP_cubic_vs_TCP_vegas
+title: Experiment - TCP cubic vs TCP vegas
 date: 2011-02-02T07:59:43
 lastmod: 2011-02-02T12:00:17
 ---

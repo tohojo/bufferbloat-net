@@ -1,6 +1,6 @@
 
 ---
-title: Setting_QoS
+title: Setting QoS
 date: 2013-03-27T16:49:23
 lastmod: 2013-03-27T17:01:15
 ---

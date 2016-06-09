@@ -1,6 +1,6 @@
 
 ---
-title: Parallel_device_flashing_from_factory_firmware
+title: Parallel device flashing from factory firmware
 date: 2011-07-15T11:54:54
 lastmod: 2011-07-15T14:41:05
 ---

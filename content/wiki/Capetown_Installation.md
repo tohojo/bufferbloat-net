@@ -1,6 +1,6 @@
 
 ---
-title: Capetown_Installation
+title: Capetown Installation
 date: 2011-05-11T11:26:18
 lastmod: 2011-05-11T12:43:48
 ---

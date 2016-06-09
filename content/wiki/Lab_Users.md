@@ -1,6 +1,6 @@
 
 ---
-title: Lab_Users
+title: Lab Users
 date: 2011-07-12T09:39:36
 lastmod: 2011-07-12T13:17:46
 ---

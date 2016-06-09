@@ -1,6 +1,6 @@
 
 ---
-title: What's_the_naming_scheme
+title: What's the naming scheme
 date: 2011-08-11T15:23:13
 lastmod: 2011-08-11T15:46:03
 ---

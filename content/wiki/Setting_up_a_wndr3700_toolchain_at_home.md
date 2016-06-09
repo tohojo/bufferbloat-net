@@ -1,6 +1,6 @@
 
 ---
-title: Setting_up_a_wndr3700_toolchain_at_home
+title: Setting up a wndr3700 toolchain at home
 date: 2011-04-16T07:23:25
 lastmod: 2011-04-29T19:19:08
 ---

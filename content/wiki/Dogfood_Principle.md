@@ -1,6 +1,6 @@
 
 ---
-title: Dogfood_Principle
+title: Dogfood Principle
 date: 2011-01-27T06:29:23
 lastmod: 2012-03-27T09:10:15
 ---

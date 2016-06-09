@@ -1,6 +1,6 @@
 
 ---
-title: Build_cluster_machines_wanted
+title: Build cluster machines wanted
 date: 2012-08-13T09:12:23
 lastmod: 2012-08-13T09:15:48
 ---

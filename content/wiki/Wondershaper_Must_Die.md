@@ -1,6 +1,6 @@
 
 ---
-title: Wondershaper_Must_Die
+title: Wondershaper Must Die
 date: 2013-12-29T01:50:36
 lastmod: 2015-05-25T18:37:25
 ---

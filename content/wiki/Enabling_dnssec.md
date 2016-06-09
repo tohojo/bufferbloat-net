@@ -1,6 +1,6 @@
 
 ---
-title: Enabling_dnssec
+title: Enabling dnssec
 date: 2011-09-07T00:27:59
 lastmod: 2011-09-07T00:27:59
 ---

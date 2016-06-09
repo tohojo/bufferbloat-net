@@ -1,6 +1,6 @@
 
 ---
-title: Dealing_with_smoketests
+title: Dealing with smoketests
 date: 2011-09-15T17:06:20
 lastmod: 2011-09-15T17:06:20
 ---

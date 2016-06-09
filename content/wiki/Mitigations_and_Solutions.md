@@ -1,6 +1,6 @@
 
 ---
-title: Mitigations_and_Solutions
+title: Mitigations and Solutions
 date: 2011-02-02T17:43:21
 lastmod: 2011-04-11T09:55:44
 ---

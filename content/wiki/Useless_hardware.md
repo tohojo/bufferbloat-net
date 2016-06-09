@@ -1,6 +1,6 @@
 
 ---
-title: Useless_hardware
+title: Useless hardware
 date: 2011-03-20T09:58:58
 lastmod: 2011-09-27T02:54:58
 ---

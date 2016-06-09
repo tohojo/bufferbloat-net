@@ -1,6 +1,6 @@
 
 ---
-title: Build_configuration
+title: Build configuration
 date: 2011-03-20T09:03:33
 lastmod: 2011-07-01T14:40:20
 ---

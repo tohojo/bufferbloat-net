@@ -1,6 +1,6 @@
 
 ---
-title: OCEAN_CITY_old_News_item_-_rc6_(beta_2)_is_suitable_for_beta_testing
+title: OCEAN CITY old News item - rc6 (beta 2) is suitable for beta testing
 date: 2012-03-17T09:19:24
 lastmod: 2012-03-17T09:19:24
 ---

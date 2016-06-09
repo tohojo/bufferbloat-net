@@ -1,6 +1,6 @@
 
 ---
-title: Architecture_Notes
+title: Architecture Notes
 date: 2011-06-04T14:52:47
 lastmod: 2011-06-24T13:31:46
 ---

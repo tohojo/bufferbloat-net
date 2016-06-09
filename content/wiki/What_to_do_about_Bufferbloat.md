@@ -1,6 +1,6 @@
 
 ---
-title: What_to_do_about_Bufferbloat
+title: What to do about Bufferbloat
 date: 2015-03-25T21:45:33
 lastmod: 2015-11-17T08:16:12
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Sharing_Windows_Files_from_wired_to_wireless
+title: Sharing Windows Files from wired to wireless
 date: 2011-11-30T23:36:17
 lastmod: 2013-06-18T02:37:21
 ---

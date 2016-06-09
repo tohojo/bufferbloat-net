@@ -1,6 +1,6 @@
 
 ---
-title: Why_42
+title: Why 42
 date: 2012-09-07T17:10:04
 lastmod: 2012-09-07T18:43:18
 ---

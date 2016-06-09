@@ -1,6 +1,6 @@
 
 ---
-title: Getting_time_from_gpsd
+title: Getting time from gpsd
 date: 2012-03-01T11:12:42
 lastmod: 2012-03-01T11:13:36
 ---

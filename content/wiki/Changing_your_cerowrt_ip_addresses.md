@@ -1,6 +1,6 @@
 
 ---
-title: Changing_your_cerowrt_ip_addresses
+title: Changing your cerowrt ip addresses
 date: 2011-09-15T16:42:56
 lastmod: 2014-09-23T03:55:17
 ---

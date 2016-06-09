@@ -1,6 +1,6 @@
 
 ---
-title: Configuring_network_manager
+title: Configuring network manager
 date: 2011-09-15T16:12:49
 lastmod: 2011-09-15T16:13:17
 ---

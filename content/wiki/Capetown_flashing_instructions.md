@@ -1,6 +1,6 @@
 
 ---
-title: Capetown_flashing_instructions
+title: Capetown flashing instructions
 date: 2011-05-29T06:13:40
 lastmod: 2011-07-18T15:29:00
 ---

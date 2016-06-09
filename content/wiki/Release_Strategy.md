@@ -1,6 +1,6 @@
 
 ---
-title: Release_Strategy
+title: Release Strategy
 date: 2012-02-13T14:40:14
 lastmod: 2012-02-13T17:34:02
 ---

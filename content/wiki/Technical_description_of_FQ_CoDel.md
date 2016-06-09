@@ -1,6 +1,6 @@
 
 ---
-title: Technical_description_of_FQ_CoDel
+title: Technical description of FQ CoDel
 date: 2014-02-10T07:49:12
 lastmod: 2015-08-18T21:40:53
 ---

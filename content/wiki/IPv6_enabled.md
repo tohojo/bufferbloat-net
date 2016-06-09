@@ -1,6 +1,6 @@
 
 ---
-title: IPv6_enabled
+title: IPv6 enabled
 date: 2011-04-27T09:12:53
 lastmod: 2011-04-27T09:12:53
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: More_advanced_Diffserv_support_in_Linux
+title: More advanced Diffserv support in Linux
 date: 2011-06-19T15:05:50
 lastmod: 2011-06-20T05:06:27
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Cerowrt_router_configuration
+title: Cerowrt router configuration
 date: 2012-03-01T17:28:16
 lastmod: 2013-03-27T17:00:16
 ---

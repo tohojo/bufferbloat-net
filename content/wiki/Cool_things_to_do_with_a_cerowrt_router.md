@@ -1,6 +1,6 @@
 
 ---
-title: Cool_things_to_do_with_a_cerowrt_router
+title: Cool things to do with a cerowrt router
 date: 2012-02-04T18:15:00
 lastmod: 2012-04-08T10:27:43
 ---

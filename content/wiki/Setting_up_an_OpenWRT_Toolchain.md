@@ -1,6 +1,6 @@
 
 ---
-title: Setting_up_an_OpenWRT_Toolchain
+title: Setting up an OpenWRT Toolchain
 date: 2011-04-08T13:19:36
 lastmod: 2011-05-28T06:39:07
 ---

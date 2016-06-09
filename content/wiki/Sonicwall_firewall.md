@@ -1,6 +1,6 @@
 
 ---
-title: Sonicwall_firewall
+title: Sonicwall firewall
 date: 2012-04-11T04:32:27
 lastmod: 2012-04-11T04:32:27
 ---

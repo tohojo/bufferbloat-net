@@ -1,6 +1,6 @@
 
 ---
-title: Installation_Guide
+title: Installation Guide
 date: 2012-01-28T15:53:50
 lastmod: 2014-07-28T15:02:27
 ---

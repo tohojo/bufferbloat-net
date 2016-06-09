@@ -1,6 +1,6 @@
 
 ---
-title: Cerowrt_flashing_instructions
+title: Cerowrt flashing instructions
 date: 2011-07-09T09:25:57
 lastmod: 2014-10-01T10:49:37
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Cosmic_background_bufferbloat_detector
+title: Cosmic background bufferbloat detector
 date: 2011-09-05T14:30:18
 lastmod: 2011-09-05T14:30:18
 ---

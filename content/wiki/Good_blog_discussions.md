@@ -1,6 +1,6 @@
 
 ---
-title: Good_blog_discussions
+title: Good blog discussions
 date: 2011-01-26T19:38:11
 lastmod: 2011-02-06T17:32:40
 ---

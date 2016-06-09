@@ -47,12 +47,13 @@ for c in content:
 for p in pages:
     if not p['wiki_id'] in interesting_wikis:
         continue
-    title = re.sub("[^a-z0-9-]", "_", p['title'].replace(" ","-"), 0, re.I)
-    titlemap[title] = p['title']
+    title = p['title'].replace("_", " ")
+    name = p['title']
+    titlemap[name] = title
     c = content_map[p['id']]
     text = c['text'].replace("[[", "<link>").replace("]]","</link>")
-    outfile = "textile/{}.textile".format(title)
-    mdfile = "textile/{}.md".format(title)
+    outfile = "textile/{}.textile".format(name)
+    mdfile = "textile/{}.md".format(name)
 
     date = p['created_on'].split(".")[0].replace(" ","T")
     updated = c['updated_on'].split(".")[0].replace(" ","T")
@@ -61,9 +62,9 @@ for p in pages:
         fp.write(text)
     subprocess.run(['pandoc', outfile, '-o', mdfile])
     mdtext = open(mdfile).read()
-    mdtext = header.format(title=p['title'], date=date, updated=updated) + mdtext
+    mdtext = header.format(title=title, date=date, updated=updated) + mdtext
 
-    with open(os.path.join(outdir, "{}.md".format(title)), "w") as fp:
+    with open(os.path.join(outdir, "{}.md".format(name)), "w") as fp:
         fp.write(mdtext)
 
 json.dump(titlemap, open("titlemap.json", "w"))

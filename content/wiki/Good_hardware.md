@@ -1,6 +1,6 @@
 
 ---
-title: Good_hardware
+title: Good hardware
 date: 2011-03-20T10:06:21
 lastmod: 2011-03-20T10:14:03
 ---

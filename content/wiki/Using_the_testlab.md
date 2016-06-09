@@ -1,6 +1,6 @@
 
 ---
-title: Using_the_testlab
+title: Using the testlab
 date: 2011-08-11T15:27:25
 lastmod: 2011-09-13T14:15:47
 ---

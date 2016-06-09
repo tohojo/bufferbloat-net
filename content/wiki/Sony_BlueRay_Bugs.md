@@ -1,6 +1,6 @@
 
 ---
-title: Sony_BlueRay_Bugs
+title: Sony BlueRay Bugs
 date: 2014-03-26T10:39:41
 lastmod: 2014-03-26T10:41:21
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Previous_Dedications
+title: Previous Dedications
 date: 2014-01-12T15:23:51
 lastmod: 2014-01-12T18:20:43
 ---

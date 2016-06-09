@@ -1,6 +1,6 @@
 
 ---
-title: Upcoming_Talks
+title: Upcoming Talks
 date: 2014-10-12T12:53:40
 lastmod: 2015-01-11T19:55:04
 ---

@@ -1,6 +1,6 @@
 
 ---
-title: Tuning_your_CeroWrt_default_gateway
+title: Tuning your CeroWrt default gateway
 date: 2014-03-26T09:56:40
 lastmod: 2014-03-26T10:46:49
 ---

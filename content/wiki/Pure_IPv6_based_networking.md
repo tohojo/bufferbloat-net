@@ -1,6 +1,6 @@
 
 ---
-title: Pure_IPv6_based_networking
+title: Pure IPv6 based networking
 date: 2012-03-07T12:12:43
 lastmod: 2012-03-08T09:24:04
 ---

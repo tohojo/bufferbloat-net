@@ -1,6 +1,6 @@
 
 ---
-title: Wireless_Battle_Mesh
+title: Wireless Battle Mesh
 date: 2011-02-08T07:18:09
 lastmod: 2011-02-08T07:18:09
 ---

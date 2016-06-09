@@ -1,6 +1,6 @@
 
 ---
-title: Linux_Tips
+title: Linux Tips
 date: 2011-02-02T07:37:05
 lastmod: 2013-07-27T11:50:28
 ---

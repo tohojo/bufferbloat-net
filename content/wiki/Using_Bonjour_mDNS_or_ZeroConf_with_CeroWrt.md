@@ -1,6 +1,6 @@
 
 ---
-title: Using_Bonjour_mDNS_or_ZeroConf_with_CeroWrt
+title: Using Bonjour mDNS or ZeroConf with CeroWrt
 date: 2012-09-10T19:23:47
 lastmod: 2013-03-16T12:05:08
 ---
