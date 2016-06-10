@@ -2,6 +2,6 @@ baseurl: "https://kau.toke.dk/bufferbloat-archive/"
 languageCode: "en-us"
 title: "Bufferbloat.net archive"
 disable404: true
-relativeURLs: true
+relativeURLs: false
 params:
   author: The Bufferbloat community
