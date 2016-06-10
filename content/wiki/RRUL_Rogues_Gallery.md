@@ -7,8 +7,6 @@ lastmod: 2013-08-11T17:28:30
 RRUL Rogues Gallery
 ===================
 
-{{&gt;toc}}
-
 This is a web page dedicated to showing off and explaining some results
 obtained via (early) prototypes of the [RRUL test suite]({{< relref "wiki/RRUL_test_suite.md" >}}).
 

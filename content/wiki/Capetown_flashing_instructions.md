@@ -12,6 +12,6 @@ http://mirrors.projectbismark.net/downloads/beta/openwrt-ar71xx-generic-wndr3700
 
 \# Follow the flashing instructions
 
--   [Flashing instruction for Linux]({{< relref "wiki/Flashing_instruction_for_Linux.md" >}})
--   [Flashing instruction for Mac]({{< relref "wiki/Flashing_instruction_for_Mac.md" >}})
+-   [Linux]({{< relref "wiki/Flashing_instruction_for_Linux.md" >}})
+-   [Mac]({{< relref "wiki/Flashing_instruction_for_Mac.md" >}})
 

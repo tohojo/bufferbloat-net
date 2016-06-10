@@ -70,7 +70,7 @@ The ipv6 subnets follow a similar scheme, except in hexadecimal
 2001:4f8:fff8:0X00::/56 per router, where X = the X in the ipv4 address.
 
 [What's the naming scheme]({{< relref "wiki/What's_the_naming_scheme.md" >}})? Some more details on the
-[machines]({{< relref "wiki/Machines.md" >}})
+[testlab machines]({{< relref "wiki/Machines.md" >}})
 
 Note this document becomes inaccurate about 5 minutes after written.
 

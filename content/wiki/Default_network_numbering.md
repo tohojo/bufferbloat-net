@@ -92,6 +92,6 @@ split across multiple subnetworks like this.
 
 ### See also
 
-[Device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})\
-[Changing your cerowrt ip addresses]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}})\
+[Default naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})\
+[Changing IP, DNS, and SSID]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}})\
 [Automated Configuration of CeroWrt]({{< relref "wiki/Automated_Configuration_of_CeroWrt.md" >}})

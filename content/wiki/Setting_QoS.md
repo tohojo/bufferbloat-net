@@ -54,7 +54,7 @@ use\
 netperf to various sites supporting it to get a reasonable value.
 
 -   Use these values to fill in the Download and Upload speed fields in
-    the [CeroWrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) It is
+    the [CeroWrt web GUI.]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) It is
     best to use values a few percentage points lower than what the
     bandwidth test shows you. For example, if the value is 2450
     kbit/sec, you could set it for 2300 kbit/sec.
@@ -64,7 +64,7 @@ netperf to various sites supporting it to get a reasonable value.
 AQM doesn't seem to do any good! I can't do a big upload/download and make a phone call!
 ----------------------------------------------------------------------------------------
 
-Decrease the Upload and Download speeds somewhat [CeroWrt router configuration]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) until you can do both. You should
+Decrease the Upload and Download speeds somewhat [in the web GUI]({{< relref "wiki/Cerowrt_router_configuration.md" >}}) until you can do both. You should
 make adjustments in 256kb increments (or do a binary search between 60%
 and 100% of your provisioned bandwidth).
 

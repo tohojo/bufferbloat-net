@@ -13,8 +13,8 @@ THIS DOCUMENT IS OBSOLETE
 See the [OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}}) page.
 
 Objective: Provide a viable substrate for future releases of
-[wiki]({{< relref "wiki/Wiki.md" >}}), [wiki]({{< relref "wiki/Wiki.md" >}}), and
-[Wiki]({{< relref "wiki/Wiki.md" >}}).
+[Bismark]({{< relref "wiki/Wiki.md" >}}), [ISCWRT]({{< relref "wiki/Wiki.md" >}}), and
+[WISP6]({{< relref "wiki/Wiki.md" >}}).
 
 Core Requirements
 -----------------

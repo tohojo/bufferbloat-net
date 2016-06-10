@@ -25,8 +25,8 @@ OpenWrt and CeroWrt:
 -   all interfaces are routed, not bridged,
 -   there is a full blown dns server, with mDNS/Bonjour enabled for ease
     of device/service discovery,
--   the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) and
-    [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}})
+-   the [default naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) and
+    [default numbering scheme]({{< relref "wiki/Default_network_numbering.md" >}})
     differ significantly from what you may be used to.
 
 The [Onboard
@@ -75,8 +75,8 @@ If you are running this inside your network, and not as your default gw,
 configure your default gw to statically assign an ip address, and route
 your subnet to the CeroWrt router, and turn off NAT.
 
-See also the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})
-and [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}})
+See also the [default naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})
+and [default numbering scheme]({{< relref "wiki/Default_network_numbering.md" >}})
 pages for more information.
 
 ### Device/Interface Naming
@@ -93,8 +93,8 @@ noted above, each of these interfaces has a /27 subnet assigned. Thus:
 -   gw10 is a Guest Wireless interface at 5.x GHz;
 -   etc.
 
-See also the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})
-and [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}})
+See also the [default naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}})
+and [default numbering scheme]({{< relref "wiki/Default_network_numbering.md" >}})
 pages for more information.
 
 ### QoS - Be sure to set it

@@ -63,7 +63,7 @@ All major bits of code (e.g. redmine) are running under a form of
 fastcgi (fcgid), which load balances and scales up and down well with
 minimal memory use.
 
-[Experiment - TCP cubic vs TCP vegas]({{< relref "wiki/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}}) is
+[TCP Vegas]({{< relref "wiki/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}}) is
 under consideration.
 
 The (low-power) dedicated servers currently running are donated by
@@ -71,4 +71,4 @@ The (low-power) dedicated servers currently running are donated by
 
 If you encounter problems, please send an email to support AT
 bufferbloat.net, detailing your configuration, and a traceroute.You can
-also take steps to [Experiments]({{< relref "wiki/Experiments.md" >}}).
+also take steps to [Diagnose your bufferbloat]({{< relref "wiki/Experiments.md" >}}).

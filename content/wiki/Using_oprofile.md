@@ -7,7 +7,7 @@ lastmod: 2011-06-04T05:35:04
 Using oprofile
 ==============
 
-There is a development build of [wiki]({{< relref "wiki/Wiki.md" >}})
+There is a development build of [Cerowrt]({{< relref "wiki/Wiki.md" >}})
 available at:
 
 http://huchra.bufferbloat.net/\~cerowrt/cerowrt-dbg

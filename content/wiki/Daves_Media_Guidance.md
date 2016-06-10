@@ -7,8 +7,6 @@ lastmod: 2015-10-15T09:33:20
 Dave Taht's Media Guidance
 ==========================
 
-{{&gt;toc}}
-
 With the upcoming publication of the [CeroWrt letter to the FCC on the
 Wifi lockdown
 issue](http://fqcodel.bufferbloat.net/~d/fcc_saner_software_practices.pdf)

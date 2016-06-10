@@ -7,8 +7,6 @@ lastmod: 2014-07-29T15:28:07
 CeroWrt 3.10 Release Notes
 ==========================
 
-{{&gt;toc}}
-
 **CeroWrt 3.10 Beta Test Release Notes**
 
 Current version is **3.10.50-1**, built on 28 July 2014. The current
@@ -55,7 +53,7 @@ components of the stack.
 -   Improved DNS handling by incorporating dnsmasq for both DNS and
     DHCP support. CeroWrt 3.10 enables DNSSEC by default, but see note
     in the Status section.
--   Incorporates [CeroWrt and BCP38]({{< relref "wiki/CeroWrt_and_BCP38.md" >}}) (BCP38) to defeat Denial of Service attacks which employ
+-   Incorporates [Best Common Practices     38]({{< relref "wiki/CeroWrt_and_BCP38.md" >}}) (BCP38) to defeat Denial of Service attacks which employ
     IP Source Address Spoofing.
 -   Adequate entropy for the random number generators, for better
     encryption (WPA, SSL), ethernet drivers, etc.
@@ -120,7 +118,7 @@ do so as well.
 -   Linux 3.10 kernel which has incorporated many fixes to bufferbloat,
     as well as finding many long-standing errors in the TCP/IP stack.
 -   A GUI for setting Smart Queue Management (SQM) parameters for
-    slower links. See [Setting up SQM for CeroWrt 310]({{< relref "wiki/Setting_up_SQM_for_CeroWrt_310.md" >}}).
+    slower links. See [Setting     up SQM for CeroWrt 3.10]({{< relref "wiki/Setting_up_SQM_for_CeroWrt_310.md" >}}).
 -   CeroWrt defaults to fq\_codel on the ge00 (wide area) interface,
     using the simple.qos queue setup script
     (see /usr/lib/sqm/simplest.qos)
@@ -137,7 +135,7 @@ do so as well.
 
 -   Much work to support the current dnsmasq for both DNS naming as well
     as IPv4/IPv6 address assignment
--   [CeroWrt and BCP38]({{< relref "wiki/CeroWrt_and_BCP38.md" >}}) (BCP38) is
+-   [Best Common Practices 38]({{< relref "wiki/CeroWrt_and_BCP38.md" >}}) (BCP38) is
     on by defaut to defeat Denial of Service attacks which employ IP
     Source Address Spoofing.
 -   Deep scrutiny of the entire Linux networking stack has identified a

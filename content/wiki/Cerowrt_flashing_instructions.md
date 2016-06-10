@@ -126,7 +126,7 @@ Flashing instruction for Linux
     take a while to get a DHCP address, and you may temporarily see a
     link-local (e.g. 169.254.x.x) address.
 14. Continue reading the
-    [Cerowrt flashing instructions]({{< relref "wiki/Cerowrt_flashing_instructions.md" >}}) (below).
+    [Final Setup     Steps]({{< relref "wiki/Cerowrt_flashing_instructions.md" >}}) (below).
 
 Flashing Instructions for Mac
 -----------------------------
@@ -179,7 +179,7 @@ Flashing Instructions for Mac
     take a while to get a DHCP address, and you may temporarily see a
     link-local (e.g. 169.254.x.x) address.
 10. Continue reading the
-    [Cerowrt flashing instructions]({{< relref "wiki/Cerowrt_flashing_instructions.md" >}}) (below)
+    [Final Setup     Steps]({{< relref "wiki/Cerowrt_flashing_instructions.md" >}}) (below)
 
 Flashing Instructions for Windows 7
 -----------------------------------
@@ -291,7 +291,7 @@ Flashing Instructions for Windows 7
     take a while to get a DHCP address, and you may temporarily see a
     link-local (e.g. 169.254.x.x) address.
 13. Continue reading the
-    [Cerowrt flashing instructions]({{< relref "wiki/Cerowrt_flashing_instructions.md" >}}) (below)
+    [Final Setup     Steps]({{< relref "wiki/Cerowrt_flashing_instructions.md" >}}) (below)
 
 Final Setup Steps
 -----------------

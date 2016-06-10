@@ -16,7 +16,7 @@ Cool things to do with a CeroWRT router
 -   Run an authoritative DNS server -- it supports dynamic DNS and fully
     automatic DNSSEC signing. (The same CeroWRT router hosts about a
     dozen signed domains.)
--   Use it as a [IPv6 Tunnel]({{< relref "wiki/IPv6_Tunnel.md" >}}) and get your
+-   Use it as a [tunnel endpoint]({{< relref "wiki/IPv6_Tunnel.md" >}}) and get your
     house running IPv6
 -   Install your favorite shell and editor and use it as a shell server
 

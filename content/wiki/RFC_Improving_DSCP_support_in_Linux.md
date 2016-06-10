@@ -15,7 +15,7 @@ RFC: Improving DSCP support in Linux
 4.  <link>Save\_the\_Mice|Stop shooting system control packets</link>!
 5.  [Analysis of existing firewalls and shapers]({{< relref "wiki/Analysis_of_existing_firewalls_and_shapers.md" >}})
 
-You can also see these suggestions as [Diffserv RFC]({{< relref "wiki/Diffserv_RFC.md" >}}).
+You can also see these suggestions as [one big web page]({{< relref "wiki/Diffserv_RFC.md" >}}).
 
 This is very much a WIP and may at some point evolve into a more formal
 RFC and actual code.

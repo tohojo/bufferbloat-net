@@ -7,8 +7,6 @@ lastmod: 2015-05-26T16:19:09
 Best Practices for Benchmarking CoDel and FQ CoDel (and almost any other network subsystem!)
 ============================================================================================
 
-{{&gt;toc}}
-
 Document version: 1.5, May 26, 2014.
 
 The bufferbloat project has had trouble getting consistent repeatable

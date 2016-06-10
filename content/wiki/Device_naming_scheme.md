@@ -58,6 +58,6 @@ scheme.
 
 ### See also:
 
-[Default network numbering]({{< relref "wiki/Default_network_numbering.md" >}})\
-[Changing your cerowrt ip addresses]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}})\
+[Default network numbering scheme]({{< relref "wiki/Default_network_numbering.md" >}})\
+[Changing IP, DNS, and SSID]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}})\
 [Automated Configuration of CeroWrt]({{< relref "wiki/Automated_Configuration_of_CeroWrt.md" >}})

@@ -34,8 +34,8 @@ A: The characteristics of wired and wireless, as well as the
 sufficiently different to warrant making a clear distinction between
 them for <link>uberwrt:internal QoS</link> to work well.
 
-See the [device naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) and
-[default network numbering]({{< relref "wiki/Default_network_numbering.md" >}}) pages
+See the [default naming scheme]({{< relref "wiki/Device_naming_scheme.md" >}}) and
+[default numbering scheme]({{< relref "wiki/Default_network_numbering.md" >}}) pages
 for more information.
 
 How is routing done in CeroWrt, since the interfaces are routed rather than bridged?
@@ -97,12 +97,12 @@ router' to include your own web pages and interfaces.
 Why 172.30.42.0/27 subnet?
 --------------------------
 
-A: Please refer to the [Default network numbering]({{< relref "wiki/Default_network_numbering.md" >}}) page.
+A: Please refer to the [default network numbering]({{< relref "wiki/Default_network_numbering.md" >}}) page.
 
 What's this babel thing?
 ------------------------
 
-A: [Wiki]({{< relref "wiki/Wiki.md" >}}).
+A: [Wireless mesh networking]({{< relref "wiki/Wiki.md" >}}).
 
 How do I disable the guest/babel interfaces?
 --------------------------------------------

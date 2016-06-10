@@ -15,7 +15,7 @@ tunnel account through Hurricane Electric's Tunnelbroker site
 (http://tunnelbroker.net) and then configure your CeroWrt router.
 
 The
-[IPv6 Tunnel]({{< relref "wiki/IPv6_Tunnel.md" >}}) makes it easy to set up the tunnel once
+[Sample Script for IPv6 tunnel]({{< relref "wiki/IPv6_Tunnel.md" >}}) makes it easy to set up the tunnel once
 you have created your Tunnelbroker account. This procedure has been
 tested with the Modena 3.7.5-2 and newer builds.
 
@@ -71,7 +71,7 @@ use the tunnel.
 3.  Select "OpenWRT Backfire 10.03.1" from the dropdown. You will see a
     set of commands listed.
 4.  Use your favorite text editor to open the
-    [IPv6 Tunnel]({{< relref "wiki/IPv6_Tunnel.md" >}}) .
+    [Sample     Script for TunnelBroker tunnel]({{< relref "wiki/IPv6_Tunnel.md" >}}) .
 5.  Use the values from the Tunnelbroker web page to fill in the
     corresponding values in the script. Save the text to file in /tmp
     and execute the script.
@@ -92,7 +92,7 @@ Tunnel Broker to update your TUNNELID to autodetect your IPv4 address:
 `https://USERNAME:PASSWORD`ipv4.tunnelbroker.net/ipv4\_end.php?tid=TUNNELID@
 
 or use the non-HTTPS URL described in the
-[IPv6 Tunnel]({{< relref "wiki/IPv6_Tunnel.md" >}})
+[script]({{< relref "wiki/IPv6_Tunnel.md" >}})
 below. If the update goes properly, you see a response similar to this:
 
 `+OK: Tunnel endpoint updated to: 123.45.67.89`

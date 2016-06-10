@@ -7,8 +7,6 @@ lastmod: 2015-06-16T15:06:51
 Janitorial Tasks to clean up the bufferbloat
 ============================================
 
-{{&gt;toc}}
-
 There are a ton of tiny code improvements that can be made across the
 tens of thousands of applications "out there" to reduce their
 bufferbloat, far more than any one person can do. But it is extremely
@@ -135,7 +133,7 @@ OSX](https://developer.apple.com/videos/wwdc/2015/?id=719) in the hope
 that this will also drive demand and deployment of network queueing
 algorithms that will mark, rather than drop, packets.
 
-ECN can be [Enable ECN]({{< relref "wiki/Enable_ECN.md" >}}).
+ECN can be [easily enabled for many OSes]({{< relref "wiki/Enable_ECN.md" >}}).
 
 But without a qdisc on the bottleneck links that respect it, turning it
 on on the tcps has little effect.
@@ -201,7 +199,7 @@ github](https://github.com/devsisters/)
 Fq\_codel or [cake]({{< relref "wiki/Cake.md" >}}) on edge routers
 ----------------------------------------------------
 
-We've spent tons of time on trying to get [sqm]({{< relref "wiki/SQM.md" >}})
+We've spent tons of time on trying to get [smart queue management]({{< relref "wiki/SQM.md" >}})
 [right](http://snapon.lab.bufferbloat.net/~d/Presos/nznog-dave-taht-bufferbloat-jan-28.pdf)
 - most recently defeated by GRO offloads in new routers, which is only
 fixed in sch\_tbf and [cake]({{< relref "wiki/Cake.md" >}}), as yet.

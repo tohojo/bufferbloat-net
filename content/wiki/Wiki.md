@@ -7,8 +7,6 @@ lastmod: 2015-10-14T10:26:53
 CoDel Overview
 ==============
 
-{{&gt;toc}}
-
 CoDel is a novel “no knobs”, “just works”, “handles variable bandwidth
 and RTT”, and simple AQM algorithm.
 
@@ -146,7 +144,7 @@ iproute2 added support for fq\_codel in the 3.6 release and
 configuration and statistics should be available by default in most
 Linux systems shipped today.
 
-[Wiki]({{< relref "wiki/Wiki.md" >}}) Version
+[CeroWrt]({{< relref "wiki/Wiki.md" >}}) Version
 -----------------------------------------
 
 The CeroWrt research router project was started, specifically, to test

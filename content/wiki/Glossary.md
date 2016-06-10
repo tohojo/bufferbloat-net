@@ -7,8 +7,6 @@ lastmod: 2012-02-14T19:25:25
 Glossary
 ========
 
-{{&gt;toc}}
-
 These terms are defined in the context of the overall topic,
 Bufferbloat, and their relevance to the recognition, detection,
 description, mitigation of this problem. As such, references to others'

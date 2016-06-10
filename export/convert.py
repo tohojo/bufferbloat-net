@@ -21,7 +21,7 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-import csv, re, subprocess, os, json
+import csv, re, subprocess, os, json, sys
 
 content_map = {}
 pages = csv.DictReader(open("wiki_pages.csv"))
@@ -41,6 +41,8 @@ lastmod: {updated}
 
 titlemap = {}
 
+outlist = []
+
 for c in content:
     content_map[c['page_id']] = c
 
@@ -51,7 +53,7 @@ for p in pages:
     name = p['title']
     titlemap[name] = title
     c = content_map[p['id']]
-    text = c['text'].replace("[[", "<link>").replace("]]","</link>")
+    text = c['text'].replace("[[", "<link>").replace("]]","</link>").replace("{{>toc}}", "")
     outfile = "textile/{}.textile".format(name)
     mdfile = "textile/{}.md".format(name)
 
@@ -64,7 +66,11 @@ for p in pages:
     mdtext = open(mdfile).read()
     mdtext = header.format(title=title, date=date, updated=updated) + mdtext
 
-    with open(os.path.join(outdir, "{}.md".format(name)), "w") as fp:
+    finalmd = os.path.join(outdir, "{}.md".format(name))
+    with open(finalmd, "w") as fp:
         fp.write(mdtext)
+    outlist.append(finalmd)
 
 json.dump(titlemap, open("titlemap.json", "w"))
+
+subprocess.run(['python', 'fix_links.py'] + outlist, stdout=sys.stdout)

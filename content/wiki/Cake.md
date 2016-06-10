@@ -12,8 +12,6 @@ Cake - Common Applications Kept Enhanced
 [NLnet](http://nlnet.nl) We appreciate their support... and could always
 use more help from others that care about speeding up the internet.
 
-{{&gt;toc}}
-
 Cake is the rollup of 3 years of deployment experience of the htb +
 fq\_codel based sqm-scripts [SQM]({{< relref "wiki/SQM.md" >}}) for aqm/fq/qos
 inbound and outbound bufferbloat management. For input into the design

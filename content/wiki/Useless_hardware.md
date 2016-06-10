@@ -21,8 +21,8 @@ openwrt support in git head. Go figure!? Would it hurt to market the
 good and truly open source router to the open source folk? The
 [wndr3700v2]({{< relref "wiki/Wndr3700v2.md" >}}) is best in class for quality, speed,
 functionality and open-sourceness, and is our first choice for
-[wiki]({{< relref "wiki/Wiki.md" >}}), [wiki]({{< relref "wiki/Wiki.md" >}}),
-[wiki]({{< relref "wiki/Wiki.md" >}}), and [wiki]({{< relref "wiki/Wiki.md" >}})
+[Cerowrt]({{< relref "wiki/Wiki.md" >}}), [ISCwrt]({{< relref "wiki/Wiki.md" >}}),
+[Wisp6]({{< relref "wiki/Wiki.md" >}}), and [Bismark]({{< relref "wiki/Wiki.md" >}})
 development.
 
 But: Avoid the other "open source" models like the plague they are.

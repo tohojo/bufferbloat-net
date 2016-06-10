@@ -85,7 +85,7 @@ for all.
 Furthermore, you can spend **a lot** of time updating priorities,
 setting up new filters, and checking to see whether VoIP, gaming, ssh,
 netflix, torrent, etc. are "balanced". (There is a whole\
-cottage industry in updating WonderShaper rule sets. [Wondershaper Must Die]({{< relref "wiki/Wondershaper_Must_Die.md" >}}), and they don't help a
+cottage industry in updating WonderShaper rule sets. [They all have terrible flaws]({{< relref "wiki/Wondershaper_Must_Die.md" >}}), and they don't help a
 lot.) Worst of all, these rules create a maintenance hassle. Each new
 rule has to be adjusted in the face of new kinds of traffic. And if the
 router changes, or speed changes, or there's new traffic in the mix,

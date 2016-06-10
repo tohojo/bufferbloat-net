@@ -52,7 +52,7 @@ Step 1. Configuring and Installing the Router
     gw.home.lan for most things, once DNS is up.
 4.  **Secure your wireless interfaces** Go to the *Network-&gt;Wireless*
     configuration page, and change the SSIDs of the various interfaces
-    to suit your liking. (See also [OCEAN CITY FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}}))
+    to suit your liking. (See also [FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}}))
     Enable WPA2 encryption on the LAN interfaces, and if you wish your
     guest interfaces to be secured, do the same there, too. Choose
     unique passwords for the lan and guest interfaces.
@@ -75,14 +75,14 @@ Important Configuration Notes:
     wireless spectrum** by default. You should address these issues
     before connecting the router to the Internet.
 -   <link>QoS</link> is turned **OFF** by default.(see
-    [OCEAN CITY FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}})). You should address this issue
+    [FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}})). You should address this issue
     after connecting to the internet.
 
 Step 2. Fine-tuning your QoS Settings
 -------------------------------------
 
 By default, the Ocean City release CeroWrt Router is configured for slow
-Internet connections. See the [OCEAN CITY FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}}) for how to
+Internet connections. See the [FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}}) for how to
 set it appropriately for your network connection. This is a very
 important step!
 
@@ -105,11 +105,11 @@ by default.You will also need to change the firewall rules, the
 /etc/xinetd.conf file and many files below /etc/chroot/named/etc/bind/
 
 It is FAR easier to change these via editing the relevant files directly
-on the router, or [Changing your cerowrt ip addresses]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}}), or, as we have DNS, just use that and don't worry
+on the router, or [with a sed script]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}}), or, as we have DNS, just use that and don't worry
 about the numbers.... (have we scared you enough yet? There will be a
 better web interface for renumbering at some point. If you must change
 the addresses or dns, here is a
-[Changing your cerowrt ip addresses]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}}).
+[link to how to comprehensively change your ips on the command line]({{< relref "wiki/Changing_your_cerowrt_ip_addresses.md" >}}).
 
 *Important:* If you change the default IP address, your Web interface
 will change at this point to be whatever-you-chose:81 after doing a save
@@ -120,8 +120,8 @@ Thanks!
 -------
 
 You should now be on the Internet using the latest and greatest code
-from the [Wiki]({{< relref "wiki/Wiki.md" >}}) Project, the
-[Wiki]({{< relref "wiki/Wiki.md" >}}) project, and
+from the [Cerowrt]({{< relref "wiki/Wiki.md" >}}) Project, the
+[Bufferbloat uberwrt]({{< relref "wiki/Wiki.md" >}}) project, and
 [OpenWrt](http://www.openwrt.org) .
 
 We hope that your experience will be exceptional. Please send us your
@@ -131,7 +131,7 @@ wiki](http://www.bufferbloat.net/register) and posting to the
 list. You can also file bugs and feature requests in our [Bug
 Tracker](http://www.bufferbloat.net/projects/cerowrt/issues)
 
-See also the [OCEAN CITY FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}}), the [OCEAN CITY RELEASE NOTES]({{< relref "wiki/OCEAN_CITY_RELEASE_NOTES.md" >}}) and <link>Cool things to do with your Cerowrt
+See also the [FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}}), the [OCEAN CITY RELEASE NOTES]({{< relref "wiki/OCEAN_CITY_RELEASE_NOTES.md" >}}) and <link>Cool things to do with your Cerowrt
 router</link>.
 
 *NB:* The rc6 build also supported a connection to http://gw.home.lan -

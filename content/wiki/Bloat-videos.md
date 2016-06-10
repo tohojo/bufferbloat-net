@@ -4,8 +4,6 @@ title: Bloat-videos
 date: 2012-12-07T22:01:15
 lastmod: 2015-09-06T04:14:58
 ---
-{{&gt;toc}}
-
 Videos about Bufferbloat, Codel and FQ\_codel
 =============================================
 

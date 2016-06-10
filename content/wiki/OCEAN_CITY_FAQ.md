@@ -123,7 +123,7 @@ when possible, and also keep your own network safe.
 What's this babel thing?
 ------------------------
 
-A: [Wiki]({{< relref "wiki/Wiki.md" >}}).
+A: [Wireless mesh networking]({{< relref "wiki/Wiki.md" >}}).
 
 How do I disable the guest/babel interfaces?
 --------------------------------------------

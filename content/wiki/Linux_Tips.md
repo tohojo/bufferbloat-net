@@ -132,7 +132,7 @@ going as low as this:
 @ ethtool -G eth0 tx 4\
 ethtool -G wlan0 tx 4@
 
-But many can get to 20 or below. See also: [Bloated Driver List]({{< relref "wiki/Bloated_Driver_List.md" >}}) for more information and patches.
+But many can get to 20 or below. See also: [Known Bloated Drivers]({{< relref "wiki/Bloated_Driver_List.md" >}}) for more information and patches.
 
 You can observe your existing settings with:
 
@@ -142,7 +142,7 @@ ethtool -g wlan0@
 Reduce transmit queue length
 ----------------------------
 
-NOTE: with [Wiki]({{< relref "wiki/Wiki.md" >}}), this is no longer needed
+NOTE: with [codel]({{< relref "wiki/Wiki.md" >}}), this is no longer needed
 either.
 
 This is a separate setting for each network interface. Examples:

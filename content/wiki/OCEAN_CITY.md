@@ -13,13 +13,13 @@ our reach, and we chose to pursue significantly scaled back (but still
 important) goals described elsewhere. These documents - devoted to the
 Ocean City release - are now obsolete:
 
--   [OCEAN CITY]({{< relref "wiki/OCEAN_CITY.md" >}})
+-   [Obsolete - OCEAN CITY READ THIS FIRST]({{< relref "wiki/OCEAN_CITY.md" >}})
     (This page)
--   [OCEAN CITY README]({{< relref "wiki/OCEAN_CITY_README.md" >}})
--   [OCEAN CITY RELEASE REQUIREMENTS]({{< relref "wiki/OCEAN_CITY_RELEASE_REQUIREMENTS.md" >}})
--   [OCEAN CITY RELEASE NOTES]({{< relref "wiki/OCEAN_CITY_RELEASE_NOTES.md" >}})
--   [OCEAN CITY INSTALLATION GUIDE]({{< relref "wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})
--   [OCEAN CITY FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}})
+-   [Obsolete - OCEAN CITY README]({{< relref "wiki/OCEAN_CITY_README.md" >}})
+-   [Obsolete - OCEAN CITY RELEASE     REQUIREMENTS]({{< relref "wiki/OCEAN_CITY_RELEASE_REQUIREMENTS.md" >}})
+-   [Obsolete - OCEAN CITY RELEASE     NOTES]({{< relref "wiki/OCEAN_CITY_RELEASE_NOTES.md" >}})
+-   [Obsolete - Installation     Guide]({{< relref "wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})
+-   [Obsolete - FAQ]({{< relref "wiki/OCEAN_CITY_FAQ.md" >}})
 -   [OCEAN CITY old News Item - rc7 slipping]({{< relref "wiki/OCEAN_CITY_old_News_Item_-_rc7_slipping.md" >}})
 -   [OCEAN CITY old News item - rc6 (beta 2) is suitable for beta testing]({{< relref "wiki/OCEAN_CITY_old_News_item_-_rc6_(beta_2)_is_suitable_for_beta_testing.md" >}})
 -   [OCEAN CITY old News Item - rc5 is suitable for testing]({{< relref "wiki/OCEAN_CITY_old_News_Item_-_rc5_is_suitable_for_testing.md" >}})
@@ -116,7 +116,7 @@ Multiple services are enabled 'in' by default, notably http, https, ssh,
 & rsync. DNS allows in the entire 2002 address range into the 'us' DNS
 view, this should be restricted to just your 2002/48 lan.
 
-From here, please move on to the [OCEAN CITY INSTALLATION GUIDE]({{< relref "wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}}).
+From here, please move on to the [download and installation guide]({{< relref "wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}}).
 
 ### NB re: DNS
 

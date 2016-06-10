@@ -86,7 +86,7 @@ Topology and Applications
 -   Does fetching content from a peer yield better or worse performance
     than fetching from an origin?
 -   Quantifying, measuring, and monitoring
-    [info-bubbles]({{< relref "wiki/Info-bubbles.md" >}}) (region-specific
+    ["information bubbles"]({{< relref "wiki/Info-bubbles.md" >}}) (region-specific
     content, filtering, etc.).
     -   action item: add some wgets to bismark-active for different Web
         servers, somehow do "diffs", upload the results to a portal

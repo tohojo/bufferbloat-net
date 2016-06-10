@@ -10,8 +10,8 @@ Cape Town Release of BISMark
 Release notes and installation guide
 ------------------------------------
 
--   [CAPETOWN INSTALLATION GUIDE]({{< relref "wiki/CAPETOWN_INSTALLATION_GUIDE.md" >}})
--   [CAPETOWN FAQ]({{< relref "wiki/Capetown_FAQ.md" >}})
+-   [Installation Guide]({{< relref "wiki/CAPETOWN_INSTALLATION_GUIDE.md" >}})
+-   [FAQ]({{< relref "wiki/Capetown_FAQ.md" >}})
 
 BISMark, by default, "phones home". If, at any point, you wish to stop
 your participation, simply remove the bismark-mgmt and bismark-active
@@ -20,7 +20,7 @@ packages.
 Builds
 ------
 
-Please see the [CAPETOWN INSTALLATION GUIDE]({{< relref "wiki/CAPETOWN_INSTALLATION_GUIDE.md" >}}) for the 'stable' build.
+Please see the [installation guide]({{< relref "wiki/CAPETOWN_INSTALLATION_GUIDE.md" >}}) for the 'stable' build.
 
 For the daring:
 

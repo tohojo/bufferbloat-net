@@ -38,11 +38,12 @@ for f in sys.argv[1:]:
             break
         pos = end+7
 
+        label = None
         linktext = c[start+6:end].replace("\n", " ")
         if ":" in linktext:
             linktext = linktext.split(":")[1]
         if "|" in linktext:
-            linktext = linktext.split("|")[0]
+            linktext,label = linktext.split("|")
         if "\#" in linktext:
             linktext = linktext.split("\#")[0]
         linktext = linktext.replace("\_", " ")
@@ -54,7 +55,7 @@ for f in sys.argv[1:]:
         found = False
         for n,t in titlemap.items():
             if t.lower() == linktext.lower():
-                newtext = newtext.replace(c[start:end+7], '[%s]({{< relref "wiki/%s.md" >}})' % (linktext, n))
+                newtext = newtext.replace(c[start:end+7], '[%s]({{< relref "wiki/%s.md" >}})' % (label or linktext, n))
                 found = True
                 break
         if not found:
