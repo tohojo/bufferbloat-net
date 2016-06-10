@@ -24,6 +24,29 @@ footer {
     width: 100%;
 }
 
+#toc {
+    float: right;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    font-size: small;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+#toc ul {
+    margin: 0;
+    padding: 0px;
+}
+
+#toc li {
+    list-style-type: none;
+    margin: 0;
+}
+
+#toc li li {
+    margin-left: 1.5em;
+}
+
 @media (min-width: 992px) {
     .col-md-9 {
         width: calc(100% - 20em);
