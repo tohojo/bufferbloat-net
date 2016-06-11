@@ -95,7 +95,7 @@ including lower ones. We would really like to see GRO and GSO be
 disabled entirely at 100Mbit and below. Let packets be PACKETS!
 
 The GRO problem is so common now (and so needed in now-shipping devices)
-that in [Cake]({{< relref "wiki/codel/Cake.md" >}}) we added offload "peeling" to turn
+that in [Cake]({{< relref "projects/codel/wiki/Cake.md" >}}) we added offload "peeling" to turn
 superpackets back into packets.
 
 Consequently, you **must** understand the device drivers you are using
@@ -129,7 +129,7 @@ section. This "problem" (it is also a needed optimization to run at gigE
 speeds on much modern hardware) has become so prevalent in both testing
 and the real world that a fix for codel's maxpacket calculation arrived
 in linux 4.1, and compensatory mechanisms are also now in TBF and
-[Cake]({{< relref "wiki/codel/Cake.md" >}}).
+[Cake]({{< relref "projects/codel/wiki/Cake.md" >}}).
 
 ### Dealing with NAPI
 
@@ -222,7 +222,7 @@ This would allow for [GRO](https://lwn.net/Articles/358910/) to happen
 on another interface. (and TSO, GSO, GRO, UFO, LRO) offloads to happen
 on all interfaces, bloating up packet sizes). *Turn all offloads off on
 **all** interfaces always* - unless you are using the new
-[Cake]({{< relref "wiki/codel/Cake.md" >}}) or revised TBF.
+[Cake]({{< relref "projects/codel/wiki/Cake.md" >}}) or revised TBF.
 
 We use multiple variants of HTB and HFSC shaper scripts from Dave Täht
 and Dan Siemon and others. Configuring HTB can be tricky, and simple
@@ -231,7 +231,7 @@ pfifo\_fifo fast queue rather than where you wanted it.
 
 [sqm-scripts](https://github.com/dtaht/ceropackages-3.10/blob/master/net/sqm-scripts/files/usr/lib/sqm/)
 might be a good starting place to for hacking. Please see also
-[wondershaper must die]({{< relref "wiki/cerowrt/Wondershaper_Must_Die.md" >}}) for some insight on how **not** to do
+[wondershaper must die]({{< relref "projects/cerowrt/wiki/Wondershaper_Must_Die.md" >}}) for some insight on how **not** to do
 the hacking.
 
 ### Know Your Bottlenecks!

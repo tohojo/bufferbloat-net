@@ -8,7 +8,7 @@ type: wiki
 Benchmarking Codel and FQ Codel
 ===============================
 
-Please see the complete [Best practices for benchmarking Codel and FQ Codel]({{< relref "wiki/codel/Best_practices_for_benchmarking_Codel_and_FQ_Codel.md" >}}) page for extensive details.
+Please see the complete [Best practices for benchmarking Codel and FQ Codel]({{< relref "projects/codel/wiki/Best_practices_for_benchmarking_Codel_and_FQ_Codel.md" >}}) page for extensive details.
 
 Benchmark tool issues
 ---------------------

@@ -11,16 +11,16 @@ CEROWRT 'OCEAN CITY' RELEASE REQUIREMENTS
 THIS DOCUMENT IS OBSOLETE
 -------------------------
 
-See the [OCEAN CITY]({{< relref "wiki/cerowrt/OCEAN_CITY.md" >}}) page.
+See the [OCEAN CITY]({{< relref "projects/cerowrt/wiki/OCEAN_CITY.md" >}}) page.
 
 Objective: Provide a viable substrate for future releases of
-[Bismark]({{< relref "wiki/codel/Wiki.md" >}}), [ISCWRT]({{< relref "wiki/codel/Wiki.md" >}}), and
-[WISP6]({{< relref "wiki/codel/Wiki.md" >}}).
+[Bismark]({{< relref "projects/codel/wiki/Wiki.md" >}}), [ISCWRT]({{< relref "projects/codel/wiki/Wiki.md" >}}), and
+[WISP6]({{< relref "projects/codel/wiki/Wiki.md" >}}).
 
 Core Requirements
 -----------------
 
-Support more [targets]({{< relref "wiki/cerowrt/Targets.md" >}}), notably those with 8MB of flash:
+Support more [targets]({{< relref "projects/cerowrt/wiki/Targets.md" >}}), notably those with 8MB of flash:
 wndr3700v1, nanostation M5.
 
 New features

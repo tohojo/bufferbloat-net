@@ -9,7 +9,7 @@ Setting QoS Properly if you can't use fq\_codel (CoDel + SFQ)
 =============================================================
 
 ***Note:** This process is no longer needed in CeroWrt. See the
-[Setting up SQM for CeroWrt 310]({{< relref "wiki/cerowrt/Setting_up_SQM_for_CeroWrt_310.md" >}}) page for a better
+[Setting up SQM for CeroWrt 310]({{< relref "projects/cerowrt/wiki/Setting_up_SQM_for_CeroWrt_310.md" >}}) page for a better
 procedure.*
 
 But if your router doesn't support these new algorithms for Active Queue

@@ -21,7 +21,7 @@ only, where we could usually find clear air on some channel or another.
 Testing with competing wifi signals is definitely on the agenda, but
 first getting a clean setup was not optional.
 
-Then summer hit, [bloatlab 1]({{< relref "wiki/cerowrt/BloatLab_1.md" >}}) became too hot to inhabit, and
+Then summer hit, [bloatlab 1]({{< relref "projects/cerowrt/wiki/BloatLab_1.md" >}}) became too hot to inhabit, and
 campground with 110 acres high in the Santa Cruz mountains, asked if we
 could fix their wifi, so long as it didn't cost them anything. SCORE!
 

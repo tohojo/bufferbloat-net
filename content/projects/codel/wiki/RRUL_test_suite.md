@@ -34,7 +34,7 @@ It does your classic latency under load tests in a variety of ways, and
 provides output data in json format, with plots in CDF (very helpful)
 and combination format. For an explanation of the charting techniques
 used,\
-see the <link>RRUL charting methods</link> page, and/or the [RRUL Rogues Gallery]({{< relref "wiki/codel/RRUL_Rogues_Gallery.md" >}}) for some example plots.
+see the <link>RRUL charting methods</link> page, and/or the [RRUL Rogues Gallery]({{< relref "projects/codel/wiki/RRUL_Rogues_Gallery.md" >}}) for some example plots.
 
 What tests exist so far?
 ------------------------

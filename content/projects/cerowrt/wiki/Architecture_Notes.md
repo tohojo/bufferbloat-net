@@ -10,8 +10,8 @@ Architecture Notes
 
 http://www.mips.com/media/files/MD00565-2B-MIPS32-QRC-01.01.pdf
 
-[OCEAN CITY FAQ]({{< relref "wiki/cerowrt/OCEAN_CITY_FAQ.md" >}})
+[OCEAN CITY FAQ]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_FAQ.md" >}})
 
-[scratch]({{< relref "wiki/bloat/Scratch.md" >}})
+[scratch]({{< relref "projects/bloat/wiki/Scratch.md" >}})
 
-[OCEAN CITY INSTALLATION GUIDE]({{< relref "wiki/cerowrt/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})
+[OCEAN CITY INSTALLATION GUIDE]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})

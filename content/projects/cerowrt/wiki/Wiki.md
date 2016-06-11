@@ -16,7 +16,7 @@ performance created, ironically, by previous attempts to make it work
 better. Eric Raymond wrote this one-sentence summary of the problem:
 "Bloated buffers lead to network-crippling latency spikes." You can read
 more about this problem at the main
-[Bufferbloat]({{< relref "wiki/bloat/Introduction.md" >}}) site.
+[Bufferbloat]({{< relref "projects/bloat/wiki/Introduction.md" >}}) site.
 
 CeroWrt was a project built upon the [OpenWrt
 firmware](http://openwrt.org) to resolve these endemic problems in home
@@ -33,11 +33,11 @@ releases, many firewall and router distributions and it is beginning to
 appear in commercial firmware. Active research (due to lack of funding,
 and succeeding in the primary goals) has ceased, with the exception of
 ongoing work into standardization efforts, and into something even
-better than fq\_codel, called [cake]({{< relref "wiki/codel/Cake.md" >}}), which is not
+better than fq\_codel, called [cake]({{< relref "projects/codel/wiki/Cake.md" >}}), which is not
 ready for prime time yet.
 
 Is your internet connection bloated? You can find out right now using
-the [Quick Test for Bufferbloat.]({{< relref "wiki/cerowrt/Quick_Test_for_Bufferbloat.md" >}}) - or see the [dslreports new
+the [Quick Test for Bufferbloat.]({{< relref "projects/cerowrt/wiki/Quick_Test_for_Bufferbloat.md" >}}) - or see the [dslreports new
 speedtest](http://dslreports.com/speedtest) .
 
 News
@@ -47,7 +47,7 @@ News
 build has been very stable since it was released on 28 July 2014. We
 strongly recommend replacing all earlier builds with this build. Read
 the [News](http://www.bufferbloat.net/news/53) item for the update. See
-the [CeroWrt 3.10 Release Notes]({{< relref "wiki/cerowrt/CeroWrt_310_Release_Notes.md" >}})
+the [CeroWrt 3.10 Release Notes]({{< relref "projects/cerowrt/wiki/CeroWrt_310_Release_Notes.md" >}})
 and the [mailing
 list](https://lists.bufferbloat.net/listinfo/cerowrt-devel) for more
 details.
@@ -75,7 +75,7 @@ capabilities
     from Kathie Nicols and Van Jacobson, along with Eric Dumazet's [flow
     queueing](https://tools.ietf.org/html/draft-hoeiland-joergensen-aqm-fq-codel-00) fq\_codel.
     These in turn rely on the Byte Queue Limits for line rate networks
-    and on htb for the [SQM]({{< relref "wiki/cerowrt/SQM.md" >}}) QoS system. These replace
+    and on htb for the [SQM]({{< relref "projects/cerowrt/wiki/SQM.md" >}}) QoS system. These replace
     earlier Active Queue Management fixes for bufferbloat including:
     Stochastic Fair Queueing-Random Early Drop (SFQRED), and other
     queue disciplines.
@@ -97,7 +97,7 @@ capabilities
 Sources of Information about the Bufferbloat Project
 ----------------------------------------------------
 
-Glossary for Bufferbloat Topics: [Glossary]({{< relref "wiki/bloat/Glossary.md" >}})\
+Glossary for Bufferbloat Topics: [Glossary]({{< relref "projects/bloat/wiki/Glossary.md" >}})\
 General Bufferbloat list: https://lists.bufferbloat.net/listinfo/bloat\
 CeroWrt-devel list:
 https://lists.bufferbloat.net/listinfo/cerowrt-devel\
@@ -106,7 +106,7 @@ https://lists.bufferbloat.net/pipermail/cerowrt-commits/\
 IRC: Find us on [IRC on
 chat.freenode.net](irc://chat.freenode.net:6667/bufferbloat),
 \#bufferbloat channel\
-[Assorted Bufferbloat Videos]({{< relref "wiki/cerowrt/Bloat-videos.md" >}})
+[Assorted Bufferbloat Videos]({{< relref "projects/cerowrt/wiki/Bloat-videos.md" >}})
 
 Try the Software
 ----------------
@@ -148,15 +148,15 @@ deployment scenario. Ask if you want them.
 As noted above, OpenWrt and DD-WRT support fq\_codel now in their QoS
 systems, so you can adopt one of the 150+ platforms supported there and
 see what happens.... YMMV, but please report here:
-[Hardware Reports on FQ CODEL]({{< relref "wiki/cerowrt/Hardware_Reports_on_FQ_CODEL.md" >}})
+[Hardware Reports on FQ CODEL]({{< relref "projects/cerowrt/wiki/Hardware_Reports_on_FQ_CODEL.md" >}})
 
 Documents
 ---------
 
--   [Installation Guide]({{< relref "wiki/cerowrt/Installation_Guide.md" >}})
--   [Flashing Instructions]({{< relref "wiki/cerowrt/Cerowrt_flashing_instructions.md" >}})
--   [Automated Configuration of CeroWrt]({{< relref "wiki/cerowrt/Automated_Configuration_of_CeroWrt.md" >}})
--   [Frequently Asked Questions]({{< relref "wiki/cerowrt/FAQ.md" >}})
+-   [Installation Guide]({{< relref "projects/cerowrt/wiki/Installation_Guide.md" >}})
+-   [Flashing Instructions]({{< relref "projects/cerowrt/wiki/Cerowrt_flashing_instructions.md" >}})
+-   [Automated Configuration of CeroWrt]({{< relref "projects/cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}})
+-   [Frequently Asked Questions]({{< relref "projects/cerowrt/wiki/FAQ.md" >}})
 -   <link>How is CeroWrt different from OpenWrt?</link>
 
 Tech Notes for CeroWrt
@@ -164,24 +164,24 @@ Tech Notes for CeroWrt
 
 The following give detailed descriptions of CeroWrt's operation.
 
--   [Setting up SQM]({{< relref "wiki/cerowrt/Setting_up_SQM_for_CeroWrt_310.md" >}})
--   [Default interface naming scheme]({{< relref "wiki/cerowrt/Device_naming_scheme.md" >}})
--   [Default network numbering     scheme]({{< relref "wiki/cerowrt/Default_network_numbering.md" >}})
--   [Changing IP, DNS, and     SSID]({{< relref "wiki/cerowrt/Changing_your_cerowrt_ip_addresses.md" >}})
--   [Monitoring CeroWrt with SNMP and     NetFlow]({{< relref "wiki/cerowrt/Monitoring_CeroWrt.md" >}})
+-   [Setting up SQM]({{< relref "projects/cerowrt/wiki/Setting_up_SQM_for_CeroWrt_310.md" >}})
+-   [Default interface naming scheme]({{< relref "projects/cerowrt/wiki/Device_naming_scheme.md" >}})
+-   [Default network numbering     scheme]({{< relref "projects/cerowrt/wiki/Default_network_numbering.md" >}})
+-   [Changing IP, DNS, and     SSID]({{< relref "projects/cerowrt/wiki/Changing_your_cerowrt_ip_addresses.md" >}})
+-   [Monitoring CeroWrt with SNMP and     NetFlow]({{< relref "projects/cerowrt/wiki/Monitoring_CeroWrt.md" >}})
 -   <link>Using Bonjour, mDNS, or ZeroConf with CeroWrt</link>
--   [Getting an IPv6 address via Hurricane Electric     Tunnelbroker.net]({{< relref "wiki/cerowrt/IPv6_Tunnel.md" >}})
--   [Useful scripts to use with CeroWrt]({{< relref "wiki/cerowrt/CeroWrtScripts.md" >}})
+-   [Getting an IPv6 address via Hurricane Electric     Tunnelbroker.net]({{< relref "projects/cerowrt/wiki/IPv6_Tunnel.md" >}})
+-   [Useful scripts to use with CeroWrt]({{< relref "projects/cerowrt/wiki/CeroWrtScripts.md" >}})
 
 Older Information
 -----------------
 
 The documents below describe the older Linux 3.7 and earlier builds.
 
--   [CeroWrt 3.7 Release Notes]({{< relref "wiki/cerowrt/CeroWrt_37_Release_Notes.md" >}})
--   [Building CeroWrt on     your own machine]({{< relref "wiki/cerowrt/Building_Cerowrt_on_your_own_machine.md" >}}) (tested for CeroWrt 3.3, not with
+-   [CeroWrt 3.7 Release Notes]({{< relref "projects/cerowrt/wiki/CeroWrt_37_Release_Notes.md" >}})
+-   [Building CeroWrt on     your own machine]({{< relref "projects/cerowrt/wiki/Building_Cerowrt_on_your_own_machine.md" >}}) (tested for CeroWrt 3.3, not with
     CeroWrt 3.7)
--   [Setting QoS If You Can't Use CoDel]({{< relref "wiki/cerowrt/Setting_QoS_If_You_Can't_Use_CoDel.md" >}})
+-   [Setting QoS If You Can't Use CoDel]({{< relref "projects/cerowrt/wiki/Setting_QoS_If_You_Can't_Use_CoDel.md" >}})
 
-The [Historical Documents]({{< relref "wiki/cerowrt/Historical_Documents.md" >}}) page links to many documents that
+The [Historical Documents]({{< relref "projects/cerowrt/wiki/Historical_Documents.md" >}}) page links to many documents that
 describe the history and earlier releases of the project.

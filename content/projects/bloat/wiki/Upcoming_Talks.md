@@ -22,4 +22,4 @@ Upcoming Talks on Bufferbloat related issues
   2015-01-29 18:30   Dave Taht                Teklibre              "Fair Queuing, AQM, and ECN":http://www.nznog.org/home/speakers                                                                          NZNOG                                                   Yes       "Distinction Hotel, Rotora, NZ":http://www.nznog.org/venue
 
 Older (and filmed) Talks are archived on the
-[bloat-videos]({{< relref "wiki/cerowrt/Bloat-videos.md" >}}) page.
+[bloat-videos]({{< relref "projects/cerowrt/wiki/Bloat-videos.md" >}}) page.

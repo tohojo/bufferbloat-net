@@ -108,7 +108,7 @@ technical notes about multimedia playing). Do you now believe
 Microsoft’s explanations? Or is there a different explanation given
 these experiments that makes more sense?
 
-See Also: [Experiment-Fun with wireless]({{< relref "wiki/bloat/Experiment-Fun_with_wireless.md" >}})
+See Also: [Experiment-Fun with wireless]({{< relref "projects/bloat/wiki/Experiment-Fun_with_wireless.md" >}})
 
 Extracted from: [Fun with your
 Switch](http://gettys.wordpress.com/2010/11/29/home-router-puzzle-piece-one-fun-with-your-switch/)

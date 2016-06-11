@@ -11,4 +11,4 @@ Product
 On this page you will find links to product specific information on
 mitigating buffer bloat.
 
-[Sonicwall firewall]({{< relref "wiki/bloat/Sonicwall_firewall.md" >}})
+[Sonicwall firewall]({{< relref "projects/bloat/wiki/Sonicwall_firewall.md" >}})

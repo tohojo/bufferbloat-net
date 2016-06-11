@@ -8,20 +8,20 @@ type: wiki
 Scratch
 =======
 
-[FAQ]({{< relref "wiki/cerowrt/FAQ.md" >}})
+[FAQ]({{< relref "projects/cerowrt/wiki/FAQ.md" >}})
 
-[HOWTO]({{< relref "wiki/codel/HOWTO.md" >}})
+[HOWTO]({{< relref "projects/codel/wiki/HOWTO.md" >}})
 
-[Good OpenWrt Devices]({{< relref "wiki/codel/Good_OpenWrt_Devices.md" >}})
+[Good OpenWrt Devices]({{< relref "projects/codel/wiki/Good_OpenWrt_Devices.md" >}})
 
-[Benchmarking Codel and FQ Codel]({{< relref "wiki/codel/Benchmarking_Codel_and_FQ_Codel.md" >}})
+[Benchmarking Codel and FQ Codel]({{< relref "projects/codel/wiki/Benchmarking_Codel_and_FQ_Codel.md" >}})
 
-[Best practices for benchmarking Codel and FQ Codel]({{< relref "wiki/codel/Best_practices_for_benchmarking_Codel_and_FQ_Codel.md" >}})
+[Best practices for benchmarking Codel and FQ Codel]({{< relref "projects/codel/wiki/Best_practices_for_benchmarking_Codel_and_FQ_Codel.md" >}})
 
-[RRUL Rogues Gallery]({{< relref "wiki/codel/RRUL_Rogues_Gallery.md" >}})
+[RRUL Rogues Gallery]({{< relref "projects/codel/wiki/RRUL_Rogues_Gallery.md" >}})
 
-[Cake]({{< relref "wiki/codel/Cake.md" >}})\
-[Bobbie]({{< relref "wiki/codel/Bobbie.md" >}})\
-[CakeFAQ]({{< relref "wiki/codel/CakeFAQ.md" >}})
+[Cake]({{< relref "projects/codel/wiki/Cake.md" >}})\
+[Bobbie]({{< relref "projects/codel/wiki/Bobbie.md" >}})\
+[CakeFAQ]({{< relref "projects/codel/wiki/CakeFAQ.md" >}})
 
-[Quotes]({{< relref "wiki/codel/Quotes.md" >}})
+[Quotes]({{< relref "projects/codel/wiki/Quotes.md" >}})

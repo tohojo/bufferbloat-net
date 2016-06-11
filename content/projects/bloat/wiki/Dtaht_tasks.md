@@ -34,7 +34,7 @@ decisions.
 keep the public conversation(s) on track, and recruiting
 <link>helpers</link> which is eating far more of my time than I'd like.
 
-[RFC Improving DSCP support in Linux]({{< relref "wiki/bloat/RFC_Improving_DSCP_support_in_Linux.md" >}})
+[RFC Improving DSCP support in Linux]({{< relref "projects/bloat/wiki/RFC_Improving_DSCP_support_in_Linux.md" >}})
 
 <link>latency</link>
 
@@ -43,13 +43,13 @@ stack.
 
 I can be found in the \#bufferbloat channel(s) on irc.
 
-<link>Save the Mice</link> [Diffserv statistics]({{< relref "wiki/bloat/Diffserv_statistics.md" >}})
+<link>Save the Mice</link> [Diffserv statistics]({{< relref "projects/bloat/wiki/Diffserv_statistics.md" >}})
 
-[Dtaht test rig]({{< relref "wiki/bloat/Dtaht_test_rig.md" >}})
+[Dtaht test rig]({{< relref "projects/bloat/wiki/Dtaht_test_rig.md" >}})
 
-[Experiment - TCP cubic vs TCP vegas]({{< relref "wiki/bloat/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}})
+[Experiment - TCP cubic vs TCP vegas]({{< relref "projects/bloat/wiki/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}})
 
-[Experiment - Bloated LAGN vs debloated WNDR5700]({{< relref "wiki/bloat/Experiment_-_Bloated_LAGN_vs_debloated_WNDR5700.md" >}})
+[Experiment - Bloated LAGN vs debloated WNDR5700]({{< relref "projects/bloat/wiki/Experiment_-_Bloated_LAGN_vs_debloated_WNDR5700.md" >}})
 
 <link>Improving DSCP support in Linux</link>
 
@@ -117,7 +117,7 @@ http://www1.sce.umkc.edu/\~sohrabyk/papers/TcomReport.pdf
 
 http://portal.acm.org/citation.cfm?id=1219649
 
-[VOIP]({{< relref "wiki/bloat/VOIP.md" >}})
+[VOIP]({{< relref "projects/bloat/wiki/VOIP.md" >}})
 
 &gt;\
 &gt; Also, PLUGFEST![]()! Sounds like a good spot to do some testing in\
@@ -133,14 +133,14 @@ need; but the task of educating them will make that clear.
 See: http://www.iol.unh.edu/\
 - Jim
 
--   [Network Analysis Tools]({{< relref "wiki/bloat/Network_Analysis_Tools.md" >}})
+-   [Network Analysis Tools]({{< relref "projects/bloat/wiki/Network_Analysis_Tools.md" >}})
 
 <!-- -->
 
--   [Bufferbloat and Freeswitch Conference Call March 9]({{< relref "wiki/bloat/Bufferbloat_and_Freeswitch_Conference_Call_March_9.md" >}})
+-   [Bufferbloat and Freeswitch Conference Call March 9]({{< relref "projects/bloat/wiki/Bufferbloat_and_Freeswitch_Conference_Call_March_9.md" >}})
 
-[Enable ECN on multiple operating systems]({{< relref "wiki/bloat/Enable_ECN_on_multiple_operating_systems.md" >}})
+[Enable ECN on multiple operating systems]({{< relref "projects/bloat/wiki/Enable_ECN_on_multiple_operating_systems.md" >}})
 
-[irc clients]({{< relref "wiki/bloat/Irc_clients.md" >}})
+[irc clients]({{< relref "projects/bloat/wiki/Irc_clients.md" >}})
 
-[BANA]({{< relref "wiki/bloat/BANA.md" >}})
+[BANA]({{< relref "projects/bloat/wiki/BANA.md" >}})

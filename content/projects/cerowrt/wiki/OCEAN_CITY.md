@@ -14,18 +14,18 @@ our reach, and we chose to pursue significantly scaled back (but still
 important) goals described elsewhere. These documents - devoted to the
 Ocean City release - are now obsolete:
 
--   [Obsolete - OCEAN CITY READ THIS FIRST]({{< relref "wiki/cerowrt/OCEAN_CITY.md" >}})
+-   [Obsolete - OCEAN CITY READ THIS FIRST]({{< relref "projects/cerowrt/wiki/OCEAN_CITY.md" >}})
     (This page)
--   [Obsolete - OCEAN CITY README]({{< relref "wiki/cerowrt/OCEAN_CITY_README.md" >}})
--   [Obsolete - OCEAN CITY RELEASE     REQUIREMENTS]({{< relref "wiki/cerowrt/OCEAN_CITY_RELEASE_REQUIREMENTS.md" >}})
--   [Obsolete - OCEAN CITY RELEASE     NOTES]({{< relref "wiki/cerowrt/OCEAN_CITY_RELEASE_NOTES.md" >}})
--   [Obsolete - Installation     Guide]({{< relref "wiki/cerowrt/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})
--   [Obsolete - FAQ]({{< relref "wiki/cerowrt/OCEAN_CITY_FAQ.md" >}})
--   [OCEAN CITY old News Item - rc7 slipping]({{< relref "wiki/cerowrt/OCEAN_CITY_old_News_Item_-_rc7_slipping.md" >}})
--   [OCEAN CITY old News item - rc6 (beta 2) is suitable for beta testing]({{< relref "wiki/cerowrt/OCEAN_CITY_old_News_item_-_rc6_(beta_2)_is_suitable_for_beta_testing.md" >}})
--   [OCEAN CITY old News Item - rc5 is suitable for testing]({{< relref "wiki/cerowrt/OCEAN_CITY_old_News_Item_-_rc5_is_suitable_for_testing.md" >}})
+-   [Obsolete - OCEAN CITY README]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_README.md" >}})
+-   [Obsolete - OCEAN CITY RELEASE     REQUIREMENTS]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_RELEASE_REQUIREMENTS.md" >}})
+-   [Obsolete - OCEAN CITY RELEASE     NOTES]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_RELEASE_NOTES.md" >}})
+-   [Obsolete - Installation     Guide]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})
+-   [Obsolete - FAQ]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_FAQ.md" >}})
+-   [OCEAN CITY old News Item - rc7 slipping]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_old_News_Item_-_rc7_slipping.md" >}})
+-   [OCEAN CITY old News item - rc6 (beta 2) is suitable for beta testing]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_old_News_item_-_rc6_(beta_2)_is_suitable_for_beta_testing.md" >}})
+-   [OCEAN CITY old News Item - rc5 is suitable for testing]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_old_News_Item_-_rc5_is_suitable_for_testing.md" >}})
 
-ALL CURRENT INFORMATION ABOUT CEROWRT IS ON THE MAIN [WIKI]({{< relref "wiki/codel/Wiki.md" >}})
+ALL CURRENT INFORMATION ABOUT CEROWRT IS ON THE MAIN [WIKI]({{< relref "projects/codel/wiki/Wiki.md" >}})
 PAGE.
 
 How CeroWrt is different from OpenWrt
@@ -76,7 +76,7 @@ default - this allows 30 addresses per interface, a sensible limit for
 home/edge routers.
 
 It is ironic that this is the last piece of 'free' IP address space
-left. See also [BANA]({{< relref "wiki/bloat/BANA.md" >}}).
+left. See also [BANA]({{< relref "projects/bloat/wiki/BANA.md" >}}).
 
 ~~If you find this IP hard to remember or type, dns is enabled by
 default for a virtual subdomain of 'home.lan. You should be able to get
@@ -91,7 +91,7 @@ your subnet to the CeroWrt router, and turn off NAT.
 
 ### Device/Interface Naming
 
-We use an unusual [device naming scheme]({{< relref "wiki/cerowrt/Device_naming_scheme.md" >}}) to manage multiple
+We use an unusual [device naming scheme]({{< relref "projects/cerowrt/wiki/Device_naming_scheme.md" >}}) to manage multiple
 kinds of wireless devices. Instead of using eth0, eth1, etc. the
 interfaces have names that more accurately reflect their actual use.
 Prefixes use Wireless vs. Ethernet and Secure, Guest/Gateway, or DMZ. As
@@ -117,7 +117,7 @@ Multiple services are enabled 'in' by default, notably http, https, ssh,
 & rsync. DNS allows in the entire 2002 address range into the 'us' DNS
 view, this should be restricted to just your 2002/48 lan.
 
-From here, please move on to the [download and installation guide]({{< relref "wiki/cerowrt/OCEAN_CITY_INSTALLATION_GUIDE.md" >}}).
+From here, please move on to the [download and installation guide]({{< relref "projects/cerowrt/wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}}).
 
 ### NB re: DNS
 

@@ -8,7 +8,7 @@ type: wiki
 SQM
 ===
 
-See: [Smart Queue Management]({{< relref "wiki/cerowrt/Smart_Queue_Management.md" >}}) for a description of why we're
+See: [Smart Queue Management]({{< relref "projects/cerowrt/wiki/Smart_Queue_Management.md" >}}) for a description of why we're
 adopting the name SQM.
 
-See: [Setting up SQM for CeroWrt 3.10]({{< relref "wiki/cerowrt/Setting_up_SQM_for_CeroWrt_310.md" >}}) if you just want to set up your CeroWrt router.
+See: [Setting up SQM for CeroWrt 3.10]({{< relref "projects/cerowrt/wiki/Setting_up_SQM_for_CeroWrt_310.md" >}}) if you just want to set up your CeroWrt router.
