@@ -83,3 +83,4 @@ for p in pages:
 json.dump(titlemap, open("titlemap.json", "w"))
 
 subprocess.run(['python', 'fix_links.py'] + list(map(str,outlist)), stdout=sys.stdout)
+subprocess.run(['python', 'attachments.py'])

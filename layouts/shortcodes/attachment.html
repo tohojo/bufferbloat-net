@@ -1,0 +1,3 @@
+<ul><li><a href="{{ printf "/attachments/%s" (.Get "filename") | relURL }}">
+  {{ .Get "name" }}
+</a> ({{ .Get "type" }}) {{ .Get "description" }}</li></ul>
