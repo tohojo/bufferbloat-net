@@ -3,5 +3,6 @@ languageCode: "en-us"
 title: "Bufferbloat.net archive"
 disable404: true
 relativeURLs: false
+pluralizeListTitles: false
 params:
   author: The Bufferbloat community
