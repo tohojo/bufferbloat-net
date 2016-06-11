@@ -54,8 +54,8 @@ for f in sys.argv[1:]:
             continue
         found = False
         for n,t in titlemap.items():
-            if t.lower() == linktext.lower():
-                newtext = newtext.replace(c[start:end+7], '[%s]({{< relref "wiki/%s.md" >}})' % (label or linktext, n))
+            if t['title'].lower() == linktext.lower():
+                newtext = newtext.replace(c[start:end+7], '[%s]({{< relref "wiki/%s/%s.md" >}})' % (label or linktext, t['project'], n))
                 found = True
                 break
         if not found:

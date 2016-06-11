@@ -21,21 +21,25 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-import csv, re, subprocess, os, json, sys
+import csv, re, subprocess, os, json, sys, pathlib
 
 content_map = {}
-pages = csv.DictReader(open("wiki_pages.csv"))
-content = csv.DictReader(open("wiki_contents.csv"))
+pages = csv.DictReader(open("wikidump.csv"))
 
-interesting_wikis = ["3","4","5","13","16"]
+interesting_wikis = ["bloat", "cerowrt", "make-wifi-fast", "codel"]
 
-outdir = "../content/wiki"
+outpath = pathlib.Path("../content/projects")
+tmpdir = pathlib.Path("textile")
+
+if not tmpdir.is_dir():
+    tmpdir.mkdir()
 
 header = """
 ---
 title: {title}
 date: {date}
 lastmod: {updated}
+type: wiki
 ---
 """
 
@@ -43,22 +47,19 @@ titlemap = {}
 
 outlist = []
 
-for c in content:
-    content_map[c['page_id']] = c
-
 for p in pages:
-    if not p['wiki_id'] in interesting_wikis:
+    project = p['project']
+    if not project in interesting_wikis:
         continue
     title = p['title'].replace("_", " ")
     name = p['title']
-    titlemap[name] = title
-    c = content_map[p['id']]
-    text = c['text'].replace("[[", "<link>").replace("]]","</link>").replace("{{>toc}}", "")
-    outfile = "textile/{}.textile".format(name)
-    mdfile = "textile/{}.md".format(name)
+    titlemap[name] = {'title':title,'project':project}
+    text = p['text'].replace("[[", "<link>").replace("]]","</link>").replace("{{>toc}}", "")
+    outfile = "textile/{}:{}.textile".format(project,name)
+    mdfile = "textile/{}:{}.md".format(p['project'],name)
 
     date = p['created_on'].split(".")[0].replace(" ","T")
-    updated = c['updated_on'].split(".")[0].replace(" ","T")
+    updated = p['updated_on'].split(".")[0].replace(" ","T")
 
     with open(outfile, "w") as fp:
         fp.write(text)
@@ -66,11 +67,15 @@ for p in pages:
     mdtext = open(mdfile).read()
     mdtext = header.format(title=title, date=date, updated=updated) + mdtext
 
-    finalmd = os.path.join(outdir, "{}.md".format(name))
-    with open(finalmd, "w") as fp:
+
+    outdir = outpath / project / 'wiki'
+    if not outdir.is_dir():
+        outdir.mkdir(parents=True)
+    finalmd = outdir / "{}.md".format(name)
+    with finalmd.open("w") as fp:
         fp.write(mdtext)
     outlist.append(finalmd)
 
 json.dump(titlemap, open("titlemap.json", "w"))
 
-subprocess.run(['python', 'fix_links.py'] + outlist, stdout=sys.stdout)
+subprocess.run(['python', 'fix_links.py'] + list(map(str,outlist)), stdout=sys.stdout)
