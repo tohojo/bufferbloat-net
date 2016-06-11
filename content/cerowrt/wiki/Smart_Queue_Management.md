@@ -39,7 +39,7 @@ management" system was the venerated
 early 2000s as the linux based shaper of choice. It was widely deployed
 in internet cafes around the world, and in Linux users' homes and
 workplaces. Although for the time it was a breakthrough, it has since
-been obsoleted by events and bugs in its design. See [Wondershaper Must Die]({{< relref "projects/cerowrt/wiki/Wondershaper_Must_Die.md" >}}).
+been obsoleted by events and bugs in its design. See [Wondershaper Must Die]({{< relref "cerowrt/wiki/Wondershaper_Must_Die.md" >}}).
 
 Much work on AQM (active queue length management) technologies like RED
 and BLUE took place in the period 1990-2002. Many variants of RED
@@ -95,7 +95,7 @@ It is far saner to apply Smart Queue Management to "police" traffic at
 today's higher speeds.
 
 Examples of deployed Smart Queue Management systems include CeroWrt's
-[SQM]({{< relref "projects/cerowrt/wiki/SQM.md" >}}) implementation, OpenWrt's qos-scripts, IPFire, the
+[SQM]({{< relref "cerowrt/wiki/SQM.md" >}}) implementation, OpenWrt's qos-scripts, IPFire, the
 Gargoyle router project, and
 [Streamboost](http://www.qualcomm.com/media/releases/2013/01/04/qualcomm-introduces-streamboost-technology-optimize-performance-and)
 . WRED is deployed in many locations. France Telecom deploys SFQ.

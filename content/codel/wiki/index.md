@@ -99,7 +99,7 @@ Google Summer of Code, and fq\_codel (and variants) are slated for the
 next version.
 
 There are now basically 6 slightly different variants of codel (see
-[Reconciling codel variants]({{< relref "projects/codel/wiki/Reconciling_codel_variants.md" >}})), flying in loose formation. The
+[Reconciling codel variants]({{< relref "codel/wiki/Reconciling_codel_variants.md" >}})), flying in loose formation. The
 code as published in the original paper is obsolete. Research is
 continuing. Come help!
 
@@ -145,7 +145,7 @@ iproute2 added support for fq\_codel in the 3.6 release and
 configuration and statistics should be available by default in most
 Linux systems shipped today.
 
-[CeroWrt]({{< relref "projects/codel/wiki/Wiki.md" >}}) Version
+[CeroWrt]({{< relref "cerowrt/wiki/index.md" >}}) Version
 -----------------------------------------
 
 The CeroWrt research router project was started, specifically, to test

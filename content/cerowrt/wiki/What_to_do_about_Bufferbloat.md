@@ -10,7 +10,7 @@ What to do about Bufferbloat
 
 Bufferbloat is high latency (or lag) that occurs when there's other
 traffic on your network. Use the [DSLReports Speed
-Test](http://dslreports.com/speedtest) or run the [Quick Test for Bufferbloat]({{< relref "projects/cerowrt/wiki/Quick_Test_for_Bufferbloat.md" >}}) to see if it's present.
+Test](http://dslreports.com/speedtest) or run the [Quick Test for Bufferbloat]({{< relref "cerowrt/wiki/Quick_Test_for_Bufferbloat.md" >}}) to see if it's present.
 
 **TL;DR** - if these tests show bufferbloat, your router is letting bulk
 traffic (uploads/downloads) interfere with (and slow down) your
@@ -86,7 +86,7 @@ for all.
 Furthermore, you can spend **a lot** of time updating priorities,
 setting up new filters, and checking to see whether VoIP, gaming, ssh,
 netflix, torrent, etc. are "balanced". (There is a whole\
-cottage industry in updating WonderShaper rule sets. [They all have terrible flaws]({{< relref "projects/cerowrt/wiki/Wondershaper_Must_Die.md" >}}), and they don't help a
+cottage industry in updating WonderShaper rule sets. [They all have terrible flaws]({{< relref "cerowrt/wiki/Wondershaper_Must_Die.md" >}}), and they don't help a
 lot.) Worst of all, these rules create a maintenance hassle. Each new
 rule has to be adjusted in the face of new kinds of traffic. And if the
 router changes, or speed changes, or there's new traffic in the mix,

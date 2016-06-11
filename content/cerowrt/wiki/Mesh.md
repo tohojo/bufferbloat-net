@@ -38,8 +38,8 @@ Configuring mesh routing on the router(s)
 The CeroWrt routers are configured as server mesh nodes by default. This
 may change in a future release.
 
-You will need to set at least one router up as an [AHCP]({{< relref "projects/cerowrt/wiki/AHCP.md" >}})
-server in order for clients to obtain an ip address on the [babel SSID]({{< relref "projects/cerowrt/wiki/Babel_SSID.md" >}}). If they are connected via other means (wired, or wireless
+You will need to set at least one router up as an [AHCP]({{< relref "cerowrt/wiki/AHCP.md" >}})
+server in order for clients to obtain an ip address on the [babel SSID]({{< relref "cerowrt/wiki/Babel_SSID.md" >}}). If they are connected via other means (wired, or wireless
 STA mode) the routers should have unique IP address ranges, and NAT
 disabled.
 
@@ -255,7 +255,7 @@ is no need to run either ahcp or babel on any client machines. I
 personally like to run babel so I can see the health of my network on
 the laptop with a tool like
 [babelweb](http://www.pps.jussieu.fr/~kerneis/software/babelweb/) -
-here's the mesh network at [bloatlab 1]({{< relref "projects/cerowrt/wiki/BloatLab_1.md" >}}) for example.
+here's the mesh network at [bloatlab 1]({{< relref "cerowrt/wiki/BloatLab_1.md" >}}) for example.
 http://io.lab.bufferbloat.net:8080/
 
 ### A laptop configured to be a partial mesh node

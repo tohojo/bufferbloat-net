@@ -9,13 +9,13 @@ RRUL Rogues Gallery
 ===================
 
 This is a web page dedicated to showing off and explaining some results
-obtained via (early) prototypes of the [RRUL test suite]({{< relref "projects/codel/wiki/RRUL_test_suite.md" >}}).
+obtained via (early) prototypes of the [RRUL test suite]({{< relref "codel/wiki/RRUL_test_suite.md" >}}).
 
 Yurtlab testing (comcast 20Mbit up 8Mbit down)
 ----------------------------------------------
 
 Various fq\_codel based rate shaping prototypes are under test at the
-[Yurtlab]({{< relref "projects/cerowrt/wiki/Yurtlab.md" >}}).
+[Yurtlab]({{< relref "cerowrt/wiki/Yurtlab.md" >}}).
 
 ### NFQ\_Codel with HTB rate limiting vs PFIFO\_FAST
 

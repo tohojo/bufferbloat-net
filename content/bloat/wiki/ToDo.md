@@ -127,36 +127,36 @@ Dave Taht's to-do list:
 
 -   <link>Myths</link>
 -   <link>Controversies</link>
--   [Conferences]({{< relref "projects/bloat/wiki/Conferences.md" >}})
+-   [Conferences]({{< relref "bloat/wiki/Conferences.md" >}})
 -   <link>Linux Traffic Shapers</link>
 -   <link>Device Driver Buffering</link>
 -   <link>Linux Patches</link>
--   [Linux Tips]({{< relref "projects/bloat/wiki/Linux_Tips.md" >}})
+-   [Linux Tips]({{< relref "bloat/wiki/Linux_Tips.md" >}})
 -   <link>Mac Tips</link>
--   [Windows Tips]({{< relref "projects/bloat/wiki/Windows_Tips.md" >}})
--   [Bloated Driver List]({{< relref "projects/bloat/wiki/Bloated_Driver_List.md" >}})
--   [IPv6]({{< relref "projects/bloat/wiki/IPv6.md" >}})
--   [Glossary]({{< relref "projects/bloat/wiki/Glossary.md" >}}) [Dark Buffers]({{< relref "projects/bloat/wiki/Dark_buffers.md" >}}) <link>Latency</link>
+-   [Windows Tips]({{< relref "bloat/wiki/Windows_Tips.md" >}})
+-   [Bloated Driver List]({{< relref "bloat/wiki/Bloated_Driver_List.md" >}})
+-   [IPv6]({{< relref "bloat/wiki/IPv6.md" >}})
+-   [Glossary]({{< relref "bloat/wiki/Glossary.md" >}}) [Dark Buffers]({{< relref "bloat/wiki/Dark_buffers.md" >}}) <link>Latency</link>
     <link>RTT</link> <link>TXQUEUELEN</link> <link>DMA\_TX\_QUEUE</link>
     <link>spiky latency</link>
--   [Experiments]({{< relref "projects/bloat/wiki/Experiments.md" >}})
--   [Equations]({{< relref "projects/bloat/wiki/Equations.md" >}})
+-   [Experiments]({{< relref "bloat/wiki/Experiments.md" >}})
+-   [Equations]({{< relref "bloat/wiki/Equations.md" >}})
 -   <link>Qdiscs</link>
--   [Papers]({{< relref "projects/bloat/wiki/Papers.md" >}})
+-   [Papers]({{< relref "bloat/wiki/Papers.md" >}})
 -   <link>Mitigations</link>
--   [Dogfood Principle]({{< relref "projects/bloat/wiki/Dogfood_Principle.md" >}})
--   [Good blog discussions]({{< relref "projects/bloat/wiki/Good_blog_discussions.md" >}})
+-   [Dogfood Principle]({{< relref "bloat/wiki/Dogfood_Principle.md" >}})
+-   [Good blog discussions]({{< relref "bloat/wiki/Good_blog_discussions.md" >}})
 -   <link>What (bad) stuff happens on a congested network?</link>
 -   <link>Mesh Networks</link>
--   [Talks]({{< relref "projects/bloat/wiki/Talks.md" >}})
--   [Experts]({{< relref "projects/bloat/wiki/Experts.md" >}})
--   [sandbox]({{< relref "projects/bloat/wiki/Sandbox.md" >}})
--   [Quotes]({{< relref "projects/codel/wiki/Quotes.md" >}})
+-   [Talks]({{< relref "bloat/wiki/Talks.md" >}})
+-   [Experts]({{< relref "bloat/wiki/Experts.md" >}})
+-   [sandbox]({{< relref "bloat/wiki/Sandbox.md" >}})
+-   [Quotes]({{< relref "bloat/wiki/Quotes.md" >}})
 -   <link>SACK hall of Fame</link> <link>SACK hall of Shame</link>
 -   <link>ECN Hall of Fame</link> <link>ECN hall of Shame</link>
--   [dtaht tasks]({{< relref "projects/bloat/wiki/Dtaht_tasks.md" >}})
--   [humor]({{< relref "projects/bloat/wiki/Humor.md" >}})
+-   [dtaht tasks]({{< relref "bloat/wiki/Dtaht_tasks.md" >}})
+-   [humor]({{< relref "bloat/wiki/Humor.md" >}})
 -   Gettys blogs reformatted\
-    [Mitigations and Solutions]({{< relref "projects/bloat/wiki/Mitigations_and_Solutions.md" >}}) [Mitigations and solutions for Broadband]({{< relref "projects/bloat/wiki/Mitigations_and_solutions_for_Broadband.md" >}}) <link>Mitigations and solutions for
-    Wireless</link> [Mitigations and Solutions for Home Gateways]({{< relref "projects/bloat/wiki/Mitigations_and_Solutions_for_Home_Gateways.md" >}})
+    [Mitigations and Solutions]({{< relref "bloat/wiki/Mitigations_and_Solutions.md" >}}) [Mitigations and solutions for Broadband]({{< relref "bloat/wiki/Mitigations_and_solutions_for_Broadband.md" >}}) <link>Mitigations and solutions for
+    Wireless</link> [Mitigations and Solutions for Home Gateways]({{< relref "bloat/wiki/Mitigations_and_Solutions_for_Home_Gateways.md" >}})
 

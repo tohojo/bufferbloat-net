@@ -8,8 +8,8 @@ type: wiki
 What's the naming scheme?
 =========================
 
-All [testlab]({{< relref "projects/cerowrt/wiki/Testlab.md" >}}) machines orbit around the gateway box,
-[Jupiter]({{< relref "projects/cerowrt/wiki/Jupiter.md" >}}). When I setup the first testlab in May, Jupiter had
+All [testlab]({{< relref "cerowrt/wiki/Testlab.md" >}}) machines orbit around the gateway box,
+[Jupiter]({{< relref "cerowrt/wiki/Jupiter.md" >}}). When I setup the first testlab in May, Jupiter had
 only 63 moons. [Now Jupiter has 64
 moons](http://en.wikipedia.org/wiki/Moons_of_Jupiter) (mostly captured
 asteriods), so I would hope that would be enough names to use.

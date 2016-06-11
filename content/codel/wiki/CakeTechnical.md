@@ -18,7 +18,7 @@ presently required to effectively tackle the bufferbloat problem at the
 network edge.
 
 For installation and configuration instructions, please see the main
-[Cake]({{< relref "projects/codel/wiki/Cake.md" >}}) page.
+[Cake]({{< relref "codel/wiki/Cake.md" >}}) page.
 
 Philosophy
 ----------

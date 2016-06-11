@@ -39,6 +39,6 @@ buffers) \\over (luck \* hacks)})}}
 
 where luck is in the range 0..1 and rapidly approaching 0.
 
-[Scientific Orgs]({{< relref "projects/bloat/wiki/Scientific_Orgs.md" >}})
+[Scientific Orgs]({{< relref "bloat/wiki/Scientific_Orgs.md" >}})
 
 http://www.cra.org/events/

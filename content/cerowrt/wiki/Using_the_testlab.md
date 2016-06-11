@@ -39,4 +39,4 @@ For example this will test a larger cwin:
 which was the subject of <link>Experiment - QoS</link>, which has many
 more examples
 
-[Machines]({{< relref "projects/cerowrt/wiki/Machines.md" >}})
+[Machines]({{< relref "cerowrt/wiki/Machines.md" >}})

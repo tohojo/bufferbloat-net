@@ -8,7 +8,7 @@ type: wiki
 Mission
 =======
 
-![](/images/jigsawfish-small.png) The [dark buffers]({{< relref "projects/bloat/wiki/Dark_buffers.md" >}})
+![](/images/jigsawfish-small.png) The [dark buffers]({{< relref "bloat/wiki/Dark_buffers.md" >}})
 that lead to <link>bloat:Bufferbloat</link> and the congestion/latency
 problems that currently plague the internet are *almost* everywhere. The
 Bufferbloat project intends to address these problems by:

@@ -27,7 +27,7 @@ different characteristics, this system lets each be played with
 individually.
 
 Lastly, the 'guest' concept lets encrypted, unencrypted, and mesh
-networks be tested individually. Etc. See also: [default network numbering]({{< relref "projects/cerowrt/wiki/Default_network_numbering.md" >}}).
+networks be tested individually. Etc. See also: [default network numbering]({{< relref "cerowrt/wiki/Default_network_numbering.md" >}}).
 
 The device naming pattern is
 
@@ -59,6 +59,6 @@ scheme.
 
 ### See also:
 
-[Default network numbering scheme]({{< relref "projects/cerowrt/wiki/Default_network_numbering.md" >}})\
-[Changing IP, DNS, and SSID]({{< relref "projects/cerowrt/wiki/Changing_your_cerowrt_ip_addresses.md" >}})\
-[Automated Configuration of CeroWrt]({{< relref "projects/cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}})
+[Default network numbering scheme]({{< relref "cerowrt/wiki/Default_network_numbering.md" >}})\
+[Changing IP, DNS, and SSID]({{< relref "cerowrt/wiki/Changing_your_cerowrt_ip_addresses.md" >}})\
+[Automated Configuration of CeroWrt]({{< relref "cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}})

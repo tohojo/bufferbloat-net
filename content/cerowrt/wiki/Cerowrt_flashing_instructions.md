@@ -127,7 +127,7 @@ Flashing instruction for Linux
     take a while to get a DHCP address, and you may temporarily see a
     link-local (e.g. 169.254.x.x) address.
 14. Continue reading the
-    [Final Setup     Steps]({{< relref "projects/cerowrt/wiki/Cerowrt_flashing_instructions.md" >}}) (below).
+    [Final Setup     Steps]({{< relref "cerowrt/wiki/Cerowrt_flashing_instructions.md" >}}) (below).
 
 Flashing Instructions for Mac
 -----------------------------
@@ -180,7 +180,7 @@ Flashing Instructions for Mac
     take a while to get a DHCP address, and you may temporarily see a
     link-local (e.g. 169.254.x.x) address.
 10. Continue reading the
-    [Final Setup     Steps]({{< relref "projects/cerowrt/wiki/Cerowrt_flashing_instructions.md" >}}) (below)
+    [Final Setup     Steps]({{< relref "cerowrt/wiki/Cerowrt_flashing_instructions.md" >}}) (below)
 
 Flashing Instructions for Windows 7
 -----------------------------------
@@ -292,7 +292,7 @@ Flashing Instructions for Windows 7
     take a while to get a DHCP address, and you may temporarily see a
     link-local (e.g. 169.254.x.x) address.
 13. Continue reading the
-    [Final Setup     Steps]({{< relref "projects/cerowrt/wiki/Cerowrt_flashing_instructions.md" >}}) (below)
+    [Final Setup     Steps]({{< relref "cerowrt/wiki/Cerowrt_flashing_instructions.md" >}}) (below)
 
 Final Setup Steps
 -----------------
@@ -317,7 +317,7 @@ Final Setup Steps
     computer to re-flash the router.
 4.  Connect the WAN port on the router to your ISP uplink and reboot
     the router.
-5.  Return to the [Installation Guide]({{< relref "projects/cerowrt/wiki/Installation_Guide.md" >}}) for the next steps.
+5.  Return to the [Installation Guide]({{< relref "cerowrt/wiki/Installation_Guide.md" >}}) for the next steps.
 
 Flashing Instructions "from the router"
 ---------------------------------------
@@ -337,7 +337,7 @@ sysupgrade utility is also installed in your router.
     a candidate)
     openwrt-ar71xx-generic-wndr3700v2-squashfs-sysupgrade.bin, but right
     now you want to wipe out everything, so use the "factory"
-    version, above). [sysupgrade]({{< relref "projects/cerowrt/wiki/Sysupgrade.md" >}}) instructions are elsewhere.
+    version, above). [sysupgrade]({{< relref "cerowrt/wiki/Sysupgrade.md" >}}) instructions are elsewhere.
 3.  Configure your wired interface to DHCP
 4.  Connect port 1 on the router to the ethernet port (make sure you are
     connecting to the router's ethernet port 1, not its WAN port!)
@@ -362,5 +362,5 @@ sysupgrade utility is also installed in your router.
     that doesn't work, proceed to step 2.
 13. Connect the WAN port on the router to your ISP uplink and reboot
     the router.
-14. Return to the [Installation Guide]({{< relref "projects/cerowrt/wiki/Installation_Guide.md" >}}) for the next steps.
+14. Return to the [Installation Guide]({{< relref "cerowrt/wiki/Installation_Guide.md" >}}) for the next steps.
 

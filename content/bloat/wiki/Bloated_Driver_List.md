@@ -8,10 +8,10 @@ type: wiki
 Bloated Device Drivers
 ======================
 
-Reducing your [Dark Buffers]({{< relref "projects/bloat/wiki/Dark_buffers.md" >}}) requires some work analyzing the
+Reducing your [Dark Buffers]({{< relref "bloat/wiki/Dark_buffers.md" >}}) requires some work analyzing the
 device drivers involved. The amount of default buffering the device
 driver does can be deduced from looking at the source code, or inferred
-by performing [Experiments]({{< relref "projects/bloat/wiki/Experiments.md" >}}) on your systems.
+by performing [Experiments]({{< relref "bloat/wiki/Experiments.md" >}}) on your systems.
 
 Please help us improve this list!
 

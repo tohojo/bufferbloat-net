@@ -79,7 +79,7 @@ The Completion/Confirmation phase shuts down the session between the
 server and clients. It starts with a message from the server indicating
 the end of the session. The clients then respond with a completion
 message, and the server responds to each completion with a confirmation
-message."<link>http://www.tcnj.edu/\~bush/uftp.html</link>
+message."[http://www.tcnj.edu/\~bush/uftp.html](http://www.tcnj.edu/\~bush/uftp.html)
 
 How to test
 -----------

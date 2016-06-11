@@ -17,7 +17,7 @@ ntp.org, the internet archive and many other wonderful projects. They
 have 10GigE connectivity to the internet.
 
 Presently much of this lab has been dissembled and moved to
-[yurtlab]({{< relref "projects/cerowrt/wiki/Yurtlab.md" >}}).
+[yurtlab]({{< relref "cerowrt/wiki/Yurtlab.md" >}}).
 
 IPv4, native IPv6 and 6to4 are being tested on a cluster of 7 routers, 2
 switches, a pair of PDUs and a perfsonar machine, and a network
@@ -70,19 +70,19 @@ The ipv6 subnets follow a similar scheme, except in hexadecimal
 
 2001:4f8:fff8:0X00::/56 per router, where X = the X in the ipv4 address.
 
-[What's the naming scheme]({{< relref "projects/cerowrt/wiki/What's_the_naming_scheme.md" >}})? Some more details on the
-[testlab machines]({{< relref "projects/cerowrt/wiki/Machines.md" >}})
+[What's the naming scheme]({{< relref "cerowrt/wiki/What's_the_naming_scheme.md" >}})? Some more details on the
+[testlab machines]({{< relref "cerowrt/wiki/Machines.md" >}})
 
 Note this document becomes inaccurate about 5 minutes after written.
 
-See also [using the testlab]({{< relref "projects/cerowrt/wiki/Using_the_testlab.md" >}})
+See also [using the testlab]({{< relref "cerowrt/wiki/Using_the_testlab.md" >}})
 
 Servers
 -------
 
   ----------------------- -------------- -------------------- ------------- ------------------------------- -------------------------------------- -------- -------------------------------- ----------
   Name                    EXT IP         EXT IPv6             IP            NET                             MAC                                    STATUS   Purpose                          PDU PORT
-  [Jupiter]({{< relref "projects/cerowrt/wiki/Jupiter.md" >}})    149.20.63.18   2001:4f8:3:203::2    172.29.0.33   16                                                                     UP       Cerowrt GW, primary DNS server   
+  [Jupiter]({{< relref "cerowrt/wiki/Jupiter.md" >}})    149.20.63.18   2001:4f8:3:203::2    172.29.0.33   16                                                                     UP       Cerowrt GW, primary DNS server   
   <link>Europa</link>     149.20.63.19   2001:4f8:3:203::13   172.29.1.33   22                                                                     UP       Cerowrt GW                       
   <link>Io</link>         149.20.63.20   2001:4f8:3:203::14   172.29.X.Z    UP                              Ubuntu 11.10 test/measurement server   
   <link>Carpo</link>                                                        IN progress - underconfigured   Perfsonar x86 data collection box      

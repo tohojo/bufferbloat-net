@@ -15,7 +15,7 @@ That proved too hard, and we went and worked first on fixing ethernet.
 With BQL and fq\_codel we think we've made a real dent in that. Sadly
 100s of ethernet drivers remain to be BQL-enabled, and soft-rate
 limiting is finicky, so we are a long way away from seeing that set of
-proven fixes ( [SQM]({{< relref "projects/cerowrt/wiki/SQM.md" >}}) ) widely deployed.
+proven fixes ( [SQM]({{< relref "cerowrt/wiki/SQM.md" >}}) ) widely deployed.
 
 3 years later... Cerowrt is now experimenting with various forms of
 fq\_codel on top of the wireless stack. The problems in wireless-n are
