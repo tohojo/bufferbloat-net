@@ -1,4 +1,3 @@
 
-    <link href="{{ "css/bootstrap.css" | relURL }}" rel="stylesheet">
-    <link href="{{ "css/font-awesome.css" | relURL }}" rel="stylesheet">
-    <link href="{{ "css/custom.css" | relURL }}" rel="stylesheet">
+  {{ range .Site.Params.stylesheets }}
+  <link href="{{ printf "css/%s" . | relURL }}" rel="stylesheet" type="text/css" />{{ end }}

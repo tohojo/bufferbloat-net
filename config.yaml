@@ -6,3 +6,4 @@ relativeURLs: false
 pluralizeListTitles: false
 params:
   author: The Bufferbloat community
+  stylesheets: [ "bootstrap.css", "font-awesome.css", "custom.css" ]
