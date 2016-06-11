@@ -1,6 +1,6 @@
-baseurl: "https://kau.toke.dk/bufferbloat-archive/"
+baseurl: "https://www.bufferbloat.net/projects/"
 languageCode: "en-us"
-title: "Bufferbloat.net archive"
+title: "Bufferbloat.net"
 disable404: false
 relativeURLs: false
 pluralizeListTitles: false
