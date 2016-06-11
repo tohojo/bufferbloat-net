@@ -42,11 +42,12 @@ for f in sys.argv[1:]:
 
         label = None
         project = myproject
-        linktext = c[start+6:end].replace("\n", " ")
-        if linktext.startswith("http"):
+        link = linktext = c[start+6:end].replace("\n", " ")
+        if link.startswith("http"):
             print("Found verbatim link: %s" % linktext)
             newtext = newtext.replace(c[start:end+7], "[%s](%s)" % (linktext,linktext))
             continue
+        linktext = link
         if ":" in linktext:
             project,linktext = linktext.split(":")
         if "|" in linktext:
@@ -71,6 +72,6 @@ for f in sys.argv[1:]:
                 found = True
                 break
         if not found:
-            print("Warning: Couldn't find target for %s" % linktext)
+            print("Warning: Couldn't find target for %s" % link)
     with open(f, 'w') as fp:
         fp.write(newtext)
