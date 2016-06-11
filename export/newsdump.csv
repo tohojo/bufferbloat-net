@@ -1,0 +1,889 @@
+project,title,summary,description,created_on,author
+sysadmin,The glory years of Netnews,"There was an age... when spell checkers could spell netequitte, when all text was green or amber on black. It was a time before time, an age before this age, when giants walked the earth.",Where does project specific news go?,2011-01-24 08:29:36.055947,Dave Täht
+bloat,Talk at Bell Labs is up,"Jim Gettys gave a talk at Bell Labs last week, pulling together most of the threads of bufferbloat into a single presentation. ","Jim Gettys gave a ""talk at Bell Labs"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/ last week, pulling together most of the threads of bufferbloat into a single presentation. You can find the talk and audio of the talk. There are still areas not discussed n detail on the blog; they will be coming over the next month or two.
+
+",2011-01-28 08:25:15.919244,Jim Gettys
+bloat,"Bufferbloat & Voip Conference Call: Friday, Jan 28 12:00 EST",Jim Gettys will be addressing the Voip Users Conference via a variety of telephony technologies. Please tune in!,"Jim Gettys will be addressing the ""Voip Users Conference"":http://www.voipusersconference.org/2011/bufferbloat/ Friday, Jan 28 12:00 EST
+
+You can dial in via:
+
+SIP: using g722 or g711 codecs with a call to ""sip:200901@login.zipdx.com"":sip://200901@login.zipdx.com
+SKYPE: vuc.me (thanks to Tim Panton and PhoneFromHere.com)
+PSTN: (567) 252-2286 thanks to Alex Graham Bell
+iNum: +883 5100 123 94882
+IRC: ""IRC channel #vuc on chat.freenode.net"":irc://chat.freenode.net%23vuc or ""chat via the web"":http://vuc.me/irc",2011-01-27 08:19:59.878663,Dave Täht
+cerowrt,Codel on Cerowrt-3.3.6-2,"A preliminary test release of CeroWrt is now available that has support for Kathie Nichols' and Van Jacobson's new AQM, codel, and Eric Dumazet's fq_codel.","A test release of CeroWrt is now available that has support for Kathie Nichols' and Van Jacobson's new AQM, ""Codel"":http://www.bufferbloat.net/projects/codel/ , and Eric Dumazet's new fair queuing implementation on top of that, fq_codel.
+
+fq_codel is enabled on all interfaces by default. It is vastly simpler than what we were using before (sfqred) and draws upon and improves on the same body of ideas (head drop, fq, timestamping) but now tied to Kathie and Van's blinding insights as to a good drop strategy, and Eric's successor ideas as towards head of queue behavior and cache line optimizations.
+
+There is a simple_qos.sh script that can be set to your uplink and downlink speeds, but no uci interface for it as yet, nor gui. (help on finishing aqm-scripts and the luci interface gladly accepted)
+
+To see all the chocolately goodness of what fq_codel can do to wired and wireless latency, it would be good for more to play with it.
+
+Benchmarks have been very good thus far, and more benchmarks and analysis are highly desired.
+
+Caveat:
+
+This release suffers from an unrelated bug ( #379 ) and should NOT be installed as your main router. I would love to beat this bug because it's the only prio 1 remaining but thus far, no luck. Under lighter loads CeroWrt appears to work just fine, but that's for me. YMMV.
+
+Get it here: http://huchra.bufferbloat.net/~cero1/3.3/3.3.6-2/
+",2012-05-14 13:56:28.237328,Dave Täht
+bloat,ECN information from Steve Bauer and Robert Beverly.,"Steve Bauer has been kind enough to give me a copy of his slides, that goes over the state of ECN. It has a quick overview of how ECN is implemented, and then goes into the current state of deployment and problems uncovered.","Steve Bauer has been kind enough to give me a copy of his slides, slightly tweaked since that workshop, that goes over the state of ECN. They are much better than half-baked, but they are very much a work in progress. It has a quick overview of how ECN is implemented, and then goes into the current state of deployment and problems uncovered.
+
+""Pointers to the slides and a bit of discussion are in my blog"":http://gettys.wordpress.com/2011/02/22/caida-workshop-aims-2011-bauer-and-beverly-ecn-results/",2011-02-22 13:36:52.919128,Jim Gettys
+cerowrt,Heartbleed and CeroWrt - upgrade please!,"Heartbleed was bad, and CeroWrt was somewhat vulnerable - fixes are now available.","Heartbleed Update
+
+In response to the heartbleed (CVE-2014-0160) vulnerability, on April
+9th 2014 we updated the under-development CeroWrt release to include
+the fixed version of openssl. The fix is in CeroWrt 3.10.36-3 and
+later.
+
+We have no means of fixing the ""stable"" (3.7.5) release of CeroWrt,
+nor any of the innumerable development releases since then.
+
+Please do a clean, fresh upgrade to CeroWrt 3.10.36-6 or later. [1]
+Images are available in: http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/
+Reflashing instructions are here:
+
+https://www.bufferbloat.net/projects/cerowrt/wiki/Cerowrt_flashing_instructions
+
+In the base image, the administration gui of recent CeroWrt versions
+depended on openssl (however it is protected by firewall rules to only
+be accessible from within your own network), and several optional packages
+did also - stunnel - used for ""secure"" tunneling, and openvpn in particular.
+
+To find out more about the bug go to http://heartbleed.com/ and/or
+see the relevant page on wikipedia: http://en.wikipedia.org/wiki/Heartbleed
+
+Heartbleed is one of the most serious bugs that has ever hit the
+internet, and in addition to web services, critical network daemons
+such as those that manage network printing, logging, monitoring, voip,
+chat, tunnels, vpns and email, all can potentially be exploited.
+
+We strongly advise resyncing your source trees with us and distributing
+new firmware images containing the updated libraries. All
+network facing TLS-using daemons are potentially a risk, as are
+any TLS using services exposed behind the firewall. 
+
+Once your system is secured again, you should re-issue certs and passwords,
+as per: https://www.eff.org/deeplinks/2014/04/bleeding-hearts-club-heartbleed-recovery-system-administrators
+and check for unverified commits.
+
+Packages maintained in the openwrt core repositories that can be
+affected when compiled for openssl[2] may include: libevent2,
+ustream-ssl, hostapd, openvpn, authsae, luci-ssl, and uhttpd.
+
+Optional network daemons in other repositories such as radsecproxy,
+vsftpd, squid, mini_httpd, pure-ftpd, cups, ndyndns, elinks,
+libtorrent, monit, nagios, syslog-ng3, boxbackup, rsyncrypto, curl,
+cyrus-sasl, openldap, icecast, fetchmail, dovecot, transmission,
+stunnel, httptunnel, apache, lighttpd, znc, net-snmp, bitlbee,
+asterisk, postfix and openvpn *all* use TLS level security, are
+often linked against openssl, and are thus potentially vulnerable.
+
+Please see the relevant website for each of the products above
+for news on their vulnerabilities. Much of the furor over heartbleed
+has focused on websites, where notably smtp and imaps and im traffic
+has also been shown vulnerable.
+
+https://zmap.io/heartbleed/
+
+http://blog.freenode.net/2014/04/heartbleed/
+
+Other infrastructure, router and CPE distributions are also affected.
+
+Two examples among many:
+
+http://www.theguardian.com/technology/2014/apr/16/bt-heartbleed-home-hubs
+
+http://www.cnet.com/news/heartbleed-bug-also-affects-cisco-juniper-equipment/
+
+Network facing Applications built on top of php4, php5, python, luasec, erlang, ruby
+are also potentially affected.
+
+Packages maintained in the ceropackages repository that were potentially
+vulnerable are xorp, python-lafs, ccnx, and resiprocate.
+
+Please take this seriously and check your firmware and your products for
+usage of the vulnerable openssl versions.
+
+We note also that multiple other serious vulnerabilities have been
+fixed in other CeroWrt and OpenWrt packages and in the Linux kernel over
+the past years; you should consider fixing those vulnerabilities in
+your downstream products and routers while you are at it.
+
+We have long been supportive of adding new features for openwrt to
+make it more easily updated in the field, the work could use more
+eyeballs and developers, and we need to find resources and funding for
+a code audit in the coming months.
+
+Notes:
+
+[1] Regrettably in the present development branch (3.10.36-4) we are
+trying to isolate a wifi bug that crops up after much traffic, we will
+announce a fix for that when it arrives. See Bug #442 .
+
+[2] The base as-provided-by OpenWrt base binary installations are not
+vulnerable to HeartBleed, as neither the builtin SSH server nor the
+optional LuCI SSL support rely on OpenSSL for cryptographic TLS
+support. Their Attitude Adjustment release used cyassl as a base,
+and the underway Barrier Breaker development series uses PolarSSL
+for as many packages as support exists and the GPLv2 license allows.
+
+In other words the OpenSSL library is not installed within the stock
+base images available on their download servers, however they too
+contain many optional packages that do depend on openssl to function,
+and many downstream products may have chosen openssl over those 
+products.
+
+Check your trees! And if you are having a bad week, perhaps this
+will help: http://www.taht.net/~mtaht/uncle_bills_helicopter.html
+
+Stay calm and keep on patching!
+",2014-04-16 11:05:11.34724,Dave Täht
+bloat,Videoconference Friday 12PM ET FCC vs open wifi firmware,"We will be having a wide ranging discussion of the recent release of our letter to the fcc on an alternate approach to making wifi faster, and more secure","see:
+
+https://plus.google.com/u/0/events/cp7g87eq2g5fde8b8i5bn2p8oo0
+
+for time, date and details. 
+
+The letter is here: http://fqcodel.bufferbloat.net/~d/fcc_saner_software_practices.pdf",2015-10-15 19:11:04.206991,Dave Täht
+bloat,Bufferbloat.net - the first 16 days,The bufferbloat project has been live for a little over 2 weeks. We've accomplished one heck of a lot so far... click on the link for an overview!,"h1. A summary of goings on at Bufferbloat.net since the launch
+
+Jim Gettys' ""presentation on Bufferbloat"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/ and the ""audio recording"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/murray_hill01192011_Bufferbloat_Talk_Edited_For_brevity.mp3 got a LOT of hits (collating the data will take some time, sorry)
+83 people joined the ""bloat"":https://lists.bufferbloat.net/listinfo/bloat mailing list
+19 people joined the ""bloat-devel"":https://lists.bufferbloat.net/listinfo/bloat-devel mailing list
+24 registrations on the ""bufferbloat project web site"":http://www.bufferbloat.net/projects/bloat
+8 people regularly in the ""#bufferbloat"":irc://chat.freenode.net#bufferbloat irc channel on chat.freenode.net
+
+I'm really delighted to see everyone so concerned about Bufferbloat and so willing to help out!
+
+In the next 15 days I hope we start to get some patches out the door, and unify several separate lines of development, improve the wiki, and continue to recruit to more people with perspectives and understandings of the problem.
+
+h2. Principal threads of conversation so far this month:
+
+""Shifting the Market"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000066.html - How to get the word out? (#33)
+""SFB"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000026.html - Discussion of the features of Stochastic fair blue queuing, with ""Juliusz Chroboczek"":http://www.pps.jussieu.fr/~jch/ , the author of the ""SFB patch"":http://www.pps.jussieu.fr/~jch/software/sfb/ for the Linux kernel
+""The dangers of AQM"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000108.html - a cautionary note about Active Queue Management, by ""Kathie Nichols"":http://www.pollere.net/about.html and ""Van Jacobson"":http://en.wikipedia.org/wiki/Van_Jacobson
+""Bufferbloat and You"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000050.html - a draft contributed by ""Eric Raymond"":http://en.wikipedia.org/wiki/Eric_Raymond, Much discussion as to good analogies for how the Internet really works ensued
+""About LEDBAT, µTP and BitTorrent"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000025.html - an exploration of the issues and advantages of bittorrent
+""TCP Vegas vs Cubic"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000016.html - Some [[Experiment_-_TCP_cubic_vs_TCP_vegas|puzzling data about TCP vegas]] with current hardware 
+""The wireless problem in a nutshell"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000068.html  The unique problems 802.11 introduces for TCP/ip (related: ""Wireless multiqueue behavior"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000118.html )
+
+h2. Blog posts & media coverage related to Bufferbloat
+
+|Richard Pitt|""Bufferbloat and your ISP's problem"":http://digital-rag.com/article.php/Buffer-Bloat-Packet-Loss|
+|""Joe Brockmeier"":http://www.networkworld.com/community/zonker|""The fight against Bufferbloat"":http://www.networkworld.com/community/fight-against-bufferbloat|
+|Jim Gettys, Dave Täht|""Bufferbloat and VOIP podcast"":http://www.voipusersconference.org/2011/bufferbloat/|
+|Jim Gettys|""A call for help with Bufferbloat animations"":http://gettys.wordpress.com/2011/02/04/animation-to-show-bufferbloat-badly-needed/|
+
+h2. Progress on the wiki and infrastructure
+
+""John Linville"":http://www.tuxdriver.com/index.html signed up as a source code maintainer - ""Richard Scheffenegger"":http://tools.ietf.org/html/draft-scheffenegger-tcpm-sack-loss-recovery-00 put up a ""simple NS2 animation of bufferbloat."":http://www.bufferbloat.net/attachments/15/nam00000.avi - ""Richard Pitt"":http://digital-rag.com/ started a [[glossary]] - ""Don Marti"":http://zgp.org/~dmarti/ contributed some [[Linux Tips]] - Eric Raymond & Dave Täht are working on an introduction and site overview - links to various important [[papers]] have been collected - and numerous bits and pieces of the overall picture have been filled in from Jim Gettys' extensive blog postings. More definitions, contributions, and organization are direly needed, but the overall picture is taking shape. The ""index"":http://www.bufferbloat.net/projects/bloat/wiki/index has various bits of good info in various states of completion, and there's also an [[outline]] of some of what remains to be done.
+",2011-02-12 11:42:02.84071,Dave Täht
+cerowrt,Ocean City (r6) Release is Complete,"We have declared victory with the Ocean City Release. It is stable, but has been surpassed by the ""bql smoketest"" versions","The ""Ocean City"" build is as done as it's going to get. It is stable, but its goals were way too broad to implement in a reasonable time period. As of mid-December 2011, we have declared victory, and chosen to focus on the essential experiments to decrease bufferbloat. This puts on hold all the rc7, rc8, etc. builds previously listed in the Roadmap.",2012-02-14 18:57:42.997061,Rich Brown
+bloat,"It's (still) the latency, stupid*","The Internet Society has issued another in its series on Bandwidth Management, in its Technology Roundtable Series.","The Internet Society has issued another in its series on Bandwidth Management, in its ""Technology Roundtable Series"":http://www.internetsociety.org/blog/2012/11/its-still-latency-stupid. The ""executive summary"":http://www.internetsociety.org/doc/bandwidth-management-internet-society-technology-roundtable-series highlights the problems that bufferbloat is causing in today's Internet.  ""The full report is available."":http://www.internetsociety.org/sites/default/files/BWroundtable_report-1.0.pdf
+
+
+
+*With apologies to Stuart Cheshire...",2012-11-29 07:59:14.632296,Jim Gettys
+bloat,How do we solve the next big Internet emergency?,"Jim Gettys talks about the real issue of bittorrent - not the technology, not the deployment - but the misguided reactions to it in his latest blog entry.","Jim Gettys writes about the needs for transparency and an action team for handling Internet emergencies as they arise, or preferably, before, in ""The Next nightmare is coming"":http://gettys.wordpress.com/2012/05/14/the-next-nightmare-is-coming/",2012-05-16 16:31:31.635182,Dave Täht
+bloat,ACM Queue publications on Bufferbloat,"Two articles have just been posted on the ACM Queue Web site as part of a Bufferbloat case study.  These are an article by Jim Gettys and Kathleen Nichols, and Vint Cerf interviewing Van Jacobson, Jim Gettys, and Nick Weaver","Two articles have just been posted on the ACM Queue Web site as part of a Bufferbloat case study.  These are an article by Jim Gettys and Kathleen Nichols, and Vint Cerf interviewing Van Jacobson, Jim Gettys, and Nick Weaver.
+
+These will hit your snail mailbox in the January 2012 CACM (Communications of the ACM).
+
+The publications are:
+* ""BufferBloat: What's Wrong with the Internet?"":http://queue.acm.org/detail.cfm?id=2076798
+A discussion with Vint Cerf, Van Jacobson, Nick Weaver, and Jim Gettys
+* ""Bufferbloat: Dark Buffers in the Internet"":http://queue.acm.org/detail.cfm?id=2071893 by Jim Gettys and Kathleen Nichols
+
+
+",2011-12-08 16:35:55.591654,Jim Gettys
+bloat,Bufferbloat demo videos,Bufferbloat demo videos are available.,"If people have heard of bufferbloat at all, it is usually just an abstraction despite having personal experience with it. Bufferbloat can occur in your operating system, your home router, your broadband gear, wireless, and almost anywhere in the Internet.  They still think that if they experience poor Internet speed means they must need more bandwidth, and take vast speed variation for granted. Sometimes, adding bandwidth can actually hurt rather than help. Most people have no idea what they can do about bufferbloat.
+
+So I’ve been working to put together several demos to help make bufferbloat concrete, and demonstrate at least partial mitigation. The mitigation shown may or may not work in your home router, and you need to be able to set both upload and download bandwidth.
+
+Two  of four cases we commonly all suffer from at home are:
+# Broadband bufferbloat (upstream)
+# Home router bufferbloat (downstream)
+Rather than attempt to show worst case bufferbloat which can easily induce complete failure, I decided to demonstrate these two cases of “typical” bufferbloat as shown by the ICSI data. As the bufferbloat varies widely as the ICSI data shows, your mileage will also vary widely.
+
+There are two versions of the video:
+
+# ""A short bufferbloat video"":http://www.youtube.com/watch?v=npiG7EBzHOU, of slightly over 8 minutes, which includes both demonstrations, but elides most of the explanation. It’s intent is to get people “hooked” so they will want to know more.
+# ""The longer version of the video"":http://www.youtube.com/watch?v=-D-cJNtKwuw clocks in at 21 minutes, includes both demonstrations, but gives a simplified explanation of bufferbloat’s cause, to encourage people to dig yet further.",2012-02-01 10:24:02.131949,Jim Gettys
+bloat,VOIP concall with the Freeswitch folk 1PM EST Mar 9,"Jim Gettys and the members of the Bufferbloat project are invited to sit in on Freeswitch's regular VOIP conference call at 1PM Eastern Time, Wednesday, March 9th. Please dial in! (details on the link)","The members of the Bufferbloat project are invited to sit in on Freeswitch's regular VOIP conference call at 1PM Eastern Time, Wednesday, March 9th. Please dial into:
+
+PSTN:       USA +1-919-386-9900 or
+               +44-3300-100-295
+SIP:         sip:888@conference.freeswitch.org
+GOOGLETALK: conf+888@conference.freeswitch.org
+
+There will also be chatter on the appropriate irc channels as we attempt a melding of the minds. More details to follow.
+
+
+h2. About Freeswitch[1]
+
+""FreeSWITCH"":http://www.freeswitch.org is a scalable, open source, cross-platform soft-switch that allows for consolidating various forms of communication media. It is used primarily for telephony applications - VoIP and traditional PSTN - but also supports video, chat, and other forms of communication.
+
+FreeSWITCH was created in 2006 in response to the need for an open source, freely available telephony platform that could fill the void left by proprietary commercial offerings. Anthony Minessale is the chief architect and lead programmer on the FreeSWITCH project. He is joined by two veteran developers - Brian K West and Michael Jerris. All three of these experienced engineers spent a number of years developing for the Asterisk PBX project before starting FreeSWITCH. 
+
+FreeSWITCH was designed with the goals of modularity, stability, and scalability. It is now used in thousands of servers to power VoIP communications for business and organizations around the world, and runs on nearly every operating system.
+
+h2. About the Bufferbloat project
+
+If you are not already aware of what bufferbloat is, the fastest way to get up to speed is to peruse the slides and listen to 25 minutes of audio before the conference call, at:
+
+http://mirrors.bufferbloat.net/Talks/BellLabs01192011/
+
+It would be great to have an informed audience so we can only touch lightly on the preliminaries and then dive deeper into bufferbloat and VOIP issues. See also Jim Gettys' blog postings[2], discussions on lwn.net[3], and slashdot[4], and elsewhere[5], as well as two very busy mailing lists[6]
+
+In short, the bufferbloat problem is that there are really big, bloated network buffers in many (especially new) routers, home (mostly wireless) gateways, hosts, and ADSL/FIOS/cable modems that can dramatically affect VOIP performance.
+
+The bufferbloat project[7] is attempting to identify equipment and software where truly bloated buffers exist, and mitigate or fix the issues with new software algorithms and heightened awareness. Recently we've released a debloat-testing Linux kernel[8] that may help in some cases. Bufferbloat is not a Linux-specific problem, it exists in all OSes, and may become more acute as Windows 7 gets rolled out.
+
+[1] http://www.freeswitch.org/
+[2] http://en.wordpress.com/tag/bufferbloat/
+[3] http://lwn.net/Articles/429931/
+[4] http://linux.slashdot.org/story/11/02/26/038249/Got-Buffer-Bloat
+[5] http://www.bufferbloat.net/projects/bloat/news
+[6] https://lists.bufferbloat.net/listinfo/
+[7] http://www.bufferbloat.net/projects/bloat/wiki
+[8] http://lwn.net/Articles/429943/
+
+
+",2011-03-05 09:31:56.500276,Dave Täht
+cerowrt,CeroWrt latest beta's,CeroWrt beta versions are getting really good,"The most recent beta-test CeroWrt (version 3.10.48-2) is working very well. The incidence of the wifi-related bug #442 has dropped, and it otherwise has been stable for almost two weeks. Get it from http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/3.10.48-2/ 
+
+There is a newer version - 3.10.50-1 - that has not been well tested, but it incorporates another wifi bug-fix. If it checks out, this may be close to a release candidate. ",2014-07-28 15:42:42.697811,Rich Brown
+cerowrt,CeroWrt bql-40 build available,"The bql-40 release incorporates Linux kernel 3.3-rc3, bind 9.9rc2, defaults to installing the snmpd, fprobe, and avahi packages and has a somewhat improved AQM. ","As noted in the Wiki and Activity pages, there has been a lot of recent work on CeroWrt. This has led to a usable firmware build that significantly improves performance with various new AQMs on a home router.
+
+The bql-40 release incorporates Linux kernel 3.3-rc3, bind 9.9rc2, defaults to installing the snmpd, fprobe, and avahi packages and has a somewhat improved AQM. This build is for the bold - use it on your secondary router. If Linux 3.3 works out we will start a new, more serious development cycle around it.
+
+Read the [[BQL_series_release_notes|Release Notes]] for details.
+
+http://huchra.bufferbloat.net/~cero1/bql-smoketests/bql-40/
+",2012-02-14 19:01:15.969996,Rich Brown
+cerowrt,CeroWrt bql-31 build available,"","The recent bql-31 build is available for the bold. This build incorporates work from the Linux 3.3 kernel as well as a number of known queue disciplines (qdisc) that dramatically relieve bufferbloat. We believe the DNS/bind and IPv6 code are also working well. The build may have bugs and may not perform perfectly, but it is certainly better than the stock firmware or other builds. We'd like to get it in the hands of people who're willing to report problems (or successes!)
+
+The [[Wiki]] page has information about downloading, installing, and configuring the build.",2012-02-14 18:59:03.973316,Rich Brown
+bloat,The first 34 days,what did we do in 34 days? A LOT. Click for more.,"h1. The Bufferbloat project news summary, February 17 - March 3, 2011
+
+I'm going to try to put out summary news like this once a month in 
+the future. This is just a summary of the past two weeks. For a summary 
+of the first two weeks, see ""here"":http://www.bufferbloat.net/news/4 . 
+
+For those of you new to bufferbloat, the fastest way to get up to speed 
+is to review Jim Gettys' presentation: ""Bufferbloat - Dark buffers on the Internet"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/ 
+and the ""audio recording"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/Bufferbloat_Talk_Edited_For_brevity.mp3
+
+In March, I hope we start to get some patches tested by lots more people, 
+start getting the qdisc folk to talk to the driver folk (and vice versa) 
+and continue to unify several separate lines of development. I hope also 
+we improve the wiki, and continue to recruit more people with different 
+layers of perspectives and understandings of the problem. Late this month 
+a new (8 core) server will come online at isc.org for use for building
+both debloat-testing and openwrt based kernels for various devices. More 
+servers and locations will follow.
+
+Extremely high on the list is getting more testing tools modified not only 
+to detect bufferbloat, but test the new kernel features to see how well they 
+are working.
+
+h2. Development
+
+The ""Debloat-testing"":http://git.infradead.org/debloat-testing.git Linux 
+kernel tree has been updated to 2.6.38-rc7-db. John Linville made an abortive 
+attempt to move it into the qdisc layer. There are other issues...
+
+h2. Statistics
+
+There are now 181 people registered in the ""general bufferbloat email list"":https://lists.bufferbloat.net/pipermail/bloat/2011-March/thread.html 
+and 42 in ""bufferbloat development list"":https://lists.bufferbloat.net/pipermail/bloat-devel/2011-March/thread.html
+
+41 people have registered on the ""bufferbloat project web site"":http://www.bufferbloat.net/projects/bloat . 
+I seem to be the only one making edits. Is there something broken?
+
+35 people (and one robot) regularly in the ""#bufferbloat"":irc://chat.freenode.net#bufferbloat irc channel on chat.freenode.net.
+
+References to ""bufferbloat"" on google doubled from roughly 30,000 to 61,200 results. 
+
+(Bufferbloat is now .00053% as popular as sex)
+
+Web hits on the presentations and site itself are not yet available. 
+
+h2. We survived slashdot!
+
+The ""thoroughly debloated servers"":http://www.bufferbloat.net/projects/bloat/wiki/Dogfood_Principle bufferbloat.net is running on survived both a 
+""discussion on lwn.net"":http://lwn.net/Articles/429931/ and a slo-mo slashdotting on the 
+""Got (bufferbloat) Bloat"":http://linux.slashdot.org/story/11/02/26/038249/Got-Buffer-Bloat thread. 
+Slashdot unfortunately got the link to the ""debloat-testing tree"":http://git.infradead.org/debloat-testing.git wrong, and never corrected it.
+
+h2. Blog posts & media coverage related to Bufferbloat (most recent first)
+
+|Richard Pitt|""Usage Based Billing - it's all about *perceived* congestion"":http://digital-rag.com/article.php/All-About-Perceived-Congestion-UBB |
+|Jim Gettys|     ""ECN study results from MIT"":http://gettys.wordpress.com/2011/02/22/caida-workshop-aims-2011-bauer-and-beverly-ecn-results/                      |
+|Jim Gettys|""Benchmarking Broadband"":http://gettys.wordpress.com/2011/02/17/caida-workshop/ |
+|Brian Proffitt|""Latency under Load"":http://www.enterprisenetworkingplanet.com/netsp/article.php/39260760|
+|Richard Pitt|""Bufferbloat and your ISP's problem"":http://digital-rag.com/article.php/Buffer-Bloat-Packet-Loss|
+|""Joe Brockmeier"":http://www.networkworld.com/community/zonker|""The fight against Bufferbloat"":http://www.networkworld.com/community/fight-against-bufferbloat|
+|Jim Gettys, Dave Täht|""Bufferbloat and VOIP podcast"":http://www.voipusersconference.org/2011/bufferbloat/|
+|Jim Gettys|""A call for help with Bufferbloat animations"":http://gettys.wordpress.com/2011/02/04/animation-to-show-bufferbloat-badly-needed/|
+
+While bufferbloat is not a Linux-specific problem, we're the first community out the gate with
+ solutions and patches. We are actively looking for iphone, ipad, and android users to test 
+some basic assumptions regarding [[ECN]]. 
+(if you are on an iphone, and having trouble 
+accessing this site or ""this mp3"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/Bufferbloat_Talk_Edited_For_brevity.mp3 , *please* let us know!)
+
+And there are tons of [[Papers|research papers]], tools and [[Linux Tips]] linked to off of our [[wiki]] that need sorting out.
+
+h2. Principal threads of conversation so far this month:
+
+""Getting more organized"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000154.html
+GSO: https://lists.bufferbloat.net/pipermail/bloat-devel/2011-March/000077.html
+""Usage based billing"":https://lists.bufferbloat.net/pipermail/bloat/2011-March/000178.html
+
+... (Still ongoing from last month)
+
+""Shifting the Market"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000066.html - How to get the word out? (#33)
+""SFB"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000026.html - Discussion of the features of Stochastic fair blue queuing, with ""Juliusz Chroboczek"":http://www.pps.jussieu.fr/~jch/ , the author of the ""SFB patch"":http://www.pps.jussieu.fr/~jch/software/sfb/ for the Linux kernel
+""The dangers of AQM"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000108.html - a cautionary note about Active Queue Management, by ""Kathie Nichols"":http://www.pollere.net/about.html and ""Van Jacobson"":http://en.wikipedia.org/wiki/Van_Jacobson
+""Bufferbloat and You"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000050.html - a draft contributed by ""Eric Raymond"":http://en.wikipedia.org/wiki/Eric_Raymond, Much discussion as to good analogies for how the Internet really works ensued
+""About LEDBAT, µTP and BitTorrent"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000025.html - an exploration of the issues and advantages of bittorrent
+""TCP Vegas vs Cubic"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000016.html - Some [[Experiment_-_TCP_cubic_vs_TCP_vegas|puzzling data about TCP vegas]] with current hardware 
+""The wireless problem in a nutshell"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000068.html  The unique problems 802.11 introduces for TCP/ip (related: ""Wireless multiqueue behavior"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/000118.html )
+
+h2. Progress on the wiki and infrastructure
+
+The wiki needs some serious love. Help merely on defining some terms would be good.
+",2011-03-04 11:44:08.289028,Dave Täht
+cerowrt,Press Release-Experts' Comments to FCC re: Wi-Fi Routers,"Over 250 internet experts filed comments to FCC Docket ET 15-170 regarding firmware for Wi-Fi Routers.
+","_October 14, 2015 06:00 AM Eastern Daylight Time_
+
+_WASHINGTON--(BUSINESS WIRE)--_ In a ""letter submitted to the Federal Communications Commission (FCC),"":http://huchra.bufferbloat.net/~d/fcc_saner_software_practices.pdf Dave Täht, co-founder of the ""Bufferbloat Project"":http://bufferbloat.net, and Dr. Vinton Cerf, co-inventor of the Internet, along with more than 260 other global network and cybersecurity experts, responded to the newly proposed FCC rules laid out in ""ET Docket No. 15-170"":https://apps.fcc.gov/edocs_public/attachmatch/FCC-15-92A1.pdf for RF Devices such as Wi-Fi routers by unveiling a new approach to improve the security of these devices and ensure a faster, better, and more secure Internet.
+
+The letter was filed during the agency’s public comment period on this issue.
+
+Dave Farber, former Chief Technologist of the FCC, supports the new approach, stating, “Today there are hundreds of millions of Wi-Fi routers in homes and offices around the globe with severe software flaws that can be easily exploited by criminals. While we agree with the FCC that the rules governing these devices must be updated, we believe the proposed rules laid out by the agency lack critical accountability for the device manufacturers.”
+
+“We can't afford to let any part of the Internet's infrastructure rot in place. We made this proposal because the wireless spectrum must not only be allocated responsibly, but also used responsibly. By requiring a bare minimum of openness in the technology at the edge of the Internet, we'll ensure that any mistakes or cheating are caught early and fixed fast,” said Dr. Vint Cerf, a co-inventor of the Internet and also Senior Vice President and Chief Internet Evangelist at Google.
+
+To improve accountability significantly while keeping the original intent of the regulation, the signatories, who also included Dr. Paul Vixie, Dr. Sascha Meinrath, Dr. Nick Feamster, Jim Gettys, Dr. David P. Reed, Dr. Andreas Petlund, Jeff Osborn, and other well-known industry experts, recommend the FCC mandate the following actions:
+
+# Any vendor of software-defined radio (SDR), wireless, or Wi-Fi radio must make public the full and maintained source code for the device driver and radio firmware in order to maintain FCC compliance. The source code should be in a buildable, change-controlled source code repository on the Internet, available for review and improvement by all.
+# The vendor must assure that secure update of firmware be working at time of shipment, and that update streams be under ultimate control of the owner of the equipment. Problems with compliance can then be fixed going forward by the person legally responsible for the router being in compliance.
+# The vendor must supply a continuous stream of source and binary updates that must respond to regulatory transgressions and Common Vulnerability and Exposure reports (CVEs) within 45 days of disclosure, for the warranted lifetime of the product, or until five years after the last customer shipment, whichever is longer.
+# Failure to comply with these regulations should result in FCC decertification of the existing product and, in severe cases, bar new products from that vendor from being considered for certification.
+# Additionally, we ask the FCC to review and rescind any rules for anything that conflicts with open source best practices, produce unmaintainable hardware, or cause vendors to believe they must only ship undocumented “binary blobs” of compiled code or use lockdown mechanisms that forbid user patching. This is an ongoing problem for the Internet community committed to best practice change control and error correction on safety-critical systems.
+
+For the complete letter and the full list of supporters, please ""visit here."":http://huchra.bufferbloat.net/~d/fcc_saner_software_practices.pdf
+
+“Our fight for a free and open Internet began long before the invention and wide use of Wi-Fi home routers, whose manufacturers chose to base on open software. We are at an important inflection point in the history of the Internet. The FCC has an opportunity to take positive action that will increase the security and performance not only of these devices, but also influence how manufacturers develop secure Internet of Things while preserving an open Internet,” said Jim Gettys, Chairman, Bufferbloat Project.
+
+“Networking research and innovation fundamentally depend on the ability to modify firmware on CPE and deploy it in real-world settings in home networks,” said Dr. Nick Feamster, Acting Director of Center for Information Technology Policy at Princeton University.
+
+""The Internet is now effectively a battleground with end-users, our employers, our schools and our vendors on one side, and organized crime and nation-states on the other side. Our home gateways are often repurposed by our adversaries into weapons against us because these small, cheap plastic boxes are unpatchable, abandoned by their makers, and completely opaque. These devices are currently the Internet's public enemy #1. The plan proposed would significantly decontaminate our technology supply chain,” said Dr. Paul Vixie, CEO of Farsight Security, Inc.
+
+“The recommendations in this document would go a long way toward ensuring the existence of a highly performant, secure, and regulation-compliant Internet far into the future,” said Jonathan Corbet, Executive Editor, LWN.net.
+
+“As the recent revelations about the ‘Moon Worm,’ ‘DNSchanger,’ and ‘Misfortune Cookie’ and now the Volkswagen scandal illustrate, secret, locked-down firmware represents a clear and present danger to the security of the Internet,” said Ted Lemon, recent Area Director at the IETF.
+
+“If we raise the bar for firmware code quality, maintenance, and upgrades, we can finish beating bufferbloat, especially on Wi-Fi, deploy IPv6 faster, improve security, and build a vastly better Internet, for everybody,” said Dave Täht, Architect, CeroWrt, co-founder, Bufferbloat Project.
+
+If you care about this important issue and agree with our approach, please contact your local Congressional representative and share our letter with them. For media interview requests or other inquiries, please contact media@bufferbloat.net.
+
+*About the Bufferbloat Project*
+
+The Bufferbloat Project is an international coalition of individuals, many who were instrumental in the development of the Internet, and several with Wi-Fi, deeply concerned about the future health, speed, and safety of the edge of the Internet. In operation for 5 years, and working primarily on third-party firmware, it has pioneered new algorithms, boosted safety and security, helped develop new standards, and worked to make as much of this new theory and code available as possible for all to use. For more information, please visit http://www.bufferbloat.net.
+
+*Contacts*
+Bufferbloat Project
+Karen Burke, 650-814-3764
+
+_Also, read the Supplemental Comments to the original letter at_ http://www.bufferbloat.net/news/56 These comments couldn't be included in the press release because of length limitations.",2015-10-16 05:16:12.801371,Rich Brown
+bloat,IEEE Internet Computing Backspace column,Vint Cerf asked Jim Gettys to write his usual Backspace column for IEEE Internet Computing; it's in the May/June issue.,"You can find it ""online here"":http://www.bufferbloat.net/documents/3.
+
+It is copyright IEEE; it is used with their permission on this web site.
+",2011-05-04 16:41:39.558877,Jim Gettys
+kermit,Kermit Project,Overview of the way forward,"Thank you all for your enthusiasm for the Kermit project. We're working on a distributable version of Kermit that will tie into network dashboard. For now, we cannot commit to a firm timeline for events, suffice to say we're working on it but we'll keep this page as current as we can.
+
+Check this page for news about the project as it unfolds. If you're interested in working on the project as a student at Georgia Tech, please get in touch with me directly. ",2011-05-16 12:18:12.117342,Marshini Chetty
+cerowrt,CeroWrt 3.3-rc5-1 build available,Build 3.3-rc5-1 is based on Linux 3.3 kernel with many advances in many modules. It's still not ready for production use unless you're willing to report bugs. (But the bufferbloat problem is getting better.),"Dave Täht writes the following in the CeroWrt-Devel mailing list: 
+
+bq. This was the first time I've had a chance to try to actually deploy
+cero as the main router in a production environment (esr's) in quite
+some time. Enough problems cropped up for me to recommend against
+using it as a primary router at this point, although I am writing 
+this email through it.
+
+bq. I did get some good data on how FIOS works (short summary: it's *hard*
+to stress out FIOS)
+
+bq. You can download from http://huchra.bufferbloat.net/~cero1/3.3/3.3-rc5-1/
+
+""Read more..."":https://lists.bufferbloat.net/pipermail/cerowrt-devel/2012-March/thread.html
+",2012-03-01 16:41:29.384022,Rich Brown
+bloat,Jim Gettys in Spain for the BattleMesh,"""Battlemesh conference"":http://battlemesh.org/ details - March 18/19 ","Jim Gettys will be giving two talks at the ""Battlemesh conference"":http://battlemesh.org/BattleMeshV4 March 16-19, in Sant Bartomeu del Grau (SBG for short), near Barcelona, Catalunia, Spain.
+
+One will be a condensed version of the existing Bell Labs bufferbloat talk, the other will be about the OLPC meltdowns.
+
+There are also interesting talks scheduled about babel-z, the mesh potato, and other topics of interest to the mesh networking community.
+
+Not to mention the battle of the mesh technologies! May the best debloated router win!
+",2011-03-18 07:44:34.784629,Dave Täht
+cerowrt,CeroWrt 3.10.50-1 Released,This version is working GREAT!,"The CeroWrt 3.10.50-1 build has been released. It has several improvements, including resyncing with the OpenWrt head, another fix to wifi that may completely address the problem with bug #442, a GUI for the BCP38 rules, and some fixes to the SQM system.
+
+Get it at: http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/3.10.50-1/
+
+Update - 21Aug2014: This build has proved very stable, and we strongly recommend that people install it. ",2014-07-29 15:31:44.845178,Rich Brown
+bismark,FCC Open Internet Apps Competition,Vote: http://challenge.gov/challenges/114/submissions/3133-bismark-a-broadband-internet-service-benchmark,"We have entered ""BISMark"":http://projectbismark.net/ into the FCC Open Internet Apps competition.  
+
+*Please ""visit the entry"":http://challenge.gov/challenges/114/submissions/3133-bismark-a-broadband-internet-service-benchmark and vote for BISMark if you like the project.* 
+
+We appreciate your support.  The winner of the competition will receive increased visibility and support from the FCC.",2011-06-17 03:20:15.618337,Nick Feamster
+bloat,6 weeks of backlogged news,"I've been too busy to write up what's been going on, here's a summary of goings on with Georgia Tech, uberwrt, debloating patches, and more:","I'd intended to write up summaries of bufferbloat related activity once a month, but am running a bit behind. Both JG and I have been travelling heavily.
+
+There's been a lot going on under the covers!
+
+Probably the biggest news is that we are working with Georgia Tech on their bismark project.[1] They are out to diagnoise the Internet and we are out to fix it. The two goals seemed compatible. In particular: we are trying to de-""heisenbug"" the test routers so they can accurately test the upstream services.
+
+We've also taken the wraps off the ""uberwrt"" project[2], which is an attempt to get the debloating work TESTED in realistic situations at the edge and also into openwrt. (Some work from this also flows into bismark)
+
+I was going to write formal joint press releases on these but have been too busy traveling, talking and hacking. (if anyone wants to step up to handle PR?)
+
+Although traffic on the bloat mailing list has been slow of late, the bismark-devel list has been hopping. Feel free to join bismark/uberwrt projects and/or the mailing list[3], especially if you are interested in embedded hardware.
+
+Moving on to other topics...
+
+Based on the early difficulties in getting debloat-testing to be a useful base for the eBDP and A* algorithms, we started looking around for ONE driver to work with and have settled on ath9k hardware (for now) as a base for routers and wireless cards. [10] We need to do a little testing of the laptop cards, but things are looking good.  the WNDR3700v2 is AWESOME, actually. 16MB of flash. LUXURY.
+
+Other Patches:
+
+Dan Siemon's pfifo_fast fix for ECN has been backported into 2.6.37.X for openwrt's git head as of Saturday. It's also now part of 2.6.39 and 2.6.38 stable.
+
+SFB is in mainline Linux 2.6.39-RCX and woefully undertested in its current incarnation.
+
+Felix Feitkeu has some patches more fully instrumenting the ath9k driver (when mildly more complete, these should get slammed into debloat-testing as well) [4]
+
+Dan Siemon has improved both his TC shaper test scripts and ping-exp [5]
+
+Media: There were a couple articles on bufferbloat that went by this month, I think they were all covered on this list...
+
+There are 236 members of the bloat list now.
+
+Infrastructure:
+
+We are moving a ton of work to a new build server and also moving the lists machine to that. Regrettably as I write, ""huchra"" is down due to finger-foo. It should be back up again Monday.
+
+Multiple other servers in other locations are in the queue. I hope to get that sorted out with isc while I am in California.
+
+Upcoming Travel:
+
+JG will be in California April 25-30. I will also be in California April 25-30 (in at least one of the same places as JG), and am available for additional talks/coding/consulting/etc along the western seaboard in early May if anyone wants me and can cover my expenses. (Sort of scheduled: Byte and Atheros U) I'll also be visiting Seattle at some point in May, too.
+
+Travel last month:
+
+JG spent spent several weeks in Europe, first attending the Wireless BattleMesh conference[6], then the IETF, giving a shorter version of his bufferbloat talk[7].
+
+I spent a week in florida gathering strength for my world tour. Then I spent a week with Georgia Tech helping get their Bismark project off the ground and hammering out workflow issues.
+
+I was tickled pink when I gave an introductory talk on bufferbloat to a class there, only to discover when Q&A rolled around that everyone participating was *already* up to speed on bufferbloat and queueing disciplines, and peppered me with questions on SFB, RED, eBDP and other algorithms we are playing with. 3 months ago I would have been met with blank looks, now it's a struggle to keep up!
+
+I then spent a week with esr getting one of the first near-complete builds of the wndr3700 working well, working on gpsd (wanted accurate time on openwrt) and rsnapshot and split dns and a host of semi-bufferbloat.net-and-uberwrt issues... And we also got a revised version of the intro to bufferbloat document up on the wiki [8].
+
+I'm very happy to see thyrsus.com go ipv6 enabled.
+
+The bufferbloat wiki is still in dire need of love, see the Todo list for more details [9] -
+
+Conclusion:
+
+And that's all the news I can remember this late Sunday evening. It's my hope that SFB will make it into bismark/uberwrt this week so we can test SFB a little more while it is still a RC in 2.6.39. I'd VERY MUCH like to make sure SFB works when it is released to millions of users worldwide. That will be in 4 weeks or so... I'm feeling a little schedule pressure here... See dan siemon's scripts... [5]
+
+[1] http://www.bufferbloat.net/projects/bismark/wiki Georgia Tech's project
+[2] http://www.bufferbloat.net/projects/uberwrt/wiki
+[3] https://lists.bufferbloat.net/listinfo/ (bismark, bismark-devel)
+[4] http://www.bufferbloat.net/projects/uberwrt/wiki/Experimental_patches
+[5] http://git.coverfire.com/ PLEASE PLAY WITH TC, SFB, and PING-EXP!!!!
+The bandwidth you save may be your own.
+[6] http://battlemesh.org/ has summaries and videos from the battlemesh
+[7] http://mirrors.bufferbloat.net/Talks/PragueIETF/
+[8] The original of the bufferbloat introductory piece was extensively discussed on this mailing list. This versions incorporates most of those changes. If you don't like this version... It's a wiki document now! Please feel free to fix, extend, and add links! http://www.bufferbloat.net/projects/bloat/wiki/Introduction
+[9] LOTS of writing left http://www.bufferbloat.net/projects/bloat/wiki/ToDo
+
+[10] After evaluating multiple routers, http://www.bufferbloat.net/projects/uberwrt/wiki/Hardware_evaluation
+
+the http://www.bufferbloat.net/projects/bismark/wiki/Wndr3700v2
+seemed like the best choice
+
+_______________________________________________
+Bloat-announce mailing list
+Bloat-announce@lists.bufferbloat.net
+https://lists.bufferbloat.net/listinfo/bloat-announce
+",2011-04-17 19:53:18.116903,Dave Täht
+bloat,"Server maintenence today - Monday, April 25",We will be migrating a few services and replacing a server today. Expect periodic outages,"Bufferbloat.net has grown by leaps and bounds and we are in need of replacing the email server and migrating a few services over to our new, beefier box, ""huchra"".
+
+Email, web, and build services will be disrupted periodically.
+",2011-04-25 13:12:46.069549,Dave Täht
+bloat,Jim Gettys IETF talk is up,"Jim Gettys had another (more concise) talk at the IETF in Prague. The questions at the end of the talk are worthwhile, especially...","
+Slides: http://mirrors.bufferbloat.net/Talks/PragueIETF/
+
+Audio:
+
+http://ietf80streaming.dnsalias.net/ietf80/ietf80-ch4-wed-am.mp3
+
+",2011-04-04 13:02:08.531167,Dave Täht
+cerowrt,CeroWrt 3.3-rc6-2 build available,"Build 3.3-rc6.2 is based on Linux 3.3 kernel with many advances in many modules. It's an improvement over earlier 3.3 builds, but you should be willing to report bugs. (But the bufferbloat problem is getting better.)","Dave Täht writes the following in the CeroWrt-Devel mailing list:
+
+bq. I put in some time testing the rc6-2 version of cerowrt back in the bloatlab, which, among other nice things, has a dedicated, real /60 ipv6 allocation. I had a chance to fiddle with encrypted wireless (works), the existing mesh network (works), radvd (fiddly), and also setup the new quagga as a 'leaf' babel node, which worked pretty well. ""Download"":http://huchra.bufferbloat.net/~cero1/3.3/3.3-rc6-2/  ""Read more..."":https://lists.bufferbloat.net/pipermail/cerowrt-devel/2012-March/000117.html
+",2012-03-07 18:08:31.340626,Rich Brown
+cerowrt,CeroWrt 3.10.50-1 -- Declaring Victory,CeroWrt 3.10.50-1 has been delightfully stable - uptimes of >80 days are common. ,"We are extremely pleased to report that CeroWrt has been highly stable since it was built over six months ago. We recently surveyed our user base, and uptimes are terrific - ranging as high as 124 days, with a lion's share of the reports greater than 80 days. Most of the reasons for reboots are due to things like power failures. CeroWrt is meeting its design goals: 
+* Reliable, secure, high performance home router
+* Bufferbloat has been controlled with fq_codel and the sqm-scripts
+* IPv6 just works, either from a native provider, such as Comcast, or through a tunnel such as Hurricane Electric
+* DNSSEC just works
+* We've proved the value of routing different interfaces, instead of bridging together the 2.4GHz, 5GHz, and Ethernet interfaces
+* And lots more
+
+The latest CeroWrt 3.10.50-1 was resync'd with the OpenWrt sources on 28 July 2014. Therefore, the CeroWrt builds have ceased to change from that date. You can review the build history from the CeroWrt release notes at: http://www.bufferbloat.net/projects/cerowrt/wiki/CeroWrt_310_Release_Notes
+
+That said, there are a few important efforts to take into account:
+
+# We have aggressively pushed the interesting changes back into the OpenWrt mainline. All these changes are now available through the standard OpenWrt builds.
+# CeroWrt development is dormant at the moment as we begin to think about the next step - how to ""make wi-fi fast"". (There are a number of bad behaviors in most wi-fi drivers that lower your wi-fi performance far below what is theoretically possible. We want to fix this.)
+# OpenWrt has declared victory on their ""Barrier Breaker"" (BB) firmware evolution based on a Linux 3.10 kernel. They are now pursuing their ""Chaos Calmer"" (CC) build based on 3.18 (or later) kernel. CC will have all the goodness of BB, plus the new features they're planning.
+
+Advice:
+
+* If you already own a Netgear WNDR 3800 (or 3700v2), you certainly won't go wrong with the CeroWrt 3.10.50-1 build. But don't run out and buy one today - they're becoming scarce and expensive. 
+* If you're looking for stable, well-supported router firmware for your home, consider the OpenWrt BB build. It's available for a wide variety of routers, and incorporates most of the major capabilities that we put into CeroWrt. 
+* If you're willing to put up with a little testing, check out the OpenWrt CC builds. That software is undergoing constant development, tweaks, and enhancements, and contains all the goodness of CeroWrt.
+* If you really want to live on the bleeding edge, join the CeroWrt Developer's list https://lists.bufferbloat.net/listinfo/cerowrt-devel to keep an eye on (or help with!) developments here. In a few months, we're planning to do more work on wi-fi, potentially on new, more available, higher performance hardware.
+",2015-02-18 19:21:11.520015,Rich Brown
+cerowrt, 3.3.8-6: A reasonably stable CeroWrt version with fq_codel,A reasonably stable version of cerowrt with fq_codel  is now available. ,"I just put out http://huchra.bufferbloat.net/~cero1/3.3/3.3.8-6/ and deployed it as my default gw and ran a bunch of tests that it survived. 
+
+This is a version after 5 development releases and I'm hoping it proves out stable enough for more deploy.
+
+I'd prefer to test 24 hours but I'm about to start a trip and can't do that. Hopefully after some more testers leap on it we can declare it stable later this week and move on...
+
+Also the source tree is mostly pushed out but a bit of a mess, I don't know if I'll be able to get Cero independently buildable before late next week.
+
+Features:
+
++ update to linux 3.3.8
++ Fix for bind9 CVE
++ switch to netifd
++ a complete resync with openwrt - this includes much new stuff,
+including wireless-testing - way too many updates to talk about
+without pulling in the commit log
++ memory problem with ath9k appears gone
++ ECN dropping instituted under load
++ fq_codel packet limits
++ There is now 6rd support, totally untested and unconfigured;
++ transmission bittorrent is in there, too
++ fq_codel on all interfaces by default, on wireless using all 4 subqueues
+
+
+-s on this release: I went for ""stable"" rather than new features after it cost me too much time.
+
+- I had to rip out opkg signing support, and some ipv6/diffserv classification support in transmission that wasn't fully baked.
+
+- re-running simple_qos.sh with new values appears to require a reboot first
+
+-The default gui for AQM doesn't work, the one for ""qos"" uses hfsc + fq_codel (but lacks ipv6 and diffserv support), and the command line simple_qos.sh has ipv6 and diffserv, but has to be edited and run manually. And perhaps it's use of htb etc can be improved. I get pretty good results on comcast with simple_qos, see speedtest results here:
+
+ http://pastebin.com/Fq6G5Q4u
+
+but not *quite* as good as I hoped for. However, under heavier loads the fq_codel stuff is working great under netperf with various numbers of threads and classifications and users.
+
+I would hope some folk here run some benchmarks against various things but some cautions - for example - chrome's benchmark tends to hit dns
+hard, and cero by default is not using your most local forwarder so it can bottleneck on dns - ways to fix that if you have dnssec is to edit
+forwarders.conf to point to your local forwarder, and uncomment the forwarders line in named.conf. If your ISP doesn't
+do dnssec yet, disable dnssec and point forwarders.conf to their nameservers - but I otherwise am getting good results.
+
+Also: I would really prefer people clearly identify when they are testing over wireless vs ethernet and until you have a fq_codel and
+debloat-script enabled kernel on your laptop, too, I am finding most of the time the bloat is coming from the testing box rather than cerowrt
+itself!
+
+There are now fq_codel enabled kernels for ubuntu 12.4 and fedora 16 available here:
+
+http://www.bufferbloat.net/projects/codel/wiki
+
+I look forward to analyzing htb vs hfsc and further tuning of qos-scripts and the simple_qos script. I'm too stupid apparently to
+come up with a way to run simple_qos out of the aqm gui... (help wanted)
+
+The new version of quagga-babeld is available in the opkg repository and it has been confirmed to work right with ipv4 mesh interfaces. I
+am really looking forward to people trying this and the authentication code now in quagga so we can migrate off of the existing babeld.
+
+Have fun. I am traveling the rest of this week. Patches, benchmarks and data gladly accepted (preferably on the cerowrt-devel list)﻿",2012-06-19 11:59:22.699944,Dave Täht
+codel,Best Practices for benchmarking Codel and fq_codel,There are landmines for the unwary here; learn how to avoid them.,"[[Best Practices for Benchmarking CoDel and FQ CoDel]] contains lots of useful information for people experimenting with the current (Linux 3.6) CoDel and fq_codel implementations. If you don't take care, you may get bad data.
+",2012-12-12 07:12:58.750394,Jim Gettys
+iscwrt,Follow the CeroWrt project for updates,The [[Cerowrt:]] project has taken on most of the development effort for this project.,"As of March 2012, the [[Cerowrt:|CeroWrt]] project has taken on most of the development effort for this project.",2012-03-17 10:07:01.916867,Rich Brown
+cerowrt,Cerowrt 3.7.5-2 Is the new Stable,"After the most extensive testing cerowrt has ever had, we're calling the 3.7.5-2 release - stable!!! - and all users should upgrade! ","What can I say? 3.7.5-2 has been deployed and thoroughly tested at multiple sites, and under high load, and on places like comcast's cable network, and it just. keeps. working.
+
+It's time to retire ""sugarland"" and get into ""Modena"". Get the ""latest firmware"":http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/3.7.5-2/ or read the ""Release Notes"":http://www.bufferbloat.net/projects/cerowrt/wiki for details.
+
+In this release:
+
+Vastly improved ipv6 naming and interopability, 3 new forms of codel and fq_codel, much better QoS...
+
+And all the chocolately goodness from OpenWrt Barrier Breaker.
+
+More news to come. Thank you all for your support and donations! We couldn't have done it without you.",2013-03-11 07:09:26.416337,Dave Täht
+cerowrt,November 2013: Update on CeroWrt,"Lots of activity under the covers, not quite anything that we can show ","Although the CeroWrt site (http://www.bufferbloat.net/projects/cerowrt/) has been quiet, that doesn't mean that we haven't been working.
+
+The CeroWrt-Devel mailing list (https://lists.bufferbloat.net/listinfo/cerowrt-devel) has been bubbling with lots of energy all summer and fall, and we're getting close to a new release that we can recommend to everyone. Here's what's we've been working on:
+
+* Significant refinement to the CoDel code, to further knock down bufferbloat
+* Update to Linux 3.10 kernel that incorporates much of our earlier work on bufferbloat
+* All the good effort from the OpenWrt Barrier Breaker development firmware
+* And too many other improvements to mention here
+
+You can check out any number of Bufferbloat videos at http://www.bufferbloat.net/projects/cerowrt/wiki/Bloat-videos to learn more about the problem and our solutions.
+
+If you just want good router firmware, purchase a Netgear WNDR3800 and burn the ""current 3.7.5-2 firmware"":http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/3.7.5-2/. You can also follow our activity on the CeroWrt-devel list to see what's happening and learn when experimental builds or solid new releases are available. ",2013-11-01 16:49:06.267913,Rich Brown
+cerowrt,CeroWrt 3.3rc7-5 build available,"The latest CeroWrt build (3.3-rc7-5) is available for testing. It moves several stable packages into the build, as well as making more progress on testing out AQM, IPv6, and other packages.","In ""this CeroWrt-devel message"":https://lists.bufferbloat.net/pipermail/cerowrt-devel/2012-March/000128.html, Dave Täht announced that build 3.3-rc7-5 is available. This build contains the following features/capabilities:
+
+* Linux 3.3 kernel. Many of the fixes for bufferbloat are being implemented in this 3.3  kernel, so we are tracking these developments carefully. http://kernel.org
+* Active Queue Management fixes for bufferbloat including: Byte Queue Limits (BQL - already incorporated into the 3.3 kernel), Stochastic Fair Queueing-Random Early Drop (SFQRED), working ECN, and other queue disciplines http://bufferbloat.net
+* IPv6 support. Another major goal of CeroWrt is to make IPv6 networking in the home as simple as IPv4.
+* Babel mesh routing protocol (1.3.1-2 release).
+* DNSSEC and DNSSEC proxying - Secure extensions to the DNS system. Proxying is currently in testing.
+* OpenWrt features. Because we track the OpenWrt code base carefully, we incorporate most of the capabilities of that distribution. We actively push our changes/enhancements back toward the OpenWrt trunk. http://openwrt.org
+* An attractive web GUI for configuration - LuCI
+
+Read the [[CeroWrt_33_Release_Notes|CeroWrt 3.3 Release Notes]]
+Download CeroWrt 3.3 builds: http://huchra.bufferbloat.net/~cero1/3.3/",2012-03-17 08:09:19.438906,Rich Brown
+bloat,mailing list server going down for maintenence,Our mail server is suffering from a failed hard disk in the raid array. Replacing now.,"Our mail server is suffering from a failed hard disk in the raid array. Replacing now. Hopefully it will come back up.
+
+In the long run, we need to move this box to a virtual somewhere.",2014-02-12 12:03:07.471357,Dave Täht
+cerowrt,CeroWrt News - January 2014,Build 3.10.24.8 is working quite well,"The newest build of CeroWrt - 3.10.24-8 - is working quite well for us. There's a ""Release Note"":http://www.bufferbloat.net/projects/cerowrt/wiki/CeroWrt_310_Release_Notes page that gives the current status. Note that, although it has been very stable, this is still an experimental release. It's available at http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/3.10.24-8/ 
+
+The CeroWrt development team has been working to nail down a no-brainer set of instructions for eliminating bufferbloat - the lag/latency that kills voice & video chat, gaming, and overall network responsiveness. The hard part is that optimal configuration of the Smart Queue Management (SQM) link is difficult - there are tons of options an ISP can set. Although CeroWrt can adapt to any of them, it's difficult to find out the exact characteristics of the link you have. Check out the latest version of our instructions at http://www.bufferbloat.net/projects/cerowrt/wiki/Setting_up_AQM_for_CeroWrt_310
+",2014-01-11 16:33:18.407291,Rich Brown
+wisp6,Follow the CeroWrt project for updates,The CeroWrt project has taken on most of the development effort for this project.,"As of March 2012, the [[Cerowrt:|CeroWrt]] project has taken on most of the development effort for this project.",2012-03-17 10:03:52.510355,Rich Brown
+cerowrt,CeroWrt Triumphs over Bufferbloat,The fq_codel algorithm which received major testing in the CeroWrt router firmware has been shown to virtually eliminate bufferbloat.,"The CeroWrt project, and its implementation of fq_codel as seen in the current build of the firmware, eliminates the problem of bufferbloat. These changes have been pushed into Linux kernel and the OpenWrt mainline (""Barrier Breaker"" release), and are now widely available.
+
+Bufferbloat is the undesirable latency that comes from a router or other network equipment buffering too much data. It has plagued network routers from the early days. The problem was made worse as RAM became cheaper: network engineers worried that dropping packets would make the network slow, so there was an incentive to buffer more and more packets. This had the paradoxical effect of retaining too many packets, which hold up all the traffic behind those buffers.
+
+Many efforts through the 1990s and 2000's attempted to address the problem. Random Early Drop (RED) and its variants showed promise, but didn't monitor the proper variables, and were thus hard to configure properly and would hurt performance if not tuned correctly. Various quality of service (QoS) policies can give priority to certain types of traffic, but they're hard to configure. As traffic types change and evolve, these policies become a maintenance hassle, since they need to be rewritten on a regular basis.
+
+In early 2012, Kathie Nichols took another look at the problem of overbuffered routers and designed the CoDel (pronounced ""coddle') algorithm. The major insight was that the best way to avoid ""too much buffering"" was to monitor a packet's _sojourn time_ - the time elapsed between when it was queued for transmssion and dequeued. If that time exceeds a certain threshold (generally 5 msec), it indicated that the packet had been queued for a long time. CoDel would then drop a percentage of those packet to provide feedback to the sender that it was using more than its share of the available capacity. An elaboration to the CoDel algorithm - fq_codel from Eric Dumazet - placed packets for each source/destination flow in a separate queue, and applied the CoDel algorithm to each queue to extremely good effect.
+
+The resulting fq_codel qdisc was put in to the Linux 3.5 kernel in July 2012. ",2015-03-10 07:47:37.296357,Rich Brown
+codel,Codel (coddling) in the news,"A great deal of coverage of codel is now out there, and some reactions to fq_codel - and it's all good. I keep waiting for another shoe to drop, but so far, so good.","Kamal Mostafa built an ""Ubuntu 12.4 PPA"":https://launchpad.net/~kamalmostafa/+archive/bufferbloat, and wrote: ""The result is *very* impressive: I see a 30X reduction in ping latency on a fully saturated 10Mbps network, just by switching on the new fq_codel scheduler. For an interactive ssh session over that same saturated 10Mbps network, fq_codel totally eliminates the laggy keyboard response — it feels like there’s no other network traffic at all!""
+
+Steve Gibson, on ""Steve Gibson's Security Now podcast"":http://www.grc.com/sn/sn-359.htm said:
+
+""They show charts where they show the throughput under these varying conditions, even though they're  discarding intelligently, and it's right up between 90 and 100 percent;  whereas the traditional algorithms collapse down into the low 10s of  percent of overall throughput.  It's just - it's fantastic. ""
+
+Jim Gettys outlined how ""The internet is broken, *and* how to fix it"":http://gettys.wordpress.com/2012/06/26/the-internet-is-screwed-up-and-how-to-fix-it ...
+
+Dave Miller ""installed CeroWrt"":https://plus.google.com/101384639386588513837/posts/Cgvfn8m9XuC
+
+""And then there was the truly mind-bending praise"":http://rajeeshknambiar.wordpress.com/2012/05/27/on-bufferbloat-and-shoulders-of-the-giants/
+
+""These extra-ordinary people, today, are silently fixing tomorrow’s internet. And they deserve big props for that. All you technologists who didn’t get a chance to appreciate Nikola Tesla or Dennis Ritchie, here is your chance to do that for some of the real heroes of our time.""
+
+I'm not going to let this last bit of exuberance get to me - as I remember how Tesla ended up, after suffering through decades of patent battles. I'm glad Van and Kathie *didn't patent codel* - and equally glad the reference implementations and sims we did are available under a dual BSD/GPL license, so anyone can use them. 
+
+Because we *all* need a better internet. 
+
+And that said, much work remains - analysis and improvements to codel with ecn continues, wifi is still troublesome, 95% of the linux drivers don't have BQL support, and so on.
+
+We're keeping links to useful code and data on http://www.bufferbloat.net/projects/codel/wiki - if you are doing any serious analysis of codel and fq_codel, or have it running on a new OS, please let us know.",2012-07-03 08:09:00.838328,Dave Täht
+cerowrt,Churn,"OK, Linux-3.3 is out. Some of the related tools are stabilizing... but stick with 3.3rc7-5 for now, please","While builds continue for the linux 3.3.0 series, enough bugs have shown up in it for me to encourage new users to stick with the last known stable(ish) release, which was 3.3rc7-5.
+
+I froze cerowrt on march 14th, got a little distracted by a demo of static deterministic nat and the port control protocol (PCP) as part of the on-going ietf meeting, and fell behind on keeping up on patches to openwrt.
+
+When I got caught up today, patches had landed which touched every major subsystem in cerowrt - the ethernet driver, the wireless driver, the kernel, scripting and the gui. Enough broke in the last two weeks of me not paying attention to the continuous integration process to make going forwards or backwards very difficult. Right now, most noticeable, wifi doesn't come up by default.
+
+I am pleased to say that dnsmasq has made great progress in AAAA dns integration, that iptables and iproute 3.3 have landed, and that I think I've made a dent in bug #113 (dnssec), but there's enough broken thus far to force me to pull all the 3.3.0 related releases until some of the stuff flying in loose formation congeals into one piece. That may not be until 3.3.1 is released. 
+
+Also making a bit of progress on dhcp-dp, I think.
+
+Hopefully early next week I'll have the pieces pulled together again to where new builds of cerowrt are useable, rather than merely debuggable. And the sources are as available as possible, on github,if you want to chip in. There's plenty of bugs left to fix...
+
+I look forward to having a more serious code freeze sometime towards the middle of April.",2012-03-27 20:32:19.519396,Dave Täht
+cerowrt,Cerowrt 3.3.8-10 - fq_codel + wifi latency reductions,"After testing in a real world deployment, cerowrt 3.3.8-10 is looking pretty good.","
+Cerowrt-3.3.8-10 is stable but forward-looking. It has an outline
+towards what a more wifi-bloat-free future would look like. Maybe.
+
+For more details, see the ""announcement on the mailing list"":https://lists.bufferbloat.net/pipermail/cerowrt-devel/2012-July/000351.html",2012-07-09 19:22:39.440219,Dave Täht
+uberwrt,Smoke test release of Cerowrt,Cerowrt - Mostly debloated router code based on the wndr3700v2 - the smoke test - released for testing!,"After a long gestation, we're happy to announce the existence of a 'smoke test' release of 'CeroWrt', for the NETGEAR WNDR3700v2 series of routers.
+
+Documentation, flash images, and installation guide are at:
+
+http://www.bufferbloat.net/projects/cerowrt/wiki/OCEAN_CITY_INSTALLATION_GUIDE
+
+This smoke test release is only for the brave... of whom I hope there are many on these lists.
+
+I hope to put out one release candidate per week for the next month, until this is baked enough to freeze for a while.
+
+The existing bug/feature database is out of date, I'll be updating that soon, but as this is hopefully baked enough for others than myself, jg, esr, and evan hunt to be be using, I'd love it if more people could get one of these routers and try out this code.
+
+What the heck is CeroWrt?
+
+Cerowrt is the outgrowth of trying to de-heisenbug debloat-testing. The results we were getting on conventional boxes were not repeatable on conventional routers, until now. The project gradually grew from OpenWrt into a kitchen sink worth of useful network analysis stuff from other projects until it became... CeroWrt. Much of it has been pushed back into openwrt...
+
+To quote from it's integral help screen:
+
+CeroWrt is an OpenWrt router platform for use by individuals, researchers, and students interested in advancing the state of the art on the Internet. Specifically, it is aimed at investigating the problems of latency under load, bufferbloat, wireless-n, QoS, and the effects of various TCP algorithms on shared networks. The features of this release include:
+
+* linux 2.6.39.2 with a few bloat-related patches
+* Bind9 DNS services with DNSSEC
+* extensive network diagnostic, performance measurement, and simulation tools
+* support for TCP bic, cubic, westwood, and reno
+* comprehensive IPv6 support
+* integral web and rsync servers
+* support for mesh networking
+* a web proxy server
+
+and most importantly, extensive debloating throughout the stack.
+
+For more details please see the wiki pages and bug database, and check in on the #bufferbloat irc channel. I will be at Georgia Tech all next week working on getting their test tools up and running on it, but will be available for help and upgrades on the mailing lists and
+
+Additional details on on the wiki.
+
+http://www.bufferbloat.net/projects/cerowrt/wiki/
+
+Happy debloating!",2011-07-09 10:47:17.782219,Dave Täht
+bloat,Short update on goings on at bufferbloat.net,"What a month!!! We've got kernel patches, AQMS, a ton of discussion on the mailing list...","h1. WHAT A MONTH! 
+(and it isn't over yet)
+
+Since John Carmack was just kind enough to tweet about us, I thought I'd put up the latest news as fast as I could: 
+
+""What is bufferbloat, anyway?"":http://gettys.wordpress.com/what-is-bufferbloat-anyway/
+
+For indepth background on bufferbloat, see and hear these ""slides and brief audio"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/ 
+
+Bufferbloat is a *major* problem in all the new kit coming out this year - cable modems and 802.11n routers especially. Latencies get so high as to make fragging frickin impossible.
+
+There is some gamer specific discussion in the above link, as well as elsewhere on ""Jim Gettys' blog"":http://gettys.wordpress.com/
+
+For the current status of our increasingly world wide efforts - see the mailing list archives:
+
+""general bufferbloat discussion"":https://lists.bufferbloat.net/pipermail/bloat/2011-February/thread.html
+
+""bufferbloat development discussion"":https://lists.bufferbloat.net/pipermail/bloat-devel/2011-February/thread.html
+
+Multiple new algorithms are being both discussed as well as tested. A Linux kernel repository just went up at:
+
+http://git.infradead.org/debloat-testing.git
+
+there are now 131 people on the mailing list, and 19 people and one robot regularly in the #bufferbloat channel on irc.
+
+While bufferbloat is not a Linux-specific problem, we're the first community out the gate with solutions and patches. We are actively looking for iphone, ipad, and android users to test some basic assumptions regarding [[ECN]]. (if you are on an iphone, and having trouble accessing this site or ""this mp3"":http://mirrors.bufferbloat.net/Talks/BellLabs01192011/Bufferbloat_Talk_Edited_For_brevity.mp3 , please let us know!)
+
+Brian Proffitt just wrote a good intro to the ""latency under load problem"":http://www.enterprisenetworkingplanet.com/netsp/article.php/39260760
+
+And there are tons of [[Papers|research papers]], tools and [[Linux Tips]] linked to off of our [[wiki]].
+
+the ""mailing list"":https://lists.bufferbloat.net/listinfo/bloat and site have been up for less than a month.
+
+h1. Please join us and help beat the bloat! 
+
+",2011-02-24 14:53:09.481823,Dave Täht
+bloat,Cambridge - State of art in Linux Congestion Control,Dave Taht had a chance to summarize the last 9 or so months of development in the Linux TCP and AQM/Packet Scheduling stacks at Cambridge. ,"Dave Taht had a chance to summarize the last 9 or so months of development in the Linux TCP and AQM/Packet Scheduling stack at Cambridge after the IETF meeting earlier this month.
+
+The slides are now up at: 
+http://snapon.lab.bufferbloat.net/~d/Presos/Cambridge_The_State_of_the_art_in_congestion_control.pdf ",2014-03-17 16:41:05.800118,Dave Täht
+bloat,VOIP concall w/Freeswitch folk recording now available,"I've put a ""summary"":http://www.bufferbloat.net/projects/bloat/wiki/Bufferbloat_and_Freeswitch_Conference_Call_March_9
+
+up of the concall with the freeswitch folk. More details below...","I've put a fairly large (and yet still incomplete) summary of the voip conference call with the freeswitch folk up at:
+
+http://www.bufferbloat.net/projects/bloat/wiki/Bufferbloat_and_Freeswitch_Conference_Call_March_9
+
+The call went on for over 2 hours as we discussed all aspects of bufferbloat as it applies to telephony. The call was recorded, and here is a link to the recording:
+
+http://wiki.freeswitch.org/files/conf_call_2011-03-09.mp3
+
+If you have a listen, and hear something interesting that I did not document, please update the wiki page!
+
+Some interesting tidbits:
+
+* Some freeswitch users are using TCP Vegas for their servers due to the 
+  latency sensitivity of that form of TCP and their need to prioritize 
+  RTP traffic
+* getting time right on various virtual server technologies is doable, but hard
+* freeswitch handled 32+ people in the conference using a variety of
+  dial-in technologies really well.
+* Their wiki was very wrong on recomendations for voip servers (corrected)
+
+I'm thinking that doing a weekly conference call among ourselves here might be useful. Thoughts?
+
+Again, way more detail on the call is at:
+
+http://www.bufferbloat.net/projects/bloat/wiki/Bufferbloat_and_Freeswitch_Conference_Call_March_9
+",2011-03-10 09:03:33.959002,Dave Täht
+cerowrt,"Plan For More Secure, Reliable Wi-Fi Routers - and Internet","*Press Release* Dave Täht, Vint Cerf, and over 260 other network experts describe their plan to produce more secure and reliable Wi-Fi routers than would result from using the current proposed FCC rules.","_Washington D.C., October 14th, 2015:_ In a ""letter"":http://huchra.bufferbloat.net/~d/fcc_saner_software_practices.pdf (""mirror here"":https://dl.dropboxusercontent.com/u/21403660/fcc_saner_software_practices.pdf) submitted to the Federal Communications Commission (FCC),  Dave Täht, co-founder of the ""Bufferbloat Project"":http://www.bufferbloat.net,  and Dr. Vinton Cerf, co-inventor of the Internet, along with more than 260 other global network and cybersecurity experts, responded to the newly proposed FCC rules laid out in ""ET Docket No. 15-170"":https://apps.fcc.gov/edocs_public/attachmatch/FCC-15-92A1.pdf for RF Devices such as Wi-Fi routers by unveiling a new approach to improve the security of these devices and ensure a faster, better, and more secure Internet. 
+
+Please read the remainder of the Press Release at: http://www.businesswire.com/news/home/20151014005564/en#.Vh4ojflViko
+
+",2015-10-13 22:01:38.45,Rich Brown
+bloat,CACM Bufferbloat paper and case study is out.,"CACM Bufferbloat paper is out. It's the same as the ACM Queue version, but killing trees...","CACM Bufferbloat paper is out. It's the same as the ACM Queue version, but killing trees... You too can read it in the comfort of your bathroom.
+
+The case study conversation led by Vint Cerf is in the February issue, but that hasn't arrived in at least my mailbox yet.
+
+FWIW: they should be fixing the access on the ACM digital library site to be public, once I deal with copyright stuff.  But the ACM queue links are just fine for now.
+",2012-01-24 14:30:25.136183,Jim Gettys
+cerowrt,Cerowrt 3.3 Tasty freeze,"The code for Cerowrt 3.3 has been frozen now for about a week. There's some not-obvious-now reasons for that, which is why the freeze is ""tasty"".","The code for Cerowrt 3.3 has been frozen now for about a week. There's some reasons for that, which is why the freeze is ""tasty"".
+(more news on monday)
+
+Multiple routers have stayed up under various workloads for the week. My own criterion before I'm happy is two weeks of uptime under heavy load...
+
+http://huchra.bufferbloat.net/~cero1/3.3/3.3.3-2/ has proven pretty stable, but ipv6 was kind of slow.
+
+http://huchra.bufferbloat.net/~cero1/3.3/dev/3.3.4-3/ is also pretty stable under all but the highest workloads, and has over double the ipv6 performance as all prior versions. However, we continue to battle with bug #379 which is going to take some more (tedious) work to fix.
+
+in the meanwhile I've taken a little time of to work on... well... you'll find out monday.
+
+
+
+
+",2012-05-06 17:00:09.61074,Dave Täht
+cerowrt,Insecurity in Home embedded devices 3/19/14 4PM,"Jim Gettys will be giving a talk at MIT about insecurity
+in home devices and what can be done about it.","
+Jim Gettys will be giving a talk at MIT about insecurity
+in home devices and what can be done about it.
+
+For more details, see:
+
+http://nms.csail.mit.edu/sys-security/details.html#March1914",2014-03-17 16:45:37.164146,Dave Täht
+cerowrt,Tasty Freeze 2,A bit more delay is expected...,found a bug or two... fixing... might be tuesday or wednesday at the moment...,2012-05-07 11:29:33.807111,Dave Täht
+cerowrt,Paypal for cerowrt subscriptions and donations,Accepting donations again for cerowrt (I hope),"
+I've been working fixing bufferbloat now for a really long time, and of late it's been really difficult to keep the lights on and the servers fed. Last month I'd hit bottom, this month is worse. I put up a donations page, and got a totally wonderful level of response - enough to make rent! Then I tripped over an obscure portion of the Amazon EULA, and ended up refunding everyone's money and cancelling your subscriptions.
+
+So, I've put up a new subscribe/donations page for the cerowrt portion of the project, using paypal at:
+
+http://www.teklibre.com/cerowrt/subscribe.html
+
+I won't jimmy wales you'all on further solicitations like this. (I know, that's what I said last month) 
+
+But a little more help in getting over this hump would be very nice to have.
+",2012-09-27 15:21:09.320918,Dave Täht
+cerowrt,Supplemental Quotes to the FCC Letter,Additional quotes that couldn't be included in the Press Release.,"“Wi-Fi devices aren’t just radios: they are network devices.  The software that governs them impacts the security and reliability of the whole network. If we leave firmware solely in the hands of manufacturers, we close the door to the very independent research that has been advancing the state of Internet technology and security all along.”  -- _Susan E. Sons, Director, Internet Civil Engineering Institute_ 
+
+""The security implications should be obvious to anyone who's been paying attention to recent headlines.  Less obvious is all the research and other work that goes on behind the scenes, by the very people who made the Internet what it is today.  Losing the ability to control the software that runs on these devices would bring this kind of research to a halt, and tie the hands of many brilliant minds who have dedicated their lives and careers to the continued improvement of the network we all depend on.  If we want to build the fast, secure, reliable Internet of the future, this kind of research must be allowed to continue."" -- _Jeff Loughlin, Independent Researcher and Open Source Developer_
+
+""Leveraging off-the-shelf WiFi hardware plays an important role in academic research in the field. Locked down devices would both independent verification of vendor performance claims and research into improving performance of current and future generation WiFi."" -- _Toke Høiland-Jørgensen, Bufferbloat researcher at Karlstad University, Sweden_
+
+“Dyn provides performance solutions for a significant proportion of the world's most popular web properties, and invests significant resources in maintaining the availability of our global DNS platform in the face of near constant attack. Low-cost (near zero-margin) home and small-business routers, easily compromised, are a significant contributor to attack traffic that we mitigate every day. In the race to the bottom, these devices are effectively unsupported by those who sell them; the ability to harden such devices is essential to the future success of the Internet as a reliable platform for communication and commerce.” -- _Joe Abley, Director of Architecture, Dyn_
+
+“Software upgradeability and inspection is vitally important, and should not be impaired. It is unimaginable that the FCC would propose anything to impede updates to network elements, and I hope that the words in the petition are considered carefully and used as a template for sane (and light) legislation.” -- _John Todd, Senior Technologist at Packet Clearing House_
+
+“As the editor of the IETF standards document RFC 7368 “IPv6 Home Networking Architecture Principles”, which describes how future IPv6 home networks can be built, I fully support the Letter submitted to the FCC,. The IETF works on the principle of rough consensus and running code, and the ability to modify and update open source home router images enables innovation and the future advancement of the Internet” -- _Dr Tim Chown, Lecturer, University of Southampton (UK)_
+
+“While looking at regulation, it would be more useful to consider ensuring vendors adopt IPv6 as they have ignored it for the last 10+ years requiring a complete device replacement. FOSS has enabled many of their devices to be updated rather than dumped in landfill.” -- _Brandon Butterworth, Chief Scientist, British Broadcasting Corporation_
+
+“The Internet of Things shouldn't be the Internet of Vulnerable Unpatchable Abandoned-by-Manufacturer Things.” -- _Will Edwards_
+
+""Unlike global climate change, software is a human construct, conceived by engineers. The use and management of it is therefore modifiable to be optimized for future use by qualified people with predictable positive results for security.  As such, these issues deserve to have sufficient technical resources and intelligent legal framework to make this happen."" -- _Randy Resnick, Creator, IP Communications & VoIP Community and VoIP Users Conference_
+
+“I was one of the designers of the Minstrel rate control algorithm that is now used for many, many Wi-Fi devices. Minstrel approximately doubled the range and gave a 10x improvement in throughput for Wi-Fi devices of the time, at the same time as decreasing their time-average radiated power. That research would have been prohibited or greatly impeded by the proposed rulemaking. It was done outside of the FCC jurisdiction, in New Zealand, but other countries tend to follow the FCC rule structure, and technical measures to implement the proposed FCC rules would be a serious impediment to doing that sort of work irrespective of the legal aspects. Further, this rule would set a precedent that would inevitably be applied in other areas of technology, and this would cause a great deal of harm to research and innovation. Locked-down firmware on Internet-connected devices stands to become a very serious problem for society, and should not be encouraged in any way. I strongly agree with the proposed alternate path for that reason.” -- _Andrew McGregor: Linux WiFi developer (Minstrel rate control), IETF working group chair, AQM developer and SDN researcher_
+
+“""Software by its very nature has bugs and will be vulnerable to attack. The only way we can be confident that such a critical piece of our societal infrastructure is as safe as possible is if the source code is made fully available for review and can be fixed by anyone with authority when problems arise. This alternate proposal, which is grounded in a deep understanding of how security issues really play out in this context, should be seriously considered by the FCC."" -- _Karen M. Sandler, Executive Director, Software Freedom Conservancy_
+
+""We are entering an era where an array of interconnected devices will create 'lowest common denominator security' within the most private reaches of our homes. True cybersecurity results from open code, peer review, and user control over their own devices and data; our recommended solutions are fundamentally important to the future growth of the Internet of Things economy.” -- _Sascha Meinrath, Palmer Chair in Telecommunications at Penn State University_
+
+“With the Internet of Things upon us, regulators can play a vital role in making our hardware secure. By requiring industry-leading engineering practices like we’ve described in this comment, the FCC can ensure Americans have more secure devices which respect the radio spectrum. At the same time, these practices provide makers and inventors with the flexibility necessary for world-leading innovation.” -- _Eric Schultz_",2015-10-14 20:44:58.428544,Rich Brown
