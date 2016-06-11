@@ -453,3 +453,10 @@ rate flows than fq\_codel is.)
 NOTE: It would be good for me to re-run these benchmarks at
 wondershaper's original speed range and mtu.\
 A comparison vs htb with and without atm compensation would be good too.
+
+### Attachments
+{{< attachment name="149.20.63.30.rrul_noclassification-wondershaper-fixedecn.svg" type="image/svg+xml" description="wondershaper" filename="131229042406_149.20.63.30.rrul_noclassification-wondershaper-fixedecn.svg" >}}
+{{< attachment name="149.20.63.30.rrul_noclassification-ethernet.svg" type="image/svg+xml" description="ceroshaper" filename="131229042558_149.20.63.30.rrul_noclassification-ethernet.svg" >}}
+{{< attachment name="wshaper-800-220.svg" type="image/svg+xml" description="wondershaper at 800kbit 220 kbit" filename="131229050304_wshaper-800-220.svg" >}}
+{{< attachment name="3band-800-220.svg" type="image/svg+xml" description="" filename="131229050543_3band-800-220.svg" >}}
+{{< attachment name="nfq_codel-800-220-ecn.svg" type="image/svg+xml" description="nfq_codel" filename="131229051851_nfq_codel-800-220-ecn.svg" >}}

@@ -138,3 +138,6 @@ router</link>.
 *NB:* The rc6 build also supported a connection to http://gw.home.lan -
 the bql-smoketests builds do not have a working bind module, so this has
 been disabled in the newer versions.
+
+### Attachments
+{{< attachment name="flanders320fade.jpg" type="image/jpeg" description="" filename="110709145314_flanders320fade.jpg" >}}

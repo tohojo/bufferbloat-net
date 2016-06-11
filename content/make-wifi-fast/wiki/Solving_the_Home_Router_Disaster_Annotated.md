@@ -287,3 +287,6 @@ hired or contracted on an as needed basis, and pulled from the 260
 volunteers currently participating in the ongoing Bufferbloat effort.
 
 There will be travel and lab expenses as well.
+
+### Attachments
+{{< attachment name="beating_the_bloat.pdf" type="application/pdf" description="" filename="140803074629_beating_the_bloat.pdf" >}}

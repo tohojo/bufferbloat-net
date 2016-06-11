@@ -481,3 +481,6 @@ If you're using some form of ipv6 in ipv4 tunneling then consider adding
 encapsulated IPv6 packets to the encapsulating IPv4 packets and help
 cake classify the contained flows into the correct tin. Enjoy! - Kevin
 D-B
+
+### Attachments
+{{< attachment name="cake-battlemesh-v8.pdf" type="application/pdf" description="Slides shown at Battlemesh v8" filename="150817135028_cake-battlemesh-v8.pdf" >}}

@@ -23,3 +23,7 @@ Upcoming Talks on Bufferbloat related issues
 
 Older (and filmed) Talks are archived on the
 [bloat-videos]({{< relref "cerowrt/wiki/Bloat-videos.md" >}}) page.
+
+### Attachments
+{{< attachment name="abstract-combined.pdf" type="application/pdf" description="Abstract, \"How to reliably measure...\"" filename="141012142441_abstract-combined.pdf" >}}
+{{< attachment name="abstract-aqm-algorithms.pdf" type="application/pdf" description="Abstract, \"Steady state, fairness and transient behaviour of modern AQMs\"" filename="141013021319_abstract-aqm-algorithms.pdf" >}}

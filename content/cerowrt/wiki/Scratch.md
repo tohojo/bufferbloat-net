@@ -75,3 +75,6 @@ really want diagrams to work
 [Setting up an interior gateway router]({{< relref "cerowrt/wiki/Setting_up_an_interior_gateway_router.md" >}})
 
 [Cerowrt and OpenWrt Barrier Breaker Interoperation]({{< relref "cerowrt/wiki/Cerowrt_and_OpenWrt_Barrier_Breaker_Interoperation.md" >}})
+
+### Attachments
+{{< attachment name="multiple_packet_sizes.ods" type="application/vnd.oasis.opendocument.spreadsheet" description="Early TFO Results on Home WiFi" filename="130109100547_multiple_packet_sizes.ods" >}}

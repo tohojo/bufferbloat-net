@@ -155,3 +155,6 @@ CeroWrt Configuration Script
 
 This is a script that lets you reconfigure your router in a repeatable
 manner. It has been moved to the [Automated Configuration of CeroWrt]({{< relref "cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}}) page.
+
+### Attachments
+{{< attachment name="flanders320fade.jpeg" type="image/jpeg" description="" filename="120301171500_flanders320fade.jpeg" >}}

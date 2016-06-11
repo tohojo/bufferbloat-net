@@ -51,3 +51,7 @@ against mitigation, when real solution still evades us.
 
 However, plugging in the 4ms constraint into the network stack gives us
 numbers to work with and goals to aim for.
+
+### Attachments
+{{< attachment name="m2e-delay.PNG" type="image/png" description="quality vs delay" filename="110426042225_m2e-delay.PNG" >}}
+{{< attachment name="m2e-delay.zip" type="application/zip" description="" filename="110426042651_m2e-delay.zip" >}}

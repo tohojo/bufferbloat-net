@@ -185,3 +185,6 @@ The documents below describe the older Linux 3.7 and earlier builds.
 
 The [Historical Documents]({{< relref "cerowrt/wiki/Historical_Documents.md" >}}) page links to many documents that
 describe the history and earlier releases of the project.
+
+### Attachments
+{{< attachment name="flanders320fade.jpg" type="image/jpeg" description="" filename="120122121434_flanders320fade.jpg" >}}

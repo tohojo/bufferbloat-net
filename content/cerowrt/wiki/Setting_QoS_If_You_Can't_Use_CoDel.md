@@ -33,3 +33,6 @@ the Network -&gt; QoS page.
 The image below shows the controls:
 
 ![](CeroWrt-QoS-steps.png)
+
+### Attachments
+{{< attachment name="CeroWrt-QoS-steps.png" type="image/png" description="" filename="130403135421_CeroWrt-QoS-steps.png" >}}
