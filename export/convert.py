@@ -57,7 +57,7 @@ for p in pages:
     name = p['title']
     if name == "Wiki":
         name = "index"
-    titlemap[project][name] = {'title':title,'project':project}
+    titlemap[project][name] = {'title':title,'project':project, 'id': p['id']}
     text = p['text'].replace("[[", "<link>").replace("]]","</link>").replace("{{>toc}}", "")
     outfile = "textile/{}:{}.textile".format(project,name)
     mdfile = "textile/{}:{}.md".format(p['project'],name)
