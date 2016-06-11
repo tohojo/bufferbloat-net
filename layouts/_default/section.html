@@ -5,8 +5,11 @@
     <div class="row">
         <div class="col-md-9">
             <div class="well well-sm">
+              <h1>List of Wiki pages</h1>
+              <p>These are all the old wiki pages from bufferbloat.net exported
+              and converted to markdown.</p>
               <ul>
-                {{ range .Data.Pages }}
+                {{ range .Data.Pages.ByTitle }}
                 {{ .Render "li" }}
                 {{ end }}
               </ul>
