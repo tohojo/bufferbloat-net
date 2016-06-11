@@ -29,6 +29,7 @@ pages = csv.DictReader(open("wikidump.csv"))
 interesting_wikis = ["bloat", "cerowrt", "make-wifi-fast", "codel"]
 
 outpath = pathlib.Path("../content")
+oldpath = pathlib.Path("../old-projects")
 tmpdir = pathlib.Path("textile")
 
 if not tmpdir.is_dir():
@@ -51,13 +52,10 @@ outlist = []
 
 for p in pages:
     project = p['project']
-    if not project in interesting_wikis:
-        continue
     title = p['title'].replace("_", " ")
     name = p['title']
     if name == "Wiki":
         name = "index"
-    titlemap[project][name] = {'title':title,'project':project, 'id': p['id']}
     text = p['text'].replace("[[", "<link>").replace("]]","</link>").replace("{{>toc}}", "")
     outfile = "textile/{}:{}.textile".format(project,name)
     mdfile = "textile/{}:{}.md".format(p['project'],name)
@@ -71,14 +69,19 @@ for p in pages:
     mdtext = open(mdfile).read()
     mdtext = header.format(title=title, date=date, updated=updated) + mdtext
 
+    if not project in interesting_wikis:
+        outdir = oldpath / project / 'wiki'
+    else:
+        outdir = outpath / project / 'wiki'
 
-    outdir = outpath / project / 'wiki'
     if not outdir.is_dir():
         outdir.mkdir(parents=True)
     finalmd = outdir / "{}.md".format(name)
     with finalmd.open("w") as fp:
         fp.write(mdtext)
-    outlist.append(finalmd)
+    if project in interesting_wikis:
+        outlist.append(finalmd)
+        titlemap[project][name] = {'title':title,'project':project, 'id': p['id']}
 
 json.dump(titlemap, open("titlemap.json", "w"))
 
