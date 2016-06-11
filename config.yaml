@@ -1,7 +1,7 @@
 baseurl: "https://kau.toke.dk/bufferbloat-archive/"
 languageCode: "en-us"
 title: "Bufferbloat.net archive"
-disable404: true
+disable404: false
 relativeURLs: false
 pluralizeListTitles: false
 params:

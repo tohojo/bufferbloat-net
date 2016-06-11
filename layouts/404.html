@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "navbar.html" . }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="well well-sm">
+              <h1>404: Not found</h1>
+              <p>The page you were trying to access was not found.</p>
+
+              <p>This is an export of the old bufferbloat.net site, converted to Hugo
+                format. There may be parts of the site that have not been ported
+                properly, which could be why you are seeing this error.</p>
+
+              <p>The sources
+                are <a href="https://github.com/tohojo/bufferbloat-net">available
+                  on github</a>. Pull requests to improve things are welcome.</p>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+        {{ partial "menu.html" . }}
+        </div>
+    </div>
+{{ partial "footer.copyright.html" . }}
+</div>
+{{ partial "footer.html" . }}
