@@ -11,7 +11,9 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/wiki/">Wiki pages</a></li>
+                  {{ range $section, $pages := .Site.Sections }}
+                  <li><a href="{{  $section | relURL }}/wiki">{{ title $section }}</a></li>
+                  {{ end }}
                     <!--
                     And here is where you'd add more links to sections, or anywhere you like.
                     <li><a href="#">About Me</a></li>
