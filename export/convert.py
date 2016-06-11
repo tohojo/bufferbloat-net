@@ -28,7 +28,7 @@ pages = csv.DictReader(open("wikidump.csv"))
 
 interesting_wikis = ["bloat", "cerowrt", "make-wifi-fast", "codel"]
 
-outpath = pathlib.Path("../content/projects")
+outpath = pathlib.Path("../content")
 tmpdir = pathlib.Path("textile")
 
 if not tmpdir.is_dir():
@@ -44,6 +44,8 @@ type: wiki
 """
 
 titlemap = {}
+for w in interesting_wikis:
+    titlemap[w] = {}
 
 outlist = []
 
@@ -53,7 +55,9 @@ for p in pages:
         continue
     title = p['title'].replace("_", " ")
     name = p['title']
-    titlemap[name] = {'title':title,'project':project}
+    if name == "Wiki":
+        name = "index"
+    titlemap[project][name] = {'title':title,'project':project}
     text = p['text'].replace("[[", "<link>").replace("]]","</link>").replace("{{>toc}}", "")
     outfile = "textile/{}:{}.textile".format(project,name)
     mdfile = "textile/{}:{}.md".format(p['project'],name)

@@ -21,12 +21,14 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-import sys, json, re, os
+import sys, json, re, os, pathlib
 
 titlemap = json.load(open("titlemap.json"))
 
 for f in sys.argv[1:]:
     c = open(f).read()
+    path = pathlib.PurePath(f)
+    myproject = path.parts[-3]
     newtext = c
     pos = 0
     while True:
@@ -39,9 +41,14 @@ for f in sys.argv[1:]:
         pos = end+7
 
         label = None
+        project = myproject
         linktext = c[start+6:end].replace("\n", " ")
+        if linktext.startswith("http"):
+            print("Found verbatim link: %s" % linktext)
+            newtext = newtext.replace(c[start:end+7], "[%s](%s)" % (linktext,linktext))
+            continue
         if ":" in linktext:
-            linktext = linktext.split(":")[1]
+            project,linktext = linktext.split(":")
         if "|" in linktext:
             linktext,label = linktext.split("|")
         if "\#" in linktext:
@@ -50,12 +57,17 @@ for f in sys.argv[1:]:
         while "  " in linktext:
             linktext = linktext.replace("  ", " ")
         linktext = linktext.strip()
+        if linktext == "Wiki":
+            linktext = "index"
         if not linktext:
             continue
         found = False
-        for n,t in titlemap.items():
-            if t['title'].lower() == linktext.lower():
-                newtext = newtext.replace(c[start:end+7], '[%s]({{< relref "projects/%s/wiki/%s.md" >}})' % (label or linktext, t['project'], n))
+        if not project in titlemap:
+            print("Warning: Found link to non-existant project: %s" % project)
+            continue
+        for n,t in titlemap[project].items():
+            if t['title'].lower() == linktext.lower() or n.lower() == linktext.lower():
+                newtext = newtext.replace(c[start:end+7], '[%s]({{< relref "%s/wiki/%s.md" >}})' % (label or linktext, t['project'], n))
                 found = True
                 break
         if not found:
