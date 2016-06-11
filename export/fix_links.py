@@ -72,6 +72,6 @@ for f in sys.argv[1:]:
                 found = True
                 break
         if not found:
-            print("Warning: Couldn't find target for %s" % link)
+            print("Warning: Couldn't find target for %s in %s" % (link, path.name))
     with open(f, 'w') as fp:
         fp.write(newtext)
