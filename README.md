@@ -42,3 +42,23 @@ When making changes, you can see a local version of the site by
 installing Hugo and running `hugo serve` in this directory. That will
 run a web server on localhost, which you can navigate to and see a live
 version of the site.
+
+### Creating a new news item
+
+You can use the hugo binary to create a new news item with appropriate
+front matter (the stuff in the top that tells Hugo that this is a news
+item). First, decide which project the news item should belong to, then
+issue a command like
+
+  `hugo new -k news bloat/news/2016-06-12-my-news-heading.md`
+
+to create the new file (the `-k news` tells Hugo to create a news item).
+
+The new item will be marked as a draft and appear in the
+`content/bloat/news` directory. You can then edit the file (don't forget
+to the title and add your name as author). While you are editing, you
+can run `hugo -D serve` to see the changes in real-time (the `-D` means
+'show drafts'). When you are done you can either manually change the
+draft status at the top of the file, or you can use the `hugo undraft`
+command to do it for you. Then add the file to git and submit a pull
+request to have your news item included on the site.
