@@ -1,0 +1,6 @@
+<div class="issue-comment">
+  <div class="issue-comment-header">
+    Updated by {{ .Get "author" }} on {{ .Get "date" | dateFormat "Jan 2, 2006"  }}.
+  </div>
+  {{ .Inner | markdownify }}
+</div>

@@ -131,3 +131,17 @@ code.has-jax {font: inherit;
     color: #999;
     font-size: small;
 }
+
+.issue-comment {
+    font-size: small;
+    margin-bottom: 15px;
+}
+
+.issue-comment blockquote {
+    font-size: small;
+}
+
+.issue-comment-header {
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}

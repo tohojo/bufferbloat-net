@@ -25,6 +25,7 @@ import csv, re, subprocess, os, json, sys, pathlib
 
 issues = csv.DictReader(open("issuesdump.csv"))
 attachments = list(csv.DictReader(open("issue-attachments.csv")))
+journals = list(csv.DictReader(open("issue-journals.csv")))
 interesting_projects = ["bloat", "cerowrt", "make-wifi-fast", "codel"]
 outpath = pathlib.Path("../content")
 oldpath = pathlib.Path("../old-projects")
@@ -52,8 +53,14 @@ aliases:
 {{{{< /issue_description >}}}}
 
 ## History
+{history}
 """
 attachment_template = '{{{{< attachment name="{name}" type="{mimetype}" size="{size}" description="{description}" filename="{filename}" date="{date}" author="{author}" >}}}}\n'
+
+journal_template = """{{{{< issue_journal date="{date}" author="{author}" >}}}}
+{text}
+{{{{< /issue_journal >}}}}
+"""
 
 def convert_textile(text):
     res = subprocess.run(['pandoc', '-f', 'textile', '-t', 'markdown'], input=text, stdout=subprocess.PIPE,
@@ -97,6 +104,28 @@ def do_attachments(issue_id):
         output = "### Attachments\n" + output
     return output
 
+def do_journals(issue_id):
+    output = ""
+    i = 0
+    for j in journals:
+        if not j['issue_id'] == issue_id:
+            continue
+        i += 1
+        date = j['created_on'].split(".")[0].replace(" ","T")
+        text = convert_textile(j['notes'].replace("[[", "<link>").replace("]]","</link>"))
+        newtext = []
+        for l in text.splitlines():
+            if l.startswith("&gt;"):
+                l = l.replace("&gt;", ">")
+            l = re.sub(r"(http[^ ]+)\\", "\\1", l)
+            newtext.append(l)
+        output = output + journal_template.format(date=date,author=j['author'],
+                                                  text="\n".join(newtext))
+
+    print("Found %d journal entries for issue %s" %(i, issue_id))
+    return output
+
+
 
 for i in issues:
     project = i['project']
@@ -112,7 +141,7 @@ for i in issues:
 
     text = header.format(title=title.replace('"', '\\"'), date=date, updated=updated, author=i['author'],
                          id=i['id'], status=i['status'], priority=i['priority'], assignee=i['assignee'],
-                         text=text, attachments=attach)
+                         text=text, attachments=attach, history=do_journals(i['id']))
 
     if not project in interesting_projects:
         outdir = oldpath / project / 'issues'
