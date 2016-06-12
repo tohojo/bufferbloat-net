@@ -12,7 +12,7 @@
                   {{ .Date.Format "Jan 2, 2006" }}. Updated on
                   {{ .Params.updated | dateFormat "Jan 2, 2006" }}.</span>
                 <div class="issue-properties">
-                  <label>Status:</label> <span class="issue-property">{{ .Params.status }}</span>
+                  <label>Status:</label> <span class="issue-property">{{ .Params.issue_status }}</span>
                   <label>Priority:</label> <span class="issue-property">{{ .Params.priority }}</span>
                   <label>Assignee:</label> <span class="issue-property">{{ .Params.assignee }}</span>
                 </div>

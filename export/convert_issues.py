@@ -36,7 +36,7 @@ updated: {updated}
 type: issue
 author: {author}
 id: {id}
-status: {status}
+issue_status: {status}
 priority: {priority}
 assignee: {assignee}
 aliases:
