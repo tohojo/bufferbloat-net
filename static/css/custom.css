@@ -72,23 +72,28 @@ code.has-jax {font: inherit;
 .issue-header {
     border: 1px solid #ddd;
     border-bottom: 0px;
-    padding: 5px;
+    padding: 8px;
     background-color: #f5f5ff;
 }
 
 .issue-header hr {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .issue-header h2 {
     margin: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 1.5em;
+    border-bottom: 1px solid #ddd
 }
 
 .issue-header .author-info {
-    font-size: small;
+    font-size: 90%;
+}
+
+.issue-properties {
+    margin-top: 10px;
 }
 
 .issue-properties label {
@@ -104,13 +109,14 @@ code.has-jax {font: inherit;
 .issue-description {
     border: 1px solid #ddd;
     border-top: 0px;
-    padding: 5px;
+    padding: 8px;
     padding-top: 10px;
     background-color: #f5f5ff;
 }
 
 .issue-description h3 {
     margin-top: 0px;
+    font-size: 1.3em;
 }
 
 .issue-bottom {
