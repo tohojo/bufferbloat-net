@@ -8,13 +8,15 @@
               <h1>Bug #{{ .Params.id }}</h1>
               <div class="issue-header">
                 <h2>{{ .Params.subject }}</h2>
-                <span class="author-info">Posted on {{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}.</span>
-                <hr>
+                <span class="author-info">Added by {{ .Params.author }} on
+                  {{ .Date.Format "Jan 2, 2006" }}. Updated on
+                  {{ .Params.updated | dateFormat "Jan 2, 2006" }}.</span>
                 <div class="issue-properties">
                   <label>Status:</label> <span class="issue-property">{{ .Params.status }}</span>
                   <label>Priority:</label> <span class="issue-property">{{ .Params.priority }}</span>
                   <label>Assignee:</label> <span class="issue-property">{{ .Params.assignee }}</span>
                 </div>
+                <hr>
               </div>
               {{ .Content }}
               <div class="issue-bottom">

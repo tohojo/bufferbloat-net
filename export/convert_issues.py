@@ -32,6 +32,7 @@ header = """
 title: "Bug #{id}: {title}"
 subject: "{title}"
 date: {date}
+updated: {updated}
 type: issue
 author: {author}
 id: {id}
@@ -60,8 +61,9 @@ for i in issues:
     name = i['id']
     text = convert_textile(i['description'].replace("[[", "<link>").replace("]]","</link>"))
     date = i['created_on'].split(".")[0].replace(" ","T")
+    updated = i['updated_on'].split(".")[0].replace(" ","T")
 
-    text = header.format(title=title.replace('"', '\\"'), date=date, author=i['author'],
+    text = header.format(title=title.replace('"', '\\"'), date=date, updated=updated, author=i['author'],
                          id=i['id'], status=i['status'], priority=i['priority'], assignee=i['assignee'],
                          text=text)
 
