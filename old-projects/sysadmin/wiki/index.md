@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Sysadmin Wiki
 date: 2011-01-23T20:11:45
 lastmod: 2011-03-21T20:48:54
 type: wiki

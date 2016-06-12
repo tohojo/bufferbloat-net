@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Iscwrt Wiki
 date: 2011-05-02T06:49:06
 lastmod: 2012-03-17T10:10:52
 type: wiki

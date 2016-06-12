@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Dashboard Wiki
 date: 2011-05-18T15:49:15
 lastmod: 2011-05-18T15:49:15
 type: wiki

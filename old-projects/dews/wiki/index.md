@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Dews Wiki
 date: 2012-05-26T18:39:43
 lastmod: 2012-05-26T18:59:21
 type: wiki

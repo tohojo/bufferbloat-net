@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Bloat-Proposals Wiki
 date: 2011-08-24T07:54:49
 lastmod: 2011-08-24T07:54:49
 type: wiki

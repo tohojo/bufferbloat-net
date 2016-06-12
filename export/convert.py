@@ -67,7 +67,8 @@ for p in pages:
         fp.write(text)
     subprocess.run(['pandoc', outfile, '-o', mdfile])
     mdtext = open(mdfile).read()
-    mdtext = header.format(title=title, date=date, updated=updated) + mdtext
+    mdtext = header.format(title=title if name != 'index' else (project.title() + " Wiki"),
+                           date=date, updated=updated) + mdtext
 
     if not project in interesting_wikis:
         outdir = oldpath / project / 'wiki'

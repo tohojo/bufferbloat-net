@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Bloat Wiki
 date: 2011-04-11T07:21:17
 lastmod: 2012-12-07T22:16:22
 type: wiki

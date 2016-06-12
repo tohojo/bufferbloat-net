@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Bismark Wiki
 date: 2011-03-10T15:16:41
 lastmod: 2011-07-18T18:22:34
 type: wiki

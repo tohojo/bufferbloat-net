@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Make-Wifi-Fast Wiki
 date: 2013-12-30T21:36:28
 lastmod: 2015-10-16T13:26:14
 type: wiki

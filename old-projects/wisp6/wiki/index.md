@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Wisp6 Wiki
 date: 2011-05-08T00:18:35
 lastmod: 2012-03-17T10:13:19
 type: wiki

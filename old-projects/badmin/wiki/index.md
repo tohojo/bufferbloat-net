@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Badmin Wiki
 date: 2011-05-18T18:54:23
 lastmod: 2011-05-22T04:15:24
 type: wiki

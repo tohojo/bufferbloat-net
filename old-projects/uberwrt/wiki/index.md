@@ -1,6 +1,6 @@
 
 ---
-title: Wiki
+title: Uberwrt Wiki
 date: 2011-03-19T12:14:13
 lastmod: 2011-07-09T10:02:06
 type: wiki
