@@ -81,7 +81,7 @@ def do_attachments(issue_id):
             continue
 
         outfile = attachdir / a['disk_filename']
-        if not outfile.exists() and False:
+        if not outfile.exists():
             with sourcefile.open("rb") as fps:
                 with outfile.open("wb") as fpd:
                     fpd.write(fps.read())
@@ -100,6 +100,7 @@ def do_attachments(issue_id):
                                                      filename=a['disk_filename'], description=a['description'].replace('"', '\\"'))
         i += 1
 
+    print("Found %d attachments for issue %s" %(i, issue_id))
     if output:
         output = "### Attachments\n" + output
     return output
