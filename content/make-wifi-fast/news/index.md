@@ -1,4 +1,4 @@
 ---
 type: newsindex
-title: Make-Wifi-Fast
+title: Make-wifi-fast
 ---
