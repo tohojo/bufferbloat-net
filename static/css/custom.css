@@ -119,13 +119,6 @@ code.has-jax {font: inherit;
     font-size: 1.3em;
 }
 
-.issue-bottom {
-    color: #999;
-    margin-top: 10px;
-    padding-top: 5px;
-    border-top: 1px solid #ddd;
-}
-
 .issue-description .attachment {
     margin: 0px;
     color: #999;
@@ -145,3 +138,12 @@ code.has-jax {font: inherit;
     border-bottom: 1px solid #ccc;
     font-weight: bold;
 }
+
+.bottom-notice {
+    color: #999;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
