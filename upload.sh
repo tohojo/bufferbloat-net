@@ -38,6 +38,7 @@ find public \( -name '*.js' -or -name '*.css' -or -name '*.svg' -or -name '*.htm
 # optimise PNG images
 find public -name '*.png' -exec optipng -silent -preserve '{}' \;
 
-rsync -rtpl --delete --exclude stats/ --exclude .well-known public/ $BUFFERBLOAT_NET_DEST
+rsync -rtpl --delete --exclude stats/ --exclude news --exclude .well-known public/ $BUFFERBLOAT_NET_DEST/projects/
+rsync -rtpl --delete public/news/ $BUFFERBLOAT_NET_DEST/news/
 
 rm static/css/combined.css
