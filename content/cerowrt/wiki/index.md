@@ -8,8 +8,6 @@ type: wiki
 Overview of the CeroWrt Project
 ===============================
 
-![](http://huchra.bufferbloat.net/~d/images/a9.jpg)
-
 Bufferbloat is the undesirable latency that comes from a router or other
 network equipment buffering too much data. It is a huge drag on Internet
 performance created, ironically, by previous attempts to make it work
