@@ -68,3 +68,54 @@ code.has-jax {font: inherit;
               background: inherit;
               border: inherit;
               color: #515151;}
+
+.issue-header {
+    border: 1px solid #ddd;
+    border-bottom: 0px;
+    padding: 5px;
+    background-color: #f5f5ff;
+}
+
+.issue-header hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.issue-header h2 {
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.issue-header .author-info {
+    font-size: small;
+}
+
+.issue-properties label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.issue-property {
+    margin-right: 1em;
+    font-size: 15px;
+}
+
+.issue-description {
+    border: 1px solid #ddd;
+    border-top: 0px;
+    padding: 5px;
+    padding-top: 10px;
+    background-color: #f5f5ff;
+}
+
+.issue-description h3 {
+    margin-top: 0px;
+}
+
+.issue-bottom {
+    color: #999;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+}

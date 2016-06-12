@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "navbar.html" . }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="well well-sm">
+              <h1>Bug #{{ .Params.id }}</h1>
+              <div class="issue-header">
+                <h2>{{ .Params.subject }}</h2>
+                <span class="author-info">Posted on {{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}.</span>
+                <hr>
+                <div class="issue-properties">
+                  <label>Status:</label> <span class="issue-property">{{ .Params.status }}</span>
+                  <label>Priority:</label> <span class="issue-property">{{ .Params.priority }}</span>
+                  <label>Assignee:</label> <span class="issue-property">{{ .Params.assignee }}</span>
+                </div>
+              </div>
+              {{ .Content }}
+              <div class="issue-bottom">
+                This is a static export of the original bufferbloat.net issue
+                database. As such, no further commenting is possible; the
+                information is solely here for archival purposes.
+              </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {{ partial "menu.html" . }}
+        </div>
+    </div>
+{{ partial "footer.copyright.html" . }}
+</div>
+{{ partial "footer.html" . }}
