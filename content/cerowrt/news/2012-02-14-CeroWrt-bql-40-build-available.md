@@ -4,6 +4,8 @@ title: "CeroWrt bql-40 build available"
 date: 2012-02-14T19:01:15
 type: news
 author: Rich Brown
+aliases:
+    - /news/26
 ---
 As noted in the Wiki and Activity pages, there has been a lot of recent
 work on CeroWrt. This has led to a usable firmware build that

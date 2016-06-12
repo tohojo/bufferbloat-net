@@ -4,6 +4,8 @@ title: "Supplemental Quotes to the FCC Letter"
 date: 2015-10-14T20:44:58
 type: news
 author: Rich Brown
+aliases:
+    - /news/56
 ---
 “Wi-Fi devices aren’t just radios: they are network devices. The
 software that governs them impacts the security and reliability of the

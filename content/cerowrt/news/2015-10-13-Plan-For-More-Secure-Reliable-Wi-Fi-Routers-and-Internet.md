@@ -4,6 +4,8 @@ title: "Plan For More Secure, Reliable Wi-Fi Routers - and Internet"
 date: 2015-10-13T22:01:38
 type: news
 author: Rich Brown
+aliases:
+    - /news/55
 ---
 *Washington D.C., October 14th, 2015:* In a
 [letter](http://huchra.bufferbloat.net/~d/fcc_saner_software_practices.pdf)

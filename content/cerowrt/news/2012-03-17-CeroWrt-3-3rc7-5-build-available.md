@@ -4,6 +4,8 @@ title: "CeroWrt 3.3rc7-5 build available"
 date: 2012-03-17T08:09:19
 type: news
 author: Rich Brown
+aliases:
+    - /news/29
 ---
 In [this CeroWrt-devel
 message](https://lists.bufferbloat.net/pipermail/cerowrt-devel/2012-March/000128.html),

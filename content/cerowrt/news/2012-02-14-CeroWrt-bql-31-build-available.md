@@ -4,6 +4,8 @@ title: "CeroWrt bql-31 build available"
 date: 2012-02-14T18:59:03
 type: news
 author: Rich Brown
+aliases:
+    - /news/25
 ---
 The recent bql-31 build is available for the bold. This build
 incorporates work from the Linux 3.3 kernel as well as a number of known

@@ -4,6 +4,8 @@ title: "Codel on Cerowrt-3.3.6-2"
 date: 2012-05-14T13:56:28
 type: news
 author: Dave Täht
+aliases:
+    - /news/35
 ---
 A test release of CeroWrt is now available that has support for Kathie
 Nichols' and Van Jacobson's new AQM,

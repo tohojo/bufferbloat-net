@@ -4,6 +4,8 @@ title: "Heartbleed and CeroWrt - upgrade please!"
 date: 2014-04-16T11:05:11
 type: news
 author: Dave Täht
+aliases:
+    - /news/50
 ---
 Heartbleed Update
 

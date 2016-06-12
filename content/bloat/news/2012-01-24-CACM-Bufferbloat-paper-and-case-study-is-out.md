@@ -4,6 +4,8 @@ title: "CACM Bufferbloat paper and case study is out."
 date: 2012-01-24T14:30:25
 type: news
 author: Jim Gettys
+aliases:
+    - /news/22
 ---
 CACM Bufferbloat paper is out. It's the same as the ACM Queue version,
 but killing trees... You too can read it in the comfort of your

@@ -4,6 +4,8 @@ title: "FCC Open Internet Apps Competition"
 date: 2011-06-17T03:20:15
 type: news
 author: Nick Feamster
+aliases:
+    - /news/16
 ---
 We have entered [BISMark](http://projectbismark.net/) into the FCC Open
 Internet Apps competition.

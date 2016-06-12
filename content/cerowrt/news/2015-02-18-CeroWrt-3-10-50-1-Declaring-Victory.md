@@ -4,6 +4,8 @@ title: "CeroWrt 3.10.50-1 -- Declaring Victory"
 date: 2015-02-18T19:21:11
 type: news
 author: Rich Brown
+aliases:
+    - /news/53
 ---
 We are extremely pleased to report that CeroWrt has been highly stable
 since it was built over six months ago. We recently surveyed our user

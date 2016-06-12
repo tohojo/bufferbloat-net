@@ -4,6 +4,8 @@ title: "Bufferbloat demo videos"
 date: 2012-02-01T10:24:02
 type: news
 author: Jim Gettys
+aliases:
+    - /news/23
 ---
 If people have heard of bufferbloat at all, it is usually just an
 abstraction despite having personal experience with it. Bufferbloat can

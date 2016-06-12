@@ -4,6 +4,8 @@ title: "CeroWrt 3.3-rc6-2 build available"
 date: 2012-03-07T18:08:31
 type: news
 author: Rich Brown
+aliases:
+    - /news/28
 ---
 Dave Täht writes the following in the CeroWrt-Devel mailing list:
 

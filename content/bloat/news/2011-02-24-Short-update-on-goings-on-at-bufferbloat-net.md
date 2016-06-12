@@ -4,6 +4,8 @@ title: "Short update on goings on at bufferbloat.net"
 date: 2011-02-24T14:53:09
 type: news
 author: Dave Täht
+aliases:
+    - /news/6
 ---
 WHAT A MONTH!\
 (and it isn't over yet)

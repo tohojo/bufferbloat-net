@@ -4,6 +4,8 @@ title: "Kermit Project"
 date: 2011-05-16T12:18:12
 type: news
 author: Marshini Chetty
+aliases:
+    - /news/15
 ---
 Thank you all for your enthusiasm for the Kermit project. We're working
 on a distributable version of Kermit that will tie into network

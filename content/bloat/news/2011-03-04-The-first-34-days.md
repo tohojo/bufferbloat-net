@@ -4,6 +4,8 @@ title: "The first 34 days"
 date: 2011-03-04T11:44:08
 type: news
 author: Dave Täht
+aliases:
+    - /news/7
 ---
 The Bufferbloat project news summary, February 17 - March 3, 2011
 =================================================================

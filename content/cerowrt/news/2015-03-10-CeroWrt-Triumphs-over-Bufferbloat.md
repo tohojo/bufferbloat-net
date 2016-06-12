@@ -4,6 +4,8 @@ title: "CeroWrt Triumphs over Bufferbloat"
 date: 2015-03-10T07:47:37
 type: news
 author: Rich Brown
+aliases:
+    - /news/54
 ---
 The CeroWrt project, and its implementation of fq\_codel as seen in the
 current build of the firmware, eliminates the problem of bufferbloat.

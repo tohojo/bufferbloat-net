@@ -4,6 +4,8 @@ title: "CeroWrt latest beta's"
 date: 2014-07-28T15:42:42
 type: news
 author: Rich Brown
+aliases:
+    - /news/51
 ---
 The most recent beta-test CeroWrt (version 3.10.48-2) is working very
 well. The incidence of the wifi-related bug \#442 has dropped, and it

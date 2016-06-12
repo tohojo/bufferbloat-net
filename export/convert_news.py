@@ -41,6 +41,8 @@ title: "{title}"
 date: {date}
 type: news
 author: {author}
+aliases:
+    - /news/{id}
 ---
 """
 
@@ -69,7 +71,7 @@ for n in news:
         fp.write(text)
     subprocess.run(['pandoc', str(outfile), '-o', str(mdfile)])
     mdtext = mdfile.open("r").read()
-    mdtext = header.format(title=title, date=date, author=n['author']) + mdtext
+    mdtext = header.format(title=title, date=date, author=n['author'], id=n['id']) + mdtext
 
     if not project in interesting_projects:
         outdir = oldpath / project / 'news'

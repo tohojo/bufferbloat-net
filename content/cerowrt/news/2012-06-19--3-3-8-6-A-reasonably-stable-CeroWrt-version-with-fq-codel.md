@@ -4,6 +4,8 @@ title: " 3.3.8-6: A reasonably stable CeroWrt version with fq_codel"
 date: 2012-06-19T11:59:22
 type: news
 author: Dave Täht
+aliases:
+    - /news/37
 ---
 I just put out http://huchra.bufferbloat.net/\~cero1/3.3/3.3.8-6/ and
 deployed it as my default gw and ran a bunch of tests that it survived.

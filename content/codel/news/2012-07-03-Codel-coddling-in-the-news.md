@@ -4,6 +4,8 @@ title: "Codel (coddling) in the news"
 date: 2012-07-03T08:09:00
 type: news
 author: Dave Täht
+aliases:
+    - /news/38
 ---
 Kamal Mostafa built an [Ubuntu 12.4
 PPA](https://launchpad.net/~kamalmostafa/+archive/bufferbloat), and

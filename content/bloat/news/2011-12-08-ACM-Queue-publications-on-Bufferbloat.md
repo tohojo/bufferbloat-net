@@ -4,6 +4,8 @@ title: "ACM Queue publications on Bufferbloat"
 date: 2011-12-08T16:35:55
 type: news
 author: Jim Gettys
+aliases:
+    - /news/21
 ---
 Two articles have just been posted on the ACM Queue Web site as part of
 a Bufferbloat case study. These are an article by Jim Gettys and

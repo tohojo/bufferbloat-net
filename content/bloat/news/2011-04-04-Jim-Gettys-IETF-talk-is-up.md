@@ -4,6 +4,8 @@ title: "Jim Gettys IETF talk is up"
 date: 2011-04-04T13:02:08
 type: news
 author: Dave Täht
+aliases:
+    - /news/11
 ---
 Slides: http://mirrors.bufferbloat.net/Talks/PragueIETF/
 

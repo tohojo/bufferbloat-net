@@ -4,6 +4,8 @@ title: "It's (still) the latency, stupid*"
 date: 2012-11-29T07:59:14
 type: news
 author: Jim Gettys
+aliases:
+    - /news/42
 ---
 The Internet Society has issued another in its series on Bandwidth
 Management, in its [Technology Roundtable

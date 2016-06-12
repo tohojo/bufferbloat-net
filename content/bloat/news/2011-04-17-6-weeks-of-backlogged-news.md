@@ -4,6 +4,8 @@ title: "6 weeks of backlogged news"
 date: 2011-04-17T19:53:18
 type: news
 author: Dave Täht
+aliases:
+    - /news/12
 ---
 I'd intended to write up summaries of bufferbloat related activity once
 a month, but am running a bit behind. Both JG and I have been travelling

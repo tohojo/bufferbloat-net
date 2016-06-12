@@ -4,6 +4,8 @@ title: "November 2013: Update on CeroWrt"
 date: 2013-11-01T16:49:06
 type: news
 author: Rich Brown
+aliases:
+    - /news/45
 ---
 Although the CeroWrt site (http://www.bufferbloat.net/projects/cerowrt/)
 has been quiet, that doesn't mean that we haven't been working.

@@ -4,6 +4,8 @@ title: "Bufferbloat.net - the first 16 days"
 date: 2011-02-12T11:42:02
 type: news
 author: Dave Täht
+aliases:
+    - /news/4
 ---
 A summary of goings on at Bufferbloat.net since the launch
 ==========================================================

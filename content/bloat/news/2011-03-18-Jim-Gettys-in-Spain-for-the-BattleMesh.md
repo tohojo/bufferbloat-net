@@ -4,6 +4,8 @@ title: "Jim Gettys in Spain for the BattleMesh"
 date: 2011-03-18T07:44:34
 type: news
 author: Dave Täht
+aliases:
+    - /news/10
 ---
 Jim Gettys will be giving two talks at the [Battlemesh
 conference](http://battlemesh.org/BattleMeshV4) March 16-19, in Sant

@@ -4,6 +4,8 @@ title: "Ocean City (r6) Release is Complete"
 date: 2012-02-14T18:57:42
 type: news
 author: Rich Brown
+aliases:
+    - /news/24
 ---
 The "Ocean City" build is as done as it's going to get. It is stable,
 but its goals were way too broad to implement in a reasonable time

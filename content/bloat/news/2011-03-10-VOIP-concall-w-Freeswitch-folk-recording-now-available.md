@@ -4,6 +4,8 @@ title: "VOIP concall w/Freeswitch folk recording now available"
 date: 2011-03-10T09:03:33
 type: news
 author: Dave Täht
+aliases:
+    - /news/9
 ---
 I've put a fairly large (and yet still incomplete) summary of the voip
 conference call with the freeswitch folk up at:

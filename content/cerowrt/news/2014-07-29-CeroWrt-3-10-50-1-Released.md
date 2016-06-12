@@ -4,6 +4,8 @@ title: "CeroWrt 3.10.50-1 Released"
 date: 2014-07-29T15:31:44
 type: news
 author: Rich Brown
+aliases:
+    - /news/52
 ---
 The CeroWrt 3.10.50-1 build has been released. It has several
 improvements, including resyncing with the OpenWrt head, another fix to

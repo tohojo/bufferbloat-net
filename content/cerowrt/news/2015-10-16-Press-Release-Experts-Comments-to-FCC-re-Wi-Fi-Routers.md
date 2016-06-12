@@ -4,6 +4,8 @@ title: "Press Release-Experts' Comments to FCC re: Wi-Fi Routers"
 date: 2015-10-16T05:16:12
 type: news
 author: Rich Brown
+aliases:
+    - /news/58
 ---
 *October 14, 2015 06:00 AM Eastern Daylight Time*
 

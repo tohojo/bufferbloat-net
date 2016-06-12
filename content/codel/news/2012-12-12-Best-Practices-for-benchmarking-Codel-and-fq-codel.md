@@ -4,6 +4,8 @@ title: "Best Practices for benchmarking Codel and fq_codel"
 date: 2012-12-12T07:12:58
 type: news
 author: Jim Gettys
+aliases:
+    - /news/43
 ---
 <link>Best Practices for Benchmarking CoDel and FQ CoDel</link> contains
 lots of useful information for people experimenting with the current

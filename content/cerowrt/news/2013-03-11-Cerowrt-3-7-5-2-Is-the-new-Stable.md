@@ -4,6 +4,8 @@ title: "Cerowrt 3.7.5-2 Is the new Stable"
 date: 2013-03-11T07:09:26
 type: news
 author: Dave Täht
+aliases:
+    - /news/44
 ---
 What can I say? 3.7.5-2 has been deployed and thoroughly tested at
 multiple sites, and under high load, and on places like comcast's cable

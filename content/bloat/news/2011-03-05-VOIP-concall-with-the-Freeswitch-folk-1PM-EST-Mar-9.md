@@ -4,6 +4,8 @@ title: "VOIP concall with the Freeswitch folk 1PM EST Mar 9"
 date: 2011-03-05T09:31:56
 type: news
 author: Dave Täht
+aliases:
+    - /news/8
 ---
 The members of the Bufferbloat project are invited to sit in on
 Freeswitch's regular VOIP conference call at 1PM Eastern Time,

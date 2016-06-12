@@ -4,6 +4,8 @@ title: "Smoke test release of Cerowrt"
 date: 2011-07-09T10:47:17
 type: news
 author: Dave Täht
+aliases:
+    - /news/17
 ---
 After a long gestation, we're happy to announce the existence of a
 'smoke test' release of 'CeroWrt', for the NETGEAR WNDR3700v2 series of

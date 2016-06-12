@@ -4,6 +4,8 @@ title: "Cerowrt 3.3 Tasty freeze"
 date: 2012-05-06T17:00:09
 type: news
 author: Dave Täht
+aliases:
+    - /news/33
 ---
 The code for Cerowrt 3.3 has been frozen now for about a week. There's
 some reasons for that, which is why the freeze is "tasty".\

@@ -4,6 +4,8 @@ title: "ECN information from Steve Bauer and Robert Beverly."
 date: 2011-02-22T13:36:52
 type: news
 author: Jim Gettys
+aliases:
+    - /news/5
 ---
 Steve Bauer has been kind enough to give me a copy of his slides,
 slightly tweaked since that workshop, that goes over the state of ECN.

@@ -4,6 +4,8 @@ title: "Talk at Bell Labs is up"
 date: 2011-01-28T08:25:15
 type: news
 author: Jim Gettys
+aliases:
+    - /news/3
 ---
 Jim Gettys gave a [talk at Bell
 Labs](http://mirrors.bufferbloat.net/Talks/BellLabs01192011/) last week,

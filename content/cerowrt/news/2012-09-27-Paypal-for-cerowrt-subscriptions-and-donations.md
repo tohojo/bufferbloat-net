@@ -4,6 +4,8 @@ title: "Paypal for cerowrt subscriptions and donations"
 date: 2012-09-27T15:21:09
 type: news
 author: Dave Täht
+aliases:
+    - /news/41
 ---
 I've been working fixing bufferbloat now for a really long time, and of
 late it's been really difficult to keep the lights on and the servers

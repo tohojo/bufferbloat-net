@@ -4,6 +4,8 @@ title: "CeroWrt News - January 2014"
 date: 2014-01-11T16:33:18
 type: news
 author: Rich Brown
+aliases:
+    - /news/46
 ---
 The newest build of CeroWrt - 3.10.24-8 - is working quite well for us.
 There's a [Release
