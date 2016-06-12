@@ -1,0 +1,66 @@
+diff --git a/include/linux/if_vlan.h b/include/linux/if_vlan.h
+index 13aff1e..add341d 100644
+--- a/include/linux/if_vlan.h
++++ b/include/linux/if_vlan.h
+@@ -39,7 +39,7 @@
+ struct vlan_hdr {
+ 	__be16	h_vlan_TCI;
+ 	__be16	h_vlan_encapsulated_proto;
+-};
++} __packed;
+ 
+ /**
+  *	struct vlan_ethhdr - vlan ethernet header (ethhdr + vlan_hdr)
+diff --git a/net/core/flow_dissector.c b/net/core/flow_dissector.c
+index a225089..da9486d 100644
+--- a/net/core/flow_dissector.c
++++ b/net/core/flow_dissector.c
+@@ -80,7 +80,7 @@ ipv6:
+ 		hdr = skb_header_pointer(skb, nhoff, sizeof(_hdr), &_hdr);
+ 		if (!hdr)
+ 			return false;
+-		proto = hdr->proto;
++		proto = __get_unaligned_cpu16(&(hdr->proto));
+ 		nhoff += PPPOE_SES_HLEN;
+ 		switch (proto) {
+ 		case __constant_htons(PPP_IP):
+@@ -101,6 +101,7 @@ ipv6:
+ 			__be16 flags;
+ 			__be16 proto;
+ 		} *hdr, _hdr;
++		__be16 gre_flags;
+ 
+ 		hdr = skb_header_pointer(skb, nhoff, sizeof(_hdr), &_hdr);
+ 		if (!hdr)
+@@ -109,14 +110,17 @@ ipv6:
+ 		 * Only look inside GRE if version zero and no
+ 		 * routing
+ 		 */
+-		if (!(hdr->flags & (GRE_VERSION|GRE_ROUTING))) {
+-			proto = hdr->proto;
++
++		gre_flags = __get_unaligned_cpu16(&(hdr->flags));
++		
++		if (!(gre_flags & (GRE_VERSION|GRE_ROUTING))) {
++			proto = __get_unaligned_cpu16(&(hdr->proto));
+ 			nhoff += 4;
+-			if (hdr->flags & GRE_CSUM)
++			if (gre_flags & GRE_CSUM)
+ 				nhoff += 4;
+-			if (hdr->flags & GRE_KEY)
++			if (gre_flags & GRE_KEY)
+ 				nhoff += 4;
+-			if (hdr->flags & GRE_SEQ)
++			if (gre_flags & GRE_SEQ)
+ 				nhoff += 4;
+ 			goto again;
+ 		}
+@@ -136,7 +140,7 @@ ipv6:
+ 		nhoff += poff;
+ 		ports = skb_header_pointer(skb, nhoff, sizeof(_ports), &_ports);
+ 		if (ports)
+-			flow->ports = *ports;
++			flow->ports = __get_unaligned_cpu32(ports);
+ 	}
+ 
+ 	return true;

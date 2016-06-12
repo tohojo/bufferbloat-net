@@ -1,0 +1,45 @@
+--- ./net/mac80211/rc80211_minstrel_ht.c~	2011-08-07 14:13:38.000000000 +1200
++++ ./net/mac80211/rc80211_minstrel_ht.c	2011-08-07 14:18:34.434970934 +1200
+@@ -510,9 +510,9 @@
+ 		tx_time += ctime + mi->overhead + tx_time_data;
+ 		tx_time_rtscts += ctime + mi->overhead_rtscts + tx_time_data;
+ 
+-		if (tx_time_rtscts < mp->segment_size)
++		if (tx_time_rtscts < mp->segment_size/6)
+ 			mr->retry_count_rtscts++;
+-	} while ((tx_time < mp->segment_size) &&
++	} while ((tx_time < mp->segment_size/6) &&
+ 	         (++mr->retry_count < mp->max_retry));
+ }
+ 
+--- ./drivers/net/wireless/ath/ath9k/ath9k.h~	2011-08-07 14:13:38.000000000 +1200
++++ ./drivers/net/wireless/ath/ath9k/ath9k.h	2011-08-07 14:19:30.897603861 +1200
+@@ -120,7 +120,7 @@
+ #define ATH_RXBUF               128
+ #define ATH_TXBUF               512
+ #define ATH_TXBUF_RESERVE       5
+-#define ATH_MAX_QDEPTH          (ATH_TXBUF / 4 - ATH_TXBUF_RESERVE)
++#define ATH_MAX_QDEPTH          (ATH_TXBUF / 13 - ATH_TXBUF_RESERVE)
+ #define ATH_TXMAXTRY            13
+ 
+ #define TID_TO_WME_AC(_tid)				\
+@@ -540,7 +540,7 @@
+ #define DEFAULT_CACHELINE       32
+ #define ATH_REGCLASSIDS_MAX     10
+ #define ATH_CABQ_READY_TIME     80      /* % of beacon interval */
+-#define ATH_MAX_SW_RETRIES      20
++#define ATH_MAX_SW_RETRIES      50
+ #define ATH_CHAN_MAX            255
+ 
+ #define ATH_TXPOWER_MAX         100     /* .5 dBm units */
+--- ./drivers/net/wireless/ath/ath9k/xmit.c~	2011-08-07 14:13:38.000000000 +1200
++++ ./drivers/net/wireless/ath/ath9k/xmit.c	2011-08-07 14:21:07.652115562 +1200
+@@ -630,7 +630,7 @@
+ 				modeidx++;
+ 
+ 			frmlen = ath_max_4ms_framelen[modeidx][rates[i].idx];
+-			max_4ms_framelen = min(max_4ms_framelen, frmlen);
++			max_4ms_framelen = min(max_4ms_framelen/4, frmlen);
+ 		}
+ 	}
+ 

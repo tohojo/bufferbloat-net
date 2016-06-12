@@ -1,0 +1,51 @@
+#!/bin/sh
+
+modprobe ipt_multiport >&- 2>&-
+modprobe ipt_CONNMARK >&- 2>&-
+modprobe ipt_length >&- 2>&-
+
+ip6tables -t mangle -F
+ip6tables -t mangle -F qos_Default
+ip6tables -t mangle -F qos_Default_ct
+ip6tables -t mangle -D FORWARD -o eth1 -j qos_Default
+ip6tables -t mangle -D OUTPUT -o eth1 -j qos_Default
+ip6tables -t mangle -X qos_Default
+ip6tables -t mangle -X qos_Default_ct
+ip6tables -t mangle -N qos_Default >&- 2>&-
+ip6tables -t mangle -N qos_Default_ct >&- 2>&-
+ip6tables -t mangle -A qos_Default_ct -m mark --mark 0/0xff -m tcp -p tcp -m multiport --ports 22,53 -j MARK --set-mark 1/0xff
+ip6tables -t mangle -A qos_Default_ct -m mark --mark 0/0xff -p udp -m udp -m multiport --ports 22,53 -j MARK --set-mark 1/0xff
+ip6tables -t mangle -A qos_Default_ct -m mark --mark 0/0xff -p tcp -m tcp -m multiport --ports 20,21,25,80,110,443,993,995 -j MARK --set-mark 3/0xff
+ip6tables -t mangle -A qos_Default_ct -m mark --mark 0/0xff -m tcp -p tcp -m multiport --ports 5190 -j MARK --set-mark 2/0xff
+ip6tables -t mangle -A qos_Default_ct -m mark --mark 0/0xff -p udp -m udp -m multiport --ports 5190 -j MARK --set-mark 2/0xff
+ip6tables -t mangle -A qos_Default_ct -j CONNMARK --save-mark --mask 0xff
+ip6tables -t mangle -A qos_Default -j CONNMARK --restore-mark --mask 0xff
+ip6tables -t mangle -A qos_Default -m mark --mark 0/0xff -j qos_Default_ct
+ip6tables -t mangle -A qos_Default -m mark --mark 1/0xff -m length --length 400: -j MARK --set-mark 0/0xff
+ip6tables -t mangle -A qos_Default -m mark --mark 2/0xff -m length --length 800: -j MARK --set-mark 0/0xff
+ip6tables -t mangle -A qos_Default -m mark --mark 0/0xff -p udp -m length --length :500 -j MARK --set-mark 2/0xff
+ip6tables -t mangle -A qos_Default -p icmp -j MARK --set-mark 1/0xff
+ip6tables -t mangle -A qos_Default -m mark --mark 0/0xff -m tcp -p tcp --sport 1024:65535 --dport 1024:65535 -j MARK --set-mark 4/0xff
+ip6tables -t mangle -A qos_Default -m mark --mark 0/0xff -p udp -m udp --sport 1024:65535 --dport 1024:65535 -j MARK --set-mark 4/0xff
+# This is my bad boy
+#ip6tables -t mangle -A qos_Default -p tcp -m length --length :128 -m mark ! --mark 4/0xff -m tcp --tcp-flags ALL SYN -j MARK --set-mark 1/0xff
+#ip6tables -t mangle -A qos_Default -p tcp -m length --length :128 -m mark ! --mark 4/0xff -m tcp --tcp-flags ALL ACK -j MARK --set-mark 1/0xff
+# Simplify
+
+# fails
+#ip6tables -t mangle -A qos_Default -p tcp -m tcp --tcp-flags ALL SYN -j MARK --set-mark 1/0xff
+#ip6tables -t mangle -A qos_Default -p tcp -m tcp --tcp-flags ALL ACK -j MARK --set-mark 1/0xff
+
+# This also fails
+
+#ip6tables -t mangle -A qos_Default -p tcp -m mark ! --mark 4/0xff -j MARK --set-mark 1/0xff
+#ip6tables -t mangle -A qos_Default -p tcp -m mark ! --mark 4/0xff -j MARK --set-mark 1/0xff
+
+# Fails too
+
+ip6tables -t mangle -A qos_Default -p tcp -m mark --mark 4/0xff -j MARK --set-mark 1/0xff
+ip6tables -t mangle -A qos_Default -p tcp -m mark --mark 4/0xff -j MARK --set-mark 1/0xff
+
+
+ip6tables -t mangle -A OUTPUT -o eth1 -j qos_Default
+ip6tables -t mangle -A FORWARD -o eth1 -j qos_Default

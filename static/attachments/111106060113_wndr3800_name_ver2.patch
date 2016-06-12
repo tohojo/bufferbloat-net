@@ -1,0 +1,66 @@
+diff --git a/target/linux/ar71xx/base-files/lib/ar71xx.sh b/target/linux/ar71xx/base-files/lib/ar71xx.sh
+index 2ab9dc0..4a984f5 100755
+--- a/target/linux/ar71xx/base-files/lib/ar71xx.sh
++++ b/target/linux/ar71xx/base-files/lib/ar71xx.sh
+@@ -160,6 +160,9 @@ ar71xx_board_name() {
+ 	*WNDR3700v2)
+ 		name="wndr3700v2"
+ 		;;
++	*WNDR3800)
++		name="wndr3800"
++		;;
+ 	*WNR2000)
+ 		name="wnr2000"
+ 		;;
+diff --git a/target/linux/ar71xx/base-files/lib/upgrade/platform.sh b/target/linux/ar71xx/base-files/lib/upgrade/platform.sh
+index 0b1e57a..e3c8aaf 100755
+--- a/target/linux/ar71xx/base-files/lib/upgrade/platform.sh
++++ b/target/linux/ar71xx/base-files/lib/upgrade/platform.sh
+@@ -102,7 +102,7 @@ platform_check_image() {
+ 		}
+ 		return 0
+ 		;;
+-	wndr3700v2)
++	wndr3700v2|wndr3800)
+ 		[ "$magic_long" != "33373031" ] && {
+ 			echo "Invalid image type."
+ 			return 1
+diff --git a/target/linux/ar71xx/files/arch/mips/ar71xx/mach-wndr3700.c b/target/linux/ar71xx/files/arch/mips/ar71xx/mach-wndr3700.c
+index 27beed1..000b460 100644
+--- a/target/linux/ar71xx/files/arch/mips/ar71xx/mach-wndr3700.c
++++ b/target/linux/ar71xx/files/arch/mips/ar71xx/mach-wndr3700.c
+@@ -291,3 +291,5 @@ static void __init wndr3700v2_setup(void)
+ 
+ MIPS_MACHINE(AR71XX_MACH_WNDR3700V2, "WNDR3700v2", "NETGEAR WNDR3700v2",
+ 	     wndr3700v2_setup);
++MIPS_MACHINE(AR71XX_MACH_WNDR3800, "WNDR3800", "NETGEAR WNDR3800",
++	     wndr3700v2_setup);
+diff --git a/target/linux/ar71xx/files/arch/mips/ar71xx/machtype.h b/target/linux/ar71xx/files/arch/mips/ar71xx/machtype.h
+index 11d87b8..8dbbf96 100644
+--- a/target/linux/ar71xx/files/arch/mips/ar71xx/machtype.h
++++ b/target/linux/ar71xx/files/arch/mips/ar71xx/machtype.h
+@@ -68,6 +68,7 @@ enum ar71xx_mach_type {
+ 	AR71XX_MACH_WHR_HP_G300N, /* Buffalo WHR-HP-G300N */
+ 	AR71XX_MACH_WNDR3700,	/* NETGEAR WNDR3700 */
+ 	AR71XX_MACH_WNDR3700V2,	/* NETGEAR WNDR3700v2 */
++	AR71XX_MACH_WNDR3800,	/* NETGEAR WNDR3800 */
+ 	AR71XX_MACH_WNR2000,	/* NETGEAR WNR2000 */
+ 	AR71XX_MACH_WP543,	/* Compex WP543 */
+ 	AR71XX_MACH_WRT160NL,	/* Linksys WRT160NL */
+diff --git a/target/linux/ar71xx/image/Makefile b/target/linux/ar71xx/image/Makefile
+index b1015a1..c94afda 100644
+--- a/target/linux/ar71xx/image/Makefile
++++ b/target/linux/ar71xx/image/Makefile
+@@ -686,10 +686,11 @@ wndr3700_cmdline=board=WNDR3700 console=ttyS0,115200
+ wndr3700_mtdlayout=mtdparts=spi0.0:320k(u-boot)ro,128k(u-boot-env)ro,1024k(kernel),6656k(rootfs),64k(art)ro,7680k@0x70000(firmware)
+ wndr3700v2_cmdline=board=WNDR3700v2 console=ttyS0,115200
+ wndr3700v2_mtdlayout=mtdparts=spi0.0:320k(u-boot)ro,128k(u-boot-env)ro,1024k(kernel),14848k(rootfs),64k(art)ro,15872k@0x70000(firmware)
++wndr3800_cmdline=board=WNDR3800 console=ttyS0,115200
+ define Image/Build/Profile/WNDR3700
+ 	$(call Image/Build/Template/$(fs_64k)/$(1),Netgear,wndr3700,$(wndr3700_cmdline),wndr3700_mtdlayout,3700,WNDR3700,"" NA,)
+ 	$(call Image/Build/Template/$(fs_64k)/$(1),Netgear,wndr3700v2,$(wndr3700v2_cmdline),wndr3700v2_mtdlayout,3701,WNDR3700v2,"",-H 29763654+16+64)
+-	$(call Image/Build/Template/$(fs_64k)/$(1),Netgear,wndr3800,$(wndr3700v2_cmdline),wndr3700v2_mtdlayout,3701,WNDR3800,"",-H 29763654+16+128)
++	$(call Image/Build/Template/$(fs_64k)/$(1),Netgear,wndr3800,$(wndr3800_cmdline),wndr3700v2_mtdlayout,3701,WNDR3800,"",-H 29763654+16+128)
+ endef
+ 
+ wr400n_cmdline=board=WRT400N console=ttyS0,115200

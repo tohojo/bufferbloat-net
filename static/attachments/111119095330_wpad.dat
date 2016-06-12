@@ -1,0 +1,12 @@
+function FindProxyForURL(url, host)
+{
+	if (isInNet(host, "172.30.42.0", "255.255.255.0")) {
+		return "DIRECT";
+	} else {
+		if (shExpMatch(url, "http:*")) 
+			return "PROXY wpad.home.lan:8123" ;
+		if (shExpMatch(url, "ftp:*"))
+			return "PROXY wpad.home.lan:8123" ;
+		return "DIRECT";
+	}
+}

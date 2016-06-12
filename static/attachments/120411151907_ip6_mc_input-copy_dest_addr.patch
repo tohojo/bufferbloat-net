@@ -1,0 +1,23 @@
+diff --git a/net/ipv6/ip6_input.c b/net/ipv6/ip6_input.c
+index 1ca5d45..4d1eb79 100644
+--- a/net/ipv6/ip6_input.c
++++ b/net/ipv6/ip6_input.c
+@@ -251,6 +251,7 @@ int ip6_input(struct sk_buff *skb)
+ int ip6_mc_input(struct sk_buff *skb)
+ {
+        const struct ipv6hdr *hdr;
++       struct in6_addr daddr;
+        int deliver;
+ 
+        IP6_UPD_PO_STATS_BH(dev_net(skb_dst(skb)->dev),
+@@ -258,7 +259,8 @@ int ip6_mc_input(struct sk_buff *skb)
+                         skb->len);
+ 
+        hdr = ipv6_hdr(skb);
+-       deliver = ipv6_chk_mcast_addr(skb->dev, &hdr->daddr, NULL);
++       memcpy(&daddr, &hdr->daddr, sizeof(struct in6_addr));
++       deliver = ipv6_chk_mcast_addr(skb->dev, &daddr, NULL);
+ 
+ #ifdef CONFIG_IPV6_MROUTE
+        /*
+

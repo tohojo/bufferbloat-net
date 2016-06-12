@@ -1,0 +1,43 @@
+diff --git a/include/linux/ipv6.h b/include/linux/ipv6.h
+index 74a90be..8fa93bc 100644
+--- a/include/linux/ipv6.h
++++ b/include/linux/ipv6.h
+@@ -74,7 +74,7 @@ static inline struct ipv6hdr *ipipv6_hdr(const struct sk_buff *skb)
+ 
+ static inline __u8 ipv6_tclass(const struct ipv6hdr *iph)
+ {
+-	return (ntohl(*(__be32 *)iph) >> 20) & 0xff;
++	return (ntohl(net_hdr_word(iph)) >> 20) & 0xff;
+ }
+ 
+ /* 
+diff --git a/include/net/ndisc.h b/include/net/ndisc.h
+index 5438b48..b79fef2 100644
+--- a/include/net/ndisc.h
++++ b/include/net/ndisc.h
+@@ -163,8 +163,10 @@ static inline struct neighbour *__ipv6_neigh_lookup(struct neigh_table *tbl, str
+ 	     n = rcu_dereference_bh(n->next)) {
+ 		u32 *n32 = (u32 *) n->primary_key;
+ 		if (n->dev == dev &&
+-		    ((n32[0] ^ p32[0]) | (n32[1] ^ p32[1]) |
+-		     (n32[2] ^ p32[2]) | (n32[3] ^ p32[3])) == 0) {
++		    ((n32[0] ^ net_hdr_word(&p32[0])) |
++		     (n32[1] ^ net_hdr_word(&p32[1])) |
++		     (n32[2] ^ net_hdr_word(&p32[2])) |
++		     (n32[3] ^ net_hdr_word(&p32[3])) == 0) {
+ 			if (!atomic_inc_not_zero(&n->refcnt))
+ 				n = NULL;
+ 			break;
+diff --git a/include/uapi/linux/xfrm.h b/include/uapi/linux/xfrm.h
+index 28e493b..74a9d71 100644
+--- a/include/uapi/linux/xfrm.h
++++ b/include/uapi/linux/xfrm.h
+@@ -13,7 +13,7 @@
+ typedef union {
+ 	__be32		a4;
+ 	__be32		a6[4];
+-} xfrm_address_t;
++} __attribute__((packed, aligned(2))) xfrm_address_t;
+ 
+ /* Ident of a specific xfrm_state. It is used on input to lookup
+  * the state by (spi,daddr,ah/esp) or to store information about

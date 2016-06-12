@@ -1,0 +1,53 @@
+diff --git a/net/ipv6/addrconf_core.c b/net/ipv6/addrconf_core.c
+index 399287e..245a771 100644
+--- a/net/ipv6/addrconf_core.c
++++ b/net/ipv6/addrconf_core.c
+@@ -28,7 +28,7 @@ int __ipv6_addr_type(const struct in6_addr *addr)
+ {
+ 	__be32 st;
+ 
+-	st = addr->s6_addr32[0];
++	st = __get_unaligned_cpu32(&(addr->s6_addr32[0]));
+ 
+ 	/* Consider all addresses with the first three bits different of
+ 	   000 and 111 as unicasts.
+@@ -55,12 +55,13 @@ int __ipv6_addr_type(const struct in6_addr *addr)
+ 		return (IPV6_ADDR_UNICAST |
+ 			IPV6_ADDR_SCOPE_TYPE(IPV6_ADDR_SCOPE_GLOBAL));			/* RFC 4193 */
+ 
+-	if ((addr->s6_addr32[0] | addr->s6_addr32[1]) == 0) {
+-		if (addr->s6_addr32[2] == 0) {
+-			if (addr->s6_addr32[3] == 0)
++	if ((__get_unaligned_cpu32(&(addr->s6_addr32[0])) |
++		__get_unaligned_cpu32(&(addr->s6_addr32[1]))) == 0) {
++		if (__get_unaligned_cpu32(&(addr->s6_addr32[2])) == 0) {
++			if (__get_unaligned_cpu32(&(addr->s6_addr32[3])) == 0)
+ 				return IPV6_ADDR_ANY;
+ 
+-			if (addr->s6_addr32[3] == htonl(0x00000001))
++			if (__get_unaligned_cpu32(&(addr->s6_addr32[3])) == htonl(0x00000001))
+ 				return (IPV6_ADDR_LOOPBACK | IPV6_ADDR_UNICAST |
+ 					IPV6_ADDR_SCOPE_TYPE(IPV6_ADDR_SCOPE_LINKLOCAL));	/* addr-select 3.4 */
+ 
+@@ -68,7 +69,7 @@ int __ipv6_addr_type(const struct in6_addr *addr)
+ 				IPV6_ADDR_SCOPE_TYPE(IPV6_ADDR_SCOPE_GLOBAL));	/* addr-select 3.3 */
+ 		}
+ 
+-		if (addr->s6_addr32[2] == htonl(0x0000ffff))
++		if (__get_unaligned_cpu32(&(addr->s6_addr32[2])) == htonl(0x0000ffff))
+ 			return (IPV6_ADDR_MAPPED |
+ 				IPV6_ADDR_SCOPE_TYPE(IPV6_ADDR_SCOPE_GLOBAL));	/* addr-select 3.3 */
+ 	}
+diff --git a/net/ipv6/route.c b/net/ipv6/route.c
+index 22b7664..d20e3bc 100644
+--- a/net/ipv6/route.c
++++ b/net/ipv6/route.c
+@@ -877,7 +877,7 @@ void ip6_route_input(struct sk_buff *skb)
+ 		.flowi6_iif = skb->dev->ifindex,
+ 		.daddr = iph->daddr,
+ 		.saddr = iph->saddr,
+-		.flowlabel = (* (__be32 *) iph) & IPV6_FLOWINFO_MASK,
++		.flowlabel = __get_unaligned_cpu32((__be32 *) iph) & IPV6_FLOWINFO_MASK,
+ 		.flowi6_mark = skb->mark,
+ 		.flowi6_proto = iph->nexthdr,
+ 	};

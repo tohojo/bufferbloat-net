@@ -1,0 +1,13 @@
+diff --git a/include/linux/in6.h b/include/linux/in6.h
+index 097a34b..1cf8a26 100644
+--- a/include/linux/in6.h
++++ b/include/linux/in6.h
+@@ -36,7 +36,7 @@ struct in6_addr {
+ #define s6_addr			in6_u.u6_addr8
+ #define s6_addr16		in6_u.u6_addr16
+ #define s6_addr32		in6_u.u6_addr32
+-};
++} __packed;
+ 
+ /* IPv6 Wildcard Address (::) and Loopback Address (::1) defined in RFC2553
+  * NOTE: Be aware the IN6ADDR_* constants and in6addr_* externals are defined

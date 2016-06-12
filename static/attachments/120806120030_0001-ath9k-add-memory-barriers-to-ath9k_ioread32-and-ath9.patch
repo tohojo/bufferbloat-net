@@ -1,0 +1,67 @@
+From 840b9b849080069718b92c10ce998e8d217c84d6 Mon Sep 17 00:00:00 2001
+From: Robert Bradley <robert.bradley1@gmail.com>
+Date: Mon, 6 Aug 2012 19:52:10 +0100
+Subject: [PATCH] ath9k: add memory barriers to ath9k_ioread32 and
+ ath9k_iowrite32
+
+This patch adds memory barriers to the ath9k_ioread32 and ath9k_iowrite32
+functions in an attempt to avoid crashes at high throughput on ar71xx-based
+wireless routers.  This is based on previous discussion of the via-rhine
+driver on the soekris-tech mailing list, which describes similar symptoms:
+
+http://www.mail-archive.com/soekris-tech@lists.soekris.com/msg06544.html
+
+Signed-off-by: Robert Bradley <robert.bradley1@gmail.com>
+---
+ drivers/net/wireless/ath/ath9k/init.c |   12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath9k/init.c b/drivers/net/wireless/ath/ath9k/init.c
+index 53a005d..0e7e07c 100644
+--- a/drivers/net/wireless/ath/ath9k/init.c
++++ b/drivers/net/wireless/ath/ath9k/init.c
+@@ -176,9 +176,12 @@ static void ath9k_iowrite32(void *hw_priv, u32 val, u32 reg_offset)
+ 		unsigned long flags;
+ 		spin_lock_irqsave(&sc->sc_serial_rw, flags);
+ 		iowrite32(val, sc->mem + reg_offset);
++		wmb();
+ 		spin_unlock_irqrestore(&sc->sc_serial_rw, flags);
+-	} else
++	} else {
+ 		iowrite32(val, sc->mem + reg_offset);
++		wmb();
++	}
+ }
+ 
+ static unsigned int ath9k_ioread32(void *hw_priv, u32 reg_offset)
+@@ -191,10 +194,13 @@ static unsigned int ath9k_ioread32(void *hw_priv, u32 reg_offset)
+ 	if (ah->config.serialize_regmode == SER_REG_MODE_ON) {
+ 		unsigned long flags;
+ 		spin_lock_irqsave(&sc->sc_serial_rw, flags);
++		rmb();
+ 		val = ioread32(sc->mem + reg_offset);
+ 		spin_unlock_irqrestore(&sc->sc_serial_rw, flags);
+-	} else
++	} else {
++		rmb();
+ 		val = ioread32(sc->mem + reg_offset);
++	}
+ 	return val;
+ }
+ 
+@@ -203,10 +209,12 @@ static unsigned int __ath9k_reg_rmw(struct ath_softc *sc, u32 reg_offset,
+ {
+ 	u32 val;
+ 
++	rmb();
+ 	val = ioread32(sc->mem + reg_offset);
+ 	val &= ~clr;
+ 	val |= set;
+ 	iowrite32(val, sc->mem + reg_offset);
++	wmb();
+ 
+ 	return val;
+ }
+-- 
+1.7.9.5
+

@@ -1,0 +1,28 @@
+diff --git a/net/ipv4/netfilter/nf_nat_proto_tcp.c b/net/ipv4/netfilter/nf_nat_proto_tcp.c
+index 9fb4b4e..0dd3452 100644
+--- a/net/ipv4/netfilter/nf_nat_proto_tcp.c
++++ b/net/ipv4/netfilter/nf_nat_proto_tcp.c
+@@ -69,8 +69,8 @@ tcp_manip_pkt(struct sk_buff *skb,
+ 		portptr = &hdr->dest;
+ 	}
+ 
+-	oldport = *portptr;
+-	*portptr = newport;
++	oldport = __get_unaligned_cpu16(portptr);
++	__put_unaligned_cpu16(newport, portptr);
+ 
+ 	if (hdrsize < sizeof(*hdr))
+ 		return true;
+diff --git a/net/netfilter/nf_conntrack_proto_tcp.c b/net/netfilter/nf_conntrack_proto_tcp.c
+index 97b9f3e..19f96ae 100644
+--- a/net/netfilter/nf_conntrack_proto_tcp.c
++++ b/net/netfilter/nf_conntrack_proto_tcp.c
+@@ -448,7 +448,7 @@ static void tcp_sack(const struct sk_buff *skb, unsigned int dataoff,
+ 
+ 	/* Fast path for timestamp-only option */
+ 	if (length == TCPOLEN_TSTAMP_ALIGNED
+-	    && *(__be32 *)ptr == htonl((TCPOPT_NOP << 24)
++	    && __get_unaligned_cpu32((__be32 *)ptr) == htonl((TCPOPT_NOP << 24)
+ 				       | (TCPOPT_NOP << 16)
+ 				       | (TCPOPT_TIMESTAMP << 8)
+ 				       | TCPOLEN_TIMESTAMP))

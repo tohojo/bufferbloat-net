@@ -1,0 +1,5 @@
+19:25:11.832432 IP6 fe80::28e:f2ff:fefa:a154.dhcpv6-client > ff02::1:2.dhcpv6-server: dhcp6 solicit
+19:25:11.832731 IP6 fe80::28e:f2ff:fefa:a154.dhcpv6-client > ff02::1:2.dhcpv6-server: dhcp6 solicit
+19:25:11.833020 IP6 fe80::28e:f2ff:fefa:a154.dhcpv6-client > ff02::1:2.dhcpv6-server: dhcp6 solicit
+19:25:11.833295 IP6 fe80::28e:f2ff:fefa:a154.dhcpv6-client > ff02::1:2.dhcpv6-server: dhcp6 solicit
+

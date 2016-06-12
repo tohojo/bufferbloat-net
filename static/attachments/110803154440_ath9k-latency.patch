@@ -1,0 +1,168 @@
+diff -c -L linux-2.6.39.2/drivers/net/wireless/ath/ath9k/ath9k.h -L buffer-content-21657gHp tramp.21657tRv.h buffer-content-21657gHp
+*** linux-2.6.39.2/drivers/net/wireless/ath/ath9k/ath9k.h
+--- buffer-content-21657gHp
+***************
+*** 124,130 ****
+  #define ATH_RXBUF               512
+  #define ATH_TXBUF               512
+  #define ATH_TXBUF_RESERVE       5
+! #define ATH_MAX_QDEPTH          (ATH_TXBUF / 4 - ATH_TXBUF_RESERVE)
+  #define ATH_TXMAXTRY            13
+  #define ATH_MGT_TXMAXTRY        4
+  
+--- 124,130 ----
+  #define ATH_RXBUF               512
+  #define ATH_TXBUF               512
+  #define ATH_TXBUF_RESERVE       5
+! #define ATH_MAX_QDEPTH          (ATH_TXBUF / 13 - ATH_TXBUF_RESERVE)
+  #define ATH_TXMAXTRY            13
+  #define ATH_MGT_TXMAXTRY        4
+  
+***************
+*** 529,535 ****
+  #define DEFAULT_CACHELINE       32
+  #define ATH_REGCLASSIDS_MAX     10
+  #define ATH_CABQ_READY_TIME     80      /* % of beacon interval */
+! #define ATH_MAX_SW_RETRIES      10
+  #define ATH_CHAN_MAX            255
+  
+  #define ATH_TXPOWER_MAX         100     /* .5 dBm units */
+--- 529,535 ----
+  #define DEFAULT_CACHELINE       32
+  #define ATH_REGCLASSIDS_MAX     10
+  #define ATH_CABQ_READY_TIME     80      /* % of beacon interval */
+! #define ATH_MAX_SW_RETRIES      54
+  #define ATH_CHAN_MAX            255
+  
+  #define ATH_TXPOWER_MAX         100     /* .5 dBm units */
+
+diff -c -L linux-2.6.39.2/drivers/net/wireless/ath/ath9k/xmit.c -L buffer-content-21657slE tramp.216575vK.c buffer-content-21657slE
+*** linux-2.6.39.2/drivers/net/wireless/ath/ath9k/xmit.c
+--- buffer-content-21657slE
+***************
+*** 247,259 ****
+  }
+  
+  static void ath_tx_set_retry(struct ath_softc *sc, struct ath_txq *txq,
+! 			     struct sk_buff *skb)
+  {
+  	struct ath_frame_info *fi = get_frame_info(skb);
+  	struct ieee80211_hdr *hdr;
+  
+  	TX_STAT_INC(txq->axq_qnum, a_retries);
+! 	if (fi->retries++ > 0)
+  		return;
+  
+  	hdr = (struct ieee80211_hdr *)skb->data;
+--- 247,262 ----
+  }
+  
+  static void ath_tx_set_retry(struct ath_softc *sc, struct ath_txq *txq,
+! 			     struct sk_buff *skb, int count)
+  {
+  	struct ath_frame_info *fi = get_frame_info(skb);
+  	struct ieee80211_hdr *hdr;
++ 	int prev = fi->retries;
+  
+  	TX_STAT_INC(txq->axq_qnum, a_retries);
+! 	fi->retries += count;
+! 
+! 	if (prev > 0)
+  		return;
+  
+  	hdr = (struct ieee80211_hdr *)skb->data;
+***************
+*** 357,363 ****
+  	struct ath_frame_info *fi;
+  	int nframes;
+  	u8 tidno;
+! 
+  	skb = bf->bf_mpdu;
+  	hdr = (struct ieee80211_hdr *)skb->data;
+  
+--- 360,367 ----
+  	struct ath_frame_info *fi;
+  	int nframes;
+  	u8 tidno;
+! 	int i, retries;
+!  
+  	skb = bf->bf_mpdu;
+  	hdr = (struct ieee80211_hdr *)skb->data;
+  
+***************
+*** 365,370 ****
+--- 369,378 ----
+  
+  	memcpy(rates, tx_info->control.rates, sizeof(rates));
+  
++ 	retries = ts->ts_longretry + 1;
++ 	for (i = 0; i < ts->ts_rateindex; i++)
++ 		retries += rates[i].count;
++ 
+  	rcu_read_lock();
+  
+  	sta = ieee80211_find_sta_by_ifaddr(hw, hdr->addr1, hdr->addr2);
+***************
+*** 443,449 ****
+  		} else {
+  			if (!(tid->state & AGGR_CLEANUP) && retry) {
+  				if (fi->retries < ATH_MAX_SW_RETRIES) {
+! 					ath_tx_set_retry(sc, txq, bf->bf_mpdu);
+  					txpending = 1;
+  				} else {
+  					bf->bf_state.bf_type |= BUF_XRETRY;
+--- 451,458 ----
+  		} else {
+  			if (!(tid->state & AGGR_CLEANUP) && retry) {
+  				if (fi->retries < ATH_MAX_SW_RETRIES) {
+! 				        ath_tx_set_retry(sc, txq, bf->bf_mpdu,
+!                                                          retries);
+  					txpending = 1;
+  				} else {
+  					bf->bf_state.bf_type |= BUF_XRETRY;
+***************
+*** 624,630 ****
+  		aggr_limit = min((max_4ms_framelen * 3) / 8,
+  				 (u32)ATH_AMPDU_LIMIT_MAX);
+  	else
+! 		aggr_limit = min(max_4ms_framelen,
+  				 (u32)ATH_AMPDU_LIMIT_MAX);
+  
+  	/*
+--- 633,639 ----
+  		aggr_limit = min((max_4ms_framelen * 3) / 8,
+  				 (u32)ATH_AMPDU_LIMIT_MAX);
+  	else
+! 		aggr_limit = min(max_4ms_framelen / 4,
+  				 (u32)ATH_AMPDU_LIMIT_MAX);
+  
+  	/*
+
+
+diff -c -L linux-2.6.39.2/net/mac80211/rc80211_minstrel_ht.c -L buffer-content-21657TEX tramp.21657gOd.c buffer-content-21657TEX
+*** linux-2.6.39.2/net/mac80211/rc80211_minstrel_ht.c
+--- buffer-content-21657TEX
+***************
+*** 487,495 ****
+  		cw = min(cw, mp->cw_max);
+  		tx_time += cw + t_slot + mi->overhead;
+  		tx_time_rtscts += cw + t_slot + mi->overhead_rtscts;
+! 		if (tx_time_rtscts < mp->segment_size)
+  			mr->retry_count_rtscts++;
+! 	} while ((tx_time < mp->segment_size) &&
+  	         (++mr->retry_count < mp->max_retry));
+  }
+  
+--- 487,495 ----
+  		cw = min(cw, mp->cw_max);
+  		tx_time += cw + t_slot + mi->overhead;
+  		tx_time_rtscts += cw + t_slot + mi->overhead_rtscts;
+! 		if (tx_time_rtscts < (mp->segment_size/6))
+  			mr->retry_count_rtscts++;
+! 	} while ((tx_time < (mp->segment_size/6)) &&
+  	         (++mr->retry_count < mp->max_retry));
+  }
+  
+
+
+

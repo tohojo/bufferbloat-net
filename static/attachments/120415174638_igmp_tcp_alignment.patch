@@ -1,0 +1,61 @@
+diff --git a/include/linux/igmp.h b/include/linux/igmp.h
+index 82de336..a17b50c 100644
+--- a/include/linux/igmp.h
++++ b/include/linux/igmp.h
+@@ -32,7 +32,7 @@ struct igmphdr {
+ 	__u8 code;		/* For newer IGMP */
+ 	__sum16 csum;
+ 	__be32 group;
+-};
++} __packed;
+ 
+ /* V3 group record types [grec_type] */
+ #define IGMPV3_MODE_IS_INCLUDE		1
+@@ -48,7 +48,7 @@ struct igmpv3_grec {
+ 	__be16	grec_nsrcs;
+ 	__be32	grec_mca;
+ 	__be32	grec_src[0];
+-};
++} __packed;
+ 
+ struct igmpv3_report {
+ 	__u8 type;
+@@ -57,7 +57,7 @@ struct igmpv3_report {
+ 	__be16 resv2;
+ 	__be16 ngrec;
+ 	struct igmpv3_grec grec[0];
+-};
++} __packed;
+ 
+ struct igmpv3_query {
+ 	__u8 type;
+@@ -78,7 +78,7 @@ struct igmpv3_query {
+ 	__u8 qqic;
+ 	__be16 nsrcs;
+ 	__be32 srcs[0];
+-};
++} __packed;
+ 
+ #define IGMP_HOST_MEMBERSHIP_QUERY	0x11	/* From RFC1112 */
+ #define IGMP_HOST_MEMBERSHIP_REPORT	0x12	/* Ditto */
+diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
+index b5e315f..1a0e649 100644
+--- a/net/ipv4/tcp_input.c
++++ b/net/ipv4/tcp_input.c
+@@ -3944,13 +3944,13 @@ static int tcp_parse_aligned_timestamp(struct tcp_sock *tp, const struct tcphdr
+ {
+ 	const __be32 *ptr = (const __be32 *)(th + 1);
+ 
+-	if (*ptr == htonl((TCPOPT_NOP << 24) | (TCPOPT_NOP << 16)
++	if (__get_unaligned_cpu32(ptr) == htonl((TCPOPT_NOP << 24) | (TCPOPT_NOP << 16)
+ 			  | (TCPOPT_TIMESTAMP << 8) | TCPOLEN_TIMESTAMP)) {
+ 		tp->rx_opt.saw_tstamp = 1;
+ 		++ptr;
+-		tp->rx_opt.rcv_tsval = ntohl(*ptr);
++		tp->rx_opt.rcv_tsval = ntohl(__get_unaligned_cpu32(ptr));
+ 		++ptr;
+-		tp->rx_opt.rcv_tsecr = ntohl(*ptr);
++		tp->rx_opt.rcv_tsecr = ntohl(__get_unaligned_cpu32(ptr));
+ 		return 1;
+ 	}
+ 	return 0;

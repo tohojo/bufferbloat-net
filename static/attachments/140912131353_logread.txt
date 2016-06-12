@@ -1,0 +1,159 @@
+Fri Sep 12 19:27:48 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:27:48 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:27:48 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:27:48 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:27:50 2014 kern.warn kernel: [81733.335937] net_ratelimit: 14 callbacks suppressed
+Fri Sep 12 19:27:50 2014 kern.warn kernel: [81733.343750] mroute: pending queue full, dropping entries
+Fri Sep 12 19:27:50 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:27:50 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:27:50 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:27:55 2014 kern.warn kernel: [81738.343750] mroute: pending queue full, dropping entries
+Fri Sep 12 19:27:55 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:27:55 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:27:55 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:00 2014 kern.warn kernel: [81743.347656] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:00 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:00 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:00 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:01 2014 kern.warn kernel: [81743.710937] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:01 2014 kern.warn kernel: [81743.714843] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:04 2014 kern.warn kernel: [81747.031250] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:05 2014 kern.warn kernel: [81748.351562] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:05 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:05 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:05 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.722656] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.730468] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.734375] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.742187] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.746093] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.753906] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.757812] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.761718] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.769531] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 kern.warn kernel: [81749.773437] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:07 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.1:43573 not from a LAN, ignoring
+Fri Sep 12 19:28:10 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:10 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:10 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:15 2014 kern.warn kernel: [81758.363281] net_ratelimit: 13 callbacks suppressed
+Fri Sep 12 19:28:15 2014 kern.warn kernel: [81758.367187] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:15 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:15 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:15 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.593750] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.597656] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.605468] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.609375] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.617187] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.621093] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.628906] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.632812] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 kern.warn kernel: [81760.636718] mroute: pending queue full, dropping entries
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.16:55886 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:18 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:20 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:20 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring
+Fri Sep 12 19:28:20 2014 daemon.warn miniupnpd[4124]: SSDP packet sender 192.168.1.17:4097 not from a LAN, ignoring

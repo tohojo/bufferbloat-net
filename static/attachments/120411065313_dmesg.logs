@@ -1,0 +1,1934 @@
+13
+13
+13
+13
+13
+13
+13
+13
+13
+ntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  803.894531] Process syslogd (pid: 770, threadinfo=86ade000, task=87d16140, tls=77b2b440)
+[  803.894531] Stack : 00000000 803011fc 86adfaa0 86adfaa0 869ced60 8721bf00 86210900 86210900
+[  803.894531]         86b2f882 86b2f86e 80360000 80231494 80213490 00000001 8721bf00 80360000
+[  803.894531]         80213888 87d48000 8721bf00 c0a80121 00000000 8721bf00 86b2f882 c0a80121
+[  803.894531]         86210900 8721bf00 86b2f882 8023350c 00000000 86adfa90 80213490 80000000
+[  803.894531]         c0a80121 0000d859 00000003 80000000 8721bf00 8029be84 00000001 80301614
+[  803.894531]         ...
+[  803.894531] Call Trace:
+[  803.894531] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  803.894531] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  803.894531] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  803.894531] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  803.894531] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  803.894531] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  803.894531] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  803.894531] [<80076df4>] __do_softirq+0xa0/0x154
+[  803.894531] [<80077000>] do_softirq+0x48/0x68
+[  803.894531] [<80077234>] irq_exit+0x4c/0xb0
+[  803.894531] [<80062d2c>] ret_from_irq+0x0/0x4
+[  803.894531] [<801e465c>] __skb_recv_datagram+0x19c/0x298
+[  803.894531] [<801e4774>] skb_recv_datagram+0x1c/0x28
+[  803.894531] [<80260fdc>] unix_dgram_recvmsg+0xac/0x38c
+[  803.894531] [<801d936c>] sock_aio_read+0x118/0x130
+[  803.894531] [<800dd568>] do_sync_read+0xa8/0xf8
+[  803.894531] [<800dde50>] vfs_read+0xc4/0x14c
+[  803.894531] [<800ddf30>] sys_read+0x58/0x9c
+[  803.894531] [<80069e24>] stack_done+0x20/0x40
+[  803.894531] 
+[  803.894531] 
+[  803.894531] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  803.894531] Cpu 0
+[  803.894531] $ 0   : 00000000 00000001 5d7fcbec 53760000
+[  803.894531] $ 4   : 00000020 b0d4dbd6 86b2f882 000005a0
+[  803.894531] $ 8   : 6a592689 8016d1a8 00000002 6e61da16
+[  803.894531] $12   : e8bc03b1 0000000e 802954f0 00000000
+[  803.894531] $16   : 8721bf00 8721bf00 86210900 00000020
+[  803.894531] $20   : 86b2f882 80360000 00000006 8035d570
+[  803.894531] $24   : 00000000 80213c2c                  
+[  803.894531] $28   : 86ade000 86adfa10 80315740 80231494
+[  803.894531] Hi    : 00000000
+[  803.894531] Lo    : 00000001
+[  803.894531] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  803.894531]     Tainted: G           O
+[  803.894531] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  803.894531] Status: 1000fc03    KERNEL EXL IE 
+[  803.894531] Cause : 00800010
+[  803.894531] BadVA : 86b2f896
+[  803.894531] PrId  : 00019374 (MIPS 24Kc)
+[  803.894531] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  803.894531] Process syslogd (pid: 770, threadinfo=86ade000, task=87d16140, tls=77b2b440)
+[  803.894531] Stack : 00000000 803011fc 86adfaa0 86adfaa0 869ced60 8721bf00 86210900 86210900
+[  803.894531]         86b2f882 86b2f86e 80360000 80231494 80213490 00000001 8721bf00 80360000
+[  803.894531]         80213888 87d48000 8721bf00 c0a80121 00000000 8721bf00 86b2f882 c0a80121
+[  803.894531]         86210900 8721bf00 86b2f882 8023350c 00000000 86adfa90 80213490 80000000
+[  803.894531]         c0a80121 0000d859 00000003 80000000 8721bf00 8029be84 00000001 80301614
+[  803.894531]         ...
+[  803.894531] Call Trace:
+[  803.894531] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  803.894531] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  803.894531] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  803.894531] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  803.894531] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  803.894531] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  803.894531] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  803.894531] [<80076df4>] __do_softirq+0xa0/0x154
+[  803.894531] [<80077000>] do_softirq+0x48/0x68
+[  803.894531] [<80077234>] irq_exit+0x4c/0xb0
+[  803.894531] [<80062d2c>] ret_from_irq+0x0/0x4
+[  803.894531] [<801e465c>] __skb_recv_datagram+0x19c/0x298
+[  803.894531] [<801e4774>] skb_recv_datagram+0x1c/0x28
+[  803.894531] [<80260fdc>] unix_dgram_recvmsg+0xac/0x38c
+[  803.894531] [<801d936c>] sock_aio_read+0x118/0x130
+[  803.894531] [<800dd568>] do_sync_read+0xa8/0xf8
+[  803.894531] [<800dde50>] vfs_read+0xc4/0x14c
+[  803.894531] [<800ddf30>] sys_read+0x58/0x9c
+[  803.894531] [<80069e24>] stack_done+0x20/0x40
+[  803.894531] 
+[  803.894531] 
+[  803.894531] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  803.894531] Cpu 0
+[  803.894531] $ 0   : 00000000 00000001 5d7fcbec d3760000
+[  803.894531] $ 4   : 00000001 0101080a 86b2f882 000005a0
+[  803.894531] $ 8   : 6a592689 8016d1a8 00000002 6e61da16
+[  803.894531] $12   : e8bc03b1 0000000e 802954f0 00000000
+[  803.894531] $16   : 8721bf00 8721bf00 86210900 00000020
+[  803.894531] $20   : 86b2f882 80360000 00000006 8035d570
+[  803.894531] $24   : 00000000 80213c2c                  
+[  803.894531] $28   : 86ade000 86adfa10 80315740 80231494
+[  803.894531] Hi    : 00000000
+[  803.894531] Lo    : 00000001
+[  803.894531] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  803.894531]     Tainted: G           O
+[  803.894531] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  803.894531] Status: 1000fc03    KERNEL EXL IE 
+[  803.894531] Cause : 00800010
+[  803.894531] BadVA : 86b2f89a
+[  803.894531] PrId  : 00019374 (MIPS 24Kc)
+[  803.894531] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  803.894531] Process syslogd (pid: 770, threadinfo=86ade000, task=87d16140, tls=77b2b440)
+[  803.894531] Stack : 00000000 803011fc 86adfaa0 86adfaa0 869ced60 8721bf00 86210900 86210900
+[  803.894531]         86b2f882 86b2f86e 80360000 80231494 80213490 00000001 8721bf00 80360000
+[  803.894531]         80213888 87d48000 8721bf00 c0a80121 00000000 8721bf00 86b2f882 c0a80121
+[  803.894531]         86210900 8721bf00 86b2f882 8023350c 00000000 86adfa90 80213490 80000000
+[  803.894531]         c0a80121 0000d859 00000003 80000000 8721bf00 8029be84 00000001 80301614
+[  803.894531]         ...
+[  803.894531] Call Trace:
+[  803.894531] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  803.894531] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  803.894531] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  803.894531] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  803.894531] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  803.894531] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  803.894531] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  803.894531] [<80076df4>] __do_softirq+0xa0/0x154
+[  803.894531] [<80077000>] do_softirq+0x48/0x68
+[  803.894531] [<80077234>] irq_exit+0x4c/0xb0
+[  803.894531] [<80062d2c>] ret_from_irq+0x0/0x4
+[  803.894531] [<801e465c>] __skb_recv_datagram+0x19c/0x298
+[  803.894531] [<801e4774>] skb_recv_datagram+0x1c/0x28
+[  803.894531] [<80260fdc>] unix_dgram_recvmsg+0xac/0x38c
+[  803.894531] [<801d936c>] sock_aio_read+0x118/0x130
+[  803.894531] [<800dd568>] do_sync_read+0xa8/0xf8
+[  803.894531] [<800dde50>] vfs_read+0xc4/0x14c
+[  803.894531] [<800ddf30>] sys_read+0x58/0x9c
+[  803.894531] [<80069e24>] stack_done+0x20/0x40
+[  803.894531] 
+[  803.894531] 
+[  803.894531] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  803.894531] Cpu 0
+[  803.894531] $ 0   : 00000000 00000001 5d7fcbec 056af30e
+[  803.894531] $ 4   : 00000001 0101080a 86b2f882 000005a0
+[  803.894531] $ 8   : 6a592689 8016d1a8 00000002 6e61da16
+[  803.894531] $12   : e8bc03b1 0000000e 802954f0 00000000
+[  803.894531] $16   : 8721bf00 8721bf00 86210900 00000020
+[  803.894531] $20   : 86b2f882 80360000 00000006 8035d570
+[  803.894531] $24   : 00000000 80213c2c                  
+[  803.894531] $28   : 86ade000 86adfa10 80315740 80231494
+[  803.894531] Hi    : 00000000
+[  803.894531] Lo    : 00000001
+[  803.894531] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  803.894531]     Tainted: G           O
+[  803.894531] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  803.894531] Status: 1000fc03    KERNEL EXL IE 
+[  803.894531] Cause : 00800010
+[  803.894531] BadVA : 86b2f89e
+[  803.894531] PrId  : 00019374 (MIPS 24Kc)
+[  803.894531] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  803.898437] Process syslogd (pid: 770, threadinfo=86ade000, task=87d16140, tls=77b2b440)
+[  803.898437] Stack : 00000000 803011fc 86adfaa0 86adfaa0 869ced60 8721bf00 86210900 86210900
+[  803.898437]         86b2f882 86b2f86e 80360000 80231494 80213490 00000001 8721bf00 80360000
+[  803.898437]         80213888 87d48000 8721bf00 c0a80121 00000000 8721bf00 86b2f882 c0a80121
+[  803.898437]         86210900 8721bf00 86b2f882 8023350c 00000000 86adfa90 80213490 80000000
+[  803.898437]         c0a80121 0000d859 00000003 80000000 8721bf00 8029be84 00000001 80301614
+[  803.898437]         ...
+[  803.898437] Call Trace:
+[  803.898437] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  803.898437] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  803.898437] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  803.898437] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  803.898437] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  803.898437] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  803.898437] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  803.898437] [<80076df4>] __do_softirq+0xa0/0x154
+[  803.898437] [<80077000>] do_softirq+0x48/0x68
+[  803.898437] [<80077234>] irq_exit+0x4c/0xb0
+[  803.898437] [<80062d2c>] ret_from_irq+0x0/0x4
+[  803.898437] [<801e465c>] __skb_recv_datagram+0x19c/0x298
+[  803.898437] [<801e4774>] skb_recv_datagram+0x1c/0x28
+[  803.898437] [<80260fdc>] unix_dgram_recvmsg+0xac/0x38c
+[  803.898437] [<801d936c>] sock_aio_read+0x118/0x130
+[  803.898437] [<800dd568>] do_sync_read+0xa8/0xf8
+[  803.898437] [<800dde50>] vfs_read+0xc4/0x14c
+[  803.898437] [<800ddf30>] sys_read+0x58/0x9c
+[  803.898437] [<80069e24>] stack_done+0x20/0x40
+[  803.898437] 
+[  803.898437] 
+[  803.898437] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+225
+00005a0
+[  806.000000] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  806.000000] $12   : 08573d9e 0000000e 802954f0 00000000
+[  806.000000] $16   : 8716fcc0 8716fcc0 86210900 8620f082
+[  806.000000] $20   : 8620f06e 80360000 00000006 8035d570
+[  806.000000] $24   : 00000000 80213c2c                  
+[  806.000000] $28   : 802fe000 802ffc00 80315740 80231494
+[  806.000000] Hi    : 00000000
+[  806.000000] Lo    : 00000001
+[  806.000000] epc   : 8022abb4 tcp_rcv_established+0x34/0x690
+[  806.000000]     Tainted: G           O
+[  806.000000] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  806.000000] Status: 1000fc03    KERNEL EXL IE 
+[  806.000000] Cause : 00800010
+[  806.000000] BadVA : 8620f08e
+[  806.000000] PrId  : 00019374 (MIPS 24Kc)
+[  806.000000] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  806.000000] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  806.000000] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 8716fcc0 86210900 86210900
+[  806.000000]         8620f082 8620f06e 80360000 80231494 80213490 00000001 8716fcc0 80360000
+[  806.000000]         80213888 87d48000 8716fcc0 c0a80121 00000000 8716fcc0 8620f082 c0a80121
+[  806.000000]         86210900 8716fcc0 8620f082 8023350c 00000000 802ffc80 80213490 80000000
+[  806.000000]         c0a80121 0000d859 00000003 80000000 8716fcc0 8029be84 00000001 80301614
+[  806.000000]         ...
+[  806.000000] Call Trace:
+[  806.000000] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  806.000000] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  806.000000] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  806.000000] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  806.000000] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  806.000000] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  806.000000] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  806.000000] [<80076df4>] __do_softirq+0xa0/0x154
+[  806.000000] [<80077000>] do_softirq+0x48/0x68
+[  806.000000] [<80077234>] irq_exit+0x4c/0xb0
+[  806.000000] [<80062d2c>] ret_from_irq+0x0/0x4
+[  806.000000] [<80062f20>] r4k_wait+0x20/0x40
+[  806.000000] [<800649fc>] cpu_idle+0x38/0x70
+[  806.000000] [<803198c8>] start_kernel+0x37c/0x39c
+[  806.000000] 
+[  806.000000] 
+[  806.000000] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  806.000000] Cpu 0
+[  806.000000] $ 0   : 00000000 00000001 5d84c26c 53760000
+[  806.000000] $ 4   : 00000020 b0d4dbd6 8620f082 000005a0
+[  806.000000] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  806.000000] $12   : 08573d9e 0000000e 802954f0 00000000
+[  806.000000] $16   : 8716fcc0 8716fcc0 86210900 00000020
+[  806.000000] $20   : 8620f082 80360000 00000006 8035d570
+[  806.000000] $24   : 00000000 80213c2c                  
+[  806.000000] $28   : 802fe000 802ffc00 80315740 80231494
+[  806.000000] Hi    : 00000000
+[  806.000000] Lo    : 00000001
+[  806.000000] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  806.000000]     Tainted: G           O
+[  806.000000] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  806.000000] Status: 1000fc03    KERNEL EXL IE 
+[  806.000000] Cause : 00800010
+[  806.000000] BadVA : 8620f096
+[  806.000000] PrId  : 00019374 (MIPS 24Kc)
+[  806.000000] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  806.000000] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  806.000000] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 8716fcc0 86210900 86210900
+[  806.000000]         8620f082 8620f06e 80360000 80231494 80213490 00000001 8716fcc0 80360000
+[  806.000000]         80213888 87d48000 8716fcc0 c0a80121 00000000 8716fcc0 8620f082 c0a80121
+[  806.000000]         86210900 8716fcc0 8620f082 8023350c 00000000 802ffc80 80213490 80000000
+[  806.000000]         c0a80121 0000d859 00000003 80000000 8716fcc0 8029be84 00000001 80301614
+[  806.000000]         ...
+[  806.000000] Call Trace:
+[  806.000000] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  806.000000] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  806.000000] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  806.000000] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  806.000000] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  806.000000] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  806.000000] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  806.000000] [<80076df4>] __do_softirq+0xa0/0x154
+[  806.000000] [<80077000>] do_softirq+0x48/0x68
+[  806.000000] [<80077234>] irq_exit+0x4c/0xb0
+[  806.000000] [<80062d2c>] ret_from_irq+0x0/0x4
+[  806.000000] [<80062f20>] r4k_wait+0x20/0x40
+[  806.000000] [<800649fc>] cpu_idle+0x38/0x70
+[  806.000000] [<803198c8>] start_kernel+0x37c/0x39c
+[  806.000000] 
+[  806.000000] 
+[  806.000000] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  806.000000] Cpu 0
+[  806.000000] $ 0   : 00000000 00000001 5d84c26c d3760000
+[  806.000000] $ 4   : 00000001 0101080a 8620f082 000005a0
+[  806.000000] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  806.000000] $12   : 08573d9e 0000000e 802954f0 00000000
+[  806.000000] $16   : 8716fcc0 8716fcc0 86210900 00000020
+[  806.000000] $20   : 8620f082 80360000 00000006 8035d570
+[  806.000000] $24   : 00000000 80213c2c                  
+[  806.000000] $28   : 802fe000 802ffc00 80315740 80231494
+[  806.000000] Hi    : 00000000
+[  806.000000] Lo    : 00000001
+[  806.000000] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  806.000000]     Tainted: G           O
+[  806.000000] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  806.000000] Status: 1000fc03    KERNEL EXL IE 
+[  806.000000] Cause : 00800010
+[  806.000000] BadVA : 8620f09a
+[  806.000000] PrId  : 00019374 (MIPS 24Kc)
+[  806.000000] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  806.000000] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  806.000000] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 8716fcc0 86210900 86210900
+[  806.000000]         8620f082 8620f06e 80360000 80231494 80213490 00000001 8716fcc0 80360000
+[  806.000000]         80213888 87d48000 8716fcc0 c0a80121 00000000 8716fcc0 8620f082 c0a80121
+[  806.000000]         86210900 8716fcc0 8620f082 8023350c 00000000 802ffc80 80213490 80000000
+[  806.000000]         c0a80121 0000d859 00000003 80000000 8716fcc0 8029be84 00000001 80301614
+[  806.000000]         ...
+[  806.000000] Call Trace:
+[  806.000000] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  806.000000] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  806.000000] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  806.000000] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  806.000000] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  806.000000] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  806.000000] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  806.000000] [<80076df4>] __do_softirq+0xa0/0x154
+[  806.000000] [<80077000>] do_softirq+0x48/0x68
+[  806.000000] [<80077234>] irq_exit+0x4c/0xb0
+[  806.000000] [<80062d2c>] ret_from_irq+0x0/0x4
+[  806.000000] [<80062f20>] r4k_wait+0x20/0x40
+[  806.000000] [<800649fc>] cpu_idle+0x38/0x70
+[  806.003906] [<803198c8>] start_kernel+0x37c/0x39c
+[  806.003906] 
+[  806.003906] 
+[  806.003906] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  806.003906] Cpu 0
+[  806.003906] $ 0   : 00000000 00000001 5d84c26c 056af3e7
+[  806.003906] $ 4   : 00000001 0101080a 8620f082 000005a0
+[  806.003906] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  806.003906] $12   : 08573d9e 0000000e 802954f0 00000000
+[  806.003906] $16   : 8716fcc0 8716fcc0 86210900 00000020
+[  806.003906] $20   : 8620f082 80360000 00000006 8035d570
+[  806.003906] $24   : 00000000 80213c2c                  
+[  806.003906] $28   : 802fe000 802ffc00 80315740 80231494
+[  806.003906] Hi    : 00000000
+[  806.003906] Lo    : 00000001
+[  806.003906] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  806.003906]     Tainted: G           O
+[  806.003906] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  806.003906] Status: 1000fc03    KERNEL EXL IE 
+[  806.003906] Cause : 00800010
+[  806.003906] BadVA : 8620f09e
+[  806.003906] PrId  : 00019374 (MIPS 24Kc)
+[  806.003906] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  806.003906] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  806.003906] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 8716fcc0 86210900 86210900
+[  806.003906]         8620f082 8620f06e 80360000 80231494 80213490 00000001 8716fcc0 80360000
+[  806.003906]         80213888 87d48000 8716fcc0 c0a80121 00000000 8716fcc0 8620f082 c0a80121
+[  806.003906]         86210900 8716fcc0 8620f082 8023350c 00000000 802ffc80 80213490 80000000
+[  806.003906]         c0a80121 0000d859 00000003 80000000 8716fcc0 8029be84 00000001 80301614
+[  806.003906]         ...
+[  806.003906] Call Trace:
+[  806.003906] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  806.003906] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  806.003906] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  806.003906] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  806.003906] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  806.003906] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  806.003906] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  806.003906] [<80076df4>] __do_softirq+0xa0/0x154
+[  806.003906] [<80077000>] do_softirq+0x48/0x68
+[  806.003906] [<80077234>] irq_exit+0x4c/0xb0
+[  806.003906] [<80062d2c>] ret_from_irq+0x0/0x4
+[  806.003906] [<80062f20>] r4k_wait+0x20/0x40
+[  806.003906] [<800649fc>] cpu_idle+0x38/0x70
+[  806.003906] [<803198c8>] start_kernel+0x37c/0x39c
+[  806.003906] 
+[  806.003906] 
+[  806.003906] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+1149
+0x458/0x4c8
+[  808.132812] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  808.132812] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  808.132812] [<80076df4>] __do_softirq+0xa0/0x154
+[  808.132812] [<80077000>] do_softirq+0x48/0x68
+[  808.132812] [<80077234>] irq_exit+0x4c/0xb0
+[  808.132812] [<80062d2c>] ret_from_irq+0x0/0x4
+[  808.132812] 
+[  808.132812] 
+[  808.132812] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+[  808.132812] Cpu 0
+[  808.132812] $ 0   : 00000000 00000001 00000001 53760000
+[  808.132812] $ 4   : 86210900 86362c00 862dc082 000005a0
+[  808.132812] $ 8   : 6a592689 8016d1a8 00000002 0680b241
+[  808.132812] $12   : 723cfc95 0000000e 802954f0 00000000
+[  808.132812] $16   : 86362c00 86362c00 86210900 862dc082
+[  808.132812] $20   : 862dc06e 80360000 00000006 8035d570
+[  808.132812] $24   : 00000000 80213c2c                  
+[  808.132812] $28   : 862e4000 862e5d10 80315740 80231494
+[  808.132812] Hi    : 00000000
+[  808.132812] Lo    : 00000001
+[  808.132812] epc   : 8022abb4 tcp_rcv_established+0x34/0x690
+[  808.132812]     Tainted: G           O
+[  808.132812] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  808.132812] Status: 1000fc03    KERNEL EXL IE 
+[  808.132812] Cause : 00800010
+[  808.132812] BadVA : 862dc08e
+[  808.132812] PrId  : 00019374 (MIPS 24Kc)
+[  808.132812] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  808.132812] Process ntpd (pid: 4437, threadinfo=862e4000, task=862d4c78, tls=77767750)
+[  808.132812] Stack : 00000000 803011fc 862e5da0 862e5da0 869ced60 86362c00 86210900 86210900
+[  808.132812]         862dc082 862dc06e 80360000 80231494 80213490 00000001 86362c00 80360000
+[  808.132812]         80213888 87d48000 86362c00 c0a80121 00000000 86362c00 862dc082 c0a80121
+[  808.132812]         86210900 86362c00 862dc082 8023350c 00000000 862e5d90 80213490 80000000
+[  808.132812]         c0a80121 0000d859 00000003 80000000 86362c00 8029be84 00000001 80301614
+[  808.132812]         ...
+[  808.132812] Call Trace:
+[  808.132812] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  808.132812] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  808.132812] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  808.132812] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  808.132812] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  808.132812] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  808.132812] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  808.132812] [<80076df4>] __do_softirq+0xa0/0x154
+[  808.132812] [<80077000>] do_softirq+0x48/0x68
+[  808.132812] [<80077234>] irq_exit+0x4c/0xb0
+[  808.132812] [<80062d2c>] ret_from_irq+0x0/0x4
+[  808.132812] 
+[  808.132812] 
+[  808.132812] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  808.132812] Cpu 0
+[  808.132812] $ 0   : 00000000 00000001 5d8b606c 53760000
+[  808.132812] $ 4   : 00000020 b0d4dbd6 862dc082 000005a0
+[  808.132812] $ 8   : 6a592689 8016d1a8 00000002 0680b241
+[  808.132812] $12   : 723cfc95 0000000e 802954f0 00000000
+[  808.132812] $16   : 86362c00 86362c00 86210900 00000020
+[  808.132812] $20   : 862dc082 80360000 00000006 8035d570
+[  808.132812] $24   : 00000000 80213c2c                  
+[  808.132812] $28   : 862e4000 862e5d10 80315740 80231494
+[  808.132812] Hi    : 00000000
+[  808.132812] Lo    : 00000001
+[  808.132812] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  808.132812]     Tainted: G           O
+[  808.132812] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  808.132812] Status: 1000fc03    KERNEL EXL IE 
+[  808.132812] Cause : 00800010
+[  808.132812] BadVA : 862dc096
+[  808.132812] PrId  : 00019374 (MIPS 24Kc)
+[  808.132812] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  808.132812] Process ntpd (pid: 4437, threadinfo=862e4000, task=862d4c78, tls=77767750)
+[  808.132812] Stack : 00000000 803011fc 862e5da0 862e5da0 869ced60 86362c00 86210900 86210900
+[  808.132812]         862dc082 862dc06e 80360000 80231494 80213490 00000001 86362c00 80360000
+[  808.132812]         80213888 87d48000 86362c00 c0a80121 00000000 86362c00 862dc082 c0a80121
+[  808.132812]         86210900 86362c00 862dc082 8023350c 00000000 862e5d90 80213490 80000000
+[  808.132812]         c0a80121 0000d859 00000003 80000000 86362c00 8029be84 00000001 80301614
+[  808.132812]         ...
+[  808.132812] Call Trace:
+[  808.132812] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  808.132812] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  808.132812] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  808.132812] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  808.132812] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  808.132812] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  808.132812] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  808.132812] [<80076df4>] __do_softirq+0xa0/0x154
+[  808.132812] [<80077000>] do_softirq+0x48/0x68
+[  808.132812] [<80077234>] irq_exit+0x4c/0xb0
+[  808.132812] [<80062d2c>] ret_from_irq+0x0/0x4
+[  808.132812] 
+[  808.132812] 
+[  808.132812] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  808.132812] Cpu 0
+[  808.132812] $ 0   : 00000000 00000001 5d8b606c d3760000
+[  808.132812] $ 4   : 00000001 0101080a 862dc082 000005a0
+[  808.132812] $ 8   : 6a592689 8016d1a8 00000002 0680b241
+[  808.132812] $12   : 723cfc95 0000000e 802954f0 00000000
+[  808.132812] $16   : 86362c00 86362c00 86210900 00000020
+[  808.132812] $20   : 862dc082 80360000 00000006 8035d570
+[  808.132812] $24   : 00000000 80213c2c                  
+[  808.132812] $28   : 862e4000 862e5d10 80315740 80231494
+[  808.132812] Hi    : 00000000
+[  808.132812] Lo    : 00000001
+[  808.132812] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  808.132812]     Tainted: G           O
+[  808.132812] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  808.132812] Status: 1000fc03    KERNEL EXL IE 
+[  808.132812] Cause : 00800010
+[  808.132812] BadVA : 862dc09a
+[  808.132812] PrId  : 00019374 (MIPS 24Kc)
+[  808.132812] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  808.132812] Process ntpd (pid: 4437, threadinfo=862e4000, task=862d4c78, tls=77767750)
+[  808.132812] Stack : 00000000 803011fc 862e5da0 862e5da0 869ced60 86362c00 86210900 86210900
+[  808.132812]         862dc082 862dc06e 80360000 80231494 80213490 00000001 86362c00 80360000
+[  808.132812]         80213888 87d48000 86362c00 c0a80121 00000000 86362c00 862dc082 c0a80121
+[  808.136718]         86210900 86362c00 862dc082 8023350c 00000000 862e5d90 80213490 80000000
+[  808.136718]         c0a80121 0000d859 00000003 80000000 86362c00 8029be84 00000001 80301614
+[  808.136718]         ...
+[  808.136718] Call Trace:
+[  808.136718] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  808.136718] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  808.136718] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  808.136718] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  808.136718] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  808.136718] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  808.136718] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  808.136718] [<80076df4>] __do_softirq+0xa0/0x154
+[  808.136718] [<80077000>] do_softirq+0x48/0x68
+[  808.136718] [<80077234>] irq_exit+0x4c/0xb0
+[  808.136718] [<80062d2c>] ret_from_irq+0x0/0x4
+[  808.136718] 
+[  808.136718] 
+[  808.136718] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  808.136718] Cpu 0
+[  808.136718] $ 0   : 00000000 00000001 5d8b606c 056af4aa
+[  808.136718] $ 4   : 00000001 0101080a 862dc082 000005a0
+[  808.136718] $ 8   : 6a592689 8016d1a8 00000002 0680b241
+[  808.136718] $12   : 723cfc95 0000000e 802954f0 00000000
+[  808.136718] $16   : 86362c00 86362c00 86210900 00000020
+[  808.136718] $20   : 862dc082 80360000 00000006 8035d570
+[  808.136718] $24   : 00000000 80213c2c                  
+[  808.136718] $28   : 862e4000 862e5d10 80315740 80231494
+[  808.136718] Hi    : 00000000
+[  808.136718] Lo    : 00000001
+[  808.136718] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  808.136718]     Tainted: G           O
+[  808.136718] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  808.136718] Status: 1000fc03    KERNEL EXL IE 
+[  808.136718] Cause : 00800010
+[  808.136718] BadVA : 862dc09e
+[  808.136718] PrId  : 00019374 (MIPS 24Kc)
+[  808.136718] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  808.136718] Process ntpd (pid: 4437, threadinfo=862e4000, task=862d4c78, tls=77767750)
+[  808.136718] Stack : 00000000 803011fc 862e5da0 862e5da0 869ced60 86362c00 86210900 86210900
+[  808.136718]         862dc082 862dc06e 80360000 80231494 80213490 00000001 86362c00 80360000
+[  808.136718]         80213888 87d48000 86362c00 c0a80121 00000000 86362c00 862dc082 c0a80121
+[  808.136718]         86210900 86362c00 862dc082 8023350c 00000000 862e5d90 80213490 80000000
+[  808.136718]         c0a80121 0000d859 00000003 80000000 86362c00 8029be84 00000001 80301614
+[  808.136718]         ...
+[  808.136718] Call Trace:
+[  808.136718] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  808.136718] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  808.136718] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  808.136718] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  808.136718] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  808.136718] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  808.136718] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  808.136718] [<80076df4>] __do_softirq+0xa0/0x154
+[  808.136718] [<80077000>] do_softirq+0x48/0x68
+[  808.136718] [<80077234>] irq_exit+0x4c/0xb0
+[  808.136718] [<80062d2c>] ret_from_irq+0x0/0x4
+[  808.136718] 
+[  808.136718] 
+[  808.136718] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+2497
+t_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  810.757812] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  810.757812] Stack : 00000000 803011fc 8633da88 8633da88 869ced60 86af9a80 86210900 86210900
+[  810.757812]         862cc882 862cc86e 80360000 80231494 80213490 00000001 86af9a80 80360000
+[  810.757812]         80213888 87d48000 86af9a80 c0a80121 00000000 86af9a80 862cc882 c0a80121
+[  810.757812]         86210900 86af9a80 862cc882 8023350c 00000000 8633da78 80213490 80000000
+[  810.757812]         c0a80121 0000d859 00000003 80000000 86af9a80 8029be84 00000001 80301614
+[  810.757812]         ...
+[  810.757812] Call Trace:
+[  810.757812] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  810.757812] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  810.757812] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  810.757812] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  810.757812] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  810.757812] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  810.757812] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  810.757812] [<80076df4>] __do_softirq+0xa0/0x154
+[  810.757812] [<80077000>] do_softirq+0x48/0x68
+[  810.757812] [<80077234>] irq_exit+0x4c/0xb0
+[  810.757812] [<80062d2c>] ret_from_irq+0x0/0x4
+[  810.757812] [<8016ccb4>] __copy_user_inatomic+0x154/0x240
+[  810.757812] [<800af3f4>] iov_iter_copy_from_user_atomic+0x74/0xa0
+[  810.757812] [<800b0280>] generic_file_buffered_write+0x15c/0x2e4
+[  810.757812] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  810.757812] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  810.757812] [<800dd470>] do_sync_write+0xa8/0xf8
+[  810.757812] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  810.757812] [<800ddfcc>] sys_write+0x58/0x9c
+[  810.757812] [<80069e24>] stack_done+0x20/0x40
+[  810.757812] 
+[  810.757812] 
+[  810.757812] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  810.757812] Cpu 0
+[  810.757812] $ 0   : 00000000 00000001 5d9526ec 53760000
+[  810.757812] $ 4   : 00000020 b0d4dbd6 862cc882 000005a0
+[  810.757812] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  810.757812] $12   : 22b2d962 0000000e 802954f0 00000000
+[  810.757812] $16   : 86af9a80 86af9a80 86210900 00000020
+[  810.757812] $20   : 862cc882 80360000 00000006 8035d570
+[  810.757812] $24   : 00000000 80213c2c                  
+[  810.757812] $28   : 8633c000 8633d9f8 80315740 80231494
+[  810.757812] Hi    : 00000000
+[  810.757812] Lo    : 00000001
+[  810.757812] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  810.757812]     Tainted: G           O
+[  810.757812] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  810.757812] Status: 1000fc03    KERNEL EXL IE 
+[  810.757812] Cause : 00800010
+[  810.757812] BadVA : 862cc896
+[  810.757812] PrId  : 00019374 (MIPS 24Kc)
+[  810.757812] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  810.757812] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  810.757812] Stack : 00000000 803011fc 8633da88 8633da88 869ced60 86af9a80 86210900 86210900
+[  810.757812]         862cc882 862cc86e 80360000 80231494 80213490 00000001 86af9a80 80360000
+[  810.757812]         80213888 87d48000 86af9a80 c0a80121 00000000 86af9a80 862cc882 c0a80121
+[  810.757812]         86210900 86af9a80 862cc882 8023350c 00000000 8633da78 80213490 80000000
+[  810.757812]         c0a80121 0000d859 00000003 80000000 86af9a80 8029be84 00000001 80301614
+[  810.757812]         ...
+[  810.757812] Call Trace:
+[  810.757812] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  810.757812] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  810.757812] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  810.757812] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  810.757812] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  810.757812] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  810.757812] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  810.757812] [<80076df4>] __do_softirq+0xa0/0x154
+[  810.757812] [<80077000>] do_softirq+0x48/0x68
+[  810.757812] [<80077234>] irq_exit+0x4c/0xb0
+[  810.757812] [<80062d2c>] ret_from_irq+0x0/0x4
+[  810.757812] [<8016ccb4>] __copy_user_inatomic+0x154/0x240
+[  810.757812] [<800af3f4>] iov_iter_copy_from_user_atomic+0x74/0xa0
+[  810.757812] [<800b0280>] generic_file_buffered_write+0x15c/0x2e4
+[  810.757812] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  810.757812] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  810.757812] [<800dd470>] do_sync_write+0xa8/0xf8
+[  810.757812] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  810.757812] [<800ddfcc>] sys_write+0x58/0x9c
+[  810.757812] [<80069e24>] stack_done+0x20/0x40
+[  810.757812] 
+[  810.757812] 
+[  810.757812] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  810.757812] Cpu 0
+[  810.757812] $ 0   : 00000000 00000001 5d9526ec d3760000
+[  810.757812] $ 4   : 00000001 0101080a 862cc882 000005a0
+[  810.757812] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  810.757812] $12   : 22b2d962 0000000e 802954f0 00000000
+[  810.757812] $16   : 86af9a80 86af9a80 86210900 00000020
+[  810.757812] $20   : 862cc882 80360000 00000006 8035d570
+[  810.757812] $24   : 00000000 80213c2c                  
+[  810.757812] $28   : 8633c000 8633d9f8 80315740 80231494
+[  810.757812] Hi    : 00000000
+[  810.757812] Lo    : 00000001
+[  810.757812] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  810.757812]     Tainted: G           O
+[  810.757812] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  810.757812] Status: 1000fc03    KERNEL EXL IE 
+[  810.757812] Cause : 00800010
+[  810.757812] BadVA : 862cc89a
+[  810.757812] PrId  : 00019374 (MIPS 24Kc)
+[  810.757812] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  810.757812] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  810.757812] Stack : 00000000 803011fc 8633da88 8633da88 869ced60 86af9a80 86210900 86210900
+[  810.757812]         862cc882 862cc86e 80360000 80231494 80213490 00000001 86af9a80 80360000
+[  810.757812]         80213888 87d48000 86af9a80 c0a80121 00000000 86af9a80 862cc882 c0a80121
+[  810.757812]         86210900 86af9a80 862cc882 8023350c 00000000 8633da78 80213490 80000000
+[  810.757812]         c0a80121 0000d859 00000003 80000000 86af9a80 8029be84 00000001 80301614
+[  810.757812]         ...
+[  810.757812] Call Trace:
+[  810.757812] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  810.757812] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  810.757812] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  810.757812] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  810.757812] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  810.757812] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  810.757812] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  810.757812] [<80076df4>] __do_softirq+0xa0/0x154
+[  810.757812] [<80077000>] do_softirq+0x48/0x68
+[  810.757812] [<80077234>] irq_exit+0x4c/0xb0
+[  810.757812] [<80062d2c>] ret_from_irq+0x0/0x4
+[  810.757812] [<8016ccb4>] __copy_user_inatomic+0x154/0x240
+[  810.757812] [<800af3f4>] iov_iter_copy_from_user_atomic+0x74/0xa0
+[  810.757812] [<800b0280>] generic_file_buffered_write+0x15c/0x2e4
+[  810.757812] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  810.757812] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  810.757812] [<800dd470>] do_sync_write+0xa8/0xf8
+[  810.757812] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  810.757812] [<800ddfcc>] sys_write+0x58/0x9c
+[  810.757812] [<80069e24>] stack_done+0x20/0x40
+[  810.757812] 
+[  810.757812] 
+[  810.757812] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  810.757812] Cpu 0
+[  810.757812] $ 0   : 00000000 00000001 5d9526ec 056af5c3
+[  810.757812] $ 4   : 00000001 0101080a 862cc882 000005a0
+[  810.757812] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  810.757812] $12   : 22b2d962 0000000e 802954f0 00000000
+[  810.757812] $16   : 86af9a80 86af9a80 86210900 00000020
+[  810.757812] $20   : 862cc882 80360000 00000006 8035d570
+[  810.757812] $24   : 00000000 80213c2c                  
+[  810.757812] $28   : 8633c000 8633d9f8 80315740 80231494
+[  810.757812] Hi    : 00000000
+[  810.757812] Lo    : 00000001
+[  810.757812] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  810.757812]     Tainted: G           O
+[  810.757812] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  810.757812] Status: 1000fc03    KERNEL EXL IE 
+[  810.757812] Cause : 00800010
+[  810.761718] BadVA : 862cc89e
+[  810.761718] PrId  : 00019374 (MIPS 24Kc)
+[  810.761718] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  810.761718] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  810.761718] Stack : 00000000 803011fc 8633da88 8633da88 869ced60 86af9a80 86210900 86210900
+[  810.761718]         862cc882 862cc86e 80360000 80231494 80213490 00000001 86af9a80 80360000
+[  810.761718]         80213888 87d48000 86af9a80 c0a80121 00000000 86af9a80 862cc882 c0a80121
+[  810.761718]         86210900 86af9a80 862cc882 8023350c 00000000 8633da78 80213490 80000000
+[  810.761718]         c0a80121 0000d859 00000003 80000000 86af9a80 8029be84 00000001 80301614
+[  810.761718]         ...
+[  810.761718] Call Trace:
+[  810.761718] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  810.761718] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  810.761718] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  810.761718] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  810.761718] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  810.761718] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  810.761718] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  810.761718] [<80076df4>] __do_softirq+0xa0/0x154
+[  810.761718] [<80077000>] do_softirq+0x48/0x68
+[  810.761718] [<80077234>] irq_exit+0x4c/0xb0
+[  810.761718] [<80062d2c>] ret_from_irq+0x0/0x4
+[  810.761718] [<8016ccb4>] __copy_user_inatomic+0x154/0x240
+[  810.761718] [<800af3f4>] iov_iter_copy_from_user_atomic+0x74/0xa0
+[  810.761718] [<800b0280>] generic_file_buffered_write+0x15c/0x2e4
+[  810.761718] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  810.761718] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  810.761718] [<800dd470>] do_sync_write+0xa8/0xf8
+[  810.761718] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  810.761718] [<800ddfcc>] sys_write+0x58/0x9c
+[  810.761718] [<80069e24>] stack_done+0x20/0x40
+[  810.761718] 
+[  810.761718] 
+[  810.761718] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+4201
+00800010
+[  812.832031] BadVA : 8636808e
+[  812.832031] PrId  : 00019374 (MIPS 24Kc)
+[  812.832031] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  812.832031] Process klogd (pid: 772, threadinfo=86af4000, task=87d16990, tls=77abb440)
+[  812.832031] Stack : 00000000 803011fc 86af5b78 86af5b78 869ced60 86b14480 86210900 86210900
+[  812.832031]         86368082 8636806e 80360000 80231494 80213490 00000001 86b14480 80360000
+[  812.832031]         80213888 87d48000 86b14480 c0a80121 00000000 86b14480 86368082 c0a80121
+[  812.832031]         86210900 86b14480 86368082 8023350c 00000000 86af5b68 80213490 80000000
+[  812.832031]         c0a80121 0000d859 00000003 80000000 86b14480 8029be84 00000001 80301614
+[  812.832031]         ...
+[  812.832031] Call Trace:
+[  812.832031] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  812.832031] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  812.832031] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  812.832031] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  812.832031] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  812.832031] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  812.832031] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  812.832031] [<80076df4>] __do_softirq+0xa0/0x154
+[  812.832031] [<80077000>] do_softirq+0x48/0x68
+[  812.832031] [<80077234>] irq_exit+0x4c/0xb0
+[  812.832031] [<80062d2c>] ret_from_irq+0x0/0x4
+[  812.832031] [<800da8e0>] kmem_cache_alloc+0x20/0xe0
+[  812.832031] [<80147254>] ovl_follow_link+0x8c/0xec
+[  812.832031] [<800eae2c>] path_openat+0x1b8/0x390
+[  812.832031] [<800eb120>] do_filp_open+0x3c/0xa4
+[  812.832031] [<800dcfd0>] do_sys_open+0x130/0x1e0
+[  812.832031] [<80069e24>] stack_done+0x20/0x40
+[  812.832031] 
+[  812.832031] 
+[  812.832031] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  812.832031] Cpu 0
+[  812.832031] $ 0   : 00000000 00000001 5d9cb6ec 53760000
+[  812.832031] $ 4   : 00000020 b0d4dbd6 86368082 000005a0
+[  812.832031] $ 8   : 6a592689 8016d1a8 00000002 1077410e
+[  812.832031] $12   : d9a0ca20 00000180 00000000 00000000
+[  812.832031] $16   : 86b14480 86b14480 86210900 00000020
+[  812.832031] $20   : 86368082 80360000 00000006 8035d570
+[  812.832031] $24   : 00000000 80213c2c                  
+[  812.832031] $28   : 86af4000 86af5ae8 80315740 80231494
+[  812.832031] Hi    : 00000000
+[  812.832031] Lo    : 00000001
+[  812.832031] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  812.832031]     Tainted: G           O
+[  812.832031] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  812.832031] Status: 1000fc03    KERNEL EXL IE 
+[  812.832031] Cause : 00800010
+[  812.832031] BadVA : 86368096
+[  812.832031] PrId  : 00019374 (MIPS 24Kc)
+[  812.832031] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  812.832031] Process klogd (pid: 772, threadinfo=86af4000, task=87d16990, tls=77abb440)
+[  812.832031] Stack : 00000000 803011fc 86af5b78 86af5b78 869ced60 86b14480 86210900 86210900
+[  812.832031]         86368082 8636806e 80360000 80231494 80213490 00000001 86b14480 80360000
+[  812.832031]         80213888 87d48000 86b14480 c0a80121 00000000 86b14480 86368082 c0a80121
+[  812.832031]         86210900 86b14480 86368082 8023350c 00000000 86af5b68 80213490 80000000
+[  812.832031]         c0a80121 0000d859 00000003 80000000 86b14480 8029be84 00000001 80301614
+[  812.832031]         ...
+[  812.832031] Call Trace:
+[  812.832031] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  812.832031] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  812.832031] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  812.832031] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  812.832031] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  812.832031] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  812.832031] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  812.832031] [<80076df4>] __do_softirq+0xa0/0x154
+[  812.832031] [<80077000>] do_softirq+0x48/0x68
+[  812.832031] [<80077234>] irq_exit+0x4c/0xb0
+[  812.832031] [<80062d2c>] ret_from_irq+0x0/0x4
+[  812.832031] [<800da8e0>] kmem_cache_alloc+0x20/0xe0
+[  812.832031] [<80147254>] ovl_follow_link+0x8c/0xec
+[  812.832031] [<800eae2c>] path_openat+0x1b8/0x390
+[  812.832031] [<800eb120>] do_filp_open+0x3c/0xa4
+[  812.832031] [<800dcfd0>] do_sys_open+0x130/0x1e0
+[  812.832031] [<80069e24>] stack_done+0x20/0x40
+[  812.832031] 
+[  812.832031] 
+[  812.832031] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  812.832031] Cpu 0
+[  812.832031] $ 0   : 00000000 00000001 5d9cb6ec d3760000
+[  812.832031] $ 4   : 00000001 0101080a 86368082 000005a0
+[  812.832031] $ 8   : 6a592689 8016d1a8 00000002 1077410e
+[  812.835937] $12   : d9a0ca20 00000180 00000000 00000000
+[  812.835937] $16   : 86b14480 86b14480 86210900 00000020
+[  812.835937] $20   : 86368082 80360000 00000006 8035d570
+[  812.835937] $24   : 00000000 80213c2c                  
+[  812.835937] $28   : 86af4000 86af5ae8 80315740 80231494
+[  812.835937] Hi    : 00000000
+[  812.835937] Lo    : 00000001
+[  812.835937] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  812.835937]     Tainted: G           O
+[  812.835937] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  812.835937] Status: 1000fc03    KERNEL EXL IE 
+[  812.835937] Cause : 00800010
+[  812.835937] BadVA : 8636809a
+[  812.835937] PrId  : 00019374 (MIPS 24Kc)
+[  812.835937] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  812.835937] Process klogd (pid: 772, threadinfo=86af4000, task=87d16990, tls=77abb440)
+[  812.835937] Stack : 00000000 803011fc 86af5b78 86af5b78 869ced60 86b14480 86210900 86210900
+[  812.835937]         86368082 8636806e 80360000 80231494 80213490 00000001 86b14480 80360000
+[  812.835937]         80213888 87d48000 86b14480 c0a80121 00000000 86b14480 86368082 c0a80121
+[  812.835937]         86210900 86b14480 86368082 8023350c 00000000 86af5b68 80213490 80000000
+[  812.835937]         c0a80121 0000d859 00000003 80000000 86b14480 8029be84 00000001 80301614
+[  812.835937]         ...
+[  812.835937] Call Trace:
+[  812.835937] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  812.835937] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  812.835937] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  812.835937] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  812.835937] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  812.835937] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  812.835937] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  812.835937] [<80076df4>] __do_softirq+0xa0/0x154
+[  812.835937] [<80077000>] do_softirq+0x48/0x68
+[  812.835937] [<80077234>] irq_exit+0x4c/0xb0
+[  812.835937] [<80062d2c>] ret_from_irq+0x0/0x4
+[  812.835937] [<800da8e0>] kmem_cache_alloc+0x20/0xe0
+[  812.835937] [<80147254>] ovl_follow_link+0x8c/0xec
+[  812.835937] [<800eae2c>] path_openat+0x1b8/0x390
+[  812.835937] [<800eb120>] do_filp_open+0x3c/0xa4
+[  812.835937] [<800dcfd0>] do_sys_open+0x130/0x1e0
+[  812.835937] [<80069e24>] stack_done+0x20/0x40
+[  812.835937] 
+[  812.835937] 
+[  812.835937] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  812.835937] Cpu 0
+[  812.835937] $ 0   : 00000000 00000001 5d9cb6ec 056af689
+[  812.835937] $ 4   : 00000001 0101080a 86368082 000005a0
+[  812.835937] $ 8   : 6a592689 8016d1a8 00000002 1077410e
+[  812.835937] $12   : d9a0ca20 00000180 00000000 00000000
+[  812.835937] $16   : 86b14480 86b14480 86210900 00000020
+[  812.835937] $20   : 86368082 80360000 00000006 8035d570
+[  812.835937] $24   : 00000000 80213c2c                  
+[  812.835937] $28   : 86af4000 86af5ae8 80315740 80231494
+[  812.835937] Hi    : 00000000
+[  812.835937] Lo    : 00000001
+[  812.835937] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  812.835937]     Tainted: G           O
+[  812.835937] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  812.835937] Status: 1000fc03    KERNEL EXL IE 
+[  812.835937] Cause : 00800010
+[  812.835937] BadVA : 8636809e
+[  812.835937] PrId  : 00019374 (MIPS 24Kc)
+[  812.835937] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  812.835937] Process klogd (pid: 772, threadinfo=86af4000, task=87d16990, tls=77abb440)
+[  812.835937] Stack : 00000000 803011fc 86af5b78 86af5b78 869ced60 86b14480 86210900 86210900
+[  812.835937]         86368082 8636806e 80360000 80231494 80213490 00000001 86b14480 80360000
+[  812.835937]         80213888 87d48000 86b14480 c0a80121 00000000 86b14480 86368082 c0a80121
+[  812.835937]         86210900 86b14480 86368082 8023350c 00000000 86af5b68 80213490 80000000
+[  812.835937]         c0a80121 0000d859 00000003 80000000 86b14480 8029be84 00000001 80301614
+[  812.835937]         ...
+[  812.835937] Call Trace:
+[  812.835937] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  812.835937] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  812.835937] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  812.835937] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  812.835937] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  812.835937] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  812.835937] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  812.835937] [<80076df4>] __do_softirq+0xa0/0x154
+[  812.835937] [<80077000>] do_softirq+0x48/0x68
+[  812.835937] [<80077234>] irq_exit+0x4c/0xb0
+[  812.835937] [<80062d2c>] ret_from_irq+0x0/0x4
+[  812.835937] [<800da8e0>] kmem_cache_alloc+0x20/0xe0
+[  812.835937] [<80147254>] ovl_follow_link+0x8c/0xec
+[  812.835937] [<800eae2c>] path_openat+0x1b8/0x390
+[  812.835937] [<800eb120>] do_filp_open+0x3c/0xa4
+[  812.835937] [<800dcfd0>] do_sys_open+0x130/0x1e0
+[  812.835937] [<80069e24>] stack_done+0x20/0x40
+[  812.835937] 
+[  812.835937] 
+[  812.835937] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+5957
+ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  817.203125] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  817.203125] Stack : 00000000 803011fc 8633daa0 8633daa0 869ced60 8715f240 86210900 86210900
+[  817.203125]         863ae882 863ae86e 80360000 80231494 80213490 00000001 8715f240 80360000
+[  817.203125]         80213888 87d48000 8715f240 c0a80121 00000000 8715f240 863ae882 c0a80121
+[  817.203125]         86210900 8715f240 863ae882 8023350c 00000000 8633da90 80213490 80000000
+[  817.203125]         c0a80121 0000d859 00000003 80000000 8715f240 8029be84 00000001 80301614
+[  817.203125]         ...
+[  817.203125] Call Trace:
+[  817.203125] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  817.203125] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  817.203125] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  817.203125] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  817.203125] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  817.203125] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  817.203125] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  817.203125] [<80076df4>] __do_softirq+0xa0/0x154
+[  817.203125] [<80077000>] do_softirq+0x48/0x68
+[  817.203125] [<80077234>] irq_exit+0x4c/0xb0
+[  817.203125] [<80062d2c>] ret_from_irq+0x0/0x4
+[  817.203125] [<800b0140>] generic_file_buffered_write+0x1c/0x2e4
+[  817.203125] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  817.203125] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  817.203125] [<800dd470>] do_sync_write+0xa8/0xf8
+[  817.203125] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  817.203125] [<800ddfcc>] sys_write+0x58/0x9c
+[  817.203125] [<80069e24>] stack_done+0x20/0x40
+[  817.203125] 
+[  817.203125] 
+[  817.203125] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  817.203125] Cpu 0
+[  817.203125] $ 0   : 00000000 00000001 5daed8ec 53760000
+[  817.203125] $ 4   : 00000020 b0d4dbd6 863ae882 000005a0
+[  817.203125] $ 8   : 6a592689 8016d1a8 00000002 62767ad5
+[  817.203125] $12   : faff7987 00000000 00000001 00000000
+[  817.203125] $16   : 8715f240 8715f240 86210900 00000020
+[  817.203125] $20   : 863ae882 80360000 00000006 8035d570
+[  817.203125] $24   : 00000000 80213c2c                  
+[  817.203125] $28   : 8633c000 8633da10 80315740 80231494
+[  817.203125] Hi    : 00000000
+[  817.203125] Lo    : 00000001
+[  817.203125] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  817.203125]     Tainted: G           O
+[  817.203125] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  817.203125] Status: 1000fc03    KERNEL EXL IE 
+[  817.203125] Cause : 00800010
+[  817.203125] BadVA : 863ae896
+[  817.203125] PrId  : 00019374 (MIPS 24Kc)
+[  817.203125] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  817.203125] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  817.203125] Stack : 00000000 803011fc 8633daa0 8633daa0 869ced60 8715f240 86210900 86210900
+[  817.203125]         863ae882 863ae86e 80360000 80231494 80213490 00000001 8715f240 80360000
+[  817.203125]         80213888 87d48000 8715f240 c0a80121 00000000 8715f240 863ae882 c0a80121
+[  817.203125]         86210900 8715f240 863ae882 8023350c 00000000 8633da90 80213490 80000000
+[  817.203125]         c0a80121 0000d859 00000003 80000000 8715f240 8029be84 00000001 80301614
+[  817.203125]         ...
+[  817.203125] Call Trace:
+[  817.203125] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  817.203125] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  817.203125] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  817.203125] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  817.203125] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  817.203125] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  817.203125] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  817.203125] [<80076df4>] __do_softirq+0xa0/0x154
+[  817.203125] [<80077000>] do_softirq+0x48/0x68
+[  817.203125] [<80077234>] irq_exit+0x4c/0xb0
+[  817.203125] [<80062d2c>] ret_from_irq+0x0/0x4
+[  817.203125] [<800b0140>] generic_file_buffered_write+0x1c/0x2e4
+[  817.203125] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  817.203125] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  817.207031] [<800dd470>] do_sync_write+0xa8/0xf8
+[  817.207031] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  817.207031] [<800ddfcc>] sys_write+0x58/0x9c
+[  817.207031] [<80069e24>] stack_done+0x20/0x40
+[  817.207031] 
+[  817.207031] 
+[  817.207031] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  817.207031] Cpu 0
+[  817.207031] $ 0   : 00000000 00000001 5daed8ec d3760000
+[  817.207031] $ 4   : 00000001 0101080a 863ae882 000005a0
+[  817.207031] $ 8   : 6a592689 8016d1a8 00000002 62767ad5
+[  817.207031] $12   : faff7987 00000000 00000001 00000000
+[  817.207031] $16   : 8715f240 8715f240 86210900 00000020
+[  817.207031] $20   : 863ae882 80360000 00000006 8035d570
+[  817.207031] $24   : 00000000 80213c2c                  
+[  817.207031] $28   : 8633c000 8633da10 80315740 80231494
+[  817.207031] Hi    : 00000000
+[  817.207031] Lo    : 00000001
+[  817.207031] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  817.207031]     Tainted: G           O
+[  817.207031] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  817.207031] Status: 1000fc03    KERNEL EXL IE 
+[  817.207031] Cause : 00800010
+[  817.207031] BadVA : 863ae89a
+[  817.207031] PrId  : 00019374 (MIPS 24Kc)
+[  817.207031] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  817.207031] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  817.207031] Stack : 00000000 803011fc 8633daa0 8633daa0 869ced60 8715f240 86210900 86210900
+[  817.207031]         863ae882 863ae86e 80360000 80231494 80213490 00000001 8715f240 80360000
+[  817.207031]         80213888 87d48000 8715f240 c0a80121 00000000 8715f240 863ae882 c0a80121
+[  817.207031]         86210900 8715f240 863ae882 8023350c 00000000 8633da90 80213490 80000000
+[  817.207031]         c0a80121 0000d859 00000003 80000000 8715f240 8029be84 00000001 80301614
+[  817.207031]         ...
+[  817.207031] Call Trace:
+[  817.207031] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  817.207031] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  817.207031] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  817.207031] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  817.207031] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  817.207031] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  817.207031] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  817.207031] [<80076df4>] __do_softirq+0xa0/0x154
+[  817.207031] [<80077000>] do_softirq+0x48/0x68
+[  817.207031] [<80077234>] irq_exit+0x4c/0xb0
+[  817.207031] [<80062d2c>] ret_from_irq+0x0/0x4
+[  817.207031] [<800b0140>] generic_file_buffered_write+0x1c/0x2e4
+[  817.207031] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  817.207031] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  817.207031] [<800dd470>] do_sync_write+0xa8/0xf8
+[  817.207031] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  817.207031] [<800ddfcc>] sys_write+0x58/0x9c
+[  817.207031] [<80069e24>] stack_done+0x20/0x40
+[  817.207031] 
+[  817.207031] 
+[  817.207031] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  817.207031] Cpu 0
+[  817.207031] $ 0   : 00000000 00000001 5daed8ec 056af83c
+[  817.207031] $ 4   : 00000001 0101080a 863ae882 000005a0
+[  817.207031] $ 8   : 6a592689 8016d1a8 00000002 62767ad5
+[  817.207031] $12   : faff7987 00000000 00000001 00000000
+[  817.207031] $16   : 8715f240 8715f240 86210900 00000020
+[  817.207031] $20   : 863ae882 80360000 00000006 8035d570
+[  817.207031] $24   : 00000000 80213c2c                  
+[  817.207031] $28   : 8633c000 8633da10 80315740 80231494
+[  817.207031] Hi    : 00000000
+[  817.207031] Lo    : 00000001
+[  817.207031] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  817.207031]     Tainted: G           O
+[  817.207031] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  817.207031] Status: 1000fc03    KERNEL EXL IE 
+[  817.207031] Cause : 00800010
+[  817.207031] BadVA : 863ae89e
+[  817.207031] PrId  : 00019374 (MIPS 24Kc)
+[  817.207031] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  817.207031] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  817.207031] Stack : 00000000 803011fc 8633daa0 8633daa0 869ced60 8715f240 86210900 86210900
+[  817.207031]         863ae882 863ae86e 80360000 80231494 80213490 00000001 8715f240 80360000
+[  817.207031]         80213888 87d48000 8715f240 c0a80121 00000000 8715f240 863ae882 c0a80121
+[  817.207031]         86210900 8715f240 863ae882 8023350c 00000000 8633da90 80213490 80000000
+[  817.207031]         c0a80121 0000d859 00000003 80000000 8715f240 8029be84 00000001 80301614
+[  817.207031]         ...
+[  817.207031] Call Trace:
+[  817.207031] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  817.207031] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  817.207031] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  817.207031] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  817.207031] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  817.207031] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  817.207031] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  817.207031] [<80076df4>] __do_softirq+0xa0/0x154
+[  817.207031] [<80077000>] do_softirq+0x48/0x68
+[  817.207031] [<80077234>] irq_exit+0x4c/0xb0
+[  817.207031] [<80062d2c>] ret_from_irq+0x0/0x4
+[  817.207031] [<800b0140>] generic_file_buffered_write+0x1c/0x2e4
+[  817.207031] [<800b16b4>] __generic_file_aio_write+0x428/0x47c
+[  817.207031] [<800b1790>] generic_file_aio_write+0x88/0x100
+[  817.207031] [<800dd470>] do_sync_write+0xa8/0xf8
+[  817.207031] [<800ddcf4>] vfs_write+0xb4/0x14c
+[  817.207031] [<800ddfcc>] sys_write+0x58/0x9c
+[  817.207031] [<80069e24>] stack_done+0x20/0x40
+[  817.207031] 
+[  817.207031] 
+[  817.207031] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+8985
+0.042968]     Tainted: G           O
+[  820.042968] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  820.042968] Status: 1000fc03    KERNEL EXL IE 
+[  820.042968] Cause : 00800010
+[  820.042968] BadVA : 86b4f08e
+[  820.042968] PrId  : 00019374 (MIPS 24Kc)
+[  820.042968] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  820.042968] Process dmesg (pid: 4460, threadinfo=862ea000, task=862d4428, tls=770af440)
+[  820.042968] Stack : 00000000 803011fc 862ea000 862ebaf0 80315740 8626d840 86210900 86210900
+[  820.042968]         86b4f082 86b4f06e 80360000 80231494 80213490 00000001 8626d840 80360000
+[  820.042968]         80213888 87d48000 8626d840 c0a80121 00000000 8626d840 86b4f082 c0a80121
+[  820.042968]         86210900 8626d840 86b4f082 8023350c 00000000 862ebb40 80213490 80000000
+[  820.042968]         c0a80121 0000d859 00000003 80000000 8626d840 8029be84 00000001 80301614
+[  820.042968]         ...
+[  820.042968] Call Trace:
+[  820.042968] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  820.042968] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  820.042968] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  820.042968] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  820.042968] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  820.042968] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  820.042968] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  820.042968] [<80076df4>] __do_softirq+0xa0/0x154
+[  820.042968] [<80077000>] do_softirq+0x48/0x68
+[  820.042968] [<80077234>] irq_exit+0x4c/0xb0
+[  820.042968] [<80062d2c>] ret_from_irq+0x0/0x4
+[  820.042968] [<800c75c8>] __do_fault+0x2c0/0x450
+[  820.042968] [<800ca15c>] handle_pte_fault+0x330/0x6d4
+[  820.042968] [<800ca5b4>] handle_mm_fault+0xb4/0xe0
+[  820.042968] [<8006bba0>] do_page_fault+0x110/0x350
+[  820.042968] [<80062d20>] ret_from_exception+0x0/0xc
+[  820.042968] 
+[  820.042968] 
+[  820.042968] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  820.042968] Cpu 0
+[  820.042968] $ 0   : 00000000 00000001 5db74a6c 53760000
+[  820.042968] $ 4   : 00000020 b0d4dbd6 86b4f082 000005a0
+[  820.042968] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  820.042968] $12   : 2d26de57 00000000 00000001 00000000
+[  820.042968] $16   : 8626d840 8626d840 86210900 00000020
+[  820.042968] $20   : 86b4f082 80360000 00000006 8035d570
+[  820.042968] $24   : 00000000 80213c2c                  
+[  820.042968] $28   : 862ea000 862ebac0 80315740 80231494
+[  820.042968] Hi    : 00000000
+[  820.042968] Lo    : 00000001
+[  820.042968] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  820.042968]     Tainted: G           O
+[  820.042968] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  820.042968] Status: 1000fc03    KERNEL EXL IE 
+[  820.042968] Cause : 00800010
+[  820.042968] BadVA : 86b4f096
+[  820.042968] PrId  : 00019374 (MIPS 24Kc)
+[  820.042968] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  820.042968] Process dmesg (pid: 4460, threadinfo=862ea000, task=862d4428, tls=770af440)
+[  820.042968] Stack : 00000000 803011fc 862ea000 862ebaf0 80315740 8626d840 86210900 86210900
+[  820.042968]         86b4f082 86b4f06e 80360000 80231494 80213490 00000001 8626d840 80360000
+[  820.042968]         80213888 87d48000 8626d840 c0a80121 00000000 8626d840 86b4f082 c0a80121
+[  820.042968]         86210900 8626d840 86b4f082 8023350c 00000000 862ebb40 80213490 80000000
+[  820.042968]         c0a80121 0000d859 00000003 80000000 8626d840 8029be84 00000001 80301614
+[  820.042968]         ...
+[  820.042968] Call Trace:
+[  820.042968] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  820.042968] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  820.042968] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  820.042968] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  820.042968] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  820.042968] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  820.042968] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  820.042968] [<80076df4>] __do_softirq+0xa0/0x154
+[  820.042968] [<80077000>] do_softirq+0x48/0x68
+[  820.042968] [<80077234>] irq_exit+0x4c/0xb0
+[  820.042968] [<80062d2c>] ret_from_irq+0x0/0x4
+[  820.042968] [<800c75c8>] __do_fault+0x2c0/0x450
+[  820.042968] [<800ca15c>] handle_pte_fault+0x330/0x6d4
+[  820.042968] [<800ca5b4>] handle_mm_fault+0xb4/0xe0
+[  820.042968] [<8006bba0>] do_page_fault+0x110/0x350
+[  820.042968] [<80062d20>] ret_from_exception+0x0/0xc
+[  820.042968] 
+[  820.042968] 
+[  820.042968] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  820.042968] Cpu 0
+[  820.042968] $ 0   : 00000000 00000001 5db74a6c d3760000
+[  820.042968] $ 4   : 00000001 0101080a 86b4f082 000005a0
+[  820.042968] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  820.042968] $12   : 2d26de57 00000000 00000001 00000000
+[  820.042968] $16   : 8626d840 8626d840 86210900 00000020
+[  820.042968] $20   : 86b4f082 80360000 00000006 8035d570
+[  820.042968] $24   : 00000000 80213c2c                  
+[  820.042968] $28   : 862ea000 862ebac0 80315740 80231494
+[  820.042968] Hi    : 00000000
+[  820.042968] Lo    : 00000001
+[  820.042968] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  820.042968]     Tainted: G           O
+[  820.042968] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  820.042968] Status: 1000fc03    KERNEL EXL IE 
+[  820.042968] Cause : 00800010
+[  820.042968] BadVA : 86b4f09a
+[  820.042968] PrId  : 00019374 (MIPS 24Kc)
+[  820.042968] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  820.042968] Process dmesg (pid: 4460, threadinfo=862ea000, task=862d4428, tls=770af440)
+[  820.042968] Stack : 00000000 803011fc 862ea000 862ebaf0 80315740 8626d840 86210900 86210900
+[  820.042968]         86b4f082 86b4f06e 80360000 80231494 80213490 00000001 8626d840 80360000
+[  820.042968]         80213888 87d48000 8626d840 c0a80121 00000000 8626d840 86b4f082 c0a80121
+[  820.042968]         86210900 8626d840 86b4f082 8023350c 00000000 862ebb40 80213490 80000000
+[  820.042968]         c0a80121 0000d859 00000003 80000000 8626d840 8029be84 00000001 80301614
+[  820.042968]         ...
+[  820.042968] Call Trace:
+[  820.046875] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  820.046875] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  820.046875] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  820.046875] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  820.046875] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  820.046875] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  820.046875] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  820.046875] [<80076df4>] __do_softirq+0xa0/0x154
+[  820.046875] [<80077000>] do_softirq+0x48/0x68
+[  820.046875] [<80077234>] irq_exit+0x4c/0xb0
+[  820.046875] [<80062d2c>] ret_from_irq+0x0/0x4
+[  820.046875] [<800c75c8>] __do_fault+0x2c0/0x450
+[  820.046875] [<800ca15c>] handle_pte_fault+0x330/0x6d4
+[  820.046875] [<800ca5b4>] handle_mm_fault+0xb4/0xe0
+[  820.046875] [<8006bba0>] do_page_fault+0x110/0x350
+[  820.046875] [<80062d20>] ret_from_exception+0x0/0xc
+[  820.046875] 
+[  820.046875] 
+[  820.046875] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  820.046875] Cpu 0
+[  820.046875] $ 0   : 00000000 00000001 5db74a6c 056af95a
+[  820.046875] $ 4   : 00000001 0101080a 86b4f082 000005a0
+[  820.046875] $ 8   : 6a592689 8016d1a8 00000000 5f380800
+[  820.046875] $12   : 2d26de57 00000000 00000001 00000000
+[  820.046875] $16   : 8626d840 8626d840 86210900 00000020
+[  820.046875] $20   : 86b4f082 80360000 00000006 8035d570
+[  820.046875] $24   : 00000000 80213c2c                  
+[  820.046875] $28   : 862ea000 862ebac0 80315740 80231494
+[  820.046875] Hi    : 00000000
+[  820.046875] Lo    : 00000001
+[  820.046875] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  820.046875]     Tainted: G           O
+[  820.046875] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  820.046875] Status: 1000fc03    KERNEL EXL IE 
+[  820.046875] Cause : 00800010
+[  820.046875] BadVA : 86b4f09e
+[  820.046875] PrId  : 00019374 (MIPS 24Kc)
+[  820.046875] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  820.046875] Process dmesg (pid: 4460, threadinfo=862ea000, task=862d4428, tls=770af440)
+[  820.046875] Stack : 00000000 803011fc 862ea000 862ebaf0 80315740 8626d840 86210900 86210900
+[  820.046875]         86b4f082 86b4f06e 80360000 80231494 80213490 00000001 8626d840 80360000
+[  820.046875]         80213888 87d48000 8626d840 c0a80121 00000000 8626d840 86b4f082 c0a80121
+[  820.046875]         86210900 8626d840 86b4f082 8023350c 00000000 862ebb40 80213490 80000000
+[  820.046875]         c0a80121 0000d859 00000003 80000000 8626d840 8029be84 00000001 80301614
+[  820.046875]         ...
+[  820.046875] Call Trace:
+[  820.046875] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  820.046875] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  820.046875] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  820.046875] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  820.046875] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  820.046875] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  820.046875] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  820.046875] [<80076df4>] __do_softirq+0xa0/0x154
+[  820.046875] [<80077000>] do_softirq+0x48/0x68
+[  820.046875] [<80077234>] irq_exit+0x4c/0xb0
+[  820.046875] [<80062d2c>] ret_from_irq+0x0/0x4
+[  820.046875] [<800c75c8>] __do_fault+0x2c0/0x450
+[  820.046875] [<800ca15c>] handle_pte_fault+0x330/0x6d4
+[  820.046875] [<800ca5b4>] handle_mm_fault+0xb4/0xe0
+[  820.046875] [<8006bba0>] do_page_fault+0x110/0x350
+[  820.046875] [<80062d20>] ret_from_exception+0x0/0xc
+[  820.046875] 
+[  820.046875] 
+[  820.046875] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+10557
+ aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  825.859375] Process babeld (pid: 4128, threadinfo=86222000, task=87d15d18, tls=77184440)
+[  825.859375] Stack : 00000000 803011fc 862238f8 862238f8 869ced60 8639cf00 86210900 86210900
+[  825.859375]         84190082 8419006e 80360000 80231494 80213490 00000001 8639cf00 80360000
+[  825.859375]         80213888 87d48000 8639cf00 c0a80121 00000000 8639cf00 84190082 c0a80121
+[  825.859375]         86210900 8639cf00 84190082 8023350c 00000000 862238e8 80213490 80000000
+[  825.859375]         c0a80121 0000d859 00000003 80000000 8639cf00 8029be84 00000001 80301614
+[  825.859375]         ...
+[  825.859375] Call Trace:
+[  825.859375] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  825.859375] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  825.859375] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  825.859375] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  825.859375] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  825.859375] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  825.859375] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  825.859375] [<80076df4>] __do_softirq+0xa0/0x154
+[  825.859375] [<80077000>] do_softirq+0x48/0x68
+[  825.859375] [<80077164>] local_bh_enable+0x94/0xb0
+[  825.859375] [<8724f950>] ip6_ins_rt+0x370/0x454 [ipv6]
+[  825.859375] 
+[  825.859375] 
+[  825.859375] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  825.859375] Cpu 0
+[  825.859375] $ 0   : 00000000 00000001 5dcf49ec 056afb93
+[  825.859375] $ 4   : 00000001 0101080a 84190082 000005a0
+[  825.859375] $ 8   : 6a592689 8016d1a8 00000000 86017810
+[  825.859375] $12   : c8370a8b 00000000 00000001 00000000
+[  825.859375] $16   : 8639cf00 8639cf00 86210900 00000020
+[  825.859375] $20   : 84190082 80360000 00000006 8035d570
+[  825.859375] $24   : 00000000 80213c2c                  
+[  825.859375] $28   : 86222000 86223868 80315740 80231494
+[  825.859375] Hi    : 00000000
+[  825.859375] Lo    : 00000001
+[  825.859375] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  825.859375]     Tainted: G           O
+[  825.859375] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  825.859375] Status: 1000fc03    KERNEL EXL IE 
+[  825.859375] Cause : 00800010
+[  825.859375] BadVA : 8419009e
+[  825.859375] PrId  : 00019374 (MIPS 24Kc)
+[  825.859375] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  825.859375] Process babeld (pid: 4128, threadinfo=86222000, task=87d15d18, tls=77184440)
+[  825.859375] Stack : 00000000 803011fc 862238f8 862238f8 869ced60 8639cf00 86210900 86210900
+[  825.859375]         84190082 8419006e 80360000 80231494 80213490 00000001 8639cf00 80360000
+[  825.859375]         80213888 87d48000 8639cf00 c0a80121 00000000 8639cf00 84190082 c0a80121
+[  825.859375]         86210900 8639cf00 84190082 8023350c 00000000 862238e8 80213490 80000000
+[  825.859375]         c0a80121 0000d859 00000003 80000000 8639cf00 8029be84 00000001 80301614
+[  825.859375]         ...
+[  825.859375] Call Trace:
+[  825.859375] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  825.859375] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  825.859375] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  825.859375] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  825.859375] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  825.859375] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  825.859375] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  825.859375] [<80076df4>] __do_softirq+0xa0/0x154
+[  825.859375] [<80077000>] do_softirq+0x48/0x68
+[  825.859375] [<80077164>] local_bh_enable+0x94/0xb0
+[  825.859375] [<8724f950>] ip6_ins_rt+0x370/0x454 [ipv6]
+[  825.859375] 
+[  825.859375] 
+[  825.859375] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+15845
+00005a0
+[  829.558593] $ 8   : 6a592689 8016d1a8 00000000 86017810
+[  829.558593] $12   : c41120c0 0013002b 00000001 00000000
+[  829.558593] $16   : 862c3600 862c3600 86210900 86347082
+[  829.558593] $20   : 8634706e 80360000 00000006 8035d570
+[  829.558593] $24   : 00000000 80213c2c                  
+[  829.558593] $28   : 802fe000 802ffc00 80315740 80231494
+[  829.558593] Hi    : 00000000
+[  829.558593] Lo    : 00000001
+[  829.558593] epc   : 8022abb4 tcp_rcv_established+0x34/0x690
+[  829.558593]     Tainted: G           O
+[  829.558593] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  829.558593] Status: 1000fc03    KERNEL EXL IE 
+[  829.558593] Cause : 00800010
+[  829.558593] BadVA : 8634708e
+[  829.558593] PrId  : 00019374 (MIPS 24Kc)
+[  829.558593] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  829.558593] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  829.558593] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 862c3600 86210900 86210900
+[  829.558593]         86347082 8634706e 80360000 80231494 80213490 00000001 862c3600 80360000
+[  829.558593]         80213888 87d48000 862c3600 c0a80121 00000000 862c3600 86347082 c0a80121
+[  829.558593]         86210900 862c3600 86347082 8023350c 00000000 802ffc80 80213490 80000000
+[  829.558593]         c0a80121 0000d859 00000003 80000000 862c3600 8029be84 00000001 80301614
+[  829.558593]         ...
+[  829.558593] Call Trace:
+[  829.558593] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  829.558593] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  829.558593] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  829.558593] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  829.558593] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  829.558593] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  829.558593] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  829.558593] [<80076df4>] __do_softirq+0xa0/0x154
+[  829.558593] [<80077000>] do_softirq+0x48/0x68
+[  829.558593] [<80077234>] irq_exit+0x4c/0xb0
+[  829.558593] [<80062d2c>] ret_from_irq+0x0/0x4
+[  829.558593] [<80062f20>] r4k_wait+0x20/0x40
+[  829.558593] [<800649fc>] cpu_idle+0x38/0x70
+[  829.558593] [<803198c8>] start_kernel+0x37c/0x39c
+[  829.558593] 
+[  829.558593] 
+[  829.558593] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  829.558593] Cpu 0
+[  829.558593] $ 0   : 00000000 00000001 5ddcd86c 53760000
+[  829.558593] $ 4   : 00000020 b0d4dbd6 86347082 000005a0
+[  829.558593] $ 8   : 6a592689 8016d1a8 00000000 86017810
+[  829.558593] $12   : c41120c0 0013002b 00000001 00000000
+[  829.558593] $16   : 862c3600 862c3600 86210900 00000020
+[  829.558593] $20   : 86347082 80360000 00000006 8035d570
+[  829.558593] $24   : 00000000 80213c2c                  
+[  829.558593] $28   : 802fe000 802ffc00 80315740 80231494
+[  829.558593] Hi    : 00000000
+[  829.558593] Lo    : 00000001
+[  829.558593] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  829.558593]     Tainted: G           O
+[  829.558593] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  829.558593] Status: 1000fc03    KERNEL EXL IE 
+[  829.558593] Cause : 00800010
+[  829.558593] BadVA : 86347096
+[  829.558593] PrId  : 00019374 (MIPS 24Kc)
+[  829.558593] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  829.558593] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  829.558593] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 862c3600 86210900 86210900
+[  829.558593]         86347082 8634706e 80360000 80231494 80213490 00000001 862c3600 80360000
+[  829.558593]         80213888 87d48000 862c3600 c0a80121 00000000 862c3600 86347082 c0a80121
+[  829.558593]         86210900 862c3600 86347082 8023350c 00000000 802ffc80 80213490 80000000
+[  829.558593]         c0a80121 0000d859 00000003 80000000 862c3600 8029be84 00000001 80301614
+[  829.558593]         ...
+[  829.558593] Call Trace:
+[  829.558593] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  829.558593] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  829.558593] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  829.558593] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  829.558593] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  829.558593] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  829.558593] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  829.558593] [<80076df4>] __do_softirq+0xa0/0x154
+[  829.558593] [<80077000>] do_softirq+0x48/0x68
+[  829.558593] [<80077234>] irq_exit+0x4c/0xb0
+[  829.558593] [<80062d2c>] ret_from_irq+0x0/0x4
+[  829.558593] [<80062f20>] r4k_wait+0x20/0x40
+[  829.558593] [<800649fc>] cpu_idle+0x38/0x70
+[  829.558593] [<803198c8>] start_kernel+0x37c/0x39c
+[  829.558593] 
+[  829.558593] 
+[  829.558593] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  829.558593] Cpu 0
+[  829.558593] $ 0   : 00000000 00000001 5ddcd86c d3760000
+[  829.558593] $ 4   : 00000001 0101080a 86347082 000005a0
+[  829.558593] $ 8   : 6a592689 8016d1a8 00000000 86017810
+[  829.558593] $12   : c41120c0 0013002b 00000001 00000000
+[  829.558593] $16   : 862c3600 862c3600 86210900 00000020
+[  829.562500] $20   : 86347082 80360000 00000006 8035d570
+[  829.562500] $24   : 00000000 80213c2c                  
+[  829.562500] $28   : 802fe000 802ffc00 80315740 80231494
+[  829.562500] Hi    : 00000000
+[  829.562500] Lo    : 00000001
+[  829.562500] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  829.562500]     Tainted: G           O
+[  829.562500] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  829.562500] Status: 1000fc03    KERNEL EXL IE 
+[  829.562500] Cause : 00800010
+[  829.562500] BadVA : 8634709a
+[  829.562500] PrId  : 00019374 (MIPS 24Kc)
+[  829.562500] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  829.562500] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  829.562500] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 862c3600 86210900 86210900
+[  829.562500]         86347082 8634706e 80360000 80231494 80213490 00000001 862c3600 80360000
+[  829.562500]         80213888 87d48000 862c3600 c0a80121 00000000 862c3600 86347082 c0a80121
+[  829.562500]         86210900 862c3600 86347082 8023350c 00000000 802ffc80 80213490 80000000
+[  829.562500]         c0a80121 0000d859 00000003 80000000 862c3600 8029be84 00000001 80301614
+[  829.562500]         ...
+[  829.562500] Call Trace:
+[  829.562500] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  829.562500] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  829.562500] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  829.562500] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  829.562500] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  829.562500] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  829.562500] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  829.562500] [<80076df4>] __do_softirq+0xa0/0x154
+[  829.562500] [<80077000>] do_softirq+0x48/0x68
+[  829.562500] [<80077234>] irq_exit+0x4c/0xb0
+[  829.562500] [<80062d2c>] ret_from_irq+0x0/0x4
+[  829.562500] [<80062f20>] r4k_wait+0x20/0x40
+[  829.562500] [<800649fc>] cpu_idle+0x38/0x70
+[  829.562500] [<803198c8>] start_kernel+0x37c/0x39c
+[  829.562500] 
+[  829.562500] 
+[  829.562500] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  829.562500] Cpu 0
+[  829.562500] $ 0   : 00000000 00000001 5ddcd86c 056afd11
+[  829.562500] $ 4   : 00000001 0101080a 86347082 000005a0
+[  829.562500] $ 8   : 6a592689 8016d1a8 00000000 86017810
+[  829.562500] $12   : c41120c0 0013002b 00000001 00000000
+[  829.562500] $16   : 862c3600 862c3600 86210900 00000020
+[  829.562500] $20   : 86347082 80360000 00000006 8035d570
+[  829.562500] $24   : 00000000 80213c2c                  
+[  829.562500] $28   : 802fe000 802ffc00 80315740 80231494
+[  829.562500] Hi    : 00000000
+[  829.562500] Lo    : 00000001
+[  829.562500] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  829.562500]     Tainted: G           O
+[  829.562500] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  829.562500] Status: 1000fc03    KERNEL EXL IE 
+[  829.562500] Cause : 00800010
+[  829.562500] BadVA : 8634709e
+[  829.562500] PrId  : 00019374 (MIPS 24Kc)
+[  829.562500] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  829.562500] Process swapper (pid: 0, threadinfo=802fe000, task=803020c0, tls=00000000)
+[  829.562500] Stack : 00000000 803011fc 802ffc90 802ffc90 869ced60 862c3600 86210900 86210900
+[  829.562500]         86347082 8634706e 80360000 80231494 80213490 00000001 862c3600 80360000
+[  829.562500]         80213888 87d48000 862c3600 c0a80121 00000000 862c3600 86347082 c0a80121
+[  829.562500]         86210900 862c3600 86347082 8023350c 00000000 802ffc80 80213490 80000000
+[  829.562500]         c0a80121 0000d859 00000003 80000000 862c3600 8029be84 00000001 80301614
+[  829.562500]         ...
+[  829.562500] Call Trace:
+[  829.562500] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  829.562500] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  829.562500] [<8023350c>] tcp_v4_rcv+0x59c/0x944
+[  829.562500] [<802139f8>] ip_local_deliver_finish+0x170/0x29c
+[  829.562500] [<801e8290>] __netif_receive_skb+0x458/0x4c8
+[  829.562500] [<801d066c>] ag71xx_poll+0x3b0/0x66c
+[  829.562500] [<801e86b0>] net_rx_action+0x88/0x1c8
+[  829.562500] [<80076df4>] __do_softirq+0xa0/0x154
+[  829.562500] [<80077000>] do_softirq+0x48/0x68
+[  829.562500] [<80077234>] irq_exit+0x4c/0xb0
+[  829.562500] [<80062d2c>] ret_from_irq+0x0/0x4
+[  829.562500] [<80062f20>] r4k_wait+0x20/0x40
+[  829.562500] [<800649fc>] cpu_idle+0x38/0x70
+[  829.562500] [<803198c8>] start_kernel+0x37c/0x39c
+[  829.562500] 
+[  829.562500] 
+[  829.562500] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+17549
+00 00000001 86210bcc 802225e4
+[  831.609375]         ...
+[  831.609375] Call Trace:
+[  831.609375] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  831.609375] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  831.609375] [<801db330>] release_sock+0xa8/0x10c
+[  831.609375] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  831.609375] [<80240144>] inet_recvmsg+0x44/0x60
+[  831.609375] [<801d936c>] sock_aio_read+0x118/0x130
+[  831.609375] [<800dd568>] do_sync_read+0xa8/0xf8
+[  831.609375] [<800dde50>] vfs_read+0xc4/0x14c
+[  831.609375] [<800ddf30>] sys_read+0x58/0x9c
+[  831.609375] [<80069e24>] stack_done+0x20/0x40
+[  831.609375] 
+[  831.609375] 
+[  831.609375] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+[  831.617187] Cpu 0
+[  831.617187] $ 0   : 00000000 80350000 00000001 53760000
+[  831.617187] $ 4   : 86210900 86310300 8400f882 000005a0
+[  831.617187] $ 8   : 8633dfe0 0000fc00 00000000 87c26000
+[  831.617187] $12   : 87f8c3e4 00000001 00010000 00480000
+[  831.617187] $16   : 86310300 86310300 86210900 80360000
+[  831.617187] $20   : 802e0544 00000001 00000000 00000000
+[  831.617187] $24   : 00483324 80095150                  
+[  831.617187] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  831.617187] Hi    : 000000c1
+[  831.617187] Lo    : a03f3eac
+[  831.617187] epc   : 8022abb4 tcp_rcv_established+0x34/0x690
+[  831.617187]     Tainted: G           O
+[  831.617187] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  831.617187] Status: 1000fc03    KERNEL EXL IE 
+[  831.617187] Cause : 00800010
+[  831.617187] BadVA : 8400f88e
+[  831.617187] PrId  : 00019374 (MIPS 24Kc)
+[  831.617187] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  831.617187] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  831.617187] Stack : 862d54c8 80287df4 86310480 80360000 802e0544 86310300 86310300 86210900
+[  831.617187]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  831.617187]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  831.617187]         86310300 86310240 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  831.617187]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  831.617187]         ...
+[  831.617187] Call Trace:
+[  831.617187] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  831.617187] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  831.617187] [<801db330>] release_sock+0xa8/0x10c
+[  831.617187] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  831.617187] [<80240144>] inet_recvmsg+0x44/0x60
+[  831.617187] [<801d936c>] sock_aio_read+0x118/0x130
+[  831.617187] [<800dd568>] do_sync_read+0xa8/0xf8
+[  831.617187] [<800dde50>] vfs_read+0xc4/0x14c
+[  831.617187] [<800ddf30>] sys_read+0x58/0x9c
+[  831.617187] [<80069e24>] stack_done+0x20/0x40
+[  831.617187] 
+[  831.617187] 
+[  831.617187] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  831.617187] Cpu 0
+[  831.617187] $ 0   : 00000000 80350000 5de339ec 53760000
+[  831.617187] $ 4   : 00000020 b0d4dbd6 8400f882 000005a0
+[  831.617187] $ 8   : 8633dfe0 0000fc00 00000000 87c26000
+[  831.617187] $12   : 87f8c3e4 00000001 00010000 00480000
+[  831.617187] $16   : 86310300 86310300 86210900 00000020
+[  831.617187] $20   : 8400f882 00000001 00000000 00000000
+[  831.617187] $24   : 00483324 80095150                  
+[  831.617187] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  831.617187] Hi    : 000000c1
+[  831.617187] Lo    : a03f3eac
+[  831.617187] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  831.617187]     Tainted: G           O
+[  831.617187] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  831.617187] Status: 1000fc03    KERNEL EXL IE 
+[  831.617187] Cause : 00800010
+[  831.617187] BadVA : 8400f896
+[  831.617187] PrId  : 00019374 (MIPS 24Kc)
+[  831.617187] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  831.617187] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  831.617187] Stack : 862d54c8 80287df4 86310480 80360000 802e0544 86310300 86310300 86210900
+[  831.617187]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  831.617187]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  831.617187]         86310300 86310240 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  831.617187]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  831.617187]         ...
+[  831.617187] Call Trace:
+[  831.617187] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  831.617187] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  831.617187] [<801db330>] release_sock+0xa8/0x10c
+[  831.617187] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  831.617187] [<80240144>] inet_recvmsg+0x44/0x60
+[  831.617187] [<801d936c>] sock_aio_read+0x118/0x130
+[  831.617187] [<800dd568>] do_sync_read+0xa8/0xf8
+[  831.617187] [<800dde50>] vfs_read+0xc4/0x14c
+[  831.617187] [<800ddf30>] sys_read+0x58/0x9c
+[  831.617187] [<80069e24>] stack_done+0x20/0x40
+[  831.617187] 
+[  831.617187] 
+[  831.617187] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  831.617187] Cpu 0
+[  831.617187] $ 0   : 00000000 80350000 5de339ec d3760000
+[  831.617187] $ 4   : 00000001 0101080a 8400f882 000005a0
+[  831.617187] $ 8   : 8633dfe0 0000fc00 00000000 87c26000
+[  831.617187] $12   : 87f8c3e4 00000001 00010000 00480000
+[  831.617187] $16   : 86310300 86310300 86210900 00000020
+[  831.617187] $20   : 8400f882 00000001 00000000 00000000
+[  831.617187] $24   : 00483324 80095150                  
+[  831.617187] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  831.617187] Hi    : 000000c1
+[  831.617187] Lo    : a03f3eac
+[  831.617187] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  831.617187]     Tainted: G           O
+[  831.617187] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  831.617187] Status: 1000fc03    KERNEL EXL IE 
+[  831.617187] Cause : 00800010
+[  831.617187] BadVA : 8400f89a
+[  831.617187] PrId  : 00019374 (MIPS 24Kc)
+[  831.617187] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  831.617187] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  831.617187] Stack : 862d54c8 80287df4 86310480 80360000 802e0544 86310300 86310300 86210900
+[  831.617187]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  831.617187]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  831.617187]         86310300 86310240 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  831.617187]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  831.617187]         ...
+[  831.617187] Call Trace:
+[  831.617187] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  831.617187] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  831.617187] [<801db330>] release_sock+0xa8/0x10c
+[  831.617187] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  831.617187] [<80240144>] inet_recvmsg+0x44/0x60
+[  831.617187] [<801d936c>] sock_aio_read+0x118/0x130
+[  831.617187] [<800dd568>] do_sync_read+0xa8/0xf8
+[  831.617187] [<800dde50>] vfs_read+0xc4/0x14c
+[  831.617187] [<800ddf30>] sys_read+0x58/0x9c
+[  831.617187] [<80069e24>] stack_done+0x20/0x40
+[  831.617187] 
+[  831.617187] 
+[  831.617187] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  831.617187] Cpu 0
+[  831.617187] $ 0   : 00000000 80350000 5de339ec 056afdce
+[  831.617187] $ 4   : 00000001 0101080a 8400f882 000005a0
+[  831.617187] $ 8   : 8633dfe0 0000fc00 00000000 87c26000
+[  831.617187] $12   : 87f8c3e4 00000001 00010000 00480000
+[  831.617187] $16   : 86310300 86310300 86210900 00000020
+[  831.617187] $20   : 8400f882 00000001 00000000 00000000
+[  831.617187] $24   : 00483324 80095150                  
+[  831.617187] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  831.617187] Hi    : 000000c1
+[  831.617187] Lo    : a03f3eac
+[  831.617187] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  831.617187]     Tainted: G           O
+[  831.617187] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  831.617187] Status: 1000fc03    KERNEL EXL IE 
+[  831.617187] Cause : 00800010
+[  831.617187] BadVA : 8400f89e
+[  831.617187] PrId  : 00019374 (MIPS 24Kc)
+[  831.617187] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  831.621093] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  831.621093] Stack : 862d54c8 80287df4 86310480 80360000 802e0544 86310300 86310300 86210900
+[  831.621093]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  831.621093]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  831.621093]         86310300 86310240 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  831.621093]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  831.621093]         ...
+[  831.621093] Call Trace:
+[  831.621093] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  831.621093] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  831.621093] [<801db330>] release_sock+0xa8/0x10c
+[  831.621093] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  831.621093] [<80240144>] inet_recvmsg+0x44/0x60
+[  831.621093] [<801d936c>] sock_aio_read+0x118/0x130
+[  831.621093] [<800dd568>] do_sync_read+0xa8/0xf8
+[  831.621093] [<800dde50>] vfs_read+0xc4/0x14c
+[  831.621093] [<800ddf30>] sys_read+0x58/0x9c
+[  831.621093] [<80069e24>] stack_done+0x20/0x40
+[  831.621093] 
+[  831.621093] 
+[  831.621093] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+18745
+00000001 86210bcc 802225e4
+[  833.679687]         ...
+[  833.679687] Call Trace:
+[  833.679687] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  833.679687] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  833.679687] [<801db330>] release_sock+0xa8/0x10c
+[  833.679687] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  833.679687] [<80240144>] inet_recvmsg+0x44/0x60
+[  833.679687] [<801d936c>] sock_aio_read+0x118/0x130
+[  833.679687] [<800dd568>] do_sync_read+0xa8/0xf8
+[  833.679687] [<800dde50>] vfs_read+0xc4/0x14c
+[  833.679687] [<800ddf30>] sys_read+0x58/0x9c
+[  833.679687] [<80069e24>] stack_done+0x20/0x40
+[  833.679687] 
+[  833.679687] 
+[  833.679687] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  833.679687] Cpu 0
+[  833.679687] $ 0   : 00000000 80350000 5de79bec d3760000
+[  833.679687] $ 4   : 00000001 0101080a 86352882 000005a0
+[  833.679687] $ 8   : 8633dfe0 0000fc00 00000000 86af4000
+[  833.679687] $12   : 00000003 00000000 810d8080 00480000
+[  833.679687] $16   : 86259540 86259540 86210900 00000020
+[  833.679687] $20   : 86352882 00000001 00000000 00000000
+[  833.679687] $24   : 0048350c 779ad660                  
+[  833.679687] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  833.679687] Hi    : 000000c2
+[  833.679687] Lo    : 1b2e7f4c
+[  833.679687] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  833.679687]     Tainted: G           O
+[  833.679687] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  833.679687] Status: 1000fc03    KERNEL EXL IE 
+[  833.679687] Cause : 00800010
+[  833.679687] BadVA : 8635289a
+[  833.679687] PrId  : 00019374 (MIPS 24Kc)
+[  833.679687] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  833.679687] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  833.679687] Stack : 862d71e0 80287df4 862c2540 80360000 802e0544 86259540 86259540 86210900
+[  833.679687]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  833.679687]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  833.679687]         86259540 863840c0 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  833.679687]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  833.679687]         ...
+[  833.679687] Call Trace:
+[  833.679687] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  833.679687] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  833.679687] [<801db330>] release_sock+0xa8/0x10c
+[  833.679687] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  833.679687] [<80240144>] inet_recvmsg+0x44/0x60
+[  833.679687] [<801d936c>] sock_aio_read+0x118/0x130
+[  833.679687] [<800dd568>] do_sync_read+0xa8/0xf8
+[  833.679687] [<800dde50>] vfs_read+0xc4/0x14c
+[  833.679687] [<800ddf30>] sys_read+0x58/0x9c
+[  833.679687] [<80069e24>] stack_done+0x20/0x40
+[  833.679687] 
+[  833.679687] 
+[  833.679687] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  833.679687] Cpu 0
+[  833.679687] $ 0   : 00000000 80350000 5de79bec 056afe7d
+[  833.679687] $ 4   : 00000001 0101080a 86352882 000005a0
+[  833.679687] $ 8   : 8633dfe0 0000fc00 00000000 86af4000
+[  833.679687] $12   : 00000003 00000000 810d8080 00480000
+[  833.679687] $16   : 86259540 86259540 86210900 00000020
+[  833.679687] $20   : 86352882 00000001 00000000 00000000
+[  833.679687] $24   : 0048350c 779ad660                  
+[  833.679687] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  833.679687] Hi    : 000000c2
+[  833.679687] Lo    : 1b2e7f4c
+[  833.679687] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  833.679687]     Tainted: G           O
+[  833.679687] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  833.679687] Status: 1000fc03    KERNEL EXL IE 
+[  833.679687] Cause : 00800010
+[  833.679687] BadVA : 8635289e
+[  833.679687] PrId  : 00019374 (MIPS 24Kc)
+[  833.679687] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  833.683593] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  833.683593] Stack : 862d71e0 80287df4 862c2540 80360000 802e0544 86259540 86259540 86210900
+[  833.683593]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  833.683593]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  833.683593]         86259540 863840c0 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  833.683593]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  833.683593]         ...
+[  833.683593] Call Trace:
+[  833.683593] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  833.683593] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  833.683593] [<801db330>] release_sock+0xa8/0x10c
+[  833.683593] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  833.683593] [<80240144>] inet_recvmsg+0x44/0x60
+[  833.683593] [<801d936c>] sock_aio_read+0x118/0x130
+[  833.683593] [<800dd568>] do_sync_read+0xa8/0xf8
+[  833.683593] [<800dde50>] vfs_read+0xc4/0x14c
+[  833.683593] [<800ddf30>] sys_read+0x58/0x9c
+[  833.683593] [<80069e24>] stack_done+0x20/0x40
+[  833.683593] 
+[  833.683593] 
+[  833.683593] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+19557
+00 00000001 86210bcc 802225e4
+[  835.722656]         ...
+[  835.722656] Call Trace:
+[  835.722656] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  835.722656] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  835.722656] [<801db330>] release_sock+0xa8/0x10c
+[  835.722656] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  835.722656] [<80240144>] inet_recvmsg+0x44/0x60
+[  835.722656] [<801d936c>] sock_aio_read+0x118/0x130
+[  835.722656] [<800dd568>] do_sync_read+0xa8/0xf8
+[  835.722656] [<800dde50>] vfs_read+0xc4/0x14c
+[  835.722656] [<800ddf30>] sys_read+0x58/0x9c
+[  835.722656] [<80069e24>] stack_done+0x20/0x40
+[  835.722656] 
+[  835.722656] 
+[  835.722656] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+[  835.730468] Cpu 0
+[  835.730468] $ 0   : 00000000 80350000 00000001 53760000
+[  835.730468] $ 4   : 86210900 86b13e40 840d0082 000005a0
+[  835.730468] $ 8   : 8633dfe0 0000fc00 00000000 86af4000
+[  835.730468] $12   : 8028bb98 00000001 8028bb90 0000aee7
+[  835.730468] $16   : 86b13e40 86b13e40 86210900 80360000
+[  835.730468] $20   : 802e0544 00000001 00000000 00000000
+[  835.730468] $24   : 00000008 80069ce0                  
+[  835.730468] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  835.730468] Hi    : 000000c2
+[  835.730468] Lo    : 956aef8e
+[  835.730468] epc   : 8022abb4 tcp_rcv_established+0x34/0x690
+[  835.730468]     Tainted: G           O
+[  835.730468] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  835.730468] Status: 1000fc03    KERNEL EXL IE 
+[  835.730468] Cause : 00800010
+[  835.730468] BadVA : 840d008e
+[  835.730468] PrId  : 00019374 (MIPS 24Kc)
+[  835.730468] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  835.730468] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  835.730468] Stack : 87d171e0 80287df4 86b13e40 80360000 802e0544 86b13e40 86b13e40 86210900
+[  835.730468]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  835.730468]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  835.730468]         86b13e40 862599c0 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  835.730468]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  835.730468]         ...
+[  835.730468] Call Trace:
+[  835.730468] [<8022abb4>] tcp_rcv_established+0x34/0x690
+[  835.730468] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  835.730468] [<801db330>] release_sock+0xa8/0x10c
+[  835.730468] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  835.730468] [<80240144>] inet_recvmsg+0x44/0x60
+[  835.730468] [<801d936c>] sock_aio_read+0x118/0x130
+[  835.730468] [<800dd568>] do_sync_read+0xa8/0xf8
+[  835.730468] [<800dde50>] vfs_read+0xc4/0x14c
+[  835.730468] [<800ddf30>] sys_read+0x58/0x9c
+[  835.730468] [<80069e24>] stack_done+0x20/0x40
+[  835.730468] 
+[  835.730468] 
+[  835.730468] Code: 00a08821  7c03ffc4  ac83035c <8cc2000c> 3c04f0f7  3484ffff  00442024  8e4202c4  1482011d 
+[  835.730468] Cpu 0
+[  835.730468] $ 0   : 00000000 80350000 5debdcec 53760000
+[  835.730468] $ 4   : 00000020 b0d4dbd6 840d0082 000005a0
+[  835.730468] $ 8   : 8633dfe0 0000fc00 00000000 86af4000
+[  835.730468] $12   : 8028bb98 00000001 8028bb90 0000aee7
+[  835.730468] $16   : 86b13e40 86b13e40 86210900 00000020
+[  835.730468] $20   : 840d0082 00000001 00000000 00000000
+[  835.730468] $24   : 00000008 80069ce0                  
+[  835.730468] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  835.730468] Hi    : 000000c2
+[  835.730468] Lo    : 956aef8e
+[  835.730468] epc   : 8022ac00 tcp_rcv_established+0x80/0x690
+[  835.730468]     Tainted: G           O
+[  835.730468] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  835.730468] Status: 1000fc03    KERNEL EXL IE 
+[  835.730468] Cause : 00800010
+[  835.730468] BadVA : 840d0096
+[  835.730468] PrId  : 00019374 (MIPS 24Kc)
+[  835.730468] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  835.730468] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  835.730468] Stack : 87d171e0 80287df4 86b13e40 80360000 802e0544 86b13e40 86b13e40 86210900
+[  835.730468]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  835.730468]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  835.730468]         86b13e40 862599c0 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  835.730468]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  835.730468]         ...
+[  835.730468] Call Trace:
+[  835.730468] [<8022ac00>] tcp_rcv_established+0x80/0x690
+[  835.730468] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  835.730468] [<801db330>] release_sock+0xa8/0x10c
+[  835.730468] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  835.730468] [<80240144>] inet_recvmsg+0x44/0x60
+[  835.730468] [<801d936c>] sock_aio_read+0x118/0x130
+[  835.730468] [<800dd568>] do_sync_read+0xa8/0xf8
+[  835.730468] [<800dde50>] vfs_read+0xc4/0x14c
+[  835.730468] [<800ddf30>] sys_read+0x58/0x9c
+[  835.730468] [<80069e24>] stack_done+0x20/0x40
+[  835.730468] 
+[  835.730468] 
+[  835.730468] Code: 965302c0  56640011  0267182b <8cc50014> 3c040101  2484080a  54a4010d  9282000c  24040001 
+[  835.730468] Cpu 0
+[  835.730468] $ 0   : 00000000 80350000 5debdcec d3760000
+[  835.730468] $ 4   : 00000001 0101080a 840d0082 000005a0
+[  835.730468] $ 8   : 8633dfe0 0000fc00 00000000 86af4000
+[  835.730468] $12   : 8028bb98 00000001 8028bb90 0000aee7
+[  835.730468] $16   : 86b13e40 86b13e40 86210900 00000020
+[  835.730468] $20   : 840d0082 00000001 00000000 00000000
+[  835.730468] $24   : 00000008 80069ce0                  
+[  835.730468] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  835.730468] Hi    : 000000c2
+[  835.730468] Lo    : 956aef8e
+[  835.730468] epc   : 8022ac20 tcp_rcv_established+0xa0/0x690
+[  835.730468]     Tainted: G           O
+[  835.730468] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  835.730468] Status: 1000fc03    KERNEL EXL IE 
+[  835.730468] Cause : 00800010
+[  835.730468] BadVA : 840d009a
+[  835.730468] PrId  : 00019374 (MIPS 24Kc)
+[  835.730468] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  835.730468] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  835.730468] Stack : 87d171e0 80287df4 86b13e40 80360000 802e0544 86b13e40 86b13e40 86210900
+[  835.730468]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  835.730468]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  835.730468]         86b13e40 862599c0 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  835.730468]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  835.730468]         ...
+[  835.730468] Call Trace:
+[  835.730468] [<8022ac20>] tcp_rcv_established+0xa0/0x690
+[  835.730468] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  835.730468] [<801db330>] release_sock+0xa8/0x10c
+[  835.730468] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  835.730468] [<80240144>] inet_recvmsg+0x44/0x60
+[  835.730468] [<801d936c>] sock_aio_read+0x118/0x130
+[  835.730468] [<800dd568>] do_sync_read+0xa8/0xf8
+[  835.730468] [<800dde50>] vfs_read+0xc4/0x14c
+[  835.730468] [<800ddf30>] sys_read+0x58/0x9c
+[  835.730468] [<80069e24>] stack_done+0x20/0x40
+[  835.730468] 
+[  835.730468] 
+[  835.730468] Code: 24040001  7c83ffc4  ae43035c <8cc30018> ae430354  8cc4001c  ae440358  8e440350  00641823 
+[  835.730468] Cpu 0
+[  835.730468] $ 0   : 00000000 80350000 5debdcec 056aff4f
+[  835.730468] $ 4   : 00000001 0101080a 840d0082 000005a0
+[  835.730468] $ 8   : 8633dfe0 0000fc00 00000000 86af4000
+[  835.730468] $12   : 8028bb98 00000001 8028bb90 0000aee7
+[  835.730468] $16   : 86b13e40 86b13e40 86210900 00000020
+[  835.730468] $20   : 840d0082 00000001 00000000 00000000
+[  835.730468] $24   : 00000008 80069ce0                  
+[  835.730468] $28   : 8633c000 8633dc78 8633dde8 80231494
+[  835.730468] Hi    : 000000c2
+[  835.730468] Lo    : 956aef8e
+[  835.730468] epc   : 8022ac28 tcp_rcv_established+0xa8/0x690
+[  835.730468]     Tainted: G           O
+[  835.730468] ra    : 80231494 tcp_v4_do_rcv+0x40/0x244
+[  835.730468] Status: 1000fc03    KERNEL EXL IE 
+[  835.730468] Cause : 00800010
+[  835.730468] BadVA : 840d009e
+[  835.730468] PrId  : 00019374 (MIPS 24Kc)
+[  835.730468] Modules linked in: cls_fw sch_htb sch_red sch_sfq cls_flow cls_u32 sch_qfq gpio_keys_polled gpio_buttons ath79_wdt xt_hashlimit ip6t_REJECT ip6t_LOG ip6t_rt ip6t_hbh ip6t_mh ip6t_ipv6header ip6t_frag ip6t_eui64 ip6t_ah ip6table_raw ip6_queue ip6table_mangle ip6table_filter ip6_tables nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_irc nf_conntrack_irc nf_nat_ftp nf_conntrack_ftp xt_policy xt_esp ipt_ah xt_HL xt_hl xt_ecn ipt_ECN xt_CLASSIFY xt_time xt_tcpmss xt_statistic xt_mark xt_length xt_DSCP xt_dscp xt_string xt_layer7 xt_quota xt_pkttype xt_physdev xt_owner ipt_MASQUERADE iptable_nat nf_nat xt_recent xt_helper xt_connmark xt_connbytes pptp xt_conntrack xt_CT xt_NOTRACK iptable_raw xt_state nf_conntrack_ipv4 nf_defrag_ipv4 nf_conntrack pppoe pppox ipt_REJECT xt_TCPMSS ipt_LOG xt_comment xt_multiport xt_mac xt_limit iptable_mangle iptable_filter ip_tables xt_tcpudp x_tables ip_gre gre ifb sit ipcomp xfrm4_tunnel xfrm4_mode_tunnel xfrm4_mode_transport xfrm4_mode_beet esp4 ah4 tunnel4 tun tcp_ledbat(O) ppp_async ppp_generic slhc xfrm_user xfrm_ipcomp af_key vfat fat autofs4 ath9k(O) ath9k_common(O) ath9k_hw(O) ath(O) nls_utf8 nls_iso8859_2 nls_iso8859_15 nls_iso8859_13 nls_iso8859_1 nls_cp437 mac80211(O) ts_fsm ts_bm ts_kmp crc_ccitt ipv6 input_polldev cfg80211(O) compat(O) input_core chainiv eseqiv crypto_wq sha1_generic krng rng md5 hmac des_generic cbc authenc arc4 aes_generic crypto_blkcipher cryptomgr aead usb_storage ohci_hcd ehci_hcd sd_mod ext4 jbd2 mbcache usbcore usb_common scsi_mod nls_base crc16 zlib_deflate crypto_hash crypto_algapi ledtrig_timer ledtrig_default_on leds_gpio
+[  835.734375] Process wget (pid: 4415, threadinfo=8633c000, task=862d6568, tls=77644440)
+[  835.734375] Stack : 87d171e0 80287df4 86b13e40 80360000 802e0544 86b13e40 86b13e40 86210900
+[  835.734375]         80360000 802e0544 00000001 80231494 00000000 00000000 8633dde8 80092830
+[  835.734375]         1000fc03 00000000 ffffffff 00000580 86210900 80287e98 8028c47c 86210900
+[  835.734375]         86b13e40 862599c0 80360000 801db330 8633dd04 0009002b 86210900 00000b00
+[  835.734375]         86311b40 86210900 00001000 86311b40 00000000 00000001 86210bcc 802225e4
+[  835.734375]         ...
+[  835.734375] Call Trace:
+[  835.734375] [<8022ac28>] tcp_rcv_established+0xa8/0x690
+[  835.734375] [<80231494>] tcp_v4_do_rcv+0x40/0x244
+[  835.734375] [<801db330>] release_sock+0xa8/0x10c
+[  835.734375] [<802225e4>] tcp_recvmsg+0x754/0x868
+[  835.734375] [<80240144>] inet_recvmsg+0x44/0x60
+[  835.734375] [<801d936c>] sock_aio_read+0x118/0x130
+[  835.734375] [<800dd568>] do_sync_read+0xa8/0xf8
+[  835.734375] [<800dde50>] vfs_read+0xc4/0x14c
+[  835.734375] [<800ddf30>] sys_read+0x58/0x9c
+[  835.734375] [<80069e24>] stack_done+0x20/0x40
+[  835.734375] 
+[  835.734375] 
+[  835.734375] Code: ae43035c  8cc30018  ae430354 <8cc4001c> ae440358  8e440350  00641823  04600101  0267182b 
+20349

@@ -1,0 +1,20 @@
+37c37
+<      git clone git://github.com/dtaht/cerofiles-3.3.git;
+---
+>      git clone git://github.com/dtaht/cerofiles.git;
+42c42
+< git clone --reference openwrt $CERO_MAIN cerowrt-3.3
+---
+> git clone --reference openwrt $CERO_MAIN cerowrt
+46c46
+< git clone cerowrt-3.3 $CERO_TARGET
+---
+> git clone cerowrt $CERO_TARGET
+54c54
+< git remote add ceromain $CERO_DIR/cerofiles-3.3
+---
+> git remote add ceromain $CERO_DIR/cerofiles
+97c97
+< rm -rf luci packages openwrt ceropackages bismark-packages cerofiles-3.3 public_html/cerowrt cerowrt-3.3 Ceropatches openflow-openwrt-bismark
+---
+> rm -rf luci packages openwrt ceropackages bismark-packages cerofiles public_html/cerowrt cerowrt Ceropatches openflow-openwrt-bismark

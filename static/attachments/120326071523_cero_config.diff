@@ -1,0 +1,4 @@
+12c12
+< CERO_MAIN=git://github.com/dtaht/Cerowrt-3.3.git
+---
+> CERO_MAIN=git://github.com/dtaht/Cerowrt.git

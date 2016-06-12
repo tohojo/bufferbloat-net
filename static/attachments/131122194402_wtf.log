@@ -1,0 +1,143 @@
+Nov 19 01:56:59 gw-comcast daemon.info xinetd[3514]: At least 1 DENY_TIME has expired, global_no_access list updated
+Nov 19 01:56:59 gw-comcast daemon.info xinetd[3514]: global_no_access list is empty.
+Nov 19 05:57:48 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 19 05:57:48 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.71 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 19 06:00:24 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 19 06:00:24 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 19 07:56:00 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: disassociated due to inactivity
+Nov 19 07:56:01 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+Nov 19 08:31:14 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 19 08:33:53 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 19 08:42:58 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 19 08:42:58 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 19 09:16:15 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 19 09:19:08 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 19 09:19:08 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 19 09:21:45 gw-comcast daemon.info hostapd: sw10: STA f8:1e:df:e4:d5:ec IEEE 802.11: authenticated
+Nov 19 09:21:45 gw-comcast daemon.info hostapd: sw10: STA f8:1e:df:e4:d5:ec IEEE 802.11: associated (aid 1)
+Nov 19 09:21:45 gw-comcast daemon.info hostapd: sw10: STA f8:1e:df:e4:d5:ec RADIUS: starting accounting session 524B1718-00000024
+Nov 19 09:21:45 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw10) 192.168.11.100 f8:1e:df:e4:d5:ec 
+Nov 19 09:21:45 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPNAK(sw10) 192.168.11.100 f8:1e:df:e4:d5:ec wrong address
+Nov 19 09:21:45 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPDISCOVER(sw10) f8:1e:df:e4:d5:ec 
+Nov 19 09:21:45 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPOFFER(sw10) 172.26.3.120 f8:1e:df:e4:d5:ec 
+Nov 19 09:21:46 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw10) 172.26.3.120 f8:1e:df:e4:d5:ec 
+Nov 19 09:21:46 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw10) 172.26.3.120 f8:1e:df:e4:d5:ec 
+Nov 19 11:30:05 gw-comcast daemon.crit xinetd[3514]: 3514 {process_sensor} Adding 50.151.13.24 to the global_no_access list for 120 minutes
+Nov 19 13:30:13 gw-comcast daemon.info xinetd[3514]: At least 1 DENY_TIME has expired, global_no_access list updated
+Nov 19 13:30:13 gw-comcast daemon.info xinetd[3514]: global_no_access list is empty.
+Nov 19 16:22:20 gw-comcast daemon.info hostapd: sw10: STA f8:1e:df:e4:d5:ec IEEE 802.11: disassociated
+Nov 19 16:22:21 gw-comcast daemon.info hostapd: sw10: STA f8:1e:df:e4:d5:ec IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+Nov 19 16:48:06 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 19 16:48:06 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.71 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 19 17:12:42 gw-comcast daemon.notice miniupnpd[2457]: remove port mapping 25546 TCP because it has expired
+Nov 19 17:12:42 gw-comcast daemon.notice miniupnpd[2457]: remove port mapping 25546 UDP because it has expired
+Nov 19 17:21:18 gw-comcast daemon.notice miniupnpd[2457]: remove port mapping 22222 UDP because it has expired
+Nov 19 17:21:18 gw-comcast daemon.notice miniupnpd[2457]: remove port mapping 22222 TCP because it has expired
+Nov 19 17:29:01 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 19 17:29:01 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.71 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 19 17:49:07 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: authenticated
+Nov 19 17:49:07 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: associated (aid 2)
+Nov 19 17:49:07 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b RADIUS: starting accounting session 52293C94-00000044
+Nov 19 17:49:08 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPDISCOVER(sw00) 08:60:6e:a4:67:8b 
+Nov 19 17:49:08 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPOFFER(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 19 17:49:08 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 19 17:49:08 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 19 18:00:09 gw-comcast daemon.notice netifd: ge00 (994): Sending renew...
+Nov 19 18:00:09 gw-comcast daemon.notice netifd: ge00 (994): Lease of 50.131.246.224 obtained, lease time 345600
+Nov 19 18:00:14 gw-comcast daemon.info dnsmasq[3585]: reading /tmp/resolv.conf.auto
+Nov 19 18:00:14 gw-comcast daemon.info dnsmasq[3585]: using nameserver 75.75.75.75#53
+Nov 19 18:00:14 gw-comcast daemon.info dnsmasq[3585]: using nameserver 75.75.76.76#53
+Nov 19 18:00:14 gw-comcast daemon.info dnsmasq[3585]: using local addresses only for domain hm.armory.com
+Nov 20 01:59:07 gw-comcast daemon.crit xinetd[3514]: 3514 {process_sensor} Adding 50.151.13.24 to the global_no_access list for 120 minutes
+Nov 20 03:59:13 gw-comcast daemon.info xinetd[3514]: At least 1 DENY_TIME has expired, global_no_access list updated
+Nov 20 03:59:13 gw-comcast daemon.info xinetd[3514]: global_no_access list is empty.
+Nov 20 04:08:38 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 20 04:08:38 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.71 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 20 05:00:13 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 20 05:00:13 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.71 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 20 05:20:21 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 20 05:20:21 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 20 15:55:17 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 20 15:55:17 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.71 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 20 16:31:26 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 20 16:31:26 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.71 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 20 16:51:34 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 20 16:51:34 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 20 17:29:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: authenticated
+Nov 20 17:29:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: associated (aid 2)
+Nov 20 17:29:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b RADIUS: starting accounting session 52293C94-00000045
+Nov 20 17:29:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: associated (aid 2)
+Nov 20 17:29:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b RADIUS: starting accounting session 52293C94-00000046
+Nov 20 17:30:56 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: authenticated
+Nov 20 17:30:56 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: associated (aid 2)
+Nov 20 17:30:56 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b RADIUS: starting accounting session 52293C94-00000047
+Nov 20 17:30:57 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 20 17:30:57 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 20 18:16:43 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:37:fd IEEE 802.11: disassociated
+Nov 20 18:16:43 gw-comcast daemon.info hostapd: gw00: STA 08:60:6e:a4:37:fd IEEE 802.11: authenticated
+Nov 20 18:16:43 gw-comcast daemon.info hostapd: gw00: STA 08:60:6e:a4:37:fd IEEE 802.11: associated (aid 1)
+Nov 20 18:16:43 gw-comcast daemon.info hostapd: gw00: STA 08:60:6e:a4:37:fd RADIUS: starting accounting session 52293C94-00000004
+Nov 20 18:16:44 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.71 08:60:6e:a4:37:fd 
+Nov 20 18:16:44 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPNAK(gw00) 172.26.3.71 08:60:6e:a4:37:fd wrong network
+Nov 20 18:16:48 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPDISCOVER(gw00) 08:60:6e:a4:37:fd 
+Nov 20 18:16:48 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPOFFER(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 20 18:16:48 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 20 18:16:48 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 20 18:17:13 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:37:fd IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+Nov 20 18:37:35 gw-comcast daemon.crit xinetd[3514]: 3514 {process_sensor} Adding 223.74.12.211 to the global_no_access list for 120 minutes
+Nov 20 18:54:46 gw-comcast daemon.crit xinetd[3514]: 3514 {process_sensor} Adding 200.82.199.108 to the global_no_access list for 120 minutes
+Nov 20 20:37:41 gw-comcast daemon.info xinetd[3514]: At least 1 DENY_TIME has expired, global_no_access list updated
+Nov 20 20:54:52 gw-comcast kern.info kernel: [4357438.500000] ge00: link down
+Nov 20 20:54:53 gw-comcast kern.debug kernel: [4357439.500000] ar71xx: pll_reg 0xb8050014: 0x1099
+Nov 20 20:54:53 gw-comcast kern.info kernel: [4357439.500000] ge00: link up (100Mbps/Full duplex)
+Nov 20 20:55:42 gw-comcast daemon.info xinetd[3514]: At least 1 DENY_TIME has expired, global_no_access list updated
+Nov 20 20:55:42 gw-comcast daemon.info xinetd[3514]: global_no_access list is empty.
+Nov 21 02:36:14 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: disassociated due to inactivity
+Nov 21 02:36:15 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+Nov 21 05:48:00 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 21 05:48:00 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 21 15:59:43 gw-comcast daemon.err rngd: failed fips test
+Nov 21 16:54:59 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 21 16:54:59 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 21 17:19:12 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 21 17:19:12 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 21 17:34:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: authenticated
+Nov 21 17:34:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: associated (aid 1)
+Nov 21 17:34:34 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b RADIUS: starting accounting session 52293C94-00000048
+Nov 21 17:34:38 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPDISCOVER(sw00) 08:60:6e:a4:67:8b 
+Nov 21 17:34:38 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPOFFER(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 21 17:34:38 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 21 17:34:38 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 21 17:48:22 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: authenticated
+Nov 21 17:48:22 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b IEEE 802.11: associated (aid 1)
+Nov 21 17:48:22 gw-comcast daemon.info hostapd: sw00: STA 08:60:6e:a4:67:8b RADIUS: starting accounting session 52293C94-00000049
+Nov 21 17:48:23 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 21 17:48:23 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 21 17:59:47 gw-comcast daemon.notice netifd: ge00 (994): Sending renew...
+Nov 21 17:59:47 gw-comcast daemon.notice netifd: ge00 (994): Lease of 50.131.246.224 obtained, lease time 345600
+Nov 21 18:00:18 gw-comcast daemon.info dnsmasq[3585]: reading /tmp/resolv.conf.auto
+Nov 21 18:00:18 gw-comcast daemon.info dnsmasq[3585]: using nameserver 75.75.75.75#53
+Nov 21 18:00:18 gw-comcast daemon.info dnsmasq[3585]: using nameserver 75.75.76.76#53
+Nov 21 18:00:18 gw-comcast daemon.info dnsmasq[3585]: using local addresses only for domain hm.armory.com
+Nov 21 18:10:51 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 21 18:43:45 gw-comcast kern.err kernel: [4435981.170000] ath: phy0: Failed to stop TX DMA, queues=0x008!
+Nov 22 04:07:33 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 22 04:07:33 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 22 04:50:25 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 22 04:50:25 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 22 05:19:36 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 22 05:19:36 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 22 11:57:09 gw-comcast daemon.crit xinetd[3514]: 3514 {process_sensor} Adding 189.23.85.195 to the global_no_access list for 120 minutes
+Nov 22 12:28:09 gw-comcast daemon.crit xinetd[3514]: 3514 {process_sensor} Adding 211.143.164.135 to the global_no_access list for 120 minutes
+Nov 22 13:57:15 gw-comcast daemon.info xinetd[3514]: At least 1 DENY_TIME has expired, global_no_access list updated
+Nov 22 14:28:16 gw-comcast daemon.info xinetd[3514]: At least 1 DENY_TIME has expired, global_no_access list updated
+Nov 22 14:28:16 gw-comcast daemon.info xinetd[3514]: global_no_access list is empty.
+Nov 22 15:52:41 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 22 15:52:41 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 22 16:21:37 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(gw00) 172.26.3.135 08:60:6e:a4:37:fd 
+Nov 22 16:21:37 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(gw00) 172.26.3.135 08:60:6e:a4:37:fd android-ae567986886a637
+Nov 22 16:50:49 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPREQUEST(sw00) 172.26.3.79 08:60:6e:a4:67:8b 
+Nov 22 16:50:49 gw-comcast daemon.info dnsmasq-dhcp[3585]: DHCPACK(sw00) 172.26.3.79 08:60:6e:a4:67:8b android-98bf1e4963e3fa79
+Nov 22 17:10:20 gw-comcast daemon.warn dnsmasq-dhcp[3585]: no address range available for DHCP request via se00
+Nov 22 19:12:49 gw-comcast authpriv.info dropbear[15714]: Child connection from 192.122.209.135:32816
+Nov 22 19:12:59 gw-comcast authpriv.notice dropbear[15714]: Password auth succeeded for 'root' from 192.122.209.135:32816

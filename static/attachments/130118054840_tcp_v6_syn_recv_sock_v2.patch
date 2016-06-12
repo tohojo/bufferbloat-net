@@ -1,0 +1,95 @@
+diff --git a/include/linux/ipv6.h b/include/linux/ipv6.h
+index 74a90be..8fa93bc 100644
+--- a/include/linux/ipv6.h
++++ b/include/linux/ipv6.h
+@@ -74,7 +74,7 @@ static inline struct ipv6hdr *ipipv6_hdr(const struct sk_buff *skb)
+ 
+ static inline __u8 ipv6_tclass(const struct ipv6hdr *iph)
+ {
+-	return (ntohl(*(__be32 *)iph) >> 20) & 0xff;
++	return (ntohl(net_hdr_word(iph)) >> 20) & 0xff;
+ }
+ 
+ /* 
+diff --git a/include/net/ndisc.h b/include/net/ndisc.h
+index e61a388..b79fef2 100644
+--- a/include/net/ndisc.h
++++ b/include/net/ndisc.h
+@@ -76,7 +76,7 @@ struct ra_msg {
+         struct icmp6hdr		icmph;
+ 	__be32			reachable_time;
+ 	__be32			retrans_timer;
+-};
++} __attribute__((packed, aligned(2)));
+ 
+ struct rd_msg {
+ 	struct icmp6hdr icmph;
+@@ -163,8 +163,10 @@ static inline struct neighbour *__ipv6_neigh_lookup(struct neigh_table *tbl, str
+ 	     n = rcu_dereference_bh(n->next)) {
+ 		u32 *n32 = (u32 *) n->primary_key;
+ 		if (n->dev == dev &&
+-		    ((n32[0] ^ p32[0]) | (n32[1] ^ p32[1]) |
+-		     (n32[2] ^ p32[2]) | (n32[3] ^ p32[3])) == 0) {
++		    ((n32[0] ^ net_hdr_word(&p32[0])) |
++		     (n32[1] ^ net_hdr_word(&p32[1])) |
++		     (n32[2] ^ net_hdr_word(&p32[2])) |
++		     (n32[3] ^ net_hdr_word(&p32[3])) == 0) {
+ 			if (!atomic_inc_not_zero(&n->refcnt))
+ 				n = NULL;
+ 			break;
+diff --git a/include/uapi/linux/xfrm.h b/include/uapi/linux/xfrm.h
+index 28e493b..74a9d71 100644
+--- a/include/uapi/linux/xfrm.h
++++ b/include/uapi/linux/xfrm.h
+@@ -13,7 +13,7 @@
+ typedef union {
+ 	__be32		a4;
+ 	__be32		a6[4];
+-} xfrm_address_t;
++} __attribute__((packed, aligned(2))) xfrm_address_t;
+ 
+ /* Ident of a specific xfrm_state. It is used on input to lookup
+  * the state by (spi,daddr,ah/esp) or to store information about
+diff --git a/net/core/secure_seq.c b/net/core/secure_seq.c
+index e61a8bb..4005c6a 100644
+--- a/net/core/secure_seq.c
++++ b/net/core/secure_seq.c
+@@ -43,10 +43,11 @@ __u32 secure_tcpv6_sequence_number(const __be32 *saddr, const __be32 *daddr,
+ 	u32 secret[MD5_MESSAGE_BYTES / 4];
+ 	u32 hash[MD5_DIGEST_WORDS];
+ 	u32 i;
++	const struct in6_addr *daddr6 = (struct in6_addr *) daddr;
+ 
+ 	memcpy(hash, saddr, 16);
+ 	for (i = 0; i < 4; i++)
+-		secret[i] = net_secret[i] + (__force u32)daddr[i];
++		secret[i] = net_secret[i] + (__force u32)daddr6->s6_addr32[i];
+ 	secret[4] = net_secret[4] +
+ 		(((__force u16)sport << 16) + (__force u16)dport);
+ 	for (i = 5; i < MD5_MESSAGE_BYTES / 4; i++)
+@@ -64,10 +65,11 @@ u32 secure_ipv6_port_ephemeral(const __be32 *saddr, const __be32 *daddr,
+ 	u32 secret[MD5_MESSAGE_BYTES / 4];
+ 	u32 hash[MD5_DIGEST_WORDS];
+ 	u32 i;
++	const struct in6_addr *daddr6 = (struct in6_addr *) daddr;
+ 
+ 	memcpy(hash, saddr, 16);
+ 	for (i = 0; i < 4; i++)
+-		secret[i] = net_secret[i] + (__force u32) daddr[i];
++		secret[i] = net_secret[i] + (__force u32) daddr6->s6_addr32[i];
+ 	secret[4] = net_secret[4] + (__force u32)dport;
+ 	for (i = 5; i < MD5_MESSAGE_BYTES / 4; i++)
+ 		secret[i] = net_secret[i];
+@@ -165,10 +167,11 @@ u64 secure_dccpv6_sequence_number(__be32 *saddr, __be32 *daddr,
+ 	u32 hash[MD5_DIGEST_WORDS];
+ 	u64 seq;
+ 	u32 i;
++	const struct in6_addr *daddr6 = (struct in6_addr *) daddr;
+ 
+ 	memcpy(hash, saddr, 16);
+ 	for (i = 0; i < 4; i++)
+-		secret[i] = net_secret[i] + daddr[i];
++		secret[i] = net_secret[i] +  daddr6->s6_addr32[i];
+ 	secret[4] = net_secret[4] +
+ 		(((__force u16)sport << 16) + (__force u16)dport);
+ 	for (i = 5; i < MD5_MESSAGE_BYTES / 4; i++)

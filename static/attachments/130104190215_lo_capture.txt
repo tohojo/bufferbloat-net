@@ -1,0 +1,15 @@
+root@OpenWrt:~# httping -F -g http://127.0.0.1:8123
+PING 127.0.0.1:8123 (http://127.0.0.1:8123):
+16:36:36.033466 IP localhost.39443 > localhost.8123: Flags [SEW], seq 2946288341, win 43690, options [mss 65495,sackOK,TS val 4294964893 ecr 0,nop,wscale 6,Unknown Option 254f989], length 0 --> SYN + Coockie and no Data.
+connected to 127.0.0.1:8123 (183 bytes), seq=0 time=3.15 ms 
+16:36:36.033584 IP localhost.8123 > localhost.39443: Flags [S.E], seq 654941876, ack 2946288342, win 43690, options [mss 65495,sackOK,TS val 4294964893 ecr 4294964893,nop,wscale 6,Unknown Option 254f989df087214939732ef], length 0  --> SYN+ACK+Cookie
+16:36:36.033638 IP localhost.39443 > localhost.8123: Flags [.], ack 1, win 683, options [nop,nop,TS val 4294964893 ecr 4294964893], length 0
+16:36:36.034971 IP localhost.39443 > localhost.8123: Flags [P.], seq 1:65, ack 1, win 683, options [nop,nop,TS val 4294964894 ecr 4294964893], length 64 --> HTTP Request HEAD
+16:36:36.035112 IP localhost.8123 > localhost.39443: Flags [.], ack 65, win 683, options [nop,nop,TS val 4294964894 ecr 4294964894], length 0
+16:36:36.035808 IP localhost.8123 > localhost.39443: Flags [P.], seq 1:184, ack 65, win 683, options [nop,nop,TS val 4294964894 ecr 4294964894], length 183  --> HTTP Response
+16:36:36.035965 IP localhost.8123 > localhost.39443: Flags [F.], seq 184, ack 65, win 683, options [nop,nop,TS val 4294964894 ecr 4294964894], length 0
+16:36:36.036082 IP localhost.39443 > localhost.8123: Flags [.], ack 184, win 700, options [nop,nop,TS val 4294964894 ecr 4294964894], length 0
+16:36:36.036350 IP localhost.39443 > localhost.8123: Flags [F.], seq 65, ack 185, win 700, options [nop,nop,TS val 4294964894 ecr 4294964894], length 0
+16:36:36.036462 IP localhost.8123 > localhost.39443: Flags [.], ack 66, win 683, options [nop,nop,TS val 4294964894 ecr 4294964894], length 0  --> Connection Completes
+
+### No packets seen later - Probably SYN+Data Crashed the box ###

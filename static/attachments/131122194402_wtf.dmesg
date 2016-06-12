@@ -1,0 +1,262 @@
+[    0.000000] Linux version 3.7.1 (cero2@snapon) (gcc version 4.6.4 20121106 (prerelease) (Linaro GCC 4.6-2012.11) ) #1 Tue Jan 1 12:58:20 PST 2013
+[    0.000000] MyLoader: sysp=aaaa5554, boardp=aaaa5554, parts=aaaa5554
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU revision is: 00019374 (MIPS 24Kc)
+[    0.000000] SoC: Atheros AR7161 rev 2
+[    0.000000] Clocks: CPU:680.000MHz, DDR:340.000MHz, AHB:170.000MHz, Ref:40.000MHz
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x07ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x07ffffff]
+[    0.000000] On node 0 totalpages: 32768
+[    0.000000] free_area_init_node: node 0, pgdat 8033e920, node_mem_map 81000000
+[    0.000000]   Normal zone: 256 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 32512 pages, LIFO batch:7
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line:  board=WNDR3700 console=ttyS0,115200 mtdparts=spi0.0:320k(u-boot)ro,128k(u-boot-env)ro,1088k(kernel),14784k(rootfs),64k(art)ro,15872k@0x70000(firmware) rootfstype=squashfs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] __ex_table already sorted, skipping sort
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 126124k/131072k available (2334k kernel code, 4948k reserved, 605k data, 256k init, 0k highmem)
+[    0.000000] SLUB: Genslabs=9, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.060000] Calibrating delay loop... 452.19 BogoMIPS (lpj=2260992)
+[    0.060000] pid_max: default: 32768 minimum: 301
+[    0.060000] Mount-cache hash table entries: 512
+[    0.070000] NET: Registered protocol family 16
+[    0.070000] MIPS: machine is NETGEAR WNDR3700/WNDR3800/WNDRMAC
+[    2.670000] registering PCI controller with io_map_base unset
+[    2.680000] bio: create slab <bio-0> at 0
+[    2.690000] PCI host bridge to bus 0000:00
+[    2.690000] pci_bus 0000:00: root bus resource [mem 0x10000000-0x16ffffff]
+[    2.700000] pci_bus 0000:00: root bus resource [io  0x0000]
+[    2.700000] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    2.710000] pci 0000:00:11.0: [168c:ff1d] type 00 class 0x020000
+[    2.710000] pci 0000:00:11.0: fixup device configuration
+[    2.710000] pci 0000:00:11.0: reg 10: [mem 0x00000000-0x0000ffff]
+[    2.710000] pci 0000:00:11.0: PME# supported from D0 D3hot
+[    2.710000] pci 0000:00:12.0: [168c:ff1d] type 00 class 0x020000
+[    2.710000] pci 0000:00:12.0: fixup device configuration
+[    2.720000] pci 0000:00:12.0: reg 10: [mem 0x00000000-0x0000ffff]
+[    2.720000] pci 0000:00:12.0: PME# supported from D0 D3hot
+[    2.720000] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 00
+[    2.720000] pci 0000:00:11.0: BAR 0: assigned [mem 0x10000000-0x1000ffff]
+[    2.720000] pci 0000:00:12.0: BAR 0: assigned [mem 0x10010000-0x1001ffff]
+[    2.730000] pci 0000:00:11.0: using irq 40 for pin 1
+[    2.730000] pci 0000:00:12.0: using irq 41 for pin 1
+[    2.740000] Switching to clocksource MIPS
+[    2.740000] NET: Registered protocol family 2
+[    2.750000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    2.750000] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    2.760000] TCP: Hash tables configured (established 4096 bind 4096)
+[    2.760000] TCP: reno registered
+[    2.770000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    2.770000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    2.780000] NET: Registered protocol family 1
+[    2.780000] PCI: CLS 0 bytes, default 32
+[    2.790000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.800000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    2.810000] msgmni has been set to 246
+[    2.810000] io scheduler noop registered
+[    2.820000] io scheduler deadline registered (default)
+[    2.820000] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    2.850000] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11) is a 16550A
+[    2.860000] console [ttyS0] enabled, bootconsole disabled
+[    2.870000] ath79-spi ath79-spi: master is unqueued, this is deprecated
+[    2.880000] m25p80 spi0.0: found mx25l12805d, expected m25p80
+[    2.880000] m25p80 spi0.0: mx25l12805d (16384 Kbytes)
+[    2.890000] 6 cmdlinepart partitions found on MTD device spi0.0
+[    2.890000] Creating 6 MTD partitions on "spi0.0":
+[    2.900000] 0x000000000000-0x000000050000 : "u-boot"
+[    2.910000] 0x000000050000-0x000000070000 : "u-boot-env"
+[    2.910000] 0x000000070000-0x000000180000 : "kernel"
+[    2.920000] 0x000000180000-0x000000ff0000 : "rootfs"
+[    2.920000] mtd: partition "rootfs" set to be root filesystem
+[    2.930000] mtd: partition "rootfs_data" created automatically, ofs=950000, len=6A0000 
+[    2.940000] 0x000000950000-0x000000ff0000 : "rootfs_data"
+[    2.940000] 0x000000ff0000-0x000001000000 : "art"
+[    2.950000] 0x000000070000-0x000000ff0000 : "firmware"
+[    2.960000] Realtek RTL8366S ethernet switch driver version 0.2.2
+[    2.970000] rtl8366s rtl8366s: using GPIO pins 5 (SDA) and 7 (SCK)
+[    2.970000] rtl8366s rtl8366s: RTL8366 ver. 1 chip found
+[    3.010000] libphy: rtl8366s: probed
+[    3.010000] eth0: Atheros AG71xx at 0xb9000000, irq 4, mode:RGMII
+[    3.320000] eth1: Atheros AG71xx at 0xba000000, irq 5, mode:RGMII
+[    3.630000] ag71xx ag71xx.1 eth1: connected to PHY at rtl8366s:04 [uid=001cc960, driver=Generic PHY]
+[    3.640000] TCP: cubic registered
+[    3.640000] NET: Registered protocol family 17
+[    3.650000] Bridge firewalling registered
+[    3.650000] 8021q: 802.1Q VLAN Support v1.8
+[    3.660000] VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+[    3.670000] Freeing unused kernel memory: 256k freed
+[    5.440000] ar71xx: pll_reg 0xb8050010: 0x11110000
+[    5.440000] eth0: link up (1000Mbps/Full duplex)
+[    5.560000] Registered led device: wndr3700:green:power
+[    5.560000] Registered led device: wndr3700:orange:power
+[    5.560000] Registered led device: wndr3700:green:wps
+[    5.560000] Registered led device: wndr3700:orange:wps
+[    5.560000] Registered led device: wndr3700:green:wan
+[    8.860000] jffs2: notice: (458) jffs2_build_xattr_subsystem: complete building xattr subsystem, 54 of xdatum (0 unchecked, 54 orphan) and 55 of xref (0 dead, 55 orphan) found.
+[    9.480000] SCSI subsystem initialized
+[    9.660000] usbcore: registered new interface driver usbfs
+[    9.660000] usbcore: registered new interface driver hub
+[    9.670000] usbcore: registered new device driver usb
+[   10.090000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   10.100000] ehci-platform ehci-platform: Generic Platform EHCI Controller
+[   10.110000] ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+[   10.150000] ehci-platform ehci-platform: irq 3, io mem 0x1b000000
+[   10.170000] ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+[   10.170000] hub 1-0:1.0: USB hub found
+[   10.180000] hub 1-0:1.0: 2 ports detected
+[   10.240000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[   10.250000] ohci-platform ohci-platform: Generic Platform OHCI Controller
+[   10.260000] ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+[   10.270000] ohci-platform ohci-platform: irq 14, io mem 0x1c000000
+[   10.330000] hub 2-0:1.0: USB hub found
+[   10.330000] hub 2-0:1.0: 2 ports detected
+[   10.380000] Initializing USB Mass Storage driver...
+[   10.380000] usbcore: registered new interface driver usb-storage
+[   10.390000] USB Mass Storage support registered.
+[   10.510000] usb 1-1: new high-speed USB device number 2 using ehci-platform
+[   10.660000] scsi0 : usb-storage 1-1:1.0
+[   11.740000] scsi 0:0:0:0: Direct-Access     Kingston DataTraveler G3  PMAP PQ: 0 ANSI: 0 CCS
+[   13.950000] sd 0:0:0:0: [sda] 30481152 512-byte logical blocks: (15.6 GB/14.5 GiB)
+[   13.960000] sd 0:0:0:0: [sda] Write Protect is off
+[   13.970000] sd 0:0:0:0: [sda] Mode Sense: 23 00 00 00
+[   13.970000] sd 0:0:0:0: [sda] No Caching mode page present
+[   13.970000] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[   13.980000] sd 0:0:0:0: [sda] No Caching mode page present
+[   13.990000] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[   14.010000]  sda: sda1
+[   14.020000] sd 0:0:0:0: [sda] No Caching mode page present
+[   14.030000] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[   14.030000] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   30.760000] eth0: link down
+[   33.190000] Compat-drivers backport release: compat-drivers-2012-12-04
+[   33.190000] Backport based on wireless-testing.git master-2012-12-06
+[   33.200000] compat.git: wireless-testing.git
+[   33.330000] cfg80211: Calling CRDA to update world regulatory domain
+[   33.330000] cfg80211: World regulatory domain updated:
+[   33.340000] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   33.350000] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   33.350000] cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[   33.360000] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[   33.370000] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   33.380000] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   33.680000] NET: Registered protocol family 10
+[   34.510000] PCI: Enabling device 0000:00:11.0 (0000 -> 0002)
+[   34.520000] ath: phy0: eeprom contains invalid mac address: ff:ff:ff:ff:ff:ff
+[   34.530000] ath: phy0: random mac address will be used: 4e:33:e3:95:97:ad
+[   34.540000] ath: EEPROM regdomain: 0x0
+[   34.540000] ath: EEPROM indicates default country code should be used
+[   34.540000] ath: doing EEPROM country->regdmn map search
+[   34.540000] ath: country maps to regdmn code: 0x3a
+[   34.540000] ath: Country alpha2 being used: US
+[   34.540000] ath: Regpair used: 0x3a
+[   34.540000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+[   34.540000] Registered led device: ath9k-phy0
+[   34.540000] ieee80211 phy0: Atheros AR9280 Rev:2 mem=0xb0000000, irq=40
+[   34.550000] PCI: Enabling device 0000:00:12.0 (0000 -> 0002)
+[   34.560000] ath: EEPROM regdomain: 0x0
+[   34.560000] ath: EEPROM indicates default country code should be used
+[   34.560000] ath: doing EEPROM country->regdmn map search
+[   34.560000] ath: country maps to regdmn code: 0x3a
+[   34.560000] ath: Country alpha2 being used: US
+[   34.560000] ath: Regpair used: 0x3a
+[   34.570000] ieee80211 phy1: Selected rate control algorithm 'minstrel_ht'
+[   34.570000] Registered led device: ath9k-phy1
+[   34.570000] ieee80211 phy1: Atheros AR9280 Rev:2 mem=0xb0010000, irq=41
+[   34.590000] cfg80211: Calling CRDA for country: US
+[   34.590000] cfg80211: Regulatory domain changed to country: US
+[   34.600000] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   34.600000] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2700 mBm)
+[   34.610000] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 1700 mBm)
+[   34.620000] cfg80211:   (5250000 KHz - 5330000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   34.630000] cfg80211:   (5490000 KHz - 5600000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   34.630000] cfg80211:   (5650000 KHz - 5710000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   34.640000] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 3000 mBm)
+[   34.650000] Button Hotplug driver version 0.4.1
+[   34.990000] af_key: Unknown symbol xfrm_count_enc_supported (err 0)
+[   34.990000] af_key: Unknown symbol xfrm_calg_get_byid (err 0)
+[   35.000000] af_key: Unknown symbol xfrm_count_auth_supported (err 0)
+[   35.000000] af_key: Unknown symbol xfrm_ealg_get_byname (err 0)
+[   35.010000] af_key: Unknown symbol xfrm_aalg_get_byname (err 0)
+[   35.020000] af_key: Unknown symbol xfrm_aalg_get_byid (err 0)
+[   35.020000] af_key: Unknown symbol xfrm_ealg_get_byid (err 0)
+[   35.030000] af_key: Unknown symbol xfrm_ealg_get_byidx (err 0)
+[   35.030000] af_key: Unknown symbol xfrm_calg_get_byname (err 0)
+[   35.040000] af_key: Unknown symbol xfrm_probe_algs (err 0)
+[   35.040000] af_key: Unknown symbol xfrm_aalg_get_byidx (err 0)
+[   35.060000] xfrm_ipcomp: Unknown symbol xfrm_calg_get_byname (err 0)
+[   35.150000] Initializing XFRM netlink socket
+[   35.290000] PPP generic driver version 2.4.2
+[   35.320000] TCP: ledbat registered
+[   35.370000] tun: Universal TUN/TAP device driver, 1.6
+[   35.370000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   35.730000] ipcomp: Unknown symbol ipcomp_input (err 0)
+[   35.740000] ipcomp: Unknown symbol ipcomp_destroy (err 0)
+[   35.740000] ipcomp: Unknown symbol ipcomp_output (err 0)
+[   35.750000] ipcomp: Unknown symbol ipcomp_init_state (err 0)
+[   35.830000] sit: IPv6 over IPv4 tunneling driver
+[   35.920000] gre: GRE over IPv4 demultiplexor driver
+[   35.940000] ip_gre: GRE over IPv4 tunneling driver
+[   36.150000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   36.330000] NET: Registered protocol family 24
+[   36.430000] nf_conntrack version 0.5.0 (1974 buckets, 7896 max)
+[   36.690000] PPTP driver version 0.8.5
+[   36.970000] xt_time: kernel timezone is -0000
+[   37.200000] Netfilter messages via NETLINK v0.30.
+[   37.300000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   37.450000] ip_set: protocol 6
+[   37.930000] Error: Driver 'gpio-keys-polled' is already registered, aborting...
+[   38.220000] u32 classifier
+[   38.220000]     Performance counters on
+[   38.230000]     input device check on
+[   38.230000]     Actions configured
+[   38.320000] Mirror/redirect action on
+[   38.530000] netem: version 1.3
+[   41.450000] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[   43.100000] IPv6: ADDRCONF(NETDEV_UP): ge00: link is not ready
+[   43.110000] ar71xx: pll_reg 0xb8050010: 0x11110000
+[   43.120000] se00: link up (1000Mbps/Full duplex)
+[   45.820000] ar71xx: pll_reg 0xb8050014: 0x1099
+[   45.820000] ge00: link up (100Mbps/Full duplex)
+[   45.820000] IPv6: ADDRCONF(NETDEV_CHANGE): ge00: link becomes ready
+[   48.410000] IPv6: ADDRCONF(NETDEV_UP): sw00: link is not ready
+[   48.510000] IPv6: ADDRCONF(NETDEV_UP): sw00: link is not ready
+[   48.570000] IPv6: ADDRCONF(NETDEV_CHANGE): sw00: link becomes ready
+[   48.590000] IPv6: ADDRCONF(NETDEV_UP): gw00: link is not ready
+[   48.620000] IPv6: ADDRCONF(NETDEV_CHANGE): gw00: link becomes ready
+[   53.280000] IPv6: ADDRCONF(NETDEV_UP): gw01: link is not ready
+[   59.090000] IPv6: ADDRCONF(NETDEV_UP): sw10: link is not ready
+[   59.190000] IPv6: ADDRCONF(NETDEV_UP): sw10: link is not ready
+[   59.210000] IPv6: ADDRCONF(NETDEV_UP): gw10: link is not ready
+[   59.280000] IPv6: ADDRCONF(NETDEV_CHANGE): sw10: link becomes ready
+[   59.280000] IPv6: ADDRCONF(NETDEV_CHANGE): gw10: link becomes ready
+[   62.040000] gw01: Creating new IBSS network, BSSID 16:dd:1b:f4:de:75
+[   62.040000] IPv6: ADDRCONF(NETDEV_CHANGE): gw01: link becomes ready
+[   65.140000] IPv6: ADDRCONF(NETDEV_UP): gw11: link is not ready
+[   73.040000] gw11: Creating new IBSS network, BSSID 5a:a6:85:3b:9f:88
+[   73.040000] IPv6: ADDRCONF(NETDEV_CHANGE): gw11: link becomes ready
+[190328.370000] nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+[2878244.400000] ath: phy0: Failed to stop TX DMA, queues=0x008!
+[3328636.560000] ath: phy0: Failed to stop TX DMA, queues=0x008!
+[3561842.400000] ath: phy0: Failed to stop TX DMA, queues=0x008!
+[3658050.960000] ath: phy0: Failed to stop TX DMA, queues=0x008!
+[4189611.200000] UDP: bad checksum. From 64.134.188.17:48291 to 50.131.246.224:22222 ulen 103
+[4357438.500000] ge00: link down
+[4357439.500000] ar71xx: pll_reg 0xb8050014: 0x1099
+[4357439.500000] ge00: link up (100Mbps/Full duplex)
+[4435981.170000] ath: phy0: Failed to stop TX DMA, queues=0x008!

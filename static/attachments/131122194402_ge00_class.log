@@ -1,0 +1,98 @@
+class htb 1:11 parent 1:1 leaf 110: prio 1 rate 128000bit ceil 1566Kbit burst 1600b cburst 1599b 
+ Sent 241756323 bytes 1785288 pkt (dropped 0, overlimits 0 requeues 0) 
+ rate 72bit 0pps backlog 0b 0p requeues 0 
+ lended: 1712754 borrowed: 72534 giants: 0
+ tokens: 1445313 ctokens: 118125
+
+class htb 1:1 root rate 4700Kbit ceil 4700Kbit burst 1599b cburst 1599b 
+ Sent 138391912024 bytes 868997248 pkt (dropped 0, overlimits 0 requeues 0) 
+ rate 4467Kbit 3469pps backlog 0b 0p requeues 0 
+ lended: 664108694 borrowed: 0 giants: 0
+ tokens: 38093 ctokens: 38093
+
+class htb 1:10 parent 1:1 prio 0 rate 4700Kbit ceil 4700Kbit burst 1599b cburst 1599b 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ rate 0bit 0pps backlog 0b 0p requeues 0 
+ lended: 0 borrowed: 0 giants: 0
+ tokens: 42546 ctokens: 42546
+
+class htb 1:13 parent 1:1 leaf 130: prio 3 rate 783000bit ceil 4636Kbit burst 1599b cburst 1599b 
+ Sent 24453110 bytes 346224 pkt (dropped 0, overlimits 0 requeues 0) 
+ rate 112bit 0pps backlog 0b 0p requeues 0 
+ lended: 345282 borrowed: 942 giants: 0
+ tokens: 238929 ctokens: 41522
+
+class htb 1:12 parent 1:1 leaf 120: prio 2 rate 783000bit ceil 4636Kbit burst 1599b cburst 1599b 
+ Sent 138125702591 bytes 866865736 pkt (dropped 0, overlimits 0 requeues 0) 
+ rate 4467Kbit 3468pps backlog 0b 176p requeues 0 
+ lended: 202830518 borrowed: 664035218 giants: 0
+ tokens: -7501 ctokens: -4373
+
+class fq_codel 110:107 parent 110: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 225 count 0 lastcount 0 ldelay 4us
+class fq_codel 110:174 parent 110: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 225 count 0 lastcount 0 ldelay 6us
+class fq_codel 110:1dd parent 110: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 144 count 0 lastcount 0 ldelay 5us
+class fq_codel 110:3f1 parent 110: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 181 count 0 lastcount 0 ldelay 9us
+class fq_codel 120:2e7 parent 120: 
+ (dropped 146244377, overlimits 0 requeues 0) 
+ backlog 28175b 175p requeues 0 
+  deficit 28 count 7674 lastcount 2200 ldelay 49.9ms dropping drop_next 724us
+class fq_codel 130:85 parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 192 count 0 lastcount 0 ldelay 7us
+class fq_codel 130:bf parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 192 count 0 lastcount 0 ldelay 5us
+class fq_codel 130:c4 parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 234 count 0 lastcount 0 ldelay 12us
+class fq_codel 130:cd parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 138 count 0 lastcount 0 ldelay 6us
+class fq_codel 130:ed parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 138 count 0 lastcount 0 ldelay 11us
+class fq_codel 130:120 parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 138 count 0 lastcount 0 ldelay 9us
+class fq_codel 130:149 parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 168 count 0 lastcount 0 ldelay 9us
+class fq_codel 130:1bc parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 192 count 0 lastcount 0 ldelay 4us
+class fq_codel 130:1ed parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 234 count 0 lastcount 0 ldelay 9us
+class fq_codel 130:2f7 parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 138 count 0 lastcount 0 ldelay 6us
+class fq_codel 130:333 parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 192 count 0 lastcount 0 ldelay 32us
+class fq_codel 130:3d1 parent 130: 
+ (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  deficit 192 count 0 lastcount 0 ldelay 4us

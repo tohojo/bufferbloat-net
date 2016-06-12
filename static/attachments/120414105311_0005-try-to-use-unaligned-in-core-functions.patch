@@ -1,0 +1,49 @@
+From 85db5abdcfab1472d98c2338ae1764f3e8ae39fe Mon Sep 17 00:00:00 2001
+From: Dave Taht <dave.taht@bufferbloat.net>
+Date: Sat, 14 Apr 2012 02:42:28 -0700
+Subject: [PATCH 5/5] try to use unaligned in core functions
+
+---
+ include/linux/skbuff.h |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/include/linux/skbuff.h b/include/linux/skbuff.h
+index ae86ade..a27eb39 100644
+--- a/include/linux/skbuff.h
++++ b/include/linux/skbuff.h
+@@ -1359,7 +1359,7 @@ static inline void skb_reset_mac_len(struct sk_buff *skb)
+ #ifdef NET_SKBUFF_DATA_USES_OFFSET
+ static inline unsigned char *skb_transport_header(const struct sk_buff *skb)
+ {
+-	return skb->head + skb->transport_header;
++  return (unsigned char *) (__get_unaligned_cpu32(&skb->head) + __get_unaligned_cpu32(&skb->transport_header);
+ }
+ 
+ static inline void skb_reset_transport_header(struct sk_buff *skb)
+@@ -1376,7 +1376,7 @@ static inline void skb_set_transport_header(struct sk_buff *skb,
+ 
+ static inline unsigned char *skb_network_header(const struct sk_buff *skb)
+ {
+-	return skb->head + skb->network_header;
++  return (unsigned char *) (__get_unaligned_cpu32(&skb->head) + __get_unaligned_cpu32(&skb->network_header));
+ }
+ 
+ static inline void skb_reset_network_header(struct sk_buff *skb)
+@@ -1426,12 +1426,12 @@ static inline void skb_reset_transport_header(struct sk_buff *skb)
+ static inline void skb_set_transport_header(struct sk_buff *skb,
+ 					    const int offset)
+ {
+-	skb->transport_header = skb->data + offset;
++  skb->transport_header = ((int) __get_unaligned_cpu32(&skb->data)) + offset;
+ }
+ 
+ static inline unsigned char *skb_network_header(const struct sk_buff *skb)
+ {
+-	return skb->network_header;
++  return (unsigned char *) __get_unaligned_cpu32(&skb->network_header);
+ }
+ 
+ static inline void skb_reset_network_header(struct sk_buff *skb)
+-- 
+1.7.5.4
+

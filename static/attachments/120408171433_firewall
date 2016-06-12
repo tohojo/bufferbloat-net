@@ -1,0 +1,109 @@
+
+config defaults
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	option drop_invalid '1'
+	option synflood_rate '200'
+	option synflood_burst '500'
+	option tcp_ecn '1'
+
+config zone
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option output 'ACCEPT'
+	option name 'wan'
+	option masq '1'
+	option mtu_fix '1'
+	option network 'ge00'
+
+config zone
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option output 'ACCEPT'
+	option name 'secure'
+	option network 'se00 sw00 sw10'
+
+config forwarding
+	option dest 'wan'
+	option src 'secure'
+
+config forwarding
+	option dest 'secure'
+	option src 'wan'
+
+config zone
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option output 'ACCEPT'
+	option name 'guest'
+	option network 'gw00 gw01 gw10 gw11'
+
+config forwarding
+	option dest 'wan'
+	option src 'guest'
+
+config forwarding
+	option dest 'guest'
+	option src 'secure'
+
+config forwarding
+	option dest 'guest'
+	option src 'wan'
+
+config rule
+	option target 'ACCEPT'
+	option name 'domain'
+	option src '*'
+	option dest '*'
+	option dest_port '53'
+
+config rule
+	option target 'ACCEPT'
+	option name 'ntp'
+	option proto 'udp'
+	option dest '*'
+	option src '*'
+	option dest_port '123'
+
+config rule
+	option target 'ACCEPT'
+	option name 'dhcp4'
+	option family 'ipv4'
+	option proto 'udp'
+	option src '*'
+	option dest '*'
+	option dest_port '68'
+
+config rule
+	option target 'ACCEPT'
+	option name 'printers'
+	option proto 'tcp'
+	option src '*'
+	option dest '*'
+	option dest_port '631'
+
+config rule
+	option target 'ACCEPT'
+	option name 'Useful Services'
+	option proto 'tcp'
+	option src '*'
+	option dest '*'
+	option dest_port '80 433 873 993'
+
+config rule
+	option target 'ACCEPT'
+	option name 'ipv6 dfz'
+	option family 'ipv6'
+	option proto 'all'
+	option src '*'
+	option dest 'guest'
+
+config rule
+	option target 'ACCEPT'
+	option name 'icmpv6'
+	option family 'ipv6'
+	option proto 'icmp'
+	option src '*'
+	option dest '*'
+

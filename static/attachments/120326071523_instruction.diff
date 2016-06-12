@@ -1,0 +1,17 @@
+7c7
+< git clone git://github.com/dtaht/cerofiles-3.3.git
+---
+> git clone git://github.com/dtaht/cerofiles.git
+19d18
+< cd wndr3700v2
+
+Before make; also do -
+cd cerowrt-3.3
+./scripts/feeds install
+
+The above step required only once. Subsequently for fetching any changes done to the local clone; run -
+./scripts/feeds update
+
+
+Bin are created at -
+/home/ketkulka/project/cerowrt_1203/src/cerowrt/wndr3800/bin/ar71xx

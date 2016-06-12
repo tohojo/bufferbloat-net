@@ -1,0 +1,517 @@
+diff --git a/arch/mips/include/asm/checksum.h b/arch/mips/include/asm/checksum.h
+index f2f7c6c..dce734c 100644
+--- a/arch/mips/include/asm/checksum.h
++++ b/arch/mips/include/asm/checksum.h
+@@ -12,6 +12,7 @@
+ #define _ASM_CHECKSUM_H
+ 
+ #include <linux/in6.h>
++#include <linux/unaligned/packed_struct.h>
+ 
+ #include <asm/uaccess.h>
+ 
+@@ -98,6 +99,41 @@ static inline __sum16 csum_fold(__wsum sum)
+  *	By Jorge Cwik <jorge@laser.satlink.net>, adapted for linux by
+  *	Arnt Gulbrandsen.
+  */
++static inline __sum16 ip_fast_csum_unaligned(const void *iph, unsigned int ihl)
++{
++	const unsigned int *word = iph;
++	const unsigned int *stop = word + ihl;
++	unsigned int csum;
++	int carry;
++	unsigned int w;
++
++	csum = __get_unaligned_cpu32(word++);
++
++	w = __get_unaligned_cpu32(word++);
++	csum += w;
++	carry = (csum < w);
++	csum += carry;
++
++	w = __get_unaligned_cpu32(word++);
++	csum += w;
++	carry = (csum < w);
++	csum += carry;
++
++	w = __get_unaligned_cpu32(word++);
++	csum += w;
++	carry = (csum < w);
++	csum += carry;
++
++	do {
++		w = __get_unaligned_cpu32(word++);
++		csum += w;
++		carry = (csum < w);
++		csum += carry;
++	} while (word != stop);
++
++	return csum_fold(csum);
++}
++
+ static inline __sum16 ip_fast_csum(const void *iph, unsigned int ihl)
+ {
+ 	const unsigned int *word = iph;
+@@ -105,6 +141,9 @@ static inline __sum16 ip_fast_csum(const void *iph, unsigned int ihl)
+ 	unsigned int csum;
+ 	int carry;
+ 
++	if ((unsigned int) iph & 3)
++		return ip_fast_csum_unaligned(iph,ihl);
++
+ 	csum = word[0];
+ 	csum += word[1];
+ 	carry = (csum < word[1]);
+@@ -192,14 +231,15 @@ static inline __sum16 ip_compute_csum(const void *buff, int len)
+ 	return csum_fold(csum_partial(buff, len, 0));
+ }
+ 
+-#define _HAVE_ARCH_IPV6_CSUM
+-static __inline__ __sum16 csum_ipv6_magic(const struct in6_addr *saddr,
++#define _HAVE_ARCH_IPV6_CSUM_ALIGNED
++static __inline__ __sum16 csum_ipv6_magic_aligned(
++					  const struct in6_addr *saddr,
+ 				          const struct in6_addr *daddr,
+ 					  __u32 len, unsigned short proto,
+ 					  __wsum sum)
+ {
+ 	__asm__(
+-	"	.set	push		# csum_ipv6_magic\n"
++	"	.set	push		# csum_ipv6_magic_aligned\n"
+ 	"	.set	noreorder	\n"
+ 	"	.set	noat		\n"
+ 	"	addu	%0, %5		# proto (long in network byte order)\n"
+diff --git a/include/linux/icmpv6.h b/include/linux/icmpv6.h
+index ba45e6b..5bb0258 100644
+--- a/include/linux/icmpv6.h
++++ b/include/linux/icmpv6.h
+@@ -76,7 +76,7 @@ struct icmp6hdr {
+ #define icmp6_addrconf_other	icmp6_dataun.u_nd_ra.other
+ #define icmp6_rt_lifetime	icmp6_dataun.u_nd_ra.rt_lifetime
+ #define icmp6_router_pref	icmp6_dataun.u_nd_ra.router_pref
+-};
++} __packed;
+ 
+ #ifdef __KERNEL__
+ #include <linux/skbuff.h>
+diff --git a/include/linux/igmp.h b/include/linux/igmp.h
+index 82de336..a17b50c 100644
+--- a/include/linux/igmp.h
++++ b/include/linux/igmp.h
+@@ -32,7 +32,7 @@ struct igmphdr {
+ 	__u8 code;		/* For newer IGMP */
+ 	__sum16 csum;
+ 	__be32 group;
+-};
++} __packed;
+ 
+ /* V3 group record types [grec_type] */
+ #define IGMPV3_MODE_IS_INCLUDE		1
+@@ -48,7 +48,7 @@ struct igmpv3_grec {
+ 	__be16	grec_nsrcs;
+ 	__be32	grec_mca;
+ 	__be32	grec_src[0];
+-};
++} __packed;
+ 
+ struct igmpv3_report {
+ 	__u8 type;
+@@ -57,7 +57,7 @@ struct igmpv3_report {
+ 	__be16 resv2;
+ 	__be16 ngrec;
+ 	struct igmpv3_grec grec[0];
+-};
++} __packed;
+ 
+ struct igmpv3_query {
+ 	__u8 type;
+@@ -78,7 +78,7 @@ struct igmpv3_query {
+ 	__u8 qqic;
+ 	__be16 nsrcs;
+ 	__be32 srcs[0];
+-};
++} __packed;
+ 
+ #define IGMP_HOST_MEMBERSHIP_QUERY	0x11	/* From RFC1112 */
+ #define IGMP_HOST_MEMBERSHIP_REPORT	0x12	/* Ditto */
+diff --git a/include/linux/in6.h b/include/linux/in6.h
+index 097a34b..0d0f788 100644
+--- a/include/linux/in6.h
++++ b/include/linux/in6.h
+@@ -36,7 +36,7 @@ struct in6_addr {
+ #define s6_addr			in6_u.u6_addr8
+ #define s6_addr16		in6_u.u6_addr16
+ #define s6_addr32		in6_u.u6_addr32
+-};
++} __packed;
+ 
+ /* IPv6 Wildcard Address (::) and Loopback Address (::1) defined in RFC2553
+  * NOTE: Be aware the IN6ADDR_* constants and in6addr_* externals are defined
+@@ -61,7 +61,7 @@ struct sockaddr_in6 {
+ 	__be32			sin6_flowinfo;  /* IPv6 flow information */
+ 	struct in6_addr		sin6_addr;      /* IPv6 address */
+ 	__u32			sin6_scope_id;  /* scope id (new in RFC2553) */
+-};
++} __packed;
+ 
+ struct ipv6_mreq {
+ 	/* IPv6 multicast address of group */
+@@ -69,7 +69,7 @@ struct ipv6_mreq {
+ 
+ 	/* local IPv6 address of interface */
+ 	int		ipv6mr_ifindex;
+-};
++} __packed;
+ 
+ #define ipv6mr_acaddr	ipv6mr_multiaddr
+ 
+@@ -83,7 +83,7 @@ struct in6_flowlabel_req {
+ 	__u16	flr_linger;
+ 	__u32	__flr_pad;
+ 	/* Options in format of IPV6_PKTOPTIONS */
+-};
++} __packed;
+ 
+ #define IPV6_FL_A_GET	0
+ #define IPV6_FL_A_PUT	1
+diff --git a/include/linux/ip.h b/include/linux/ip.h
+index bd0a2a8..85ad985 100644
+--- a/include/linux/ip.h
++++ b/include/linux/ip.h
+@@ -102,7 +102,7 @@ struct iphdr {
+ 	__be32	saddr;
+ 	__be32	daddr;
+ 	/*The options start here. */
+-};
++} __packed;
+ 
+ #ifdef __KERNEL__
+ #include <linux/skbuff.h>
+@@ -125,25 +125,25 @@ struct ip_auth_hdr {
+ 	__be32 spi;
+ 	__be32 seq_no;		/* Sequence number */
+ 	__u8  auth_data[0];	/* Variable len but >=4. Mind the 64 bit alignment! */
+-};
++} __packed;
+ 
+ struct ip_esp_hdr {
+ 	__be32 spi;
+ 	__be32 seq_no;		/* Sequence number */
+ 	__u8  enc_data[0];	/* Variable len but >=8. Mind the 64 bit alignment! */
+-};
++} __packed;
+ 
+ struct ip_comp_hdr {
+ 	__u8 nexthdr;
+ 	__u8 flags;
+ 	__be16 cpi;
+-};
++} __packed;
+ 
+ struct ip_beet_phdr {
+ 	__u8 nexthdr;
+ 	__u8 hdrlen;
+ 	__u8 padlen;
+ 	__u8 reserved;
+-};
++} __packed;
+ 
+ #endif	/* _LINUX_IP_H */
+diff --git a/include/linux/ipv6.h b/include/linux/ipv6.h
+index 6318268..07f35fa 100644
+--- a/include/linux/ipv6.h
++++ b/include/linux/ipv6.h
+@@ -49,7 +49,7 @@ struct ipv6_rt_hdr {
+ 	 *	type specific data
+ 	 *	variable length field
+ 	 */
+-};
++} __packed;
+ 
+ 
+ struct ipv6_opt_hdr {
+@@ -126,7 +126,7 @@ struct ipv6hdr {
+ 
+ 	struct	in6_addr	saddr;
+ 	struct	in6_addr	daddr;
+-};
++} __packed;
+ 
+ #ifdef __KERNEL__
+ /*
+diff --git a/include/linux/tcp.h b/include/linux/tcp.h
+index 3c7ffdb..680e0e8 100644
+--- a/include/linux/tcp.h
++++ b/include/linux/tcp.h
+@@ -54,7 +54,7 @@ struct tcphdr {
+ 	__be16	window;
+ 	__sum16	check;
+ 	__be16	urg_ptr;
+-};
++} __packed;
+ 
+ /*
+  *	The union cast uses a gcc extension to avoid aliasing problems
+@@ -64,9 +64,10 @@ struct tcphdr {
+ union tcp_word_hdr { 
+ 	struct tcphdr hdr;
+ 	__be32 		  words[5];
+-}; 
++} __packed; 
+ 
+-#define tcp_flag_word(tp) ( ((union tcp_word_hdr *)(tp))->words [3]) 
++#define tcp_flag_word2(tp) ( ((union tcp_word_hdr *)(tp))->words [3])
++#define tcp_flag_word(tp) ( __get_unaligned_cpu32(&(((union tcp_word_hdr *)(tp))->words [3])))
+ 
+ enum { 
+ 	TCP_FLAG_CWR = __cpu_to_be32(0x00800000),
+diff --git a/include/net/flow_keys.h b/include/net/flow_keys.h
+index 80461c1..ffd6fbd 100644
+--- a/include/net/flow_keys.h
++++ b/include/net/flow_keys.h
+@@ -10,7 +10,7 @@ struct flow_keys {
+ 		__be16 port16[2];
+ 	};
+ 	u8 ip_proto;
+-};
++} __packed;
+ 
+ extern bool skb_flow_dissect(const struct sk_buff *skb, struct flow_keys *flow);
+ #endif
+diff --git a/include/net/ndisc.h b/include/net/ndisc.h
+index a9d350e..5be936d 100644
+--- a/include/net/ndisc.h
++++ b/include/net/ndisc.h
+@@ -62,18 +62,18 @@ struct nd_msg {
+         struct icmp6hdr	icmph;
+         struct in6_addr	target;
+ 	__u8		opt[0];
+-};
++} __packed;
+ 
+ struct rs_msg {
+ 	struct icmp6hdr	icmph;
+ 	__u8		opt[0];
+-};
++} __packed;
+ 
+ struct ra_msg {
+         struct icmp6hdr		icmph;
+ 	__be32			reachable_time;
+ 	__be32			retrans_timer;
+-};
++} __packed;
+ 
+ struct nd_opt_hdr {
+ 	__u8		nd_opt_type;
+diff --git a/net/ipv4/netfilter/nf_conntrack_l3proto_ipv4.c b/net/ipv4/netfilter/nf_conntrack_l3proto_ipv4.c
+index de9da21..2704407 100644
+--- a/net/ipv4/netfilter/nf_conntrack_l3proto_ipv4.c
++++ b/net/ipv4/netfilter/nf_conntrack_l3proto_ipv4.c
+@@ -14,6 +14,7 @@
+ #include <linux/skbuff.h>
+ #include <linux/icmp.h>
+ #include <linux/sysctl.h>
++#include <linux/unaligned/packed_struct.h>
+ #include <net/route.h>
+ #include <net/ip.h>
+ 
+@@ -44,8 +45,8 @@ static bool ipv4_pkt_to_tuple(const struct sk_buff *skb, unsigned int nhoff,
+ 	if (ap == NULL)
+ 		return false;
+ 
+-	tuple->src.u3.ip = ap[0];
+-	tuple->dst.u3.ip = ap[1];
++	tuple->src.u3.ip = __get_unaligned_cpu32(ap++);
++	tuple->dst.u3.ip = __get_unaligned_cpu32(ap);
+ 
+ 	return true;
+ }
+diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
+index 22ef5f9..bf3f773 100644
+--- a/net/ipv4/tcp.c
++++ b/net/ipv4/tcp.c
+@@ -2834,7 +2834,7 @@ found:
+ 
+ 	p = *head;
+ 	th2 = tcp_hdr(p);
+-	tcp_flag_word(th2) |= flags & (TCP_FLAG_FIN | TCP_FLAG_PSH);
++	tcp_flag_word2(th2) = tcp_flag_word(th2) | flags & (TCP_FLAG_FIN | TCP_FLAG_PSH);
+ 
+ out_check_final:
+ 	flush = len < mss;
+diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
+index b5e315f..1a0e649 100644
+--- a/net/ipv4/tcp_input.c
++++ b/net/ipv4/tcp_input.c
+@@ -3944,13 +3944,13 @@ static int tcp_parse_aligned_timestamp(struct tcp_sock *tp, const struct tcphdr
+ {
+ 	const __be32 *ptr = (const __be32 *)(th + 1);
+ 
+-	if (*ptr == htonl((TCPOPT_NOP << 24) | (TCPOPT_NOP << 16)
++	if (__get_unaligned_cpu32(ptr) == htonl((TCPOPT_NOP << 24) | (TCPOPT_NOP << 16)
+ 			  | (TCPOPT_TIMESTAMP << 8) | TCPOLEN_TIMESTAMP)) {
+ 		tp->rx_opt.saw_tstamp = 1;
+ 		++ptr;
+-		tp->rx_opt.rcv_tsval = ntohl(*ptr);
++		tp->rx_opt.rcv_tsval = ntohl(__get_unaligned_cpu32(ptr));
+ 		++ptr;
+-		tp->rx_opt.rcv_tsecr = ntohl(*ptr);
++		tp->rx_opt.rcv_tsecr = ntohl(__get_unaligned_cpu32(ptr));
+ 		return 1;
+ 	}
+ 	return 0;
+diff --git a/net/ipv6/af_inet6.c b/net/ipv6/af_inet6.c
+index 273f48d..c649aea 100644
+--- a/net/ipv6/af_inet6.c
++++ b/net/ipv6/af_inet6.c
+@@ -695,7 +695,7 @@ int ipv6_opt_accepted(struct sock *sk, struct sk_buff *skb)
+ 		if ((opt->hop && (np->rxopt.bits.hopopts ||
+ 				  np->rxopt.bits.ohopopts)) ||
+ 		    ((IPV6_FLOWINFO_MASK &
+-		      *(__be32 *)skb_network_header(skb)) &&
++		      __get_unaligned_cpu32((__be32 *)skb_network_header(skb))) &&
+ 		     np->rxopt.bits.rxflow) ||
+ 		    (opt->srcrt && (np->rxopt.bits.srcrt ||
+ 		     np->rxopt.bits.osrcrt)) ||
+diff --git a/net/ipv6/datagram.c b/net/ipv6/datagram.c
+index 251e7cd..0b0abd8 100644
+--- a/net/ipv6/datagram.c
++++ b/net/ipv6/datagram.c
+@@ -358,12 +358,12 @@ int ipv6_recv_error(struct sock *sk, struct msghdr *msg, int len)
+ 				*(struct in6_addr *)(nh + serr->addr_offset);
+ 			if (np->sndflow)
+ 				sin->sin6_flowinfo =
+-					(*(__be32 *)(nh + serr->addr_offset - 24) &
++					(__get_unaligned_cpu32((__be32 *)(nh + serr->addr_offset - 24)) &
+ 					 IPV6_FLOWINFO_MASK);
+ 			if (ipv6_addr_type(&sin->sin6_addr) & IPV6_ADDR_LINKLOCAL)
+ 				sin->sin6_scope_id = IP6CB(skb)->iif;
+ 		} else {
+-			ipv6_addr_set_v4mapped(*(__be32 *)(nh + serr->addr_offset),
++			ipv6_addr_set_v4mapped(__get_unaligned_cpu32((__be32 *)(nh + serr->addr_offset)),
+ 					       &sin->sin6_addr);
+ 		}
+ 	}
+@@ -485,12 +485,12 @@ int datagram_recv_ctl(struct sock *sk, struct msghdr *msg, struct sk_buff *skb)
+ 	}
+ 
+ 	if (np->rxopt.bits.rxtclass) {
+-		int tclass = (ntohl(*(__be32 *)ipv6_hdr(skb)) >> 20) & 0xff;
++		int tclass = (ntohl(__get_unaligned_cpu32((__be32 *)ipv6_hdr(skb))) >> 20) & 0xff;
+ 		put_cmsg(msg, SOL_IPV6, IPV6_TCLASS, sizeof(tclass), &tclass);
+ 	}
+ 
+-	if (np->rxopt.bits.rxflow && (*(__be32 *)nh & IPV6_FLOWINFO_MASK)) {
+-		__be32 flowinfo = *(__be32 *)nh & IPV6_FLOWINFO_MASK;
++	if (np->rxopt.bits.rxflow && (__get_unaligned_cpu32((__be32 *)nh) & IPV6_FLOWINFO_MASK)) {
++		__be32 flowinfo = __get_unaligned_cpu32((__be32 *)nh) & IPV6_FLOWINFO_MASK;
+ 		put_cmsg(msg, SOL_IPV6, IPV6_FLOWINFO, sizeof(flowinfo), &flowinfo);
+ 	}
+ 
+@@ -585,7 +585,7 @@ int datagram_recv_ctl(struct sock *sk, struct msghdr *msg, struct sk_buff *skb)
+ 
+ 			sin6.sin6_family = AF_INET6;
+ 			sin6.sin6_addr = ipv6_hdr(skb)->daddr;
+-			sin6.sin6_port = ports[1];
++			sin6.sin6_port = __get_unaligned_cpu16(&(ports[1]));
+ 			sin6.sin6_flowinfo = 0;
+ 			sin6.sin6_scope_id = 0;
+ 
+@@ -677,12 +677,12 @@ int datagram_send_ctl(struct net *net, struct sock *sk,
+ 			}
+ 
+ 			if (fl6->flowlabel&IPV6_FLOWINFO_MASK) {
+-				if ((fl6->flowlabel^*(__be32 *)CMSG_DATA(cmsg))&~IPV6_FLOWINFO_MASK) {
++				if ((fl6->flowlabel^__get_unaligned_cpu32((__be32 *)CMSG_DATA(cmsg)))&~IPV6_FLOWINFO_MASK) {
+ 					err = -EINVAL;
+ 					goto exit_f;
+ 				}
+ 			}
+-			fl6->flowlabel = IPV6_FLOWINFO_MASK & *(__be32 *)CMSG_DATA(cmsg);
++			fl6->flowlabel = IPV6_FLOWINFO_MASK & __get_unaligned_cpu32((__be32 *)CMSG_DATA(cmsg));
+ 			break;
+ 
+ 		case IPV6_2292HOPOPTS:
+diff --git a/net/ipv6/exthdrs.c b/net/ipv6/exthdrs.c
+index 3d641b6..7c072da 100644
+--- a/net/ipv6/exthdrs.c
++++ b/net/ipv6/exthdrs.c
+@@ -593,7 +593,7 @@ static int ipv6_hop_jumbo(struct sk_buff *skb, int optoff)
+ 		goto drop;
+ 	}
+ 
+-	pkt_len = ntohl(*(__be32 *)(nh + optoff + 2));
++	pkt_len = ntohl(__get_unaligned_cpu32((__be32 *)(nh + optoff + 2)));
+ 	if (pkt_len <= IPV6_MAXPLEN) {
+ 		IP6_INC_STATS_BH(net, ipv6_skb_idev(skb),
+ 				 IPSTATS_MIB_INHDRERRORS);
+diff --git a/net/ipv6/netfilter/ip6t_LOG.c b/net/ipv6/netfilter/ip6t_LOG.c
+index e6af8d7..ef83fab 100644
+--- a/net/ipv6/netfilter/ip6t_LOG.c
++++ b/net/ipv6/netfilter/ip6t_LOG.c
+@@ -64,9 +64,9 @@ static void dump_packet(struct sbuff *m,
+ 	/* Max length: 44 "LEN=65535 TC=255 HOPLIMIT=255 FLOWLBL=FFFFF " */
+ 	sb_add(m, "LEN=%Zu TC=%u HOPLIMIT=%u FLOWLBL=%u ",
+ 	       ntohs(ih->payload_len) + sizeof(struct ipv6hdr),
+-	       (ntohl(*(__be32 *)ih) & 0x0ff00000) >> 20,
++	       (ntohl(__get_unaligned_cpu32((__be32 *)ih)) & 0x0ff00000) >> 20,
+ 	       ih->hop_limit,
+-	       (ntohl(*(__be32 *)ih) & 0x000fffff));
++	       (ntohl(__get_unaligned_cpu32((__be32 *)ih)) & 0x000fffff));
+ 
+ 	fragment = 0;
+ 	ptr = ip6hoff + sizeof(struct ipv6hdr);
+diff --git a/net/ipv6/route.c b/net/ipv6/route.c
+index 4d5915d..e1e8bad 100644
+--- a/net/ipv6/route.c
++++ b/net/ipv6/route.c
+@@ -877,7 +877,7 @@ void ip6_route_input(struct sk_buff *skb)
+ 		.flowi6_iif = skb->dev->ifindex,
+ 		.daddr = iph->daddr,
+ 		.saddr = iph->saddr,
+-		.flowlabel = (* (__be32 *) iph) & IPV6_FLOWINFO_MASK,
++		.flowlabel = (__get_unaligned_cpu32(iph)) & IPV6_FLOWINFO_MASK,
+ 		.flowi6_mark = skb->mark,
+ 		.flowi6_proto = iph->nexthdr,
+ 	};
+diff --git a/net/ipv6/xfrm6_policy.c b/net/ipv6/xfrm6_policy.c
+index 8ea65e0..eecde59 100644
+--- a/net/ipv6/xfrm6_policy.c
++++ b/net/ipv6/xfrm6_policy.c
+@@ -160,8 +160,8 @@ _decode_session6(struct sk_buff *skb, struct flowi *fl, int reverse)
+ 			     pskb_may_pull(skb, nh + offset + 4 - skb->data))) {
+ 				__be16 *ports = (__be16 *)exthdr;
+ 
+-				fl6->fl6_sport = ports[!!reverse];
+-				fl6->fl6_dport = ports[!reverse];
++				fl6->fl6_sport = __get_unaligned_cpu16(&ports[!!reverse]);
++				fl6->fl6_dport = __get_unaligned_cpu16(&ports[!reverse]);
+ 			}
+ 			fl6->flowi6_proto = nexthdr;
+ 			return;
+diff --git a/net/xfrm/xfrm_input.c b/net/xfrm/xfrm_input.c
+index 54a0dc2..e9c51b6 100644
+--- a/net/xfrm/xfrm_input.c
++++ b/net/xfrm/xfrm_input.c
+@@ -52,6 +52,7 @@ int xfrm_parse_spi(struct sk_buff *skb, u8 nexthdr, __be32 *spi, __be32 *seq)
+ {
+ 	int offset, offset_seq;
+ 	int hlen;
++	__be32 *pspi, *pseq;
+ 
+ 	switch (nexthdr) {
+ 	case IPPROTO_AH:
+@@ -77,8 +78,10 @@ int xfrm_parse_spi(struct sk_buff *skb, u8 nexthdr, __be32 *spi, __be32 *seq)
+ 	if (!pskb_may_pull(skb, hlen))
+ 		return -EINVAL;
+ 
+-	*spi = *(__be32*)(skb_transport_header(skb) + offset);
+-	*seq = *(__be32*)(skb_transport_header(skb) + offset_seq);
++	pspi = (__be32*)(skb_transport_header(skb) + offset);
++	pseq = (__be32*)(skb_transport_header(skb) + offset_seq);
++	*spi = __get_unaligned_cpu32(pspi);
++	*seq = __get_unaligned_cpu32(pseq);
+ 	return 0;
+ }
+ 
