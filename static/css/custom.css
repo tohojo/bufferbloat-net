@@ -147,3 +147,19 @@ code.has-jax {font: inherit;
     text-align: right;
 }
 
+.author {
+    color: #999;
+}
+
+.news-summary .author {
+    margin-bottom: 15px;
+}
+
+.news-summary {
+    border-top: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+.read-more-link {
+    text-align: right;
+}

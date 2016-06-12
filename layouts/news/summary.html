@@ -1,0 +1,10 @@
+<div class="news-summary">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <div class="author">Posted on {{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}.</div>
+  {{ .Summary }}
+  {{ if .Truncated }}
+  <div class="read-more-link">
+    <a href="{{ .RelPermalink }}">Read More…</a>
+  </div>
+  {{ end }}
+</div>
