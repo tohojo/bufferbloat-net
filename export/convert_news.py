@@ -63,6 +63,7 @@ for n in news:
     mdfile = tmpdir / "{}:{}.md".format(project,name)
 
     date = n['created_on'].split(".")[0].replace(" ","T")
+    pathdate = n['created_on'].split(" ")[0]
 
     with outfile.open("w") as fp:
         fp.write(text)
@@ -77,6 +78,6 @@ for n in news:
 
     if not outdir.is_dir():
         outdir.mkdir(parents=True)
-    finalmd = outdir / "{}.md".format(name)
+    finalmd = outdir / "{}-{}.md".format(pathdate, name)
     with finalmd.open("w") as fp:
         fp.write(mdtext)
