@@ -24,9 +24,12 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import csv, re, subprocess, os, json, sys, pathlib
 
 issues = csv.DictReader(open("issuesdump.csv"))
+attachments = list(csv.DictReader(open("issue-attachments.csv")))
 interesting_projects = ["bloat", "cerowrt", "make-wifi-fast", "codel"]
 outpath = pathlib.Path("../content")
 oldpath = pathlib.Path("../old-projects")
+attachdir = pathlib.Path("../static/attachments/")
+sourcedir = pathlib.Path("files/")
 header = """
 ---
 title: "Bug #{id}: {title}"
@@ -45,15 +48,55 @@ aliases:
 
 {{{{< issue_description >}}}}
 {text}
+{attachments}
 {{{{< /issue_description >}}}}
 
 ## History
 """
+attachment_template = '{{{{< attachment name="{name}" type="{mimetype}" size="{size}" description="{description}" filename="{filename}" date="{date}" author="{author}" >}}}}\n'
 
 def convert_textile(text):
     res = subprocess.run(['pandoc', '-f', 'textile', '-t', 'markdown'], input=text, stdout=subprocess.PIPE,
                          universal_newlines=True, check=True)
     return res.stdout
+
+def do_attachments(issue_id):
+    output = ""
+    i = 0
+    for a in attachments:
+        found = False
+        if not a['issue_id'] == issue_id:
+            continue
+
+        sourcefile = sourcedir / a['disk_filename']
+        if not sourcefile.exists():
+            print("Source file %s doesn't exist." % sourcefile)
+            continue
+
+        outfile = attachdir / a['disk_filename']
+        if not outfile.exists() and False:
+            with sourcefile.open("rb") as fps:
+                with outfile.open("wb") as fpd:
+                    fpd.write(fps.read())
+
+        size = int(a['filesize'])
+        if size > 2**20:
+            size = "%.1f MiB" % (size/2**20)
+        elif size > 2**10:
+            size = "%.1f kiB" % (size/2**10)
+        else:
+            size = "%d bytes" % size
+
+        date = a['created_on'].split(".")[0].replace(" ","T")
+        output = output + attachment_template.format(name=a['filename'], mimetype=a['content_type'],
+                                                     date=date, author=a['name'], size=size,
+                                                     filename=a['disk_filename'], description=a['description'].replace('"', '\\"'))
+        i += 1
+
+    if output:
+        output = "### Attachments\n" + output
+    return output
+
 
 for i in issues:
     project = i['project']
@@ -62,10 +105,14 @@ for i in issues:
     text = convert_textile(i['description'].replace("[[", "<link>").replace("]]","</link>"))
     date = i['created_on'].split(".")[0].replace(" ","T")
     updated = i['updated_on'].split(".")[0].replace(" ","T")
+    attach = ""
+
+    if project in interesting_projects:
+        attach = do_attachments(i['id'])
 
     text = header.format(title=title.replace('"', '\\"'), date=date, updated=updated, author=i['author'],
                          id=i['id'], status=i['status'], priority=i['priority'], assignee=i['assignee'],
-                         text=text)
+                         text=text, attachments=attach)
 
     if not project in interesting_projects:
         outdir = oldpath / project / 'issues'

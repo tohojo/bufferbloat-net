@@ -1,3 +1,4 @@
-<ul><li><a href="{{ printf "/attachments/%s" (.Get "filename") | relURL }}">
+<ul class="attachment"><li><a href="{{ printf "/attachments/%s" (.Get "filename") | relURL }}">
   {{ .Get "name" }}
-</a> ({{ .Get "type" }}) {{ .Get "description" }}</li></ul>
+</a> ({{ .Get "type" }}{{ if .Get "size" }}; {{ .Get "size"  }}{{end}}) {{ .Get "description" }} {{ .Get "author" }}
+    {{if .Get "date" }}{{ .Get "date" | dateFormat "Jan 2, 2006"  }}{{end}}</li></ul>

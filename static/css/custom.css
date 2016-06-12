@@ -125,3 +125,9 @@ code.has-jax {font: inherit;
     padding-top: 5px;
     border-top: 1px solid #ddd;
 }
+
+.issue-description .attachment {
+    margin: 0px;
+    color: #999;
+    font-size: small;
+}
