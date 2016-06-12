@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "navbar.html" . }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="well well-sm">
+              <h1>{{ .Title }} news items</h1>
+              <p>These are all the news items posted in the {{ .Title }} project.</p>
+              <ul>
+                {{ $this := .Title | lower }}
+                {{ range where .Site.Pages.ByDate.Reverse "Type" "=" "news"}}
+                  {{ if eq .Section $this }}
+                  {{ .Render "li" }}
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {{ partial "menu.html" . }}
+        </div>
+    </div>
+{{ partial "footer.copyright.html" . }}
+</div>
+{{ partial "footer.html" . }}

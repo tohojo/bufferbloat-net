@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "navbar.html" . }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="well well-sm">
+                    <h3>{{ .Title }}<br> <small>{{ .Description }}</small></h3>
+                    <div class="author">Posted on {{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}.</div>
+                    <hr>
+                    {{ .Content }}
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {{ partial "menu.html" . }}
+        </div>
+    </div>
+{{ partial "footer.copyright.html" . }}
+</div>
+{{ partial "footer.html" . }}
