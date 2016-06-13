@@ -54,9 +54,13 @@ class ReqHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(401)
             return
 
-        data = json.loads(indata.decode())
-        print(data)
-        self.run_build()
+        try:
+            data = json.loads(indata.decode())
+        except (json.decoder.JSONDecodeError, TypeError):
+            self.send_response(500)
+
+        if data.get('ref') == 'refs/heads/master':
+            self.run_build()
 
         self.send_response(200,'OK')
         self.end_headers()
