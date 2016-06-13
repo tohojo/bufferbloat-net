@@ -137,10 +137,7 @@ and is thus a little more compact than if it did.
 
 Two more new keywords deal with the basic VDSL2 configurations. Again,
 the overheads use IP as a baseline, but this time ATM cell-framing is
-turned off. Apparently PTM does have a small additional overhead on the
-order of 1/128, due to HDLC framing which attaches special meaning to
-0x7D and 0x7E bytes; I might need to add approximate handling for that,
-kernel-side.
+turned off.
 
 pppoe-ptm (27)\
 bridged-ptm (19)
