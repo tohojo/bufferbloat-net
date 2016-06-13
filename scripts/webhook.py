@@ -42,6 +42,14 @@ class ReqHandler(http.server.BaseHTTPRequestHandler):
     def run_build(self):
         self.server.q.put(True)
 
+    def error(self, response):
+        self.send_response(response)
+        self.end_headers()
+        self.wfile.flush()
+
+    def do_GET(self):
+        self.error(405)
+
     def do_POST(self):
         try:
             nbytes = int(self.headers.get('content-length'))
@@ -51,13 +59,14 @@ class ReqHandler(http.server.BaseHTTPRequestHandler):
             indata = None
 
         if not indata or not 'X-Hub-Signature' in self.headers or not self.verify_sig(indata):
-            self.send_response(401)
+            self.error(401)
             return
 
         try:
             data = json.loads(indata.decode())
         except (json.decoder.JSONDecodeError, TypeError):
-            self.send_response(500)
+            self.error(400)
+            return
 
         if data.get('ref') == 'refs/heads/master':
             self.run_build()
