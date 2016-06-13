@@ -5,7 +5,15 @@ set -o nounset
 
 [ -n "$BUFFERBLOAT_NET_DEST" ] || exit 1
 
-cd ~/git/bufferbloat-net
+LOCKDIR=$HOME/.bufferbloat-build.lock
+PIDFILE=$LOCKDIR/PID
+
+mkdir $LOCKDIR # fails if it already exists
+echo $$ > "$PIDFILE"
+
+cd $HOME/bufferbloat-net
+
+git pull --quiet --ff-only
 
 rm -rf public
 
@@ -21,12 +29,12 @@ get_stylesheets()
     done
 }
 
-get_stylesheets | cssmin > static/css/combined.css
+get_stylesheets | python -m rcssmin > static/css/combined.css
 
 conf=$(mktemp config-XXXX.yaml)
 sed 's/stylesheets: .*/stylesheets: ["combined.css"]/' config.yaml > $conf
 
-hugo -d public --config=$conf
+hugo -d public --config=$conf --logFile=$HOME/hugo.log > /dev/null
 rm -f $conf
 
 # Remove source css files
@@ -42,4 +50,4 @@ rsync -rtpl --delete --exclude stats/ --exclude /news --exclude /issues --exclud
 rsync -rtpl --delete public/news/ $BUFFERBLOAT_NET_DEST/news/
 rsync -rtpl --delete public/issues/ $BUFFERBLOAT_NET_DEST/issues/
 
-rm static/css/combined.css
+rm -rf static/css/combined.css $LOCKDIR
