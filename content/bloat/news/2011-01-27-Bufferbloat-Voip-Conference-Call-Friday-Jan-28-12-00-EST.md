@@ -19,5 +19,5 @@ SKYPE: vuc.me (thanks to Tim Panton and PhoneFromHere.com)\
 PSTN: (567) 252-2286 thanks to Alex Graham Bell\
 iNum: +883 5100 123 94882\
 IRC: [IRC channel \#vuc on
-chat.freenode.net](irc://chat.freenode.net%23vuc) or [chat via the
+chat.freenode.net](irc://chat.freenode.net#vuc) or [chat via the
 web](http://vuc.me/irc)

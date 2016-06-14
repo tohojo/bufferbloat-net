@@ -56,7 +56,7 @@ bufferbloat.net is about. I ended up talking way too much about bug
 \[\#33\].
 
 The comcast paper that established [32 as an upper bound for unmanaged
-buffering on some home gateways](needthelink) in many circumstances was
+buffering on some home gateways]() in many circumstances was
 discussed. Both JG and I stressed it was the formula, not the number,
 that was important.
 

@@ -22,7 +22,7 @@ http://gettys.files.wordpress.com/2010/12/uplink\_buffer\_all.pdf
 [Netalyzr: Illuminating The Edge
 Network](http://www.icir.org/christian/publications/2010-imc-netalyzr.pdf)\
 As outlined in the [IMC Netalyzr
-paper](href="http://conferences.sigcomm.org/imc/2010/papers/p246.pdf")
+paper](http://conferences.sigcomm.org/imc/2010/papers/p246.pdf)
 section 5.2, the structure you see is very useful to see what buffer
 sizes and provisioned bandwidths are common. The diagonal lines indicate
 the latency (in seconds!) caused by the buffering. Both wired and
