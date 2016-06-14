@@ -12,7 +12,7 @@ Changing interfaces, router name, your ip addresses or SSID are tedious
 using the default web interface, and it is much faster to do it at the
 command line.
 
-The [Automated Configuration of CeroWrt]({{< relref "cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}}) page provides a
+The [Automated Configuration of CeroWrt](Automated_Configuration_of_CeroWrt.md) page provides a
 script that systematically changes these addresses, as well as
 configuring other aspects of the router in a single step.
 

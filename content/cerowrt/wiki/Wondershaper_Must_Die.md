@@ -15,13 +15,13 @@ Breaker and Chaos Calmer builds - http://openwrt.org Use SQM - it works
 great.*
 
 Wondershaper was great for its time (2002). It was one of the first
-integrated [Smart Queue Management]({{< relref "cerowrt/wiki/Smart_Queue_Management.md" >}}) systems, incorporating
+integrated [Smart Queue Management](Smart_Queue_Management.md) systems, incorporating
 packet scheduling (SFQ), rate limiting, policing, and QoS in a tiny
 amount of easily understandable code. It spread around the internet like
 wildfire back then. Nearly every cybercafe I've been in, from the US to
 Sri Lanka to Nicaragua, deploys it or some variant thereof to keep
 latencies low and web/gaming/voice traffic optimal for dozens of users.
-Dozens of more sophisticated [Smart Queue Management]({{< relref "cerowrt/wiki/Smart_Queue_Management.md" >}}) scripts
+Dozens of more sophisticated [Smart Queue Management](Smart_Queue_Management.md) scripts
 are descended from it. It worked well in its target environments. And
 yet, WonderShaper's currently wrong, so wrong, for today's internet.
 Much better alternatives exist.
@@ -45,7 +45,7 @@ it.
 But: the flaws are so legion and in nearly every line of code, that the
 best I can hope for is to get the newer maintainers to at least address
 the low lying fruit in it, and for my own efforts to continue with the
-alternate line of work that is in CeroWrt's [SQM]({{< relref "cerowrt/wiki/SQM.md" >}}) system.
+alternate line of work that is in CeroWrt's [SQM](SQM.md) system.
 
 Wondershaper is a fine example of tight, well written, undercommented
 code that doesn't work right anymore. So I'm going to paste the original
@@ -369,7 +369,7 @@ Wondershaper annotated source code
 
 I could sit here and rewrite wondershaper to keep the strength of it as
 a coding example of how to use filtering, etc. OR: I could point you at
-the [SQM]({{< relref "cerowrt/wiki/SQM.md" >}}) code in cerowrt, or the [traffic shaping example in
+the [SQM](SQM.md) code in cerowrt, or the [traffic shaping example in
 gentoo](https://wiki.gentoo.org/wiki/Traffic_shaping) .
 
 Or I could show you a benchmark of what happens if you naively run

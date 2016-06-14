@@ -19,7 +19,7 @@ bundle includes scripts to:
     firmware - *config-cerowrt.sh*
 -   **Set up an IPv6 6-in-4 tunnel** to TunnelBroker.net -
     *tunnelbroker.sh*
--   **Collect troubleshooting information** (see [Debugging CeroWrt]({{< relref "cerowrt/wiki/Debugging_CeroWrt.md" >}})) that helps us diagnose problems - *cerostats.sh*
+-   **Collect troubleshooting information** (see [Debugging CeroWrt](Debugging_CeroWrt.md)) that helps us diagnose problems - *cerostats.sh*
 
 How do I get these scripts?
 ---------------------------

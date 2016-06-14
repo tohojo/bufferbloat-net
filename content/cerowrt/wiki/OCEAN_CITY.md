@@ -14,18 +14,18 @@ our reach, and we chose to pursue significantly scaled back (but still
 important) goals described elsewhere. These documents - devoted to the
 Ocean City release - are now obsolete:
 
--   [Obsolete - OCEAN CITY READ THIS FIRST]({{< relref "cerowrt/wiki/OCEAN_CITY.md" >}})
+-   [Obsolete - OCEAN CITY READ THIS FIRST](OCEAN_CITY.md)
     (This page)
--   [Obsolete - OCEAN CITY README]({{< relref "cerowrt/wiki/OCEAN_CITY_README.md" >}})
--   [Obsolete - OCEAN CITY RELEASE     REQUIREMENTS]({{< relref "cerowrt/wiki/OCEAN_CITY_RELEASE_REQUIREMENTS.md" >}})
--   [Obsolete - OCEAN CITY RELEASE     NOTES]({{< relref "cerowrt/wiki/OCEAN_CITY_RELEASE_NOTES.md" >}})
--   [Obsolete - Installation     Guide]({{< relref "cerowrt/wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}})
--   [Obsolete - FAQ]({{< relref "cerowrt/wiki/OCEAN_CITY_FAQ.md" >}})
--   [OCEAN CITY old News Item - rc7 slipping]({{< relref "cerowrt/wiki/OCEAN_CITY_old_News_Item_-_rc7_slipping.md" >}})
--   [OCEAN CITY old News item - rc6 (beta 2) is suitable for beta testing]({{< relref "cerowrt/wiki/OCEAN_CITY_old_News_item_-_rc6_(beta_2)_is_suitable_for_beta_testing.md" >}})
--   [OCEAN CITY old News Item - rc5 is suitable for testing]({{< relref "cerowrt/wiki/OCEAN_CITY_old_News_Item_-_rc5_is_suitable_for_testing.md" >}})
+-   [Obsolete - OCEAN CITY README](OCEAN_CITY_README.md)
+-   [Obsolete - OCEAN CITY RELEASE     REQUIREMENTS](OCEAN_CITY_RELEASE_REQUIREMENTS.md)
+-   [Obsolete - OCEAN CITY RELEASE     NOTES](OCEAN_CITY_RELEASE_NOTES.md)
+-   [Obsolete - Installation     Guide](OCEAN_CITY_INSTALLATION_GUIDE.md)
+-   [Obsolete - FAQ](OCEAN_CITY_FAQ.md)
+-   [OCEAN CITY old News Item - rc7 slipping](OCEAN_CITY_old_News_Item_-_rc7_slipping.md)
+-   [OCEAN CITY old News item - rc6 (beta 2) is suitable for beta testing](OCEAN_CITY_old_News_item_-_rc6_(beta_2)_is_suitable_for_beta_testing.md)
+-   [OCEAN CITY old News Item - rc5 is suitable for testing](OCEAN_CITY_old_News_Item_-_rc5_is_suitable_for_testing.md)
 
-ALL CURRENT INFORMATION ABOUT CEROWRT IS ON THE MAIN [WIKI]({{< relref "cerowrt/wiki/index.md" >}})
+ALL CURRENT INFORMATION ABOUT CEROWRT IS ON THE MAIN [WIKI](index.md)
 PAGE.
 
 How CeroWrt is different from OpenWrt
@@ -91,7 +91,7 @@ your subnet to the CeroWrt router, and turn off NAT.
 
 ### Device/Interface Naming
 
-We use an unusual [device naming scheme]({{< relref "cerowrt/wiki/Device_naming_scheme.md" >}}) to manage multiple
+We use an unusual [device naming scheme](Device_naming_scheme.md) to manage multiple
 kinds of wireless devices. Instead of using eth0, eth1, etc. the
 interfaces have names that more accurately reflect their actual use.
 Prefixes use Wireless vs. Ethernet and Secure, Guest/Gateway, or DMZ. As
@@ -117,7 +117,7 @@ Multiple services are enabled 'in' by default, notably http, https, ssh,
 & rsync. DNS allows in the entire 2002 address range into the 'us' DNS
 view, this should be restricted to just your 2002/48 lan.
 
-From here, please move on to the [download and installation guide]({{< relref "cerowrt/wiki/OCEAN_CITY_INSTALLATION_GUIDE.md" >}}).
+From here, please move on to the [download and installation guide](OCEAN_CITY_INSTALLATION_GUIDE.md).
 
 ### NB re: DNS
 

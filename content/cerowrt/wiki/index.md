@@ -37,7 +37,7 @@ better than fq\_codel, called [cake]({{< relref "codel/wiki/Cake.md" >}}), which
 ready for prime time yet.
 
 Is your internet connection bloated? You can find out right now using
-the [Quick Test for Bufferbloat.]({{< relref "cerowrt/wiki/Quick_Test_for_Bufferbloat.md" >}}) - or see the [dslreports new
+the [Quick Test for Bufferbloat.](Quick_Test_for_Bufferbloat.md) - or see the [dslreports new
 speedtest](http://dslreports.com/speedtest) .
 
 News
@@ -47,7 +47,7 @@ News
 build has been very stable since it was released on 28 July 2014. We
 strongly recommend replacing all earlier builds with this build. Read
 the [News](http://www.bufferbloat.net/news/53) item for the update. See
-the [CeroWrt 3.10 Release Notes]({{< relref "cerowrt/wiki/CeroWrt_310_Release_Notes.md" >}})
+the [CeroWrt 3.10 Release Notes](CeroWrt_310_Release_Notes.md)
 and the [mailing
 list](https://lists.bufferbloat.net/listinfo/cerowrt-devel) for more
 details.
@@ -75,7 +75,7 @@ capabilities
     from Kathie Nicols and Van Jacobson, along with Eric Dumazet's [flow
     queueing](https://tools.ietf.org/html/draft-hoeiland-joergensen-aqm-fq-codel-00) fq\_codel.
     These in turn rely on the Byte Queue Limits for line rate networks
-    and on htb for the [SQM]({{< relref "cerowrt/wiki/SQM.md" >}}) QoS system. These replace
+    and on htb for the [SQM](SQM.md) QoS system. These replace
     earlier Active Queue Management fixes for bufferbloat including:
     Stochastic Fair Queueing-Random Early Drop (SFQRED), and other
     queue disciplines.
@@ -106,7 +106,7 @@ https://lists.bufferbloat.net/pipermail/cerowrt-commits/\
 IRC: Find us on [IRC on
 chat.freenode.net](irc://chat.freenode.net:6667/bufferbloat),
 \#bufferbloat channel\
-[Assorted Bufferbloat Videos]({{< relref "cerowrt/wiki/Bloat-videos.md" >}})
+[Assorted Bufferbloat Videos](Bloat-videos.md)
 
 Try the Software
 ----------------
@@ -148,15 +148,15 @@ deployment scenario. Ask if you want them.
 As noted above, OpenWrt and DD-WRT support fq\_codel now in their QoS
 systems, so you can adopt one of the 150+ platforms supported there and
 see what happens.... YMMV, but please report here:
-[Hardware Reports on FQ CODEL]({{< relref "cerowrt/wiki/Hardware_Reports_on_FQ_CODEL.md" >}})
+[Hardware Reports on FQ CODEL](Hardware_Reports_on_FQ_CODEL.md)
 
 Documents
 ---------
 
--   [Installation Guide]({{< relref "cerowrt/wiki/Installation_Guide.md" >}})
--   [Flashing Instructions]({{< relref "cerowrt/wiki/Cerowrt_flashing_instructions.md" >}})
--   [Automated Configuration of CeroWrt]({{< relref "cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}})
--   [Frequently Asked Questions]({{< relref "cerowrt/wiki/FAQ.md" >}})
+-   [Installation Guide](Installation_Guide.md)
+-   [Flashing Instructions](Cerowrt_flashing_instructions.md)
+-   [Automated Configuration of CeroWrt](Automated_Configuration_of_CeroWrt.md)
+-   [Frequently Asked Questions](FAQ.md)
 -   <link>How is CeroWrt different from OpenWrt?</link>
 
 Tech Notes for CeroWrt
@@ -164,26 +164,26 @@ Tech Notes for CeroWrt
 
 The following give detailed descriptions of CeroWrt's operation.
 
--   [Setting up SQM]({{< relref "cerowrt/wiki/Setting_up_SQM_for_CeroWrt_310.md" >}})
--   [Default interface naming scheme]({{< relref "cerowrt/wiki/Device_naming_scheme.md" >}})
--   [Default network numbering     scheme]({{< relref "cerowrt/wiki/Default_network_numbering.md" >}})
--   [Changing IP, DNS, and     SSID]({{< relref "cerowrt/wiki/Changing_your_cerowrt_ip_addresses.md" >}})
--   [Monitoring CeroWrt with SNMP and     NetFlow]({{< relref "cerowrt/wiki/Monitoring_CeroWrt.md" >}})
+-   [Setting up SQM](Setting_up_SQM_for_CeroWrt_310.md)
+-   [Default interface naming scheme](Device_naming_scheme.md)
+-   [Default network numbering     scheme](Default_network_numbering.md)
+-   [Changing IP, DNS, and     SSID](Changing_your_cerowrt_ip_addresses.md)
+-   [Monitoring CeroWrt with SNMP and     NetFlow](Monitoring_CeroWrt.md)
 -   <link>Using Bonjour, mDNS, or ZeroConf with CeroWrt</link>
--   [Getting an IPv6 address via Hurricane Electric     Tunnelbroker.net]({{< relref "cerowrt/wiki/IPv6_Tunnel.md" >}})
--   [Useful scripts to use with CeroWrt]({{< relref "cerowrt/wiki/CeroWrtScripts.md" >}})
+-   [Getting an IPv6 address via Hurricane Electric     Tunnelbroker.net](IPv6_Tunnel.md)
+-   [Useful scripts to use with CeroWrt](CeroWrtScripts.md)
 
 Older Information
 -----------------
 
 The documents below describe the older Linux 3.7 and earlier builds.
 
--   [CeroWrt 3.7 Release Notes]({{< relref "cerowrt/wiki/CeroWrt_37_Release_Notes.md" >}})
--   [Building CeroWrt on     your own machine]({{< relref "cerowrt/wiki/Building_Cerowrt_on_your_own_machine.md" >}}) (tested for CeroWrt 3.3, not with
+-   [CeroWrt 3.7 Release Notes](CeroWrt_37_Release_Notes.md)
+-   [Building CeroWrt on     your own machine](Building_Cerowrt_on_your_own_machine.md) (tested for CeroWrt 3.3, not with
     CeroWrt 3.7)
--   [Setting QoS If You Can't Use CoDel]({{< relref "cerowrt/wiki/Setting_QoS_If_You_Can't_Use_CoDel.md" >}})
+-   [Setting QoS If You Can't Use CoDel](Setting_QoS_If_You_Can't_Use_CoDel.md)
 
-The [Historical Documents]({{< relref "cerowrt/wiki/Historical_Documents.md" >}}) page links to many documents that
+The [Historical Documents](Historical_Documents.md) page links to many documents that
 describe the history and earlier releases of the project.
 
 ### Attachments

@@ -9,7 +9,7 @@ Setting up AQM for CeroWrt 3.10
 ===============================
 
 **THIS PAGE IS DEPRECATED** in favor of the
-[Setting up SQM for CeroWrt 310]({{< relref "cerowrt/wiki/Setting_up_SQM_for_CeroWrt_310.md" >}}) page.
+[Setting up SQM for CeroWrt 310](Setting_up_SQM_for_CeroWrt_310.md) page.
 
 **Why?**
 

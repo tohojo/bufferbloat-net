@@ -13,7 +13,7 @@ What about QoS/AQM?
 
 Prior to the Modena build (February 2013), CeroWrt benefitted from
 setting QoS parameters. The defaults in Modena work pretty well, and
-using the procedure described on the [Setting up AQM]({{< relref "cerowrt/wiki/Setting_up_AQM.md" >}}) page
+using the procedure described on the [Setting up AQM](Setting_up_AQM.md) page
 works even better.
 
 Does Cerowrt "phone home"?
@@ -35,8 +35,8 @@ A: The characteristics of wired and wireless, as well as the
 sufficiently different to warrant making a clear distinction between
 them for <link>uberwrt:internal QoS</link> to work well.
 
-See the [default naming scheme]({{< relref "cerowrt/wiki/Device_naming_scheme.md" >}}) and
-[default numbering scheme]({{< relref "cerowrt/wiki/Default_network_numbering.md" >}}) pages
+See the [default naming scheme](Device_naming_scheme.md) and
+[default numbering scheme](Default_network_numbering.md) pages
 for more information.
 
 How is routing done in CeroWrt, since the interfaces are routed rather than bridged?
@@ -78,7 +78,7 @@ If your client (laptop, whatever) supports 5Ghz operation, you really
 want to use that SSID (clearly delineated by a "5" postfix) to get
 higher performance operation.
 
-You can make all the SSIDs be the same if you like in the [CeroWrt router configuration]({{< relref "cerowrt/wiki/Cerowrt_router_configuration.md" >}}) pages, but NANOG recommends training users
+You can make all the SSIDs be the same if you like in the [CeroWrt router configuration](Cerowrt_router_configuration.md) pages, but NANOG recommends training users
 "to choose the one on 5".
 
 Why guest interfaces?
@@ -98,7 +98,7 @@ router' to include your own web pages and interfaces.
 Why 172.30.42.0/27 subnet?
 --------------------------
 
-A: Please refer to the [default network numbering]({{< relref "cerowrt/wiki/Default_network_numbering.md" >}}) page.
+A: Please refer to the [default network numbering](Default_network_numbering.md) page.
 
 What's this babel thing?
 ------------------------
@@ -131,7 +131,7 @@ A: This is a research project. We hope to make things simpler.
 This is cool! What else can this puppy do?
 ------------------------------------------
 
-A: See: [Cool things to do with a cerowrt router]({{< relref "cerowrt/wiki/Cool_things_to_do_with_a_cerowrt_router.md" >}})
+A: See: [Cool things to do with a cerowrt router](Cool_things_to_do_with_a_cerowrt_router.md)
 
 How to close default open firewall ports?
 -----------------------------------------

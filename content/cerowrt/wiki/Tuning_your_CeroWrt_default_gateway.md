@@ -11,7 +11,7 @@ Tuning your CeroWrt default gateway (External Gateway Router - EGR)
 CeroWrt **routes** by default, not bridges. This brings in some
 complexity in setup but large improvements in latency and jitter.
 
-If you want multiple routers see also: [Setting up an interior gateway router]({{< relref "cerowrt/wiki/Setting_up_an_interior_gateway_router.md" >}}).
+If you want multiple routers see also: [Setting up an interior gateway router](Setting_up_an_interior_gateway_router.md).
 
 For information on bridging, rather than routing, see <link>Setting up
 CeroWrt to bridge</link>.
@@ -129,10 +129,10 @@ Further tuning
 
 Install the box wherever it goes.
 
-Configure [SQM]({{< relref "cerowrt/wiki/SQM.md" >}})
+Configure [SQM](SQM.md)
 --------------------------
 
-Can't stress that more. Fix your bufferbloat! see: [Setting up SQM for CeroWrt 310]({{< relref "cerowrt/wiki/Setting_up_SQM_for_CeroWrt_310.md" >}}).
+Can't stress that more. Fix your bufferbloat! see: [Setting up SQM for CeroWrt 310](Setting_up_SQM_for_CeroWrt_310.md).
 
 You can make your network perform [like
 this](http://snapon.lab.bufferbloat.net/~cero2/jimreisert/results.html)
@@ -245,5 +245,5 @@ but it isn't fully baked yet.
 ### Some devices don't like /27 subnets
 
 The sony line of blue-ray players are known to not like the /27 subnets
-cerowrt uses. This is discussed on the [Sony BlueRay Bugs]({{< relref "cerowrt/wiki/Sony_BlueRay_Bugs.md" >}})
+cerowrt uses. This is discussed on the [Sony BlueRay Bugs](Sony_BlueRay_Bugs.md)
 page.

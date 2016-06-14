@@ -39,8 +39,8 @@ How can I get this script?
 --------------------------
 
 The *config-cerowrt.sh* script is now part of the
-[CeroWrtScripts bundle.]({{< relref "cerowrt/wiki/CeroWrtScripts.md" >}}) A direct link to the
+[CeroWrtScripts bundle.](CeroWrtScripts.md) A direct link to the
 script is:
 https://github.com/richb-hanover/CeroWrtScripts/blob/master/config-cerowrt.sh
 But it's easier to use the script if you `git clone` it to your router
-as described on the [CeroWrtScripts page.]({{< relref "cerowrt/wiki/CeroWrtScripts.md" >}})
+as described on the [CeroWrtScripts page.](CeroWrtScripts.md)

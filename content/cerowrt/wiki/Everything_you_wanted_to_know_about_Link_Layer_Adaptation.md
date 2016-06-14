@@ -15,7 +15,7 @@ http://www.bufferbloat.net/projects/cerowrt/wiki/Setting\_up\_AQM\_for\_CeroWrt\
 
 However, certain link types have smaller overheads, and if you can
 ascertain your link types (whether it’s LLC or VC-Mux based), you can
-use these smaller overheads: Try the [Quick Test for Bufferbloat]({{< relref "cerowrt/wiki/Quick_Test_for_Bufferbloat.md" >}}) after making the change.
+use these smaller overheads: Try the [Quick Test for Bufferbloat](Quick_Test_for_Bufferbloat.md) after making the change.
 
 **LLC-based Overheads:**
 

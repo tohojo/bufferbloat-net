@@ -8,8 +8,8 @@ type: wiki
 Setting up SQM for CeroWrt 3.10
 ===============================
 
-Current versions of CeroWrt have a [Smart Queue Management]({{< relref "cerowrt/wiki/Smart_Queue_Management.md" >}})
-([SQM]({{< relref "cerowrt/wiki/SQM.md" >}})) tab in the Network section that allows you to
+Current versions of CeroWrt have a [Smart Queue Management](Smart_Queue_Management.md)
+([SQM](SQM.md)) tab in the Network section that allows you to
 optimize the performance of the interface (generally ge00) that connects
 the CeroWrt router to the Internet. There are three sub-tabs in the SQM
 tab that you may configure:
@@ -157,7 +157,7 @@ passes it along to the receiver. That receiver sends the congestion
 notification back to the sender, which can adjust its rate. This
 provides faster feedback than having CeroWrt drop the received packet.
 Note: this technique requires that the TCP stack on both sides
-[enable ECN]({{< relref "cerowrt/wiki/Enable_ECN.md" >}}).
+[enable ECN](Enable_ECN.md).
 
 At low bandwidths we recommend that you turn ECN off for the Upload
 (outbound, egress) direction, because fq\_codel handles and drops
@@ -215,7 +215,7 @@ Internet. The general rule for selecting the Link Layer Adaption is:
     other parameters will be ignored.
 
 If you are not sure what kind of link you have, first try using "None",
-then run the [Quick Test for Bufferbloat]({{< relref "cerowrt/wiki/Quick_Test_for_Bufferbloat.md" >}}). If the results are
+then run the [Quick Test for Bufferbloat](Quick_Test_for_Bufferbloat.md). If the results are
 good, you’re done. Next, try the ATM choice, then the Ethernet choice to
 see which performs best. Read the **Details** (below) to learn more
 about tuning the parameters for your link.
@@ -246,7 +246,7 @@ should work quite well for virtually all connections.
 
 You may be able to improve your performance by adjusting the parameters
 above to the specifics of your connection to the internet through your
-ISP. If you want to experiment, read [Everything you wanted to know about Link Layer Adaptation]({{< relref "cerowrt/wiki/Everything_you_wanted_to_know_about_Link_Layer_Adaptation.md" >}}). And join the [CeroWrt-Devel mailing
+ISP. If you want to experiment, read [Everything you wanted to know about Link Layer Adaptation](Everything_you_wanted_to_know_about_Link_Layer_Adaptation.md). And join the [CeroWrt-Devel mailing
 list](https://lists.bufferbloat.net/listinfo/cerowrt-devel) and let us
 know what you learn!
 

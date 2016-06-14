@@ -33,7 +33,7 @@ Present versions of cerowrt try really hard to come up automatically in
 in the near future.
 
 For purposes of this discussion I'm merely going to document how
-[bloatlab 1]({{< relref "cerowrt/wiki/BloatLab_1.md" >}}) is configured. The bloatlab has a /60 ipv6
+[bloatlab 1](BloatLab_1.md) is configured. The bloatlab has a /60 ipv6
 delegation from isc.org, thus leading to the possibility of 16 distinct
 ipv6 networks. There is also a 'main' network on which an array of
 routers and test equipment are configured.

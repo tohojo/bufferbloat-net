@@ -19,7 +19,7 @@ vlan priority harmonized with 802.11e priority?\
 Independently buildable (perl)\
 ECN iptables changes\
 Elemental diffserv support\
-more support for the [cosmic background bufferbloat detector]({{< relref "cerowrt/wiki/Cosmic_background_bufferbloat_detector.md" >}})
+more support for the [cosmic background bufferbloat detector](Cosmic_background_bufferbloat_detector.md)
 
 Fixes for bugs \#240, \#252, \#242, \#233, \#239, \#98, \#113, \#262 -
 

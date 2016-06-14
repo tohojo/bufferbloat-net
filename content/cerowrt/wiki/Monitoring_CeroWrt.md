@@ -11,7 +11,7 @@ Monitoring CeroWrt with SNMP and NetFlow
 There are optional packages that allow you to install SNMP and NetFlow
 agents on CeroWrt.
 
-The [Automated Configuration of CeroWrt]({{< relref "cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}}) page provides a
+The [Automated Configuration of CeroWrt](Automated_Configuration_of_CeroWrt.md) page provides a
 script that (optionally) performs both these actions as well as allowing
 you to configure other aspects of your router in a single step. For
 reference, the GUI process for enabling SNMP and NetFlow procedures are
@@ -91,4 +91,4 @@ router, paste the script into a file in /tmp, then run that file. Note
 that you should change *192.168.1.1* in **both** fprobe commands to the
 address of your own NetFlow collector.
 
-The script has been moved to the [Automated Configuration of CeroWrt]({{< relref "cerowrt/wiki/Automated_Configuration_of_CeroWrt.md" >}}) page.
+The script has been moved to the [Automated Configuration of CeroWrt](Automated_Configuration_of_CeroWrt.md) page.
