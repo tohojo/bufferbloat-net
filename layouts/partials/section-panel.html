@@ -3,8 +3,8 @@
           <h4>{{ . | title }} Project</h4>
         </div>
         <div class="panel-body">
-          <a href="{{ . | lower | relURL }}/news">News items</a><br />
-          <a href="{{ . | lower | relURL }}">List of Wiki pages</a><br />
-          <a href="{{ . | lower | relURL }}/issues">List of bugs</a>
+          <a href="/{{ . | lower }}/news">News items</a><br />
+          <a href="/{{ . | lower }}">List of Wiki pages</a><br />
+          <a href="/{{ . | lower }}/issues">List of bugs</a>
         </div>
     </div>
