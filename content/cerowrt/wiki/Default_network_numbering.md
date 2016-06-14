@@ -23,7 +23,7 @@ the 172.16.0.0/12 range to play in. The default address for the router
 is 172.30.42.1.
 
 It is ironic that this is the last piece of 'free' IP address space
-left. See also [BANA]({{< relref "bloat/wiki/BANA.md" >}}).
+left. See also [BANA](/bloat/wiki/BANA.md).
 
 If you find this IP hard to remember or type, DNS is enabled by default
 for a virtual subdomain of *home.lan*. You should be able to get to it

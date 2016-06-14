@@ -15,7 +15,7 @@ Yurtlab testing (comcast 20Mbit up 8Mbit down)
 ----------------------------------------------
 
 Various fq\_codel based rate shaping prototypes are under test at the
-[Yurtlab]({{< relref "cerowrt/wiki/Yurtlab.md" >}}).
+[Yurtlab](/cerowrt/wiki/Yurtlab.md).
 
 ### NFQ\_Codel with HTB rate limiting vs PFIFO\_FAST
 

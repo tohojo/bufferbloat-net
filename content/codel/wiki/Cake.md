@@ -14,7 +14,7 @@ Cake - Common Applications Kept Enhanced
 use more help from others that care about speeding up the internet.
 
 Cake is the rollup of 3 years of deployment experience of the htb +
-fq\_codel based sqm-scripts [SQM]({{< relref "cerowrt/wiki/SQM.md" >}}) for aqm/fq/qos
+fq\_codel based sqm-scripts [SQM](/cerowrt/wiki/SQM.md) for aqm/fq/qos
 inbound and outbound bufferbloat management. For input into the design
 and implementation, please join the [cake mailing
 list](https://lists.bufferbloat.net/listinfo/cake) . For an alternative

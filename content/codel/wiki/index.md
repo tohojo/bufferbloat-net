@@ -147,7 +147,7 @@ iproute2 added support for fq\_codel in the 3.6 release and
 configuration and statistics should be available by default in most
 Linux systems shipped today.
 
-[CeroWrt]({{< relref "cerowrt/wiki/index.md" >}}) Version
+[CeroWrt](/cerowrt/wiki/index.md) Version
 -----------------------------------------
 
 The CeroWrt research router project was started, specifically, to test

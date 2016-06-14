@@ -388,7 +388,7 @@ The black line is an average of the fat streams and does not account for
 acks in the opposite direction or the measurement flows. In the latency
 test (third part of the chart), the black line is also an average, and
 each measurement stream stops at the first packet loss. (See
-[RRUL test suite]({{< relref "codel/wiki/RRUL_test_suite.md" >}}) for more details on this benchmark
+[RRUL test suite](/codel/wiki/RRUL_test_suite.md) for more details on this benchmark
 and these plots.
 
 Using wondershaper at this speed inbound bandwidth is less than HALF of

@@ -22,11 +22,11 @@ generally aren't but that's another story) it IS the right thing...
 Please, please, don't just blindly go twisting knobs without
 understanding what you are doing... and we've mostly settled on
 fq\_codel as being the best answer yet, see the
-[Bloat-videos]({{< relref "cerowrt/wiki/Bloat-videos.md" >}}) page for some details on that.
+[Bloat-videos](/cerowrt/wiki/Bloat-videos.md) page for some details on that.
 
 So the remainder of this web page is very old... and we haven't actually
 updated the main bufferbloat web servers to any huge extent lately,
-we're running the [Yurtlab]({{< relref "cerowrt/wiki/Yurtlab.md" >}}) instead, (and we are
+we're running the [Yurtlab](/cerowrt/wiki/Yurtlab.md) instead, (and we are
 doing several large scale test deployments...)
 
 ... so for historical reasons... read on...
@@ -143,7 +143,7 @@ ethtool -g wlan0@
 Reduce transmit queue length
 ----------------------------
 
-NOTE: with [codel]({{< relref "codel/wiki/index.md" >}}), this is no longer needed
+NOTE: with [codel](/codel/wiki/index.md), this is no longer needed
 either.
 
 This is a separate setting for each network interface. Examples:

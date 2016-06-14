@@ -63,7 +63,7 @@ default - this allows 30 addresses per interface, a sensible limit for
 home/edge routers.
 
 It is ironic that this is the last piece of 'free' IP address space
-left. See also [BANA]({{< relref "bloat/wiki/BANA.md" >}}).
+left. See also [BANA](/bloat/wiki/BANA.md).
 
 If you find this IP hard to remember or type, dns is enabled by default
 for a virtual subdomain of 'home.lan. You should be able to get to it

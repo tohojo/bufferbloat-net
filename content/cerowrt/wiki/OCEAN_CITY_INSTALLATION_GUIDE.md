@@ -122,7 +122,7 @@ Thanks!
 
 You should now be on the Internet using the latest and greatest code
 from the [Cerowrt](index.md) Project, the
-[Bufferbloat uberwrt]({{< relref "bloat/wiki/index.md" >}}) project, and
+[Bufferbloat uberwrt](/bloat/wiki/index.md) project, and
 [OpenWrt](http://www.openwrt.org) .
 
 We hope that your experience will be exceptional. Please send us your

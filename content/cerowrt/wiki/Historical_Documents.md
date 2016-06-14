@@ -84,6 +84,6 @@ The following may be incomplete or outdated.
 
 <link>pdsh</link>
 
-[BANA]({{< relref "bloat/wiki/BANA.md" >}})
+[BANA](/bloat/wiki/BANA.md)
 
 [scratch](Scratch.md)

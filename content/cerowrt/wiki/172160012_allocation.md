@@ -13,4 +13,4 @@ connect widely disconnected researchers together, much like how the
 early ARPA-net did the same for universities around the United States
 back in the early 1970s.
 
-See [BANA]({{< relref "bloat/wiki/BANA.md" >}}) for more details.
+See [BANA](/bloat/wiki/BANA.md) for more details.

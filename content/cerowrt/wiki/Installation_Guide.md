@@ -88,7 +88,7 @@ Step 3. That's It!
 
 You should now be on the Internet using the latest and greatest code
 from the [CeroWrt](index.md) Project, the
-[Bufferbloat]({{< relref "bloat/wiki/index.md" >}}) project, and
+[Bufferbloat](/bloat/wiki/index.md) project, and
 [OpenWrt](http://www.openwrt.org) .
 
 We hope that your experience will be exceptional. Please send us your

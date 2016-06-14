@@ -16,7 +16,7 @@ performance created, ironically, by previous attempts to make it work
 better. Eric Raymond wrote this one-sentence summary of the problem:
 "Bloated buffers lead to network-crippling latency spikes." You can read
 more about this problem at the main
-[Bufferbloat]({{< relref "bloat/wiki/Introduction.md" >}}) site.
+[Bufferbloat](/bloat/wiki/Introduction.md) site.
 
 CeroWrt was a project built upon the [OpenWrt
 firmware](http://openwrt.org) to resolve these endemic problems in home
@@ -33,7 +33,7 @@ releases, many firewall and router distributions and it is beginning to
 appear in commercial firmware. Active research (due to lack of funding,
 and succeeding in the primary goals) has ceased, with the exception of
 ongoing work into standardization efforts, and into something even
-better than fq\_codel, called [cake]({{< relref "codel/wiki/Cake.md" >}}), which is not
+better than fq\_codel, called [cake](/codel/wiki/Cake.md), which is not
 ready for prime time yet.
 
 Is your internet connection bloated? You can find out right now using
@@ -97,7 +97,7 @@ capabilities
 Sources of Information about the Bufferbloat Project
 ----------------------------------------------------
 
-Glossary for Bufferbloat Topics: [Glossary]({{< relref "bloat/wiki/Glossary.md" >}})\
+Glossary for Bufferbloat Topics: [Glossary](/bloat/wiki/Glossary.md)\
 General Bufferbloat list: https://lists.bufferbloat.net/listinfo/bloat\
 CeroWrt-devel list:
 https://lists.bufferbloat.net/listinfo/cerowrt-devel\
