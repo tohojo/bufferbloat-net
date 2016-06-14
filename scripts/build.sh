@@ -7,15 +7,24 @@ set -o nounset
 
 LOCKDIR=$HOME/.bufferbloat-build.lock
 PIDFILE=$LOCKDIR/PID
+SRCDIR=$HOME/bufferbloat-net
+
+cleanup() {
+    rm -rf $LOCKDIR $TMPDIR
+    rm -f $SRCDIR/static/css/combined.css
+}
+
 
 mkdir $LOCKDIR # fails if it already exists
+trap cleanup EXIT
 echo $$ > "$PIDFILE"
+TMPDIR=$(mktemp -d /tmp/hugo-build-XXXX)
+conf=$TMPDIR/config.yaml
+target=$TMPDIR/public
 
-cd $HOME/bufferbloat-net
+cd $SRCDIR
 
 git pull --quiet --ff-only
-
-rm -rf public
 
 STYLESHEET_PATHS="static/css"
 
@@ -29,25 +38,22 @@ get_stylesheets()
     done
 }
 
-get_stylesheets | python -m rcssmin > static/css/combined.css
+get_stylesheets | python -m rcssmin > $SRCDIR/static/css/combined.css
 
-conf=$(mktemp config-XXXX.yaml)
-sed 's/stylesheets: .*/stylesheets: ["combined.css"]/' config.yaml > $conf
+sed 's/stylesheets: .*/stylesheets: ["combined.css"]/' $SRCDIR/config.yaml > $conf
 
-hugo -d public --config=$conf --logFile=$HOME/hugo.log > /dev/null
-rm -f $conf
+hugo -d $target --config=$conf --logFile=$HOME/hugo.log  > /dev/null
 
 # Remove source css files
-find public -name '*.css' -not -name combined.css -delete
+find $target -name '*.css' -not -name combined.css -delete
 
 # gzip files so nginx can serve them compressed
-find public \( -name '*.js' -or -name '*.css' -or -name '*.svg' -or -name '*.html' -or -name '*.ttf' \) -exec gzip -k9 '{}' \;
+find $target \( -name '*.js' -or -name '*.css' -or -name '*.svg' -or -name '*.html' -or -name '*.ttf' \) -exec gzip -k9 '{}' \;
 
 # optimise PNG images
-find public -name '*.png' -exec optipng -silent -preserve '{}' \;
+#find public -name '*.png' -exec optipng -silent -preserve '{}' \;
 
-rsync -rtpl --delete --exclude stats/ --exclude /news --exclude /issues --exclude .well-known public/ $BUFFERBLOAT_NET_DEST/projects/
-rsync -rtpl --delete public/news/ $BUFFERBLOAT_NET_DEST/news/
-rsync -rtpl --delete public/issues/ $BUFFERBLOAT_NET_DEST/issues/
+rsync -rtpl --delete --exclude stats/ --exclude /news --exclude /issues --exclude .well-known $target/ $BUFFERBLOAT_NET_DEST/projects/
+rsync -rtpl --delete $target/news/ $BUFFERBLOAT_NET_DEST/news/
+rsync -rtpl --delete $target/issues/ $BUFFERBLOAT_NET_DEST/issues/
 
-rm -rf static/css/combined.css $LOCKDIR
