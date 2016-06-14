@@ -30,7 +30,9 @@ def run_build(q):
     while q.get():
         c = subprocess.run([os.path.join(os.environ['HOME'], 'build.sh')])
         if c.returncode:
-            print("Build failed with code %d" % c.returncode)
+            sys.stderr.write("Build failed with code %d.\n" % c.returncode)
+        else:
+            sys.stdout.write("Successfully built Hugo site.\n")
 
 class ReqHandler(http.server.BaseHTTPRequestHandler):
 
