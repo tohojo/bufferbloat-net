@@ -124,23 +124,23 @@ The screenshots below illustrate the process of setting up a
 TunnelBroker account at HurricaneElectric.net
 
 **Figure 1:** Main Page, showing **Create Regular Tunnel** link\
-![](tunnelbroker1.png)
+![](/attachments/120317071311_tunnelbroker1.png)
 
 **Figure 2:** Create New Tunnel page\
-![](tunnelbroker2.png)
+![](/attachments/120317071430_tunnelbroker2.png)
 
 **Figure 3:** Tunnel Details page\
-![](tunnelbroker3.png)
+![](/attachments/120317071431_tunnelbroker3.png)
 
 **Figure 4:** Configuration script for CeroWrt and OpenWrt\
-![](tunnelbroker4.png)
+![](/attachments/120317071431_tunnelbroker4.png)
 
 **Figure 5:** Advanced Settings\
-![](tunnelbroker5.png)
+![](/attachments/120317071431_tunnelbroker5.png)
 
 ### Attachments
-{{< attachment name="tunnelbroker5.png" type="image/png" description="" filename="120317071431_tunnelbroker5.png" >}}
 {{< attachment name="tunnelbroker1.png" type="image/png" description="" filename="120317071311_tunnelbroker1.png" >}}
 {{< attachment name="tunnelbroker2.png" type="image/png" description="" filename="120317071430_tunnelbroker2.png" >}}
 {{< attachment name="tunnelbroker3.png" type="image/png" description="" filename="120317071431_tunnelbroker3.png" >}}
 {{< attachment name="tunnelbroker4.png" type="image/png" description="" filename="120317071431_tunnelbroker4.png" >}}
+{{< attachment name="tunnelbroker5.png" type="image/png" description="" filename="120317071431_tunnelbroker5.png" >}}
