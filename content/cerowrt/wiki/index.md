@@ -4,6 +4,8 @@ title: Cerowrt Wiki
 date: 2011-05-28T06:59:53
 lastmod: 2015-11-29T16:41:10
 type: wiki
+aliases:
+    - /cerowrt/wiki/Wiki
 ---
 Overview of the CeroWrt Project
 ===============================

@@ -4,6 +4,8 @@ title: Codel Wiki
 date: 2012-05-06T18:52:34
 lastmod: 2015-10-14T10:26:53
 type: wiki
+aliases:
+    - /codel/wiki/Wiki
 ---
 CoDel Overview
 ==============
