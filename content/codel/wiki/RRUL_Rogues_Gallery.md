@@ -9,7 +9,7 @@ RRUL Rogues Gallery
 ===================
 
 This is a web page dedicated to showing off and explaining some results
-obtained via (early) prototypes of the [RRUL test suite]({{< relref "codel/wiki/RRUL_test_suite.md" >}}).
+obtained via (early) prototypes of the [RRUL test suite](RRUL_test_suite.md).
 
 Yurtlab testing (comcast 20Mbit up 8Mbit down)
 ----------------------------------------------

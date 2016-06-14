@@ -18,7 +18,7 @@ fq\_codel based sqm-scripts [SQM]({{< relref "cerowrt/wiki/SQM.md" >}}) for aqm/
 inbound and outbound bufferbloat management. For input into the design
 and implementation, please join the [cake mailing
 list](https://lists.bufferbloat.net/listinfo/cake) . For an alternative
-approach to inbound traffic management, see [Bobbie]({{< relref "codel/wiki/Bobbie.md" >}}).
+approach to inbound traffic management, see [Bobbie](Bobbie.md).
 
 Slides from a recent talk on Cake, at Battlemesh v8:
 attachment:cake-battlemesh-v8.pdf
@@ -315,7 +315,7 @@ on the outbound device. We added "peeling" to fix this so you no longer
 have to turn off offloads like thiese.
 
 There are numerous other traps for the unwary, documented in
-[Best practices for benchmarking Codel and FQ Codel]({{< relref "codel/wiki/Best_practices_for_benchmarking_Codel_and_FQ_Codel.md" >}})
+[Best practices for benchmarking Codel and FQ Codel](Best_practices_for_benchmarking_Codel_and_FQ_Codel.md)
 - we are trying to make those traps less dangerous in cake, for example,
 we came up with a way to "peel" apart TSO/GSO/GRO offloads to deal with
 packets rather than superpackets.

@@ -101,7 +101,7 @@ Google Summer of Code, and fq\_codel (and variants) are slated for the
 next version.
 
 There are now basically 6 slightly different variants of codel (see
-[Reconciling codel variants]({{< relref "codel/wiki/Reconciling_codel_variants.md" >}})), flying in loose formation. The
+[Reconciling codel variants](Reconciling_codel_variants.md)), flying in loose formation. The
 code as published in the original paper is obsolete. Research is
 continuing. Come help!
 
