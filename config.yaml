@@ -6,5 +6,8 @@ relativeURLs: false
 pluralizeListTitles: false
 metadataFormat: yaml
 params:
-  author: The Bufferbloat community
   stylesheets: [ "bootstrap.css", "font-awesome.css", "custom.css" ]
+author:
+  name: The Bufferbloat community
+  email: bloat@lists.bufferbloat.net
+
