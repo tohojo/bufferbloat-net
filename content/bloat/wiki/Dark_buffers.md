@@ -15,5 +15,5 @@ do not cause problems when they are empty. But when they fill they
 introduce additional latency (and create other problems, possibly very
 severe) to other traffic sharing the link.
 
-The [Buffer Bloat project](/projects/bloat) is dedicated to finding and
+The [Buffer Bloat project](index.md) is dedicated to finding and
 mitigating Dark Buffers.

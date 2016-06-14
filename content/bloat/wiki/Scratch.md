@@ -8,16 +8,16 @@ type: wiki
 Scratch
 =======
 
-[BQL enabled drivers]({{< relref "bloat/wiki/BQL_enabled_drivers.md" >}})
+[BQL enabled drivers](BQL_enabled_drivers.md)
 
 <link>Gathering 2013 Overview</link>
 
 <link>Gathering 2013 Long Period Bloat</link>
 
-[Upcoming Talks]({{< relref "bloat/wiki/Upcoming_Talks.md" >}})
+[Upcoming Talks](Upcoming_Talks.md)
 
-[Janitorial Tasks]({{< relref "bloat/wiki/Janitorial_Tasks.md" >}})
+[Janitorial Tasks](Janitorial_Tasks.md)
 
-[Advice for ISPS]({{< relref "bloat/wiki/Advice_for_ISPS.md" >}})
+[Advice for ISPS](Advice_for_ISPS.md)
 
-[Daves Media Guidance]({{< relref "bloat/wiki/Daves_Media_Guidance.md" >}})
+[Daves Media Guidance](Daves_Media_Guidance.md)

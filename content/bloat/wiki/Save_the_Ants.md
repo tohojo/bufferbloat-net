@@ -29,7 +29,7 @@ shootdowns (SCTP, etc), has similarly multiplied effects.
 
 Also, TCP MICE are hard to shoot right and have a desirable effect.
 
-Here are some [traffic analyses]({{< relref "bloat/wiki/Diffserv_statistics.md" >}}), which
+Here are some [traffic analyses](Diffserv_statistics.md), which
 can give you a feel for the ratios in one (atypical) home network.
 
 So most shapers should make mildly greater efforts to avoid shooting

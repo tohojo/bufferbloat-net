@@ -127,36 +127,35 @@ Dave Taht's to-do list:
 
 -   <link>Myths</link>
 -   <link>Controversies</link>
--   [Conferences]({{< relref "bloat/wiki/Conferences.md" >}})
+-   [Conferences](Conferences.md)
 -   <link>Linux Traffic Shapers</link>
 -   <link>Device Driver Buffering</link>
 -   <link>Linux Patches</link>
--   [Linux Tips]({{< relref "bloat/wiki/Linux_Tips.md" >}})
+-   [Linux Tips](Linux_Tips.md)
 -   <link>Mac Tips</link>
--   [Windows Tips]({{< relref "bloat/wiki/Windows_Tips.md" >}})
--   [Bloated Driver List]({{< relref "bloat/wiki/Bloated_Driver_List.md" >}})
--   [IPv6]({{< relref "bloat/wiki/IPv6.md" >}})
--   [Glossary]({{< relref "bloat/wiki/Glossary.md" >}}) [Dark Buffers]({{< relref "bloat/wiki/Dark_buffers.md" >}}) <link>Latency</link>
+-   [Windows Tips](Windows_Tips.md)
+-   [Bloated Driver List](Bloated_Driver_List.md)
+-   [IPv6](IPv6.md)
+-   [Glossary](Glossary.md) [Dark Buffers](Dark_buffers.md) <link>Latency</link>
     <link>RTT</link> <link>TXQUEUELEN</link> <link>DMA\_TX\_QUEUE</link>
     <link>spiky latency</link>
--   [Experiments]({{< relref "bloat/wiki/Experiments.md" >}})
--   [Equations]({{< relref "bloat/wiki/Equations.md" >}})
+-   [Experiments](Experiments.md)
+-   [Equations](Equations.md)
 -   <link>Qdiscs</link>
--   [Papers]({{< relref "bloat/wiki/Papers.md" >}})
+-   [Papers](Papers.md)
 -   <link>Mitigations</link>
--   [Dogfood Principle]({{< relref "bloat/wiki/Dogfood_Principle.md" >}})
--   [Good blog discussions]({{< relref "bloat/wiki/Good_blog_discussions.md" >}})
+-   [Dogfood Principle](Dogfood_Principle.md)
+-   [Good blog discussions](Good_blog_discussions.md)
 -   <link>What (bad) stuff happens on a congested network?</link>
 -   <link>Mesh Networks</link>
--   [Talks]({{< relref "bloat/wiki/Talks.md" >}})
--   [Experts]({{< relref "bloat/wiki/Experts.md" >}})
--   [sandbox]({{< relref "bloat/wiki/Sandbox.md" >}})
--   [Quotes]({{< relref "bloat/wiki/Quotes.md" >}})
+-   [Talks](Talks.md)
+-   [Experts](Experts.md)
+-   [Quotes](Quotes.md)
 -   <link>SACK hall of Fame</link> <link>SACK hall of Shame</link>
 -   <link>ECN Hall of Fame</link> <link>ECN hall of Shame</link>
--   [dtaht tasks]({{< relref "bloat/wiki/Dtaht_tasks.md" >}})
--   [humor]({{< relref "bloat/wiki/Humor.md" >}})
+-   [dtaht tasks](Dtaht_tasks.md)
+-   [humor](Humor.md)
 -   Gettys blogs reformatted\
-    [Mitigations and Solutions]({{< relref "bloat/wiki/Mitigations_and_Solutions.md" >}}) [Mitigations and solutions for Broadband]({{< relref "bloat/wiki/Mitigations_and_solutions_for_Broadband.md" >}}) <link>Mitigations and solutions for
-    Wireless</link> [Mitigations and Solutions for Home Gateways]({{< relref "bloat/wiki/Mitigations_and_Solutions_for_Home_Gateways.md" >}})
+    [Mitigations and Solutions](Mitigations_and_Solutions.md) [Mitigations and solutions for Broadband](Mitigations_and_solutions_for_Broadband.md) <link>Mitigations and solutions for
+    Wireless</link> [Mitigations and Solutions for Home Gateways](Mitigations_and_Solutions_for_Home_Gateways.md)
 

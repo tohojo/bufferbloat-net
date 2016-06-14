@@ -10,13 +10,13 @@ RFC: Improving DSCP support in Linux
 
 {{include(Diffserv Linux Improvement Overview)}}
 
-1.  [Basic Diffserv Improvements to Linux]({{< relref "bloat/wiki/Basic_Diffserv_Improvements_to_Linux.md" >}})
-2.  [More advanced Diffserv support in Linux]({{< relref "bloat/wiki/More_advanced_Diffserv_support_in_Linux.md" >}})
-3.  [Radical Diffserv improvements]({{< relref "bloat/wiki/Radical_Diffserv_improvements.md" >}})
+1.  [Basic Diffserv Improvements to Linux](Basic_Diffserv_Improvements_to_Linux.md)
+2.  [More advanced Diffserv support in Linux](More_advanced_Diffserv_support_in_Linux.md)
+3.  [Radical Diffserv improvements](Radical_Diffserv_improvements.md)
 4.  <link>Save\_the\_Mice|Stop shooting system control packets</link>!
-5.  [Analysis of existing firewalls and shapers]({{< relref "bloat/wiki/Analysis_of_existing_firewalls_and_shapers.md" >}})
+5.  [Analysis of existing firewalls and shapers](Analysis_of_existing_firewalls_and_shapers.md)
 
-You can also see these suggestions as [one big web page]({{< relref "bloat/wiki/Diffserv_RFC.md" >}}).
+You can also see these suggestions as [one big web page](Diffserv_RFC.md).
 
 This is very much a WIP and may at some point evolve into a more formal
 RFC and actual code.

@@ -34,7 +34,7 @@ decisions.
 keep the public conversation(s) on track, and recruiting
 <link>helpers</link> which is eating far more of my time than I'd like.
 
-[RFC Improving DSCP support in Linux]({{< relref "bloat/wiki/RFC_Improving_DSCP_support_in_Linux.md" >}})
+[RFC Improving DSCP support in Linux](RFC_Improving_DSCP_support_in_Linux.md)
 
 <link>latency</link>
 
@@ -43,13 +43,13 @@ stack.
 
 I can be found in the \#bufferbloat channel(s) on irc.
 
-<link>Save the Mice</link> [Diffserv statistics]({{< relref "bloat/wiki/Diffserv_statistics.md" >}})
+<link>Save the Mice</link> [Diffserv statistics](Diffserv_statistics.md)
 
-[Dtaht test rig]({{< relref "bloat/wiki/Dtaht_test_rig.md" >}})
+[Dtaht test rig](Dtaht_test_rig.md)
 
-[Experiment - TCP cubic vs TCP vegas]({{< relref "bloat/wiki/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}})
+[Experiment - TCP cubic vs TCP vegas](Experiment_-_TCP_cubic_vs_TCP_vegas.md)
 
-[Experiment - Bloated LAGN vs debloated WNDR5700]({{< relref "bloat/wiki/Experiment_-_Bloated_LAGN_vs_debloated_WNDR5700.md" >}})
+[Experiment - Bloated LAGN vs debloated WNDR5700](Experiment_-_Bloated_LAGN_vs_debloated_WNDR5700.md)
 
 <link>Improving DSCP support in Linux</link>
 
@@ -117,7 +117,7 @@ http://www1.sce.umkc.edu/\~sohrabyk/papers/TcomReport.pdf
 
 http://portal.acm.org/citation.cfm?id=1219649
 
-[VOIP]({{< relref "bloat/wiki/VOIP.md" >}})
+[VOIP](VOIP.md)
 
 &gt;\
 &gt; Also, PLUGFEST![]()! Sounds like a good spot to do some testing in\
@@ -133,14 +133,14 @@ need; but the task of educating them will make that clear.
 See: http://www.iol.unh.edu/\
 - Jim
 
--   [Network Analysis Tools]({{< relref "bloat/wiki/Network_Analysis_Tools.md" >}})
+-   [Network Analysis Tools](Network_Analysis_Tools.md)
 
 <!-- -->
 
--   [Bufferbloat and Freeswitch Conference Call March 9]({{< relref "bloat/wiki/Bufferbloat_and_Freeswitch_Conference_Call_March_9.md" >}})
+-   [Bufferbloat and Freeswitch Conference Call March 9](Bufferbloat_and_Freeswitch_Conference_Call_March_9.md)
 
-[Enable ECN on multiple operating systems]({{< relref "bloat/wiki/Enable_ECN_on_multiple_operating_systems.md" >}})
+[Enable ECN on multiple operating systems](Enable_ECN_on_multiple_operating_systems.md)
 
-[irc clients]({{< relref "bloat/wiki/Irc_clients.md" >}})
+[irc clients](Irc_clients.md)
 
-[BANA]({{< relref "bloat/wiki/BANA.md" >}})
+[BANA](BANA.md)

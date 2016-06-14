@@ -30,7 +30,7 @@ BQL has generally been shown to be a win on every driver it has been
 implemented on. It is a very few lines of code to add, however that code
 requires having the device in front of you and rigorous testing, thus
 BQL support entering the kernel has been fairly slow, with only a few
-dozen [BQL enabled drivers]({{< relref "bloat/wiki/BQL_enabled_drivers.md" >}}) out of the hundreds of devices
+dozen [BQL enabled drivers](BQL_enabled_drivers.md) out of the hundreds of devices
 "out there". Scratching this itch is a good introduction to kernel
 programming, and a net win for fighting bufferbloat, and thus folk doing
 a teeny bit of work on this here and there will gradually make a

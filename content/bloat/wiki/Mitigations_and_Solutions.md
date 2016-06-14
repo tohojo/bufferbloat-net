@@ -13,20 +13,20 @@ Strategy
 
 How to attack the bufferbloat problem and develop your own solutions.
 
--   [Mitigations and solutions for Broadband]({{< relref "bloat/wiki/Mitigations_and_solutions_for_Broadband.md" >}})
+-   [Mitigations and solutions for Broadband](Mitigations_and_solutions_for_Broadband.md)
 
 <!-- -->
 
--   [Mitigations and solutions for Home Gateways]({{< relref "bloat/wiki/Mitigations_and_Solutions_for_Home_Gateways.md" >}})
+-   [Mitigations and solutions for Home Gateways](Mitigations_and_Solutions_for_Home_Gateways.md)
 
 Tactics
 -------
 
 Specific recipes for bufferbloat mitigation.
 
--   [Linux Tips]({{< relref "bloat/wiki/Linux_Tips.md" >}})
+-   [Linux Tips](Linux_Tips.md)
 
 <!-- -->
 
--   [Windows Tips]({{< relref "bloat/wiki/Windows_Tips.md" >}})
+-   [Windows Tips](Windows_Tips.md)
 

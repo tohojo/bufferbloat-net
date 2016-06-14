@@ -8,7 +8,7 @@ type: wiki
 Linux Tips
 ==========
 
-The [Dogfood Principle]({{< relref "bloat/wiki/Dogfood_Principle.md" >}}) page covers the settings on the
+The [Dogfood Principle](Dogfood_Principle.md) page covers the settings on the
 bufferbloat.net servers, which run Linux.
 
 Some people note that in some bufferbloat experiments we set the
@@ -133,7 +133,7 @@ going as low as this:
 @ ethtool -G eth0 tx 4\
 ethtool -G wlan0 tx 4@
 
-But many can get to 20 or below. See also: [Known Bloated Drivers]({{< relref "bloat/wiki/Bloated_Driver_List.md" >}}) for more information and patches.
+But many can get to 20 or below. See also: [Known Bloated Drivers](Bloated_Driver_List.md) for more information and patches.
 
 You can observe your existing settings with:
 
@@ -178,7 +178,7 @@ bit) useful](http://mirrors.bufferbloat.net/Builds/)). Note that this
 kernel is also built preempt, as Dave likes to do music. Additionally,
 you might like something more graceful to set your wireless queue length
 to something more sensible for that kernel; a Debian
-/etc/networks/if-up.d [wlan script]({{< relref "bloat/wiki/Wlan_script.md" >}}) for this is available.
+/etc/networks/if-up.d [wlan script](Wlan_script.md) for this is available.
 
 References
 ----------

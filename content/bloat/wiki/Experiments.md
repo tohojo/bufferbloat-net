@@ -11,13 +11,13 @@ Experiments
 Experiments with interesting results
 ====================================
 
-[Experiment-Fun with wireless]({{< relref "bloat/wiki/Experiment-Fun_with_wireless.md" >}})
+[Experiment-Fun with wireless](Experiment-Fun_with_wireless.md)
 
-[Experiment-Fun with your switch]({{< relref "bloat/wiki/Experiment-Fun_with_your_switch.md" >}})
+[Experiment-Fun with your switch](Experiment-Fun_with_your_switch.md)
 
 Experiments in progress
 =======================
 
-[Experiment - TCP cubic vs TCP vegas]({{< relref "bloat/wiki/Experiment_-_TCP_cubic_vs_TCP_vegas.md" >}})
+[Experiment - TCP cubic vs TCP vegas](Experiment_-_TCP_cubic_vs_TCP_vegas.md)
 
-[Experiment - BismarkECNDNSGOOGLE]({{< relref "bloat/wiki/Experiment_-_BismarkECNDNSGOOGLE.md" >}})
+[Experiment - BismarkECNDNSGOOGLE](Experiment_-_BismarkECNDNSGOOGLE.md)
