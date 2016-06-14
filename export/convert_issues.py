@@ -29,7 +29,7 @@ journals = list(csv.DictReader(open("issue-journals.csv")))
 interesting_projects = ["bloat", "cerowrt", "make-wifi-fast", "codel"]
 outpath = pathlib.Path("../content")
 oldpath = pathlib.Path("../old-projects")
-attachdir = pathlib.Path("../static/attachments/")
+attachdir = pathlib.Path("../content/attachments/")
 sourcedir = pathlib.Path("files/")
 header = """
 ---

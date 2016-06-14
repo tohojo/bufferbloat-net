@@ -27,7 +27,7 @@ from itertools import chain
 titlemap = json.load(open("titlemap.json"))
 attachments = csv.DictReader(open("wiki-attachments.csv"))
 sourcedir = pathlib.Path("files/")
-outdir = pathlib.Path("../static/attachments/")
+outdir = pathlib.Path("../content/attachments/")
 contentdir = pathlib.Path("../content/")
 
 header = """
