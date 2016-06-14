@@ -41,7 +41,7 @@ spoken phrase at some point.
 
 ITU T G.114 recommends a mouth-to-ear delay of under 150 ms.
 
-![](m2e-delay.PNG)\
+![](/attachments/110426042225_m2e-delay.PNG)\
 (source ITU T G.114)
 
 Admittedly the real point is different; there is no single right answer,

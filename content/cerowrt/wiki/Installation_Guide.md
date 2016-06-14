@@ -8,7 +8,7 @@ type: wiki
 Installation Guide
 ==================
 
-![](flanders320fade.jpeg)\
+![](/attachments/120301171500_flanders320fade.jpeg)\
 It is a good idea to print out these instructions before proceeding,
 especially if you're flashing the firmware in your sole router. If your
 router has already been flashed with CeroWrt firmware, so you can

@@ -118,4 +118,4 @@ TBD
   TBD                     Buffalo Stock Firmware
   ------ ---- ----- ----- ------------------------
 
-![](attached_t.svg)
+

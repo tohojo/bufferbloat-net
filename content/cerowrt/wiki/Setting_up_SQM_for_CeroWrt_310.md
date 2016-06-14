@@ -38,7 +38,7 @@ now available in both the BB & CC releases. Install the luci-app-sqm and
 sqm-scripts packages, then use the Network -&gt; SQM QoS menu to get to
 these screens. (You may have to log out and in to see the new menu.)
 
-![](CeroWrtTorontoBasic1.png)
+![](/attachments/140330154553_CeroWrtTorontoBasic1.png)
 
 1. Basic Settings
 -----------------
@@ -114,7 +114,7 @@ above.)
 Be sure to make your measurement when the network is quiet, and others
 in your home aren’t generating traffic.
 
-![](CeroWrtToronto-QDisc1.png)
+![](/attachments/140330154553_CeroWrtToronto-QDisc1.png)
 
 2. Queue Discipline
 -------------------
@@ -190,7 +190,7 @@ this tab, it is safe to leave them at their default. They include:
 -   **Advanced option string for egress:** Similar to the ingress
     advanced option string.
 
-![](CeroWrtTorontoLinkLayer1.png)
+![](/attachments/140330154553_CeroWrtTorontoLinkLayer1.png)
 
 3. Link Layer Adaptation
 ------------------------
@@ -258,9 +258,9 @@ clicking the **System sub-tab**, and finding the **Language and Style**
 sub-sub-sub tab. These Web pages are the equivalent of the ones above
 shown in the Bootstrap design
 
-![](CeroWrtTorontoBasic.png)\
-![](CeroWrtTorontoQDisc.png)\
-![](CeroWrtTorontoLinkLayer.png)
+![](/attachments/140322141921_CeroWrtTorontoBasic.png)\
+![](/attachments/140322141921_CeroWrtTorontoQDisc.png)\
+![](/attachments/140322141921_CeroWrtTorontoLinkLayer.png)
 
 ### Attachments
 {{< attachment name="CeroWrtTorontoBasic.png" type="image/png" description="" filename="140322141921_CeroWrtTorontoBasic.png" >}}

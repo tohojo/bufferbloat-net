@@ -22,7 +22,7 @@ case, so that you can have a primary and secondary router in your home.
 The image below shows the GUI in the CeroWrt web interface. Find it from
 the Network &gt; Firewall &gt; BCP38 tab.
 
-![](CeroWrtTorontoBCP38.png)
+![](/attachments/140322150351_CeroWrtTorontoBCP38.png)
 
 ### Attachments
 {{< attachment name="CeroWrtTorontoBCP38.png" type="image/png" description="" filename="140322150351_CeroWrtTorontoBCP38.png" >}}

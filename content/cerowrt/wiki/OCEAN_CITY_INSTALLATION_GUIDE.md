@@ -8,7 +8,7 @@ type: wiki
 CeroWrt 'Ocean City' INSTALLATION GUIDE
 =======================================
 
-![](flanders320fade.jpg)
+![](/attachments/110709145314_flanders320fade.jpg)
 
 ### THIS DOCUMENT IS OBSOLETE
 
