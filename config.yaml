@@ -12,4 +12,6 @@ params:
 author:
   name: The Bufferbloat community
   email: bloat@lists.bufferbloat.net
-
+blackfriday:
+  plainIDAnchors: true
+  sourceRelativeLinksEval: true
