@@ -70,10 +70,10 @@ Other LInks
     binary blobs in precisely the places we need to hack on, and are
     currently unsuitable for further development. We MAY acquire a
     firmware license to deal with one or more 802.11ac chips. Read more
-    in the [Hardware Plan]({{< relref "make-wifi-fast/wiki/Hardware_Plan.md" >}}) and the [RFP]({{< relref "make-wifi-fast/wiki/RFP.md" >}}) pages.
+    in the [Hardware Plan](Hardware_Plan.md) and the [RFP](RFP.md) pages.
 -   **BQL on Everything:** It really doesn't fit into the context of
     make-wifi-fast, but an active effort to get BQL on more hardware
     that can support it, and to get it better documented so that more
     new drivers use it, would be good.
--   **Re-working Wi-Fi:** Read the [Wifi Stack Rework]({{< relref "make-wifi-fast/wiki/Wifi_Stack_Rework.md" >}}) page.
+-   **Re-working Wi-Fi:** Read the [Wifi Stack Rework](Wifi_Stack_Rework.md) page.
 

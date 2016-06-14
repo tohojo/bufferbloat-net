@@ -21,7 +21,7 @@ shorter on that sort of hardware, and we envision several new features
 that might require a faster processor than what is commonly found in
 existing access points.
 
-A [RFP]({{< relref "make-wifi-fast/wiki/RFP.md" >}}) or two will be issued to find more suitable hardware
+A [RFP](RFP.md) or two will be issued to find more suitable hardware
 in the long run, and it may turn out that custom hardware will be
 necessary.
 
