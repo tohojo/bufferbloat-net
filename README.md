@@ -38,6 +38,8 @@ commit the results and open a pull request against this repository.
 It is also possible to file issues to point out errors or omissions, or
 give suggestions for the content.
 
+Note that Hugo version 0.16 or higher is required to build the site.
+
 When making changes, you can see a local version of the site by
 installing Hugo and running `hugo serve` in this directory. That will
 run a web server on localhost, which you can navigate to and see a live
