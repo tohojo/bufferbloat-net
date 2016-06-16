@@ -1,5 +1,7 @@
 # Bufferbloat.net web site source
 
+[![Build Status](https://travis-ci.org/tohojo/bufferbloat-net.svg?branch=master)](https://travis-ci.org/tohojo/bufferbloat-net)
+
 This repo contains the source files for the bufferbloat.net web site
 (https://www.bufferbloat.net). The site is built using the Hugo static
 site generator (https://gohugo.io) and most of the content is
@@ -37,6 +39,8 @@ changes to the markdown file corresponding to the page you wish to edit,
 commit the results and open a pull request against this repository.
 It is also possible to file issues to point out errors or omissions, or
 give suggestions for the content.
+
+Note that Hugo version 0.16 or higher is required to build the site.
 
 When making changes, you can see a local version of the site by
 installing Hugo and running `hugo serve` in this directory. That will
