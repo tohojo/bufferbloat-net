@@ -8,6 +8,7 @@ set -o nounset
 LOCKDIR=$HOME/.bufferbloat-build.lock
 PIDFILE=$LOCKDIR/PID
 SRCDIR=$HOME/bufferbloat-net
+POST_HOOK=$HOME/invalidate-caches.py
 
 cleanup() {
     rm -rf $LOCKDIR $TMPDIR
@@ -53,7 +54,9 @@ find $target \( -name '*.js' -or -name '*.css' -or -name '*.svg' -or -name '*.ht
 # optimise PNG images
 #find public -name '*.png' -exec optipng -silent -preserve '{}' \;
 
-rsync -rtpl --delete --exclude stats/ --exclude /news --exclude /issues --exclude .well-known $target/ $BUFFERBLOAT_NET_DEST/projects/
+rsync -rtplcO --info=name --delete --exclude stats/ --exclude /news --exclude /issues --exclude .well-known $target/ $BUFFERBLOAT_NET_DEST/projects/ > $target/changes.list
 rsync -rtpl --delete $target/news/ $BUFFERBLOAT_NET_DEST/news/
 rsync -rtpl --delete $target/issues/ $BUFFERBLOAT_NET_DEST/issues/
+
+$POST_HOOK $target/changes.list
 
