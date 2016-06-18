@@ -2,8 +2,8 @@ baseurl: "https://www.bufferbloat.net/projects/"
 languageCode: "en-us"
 title: "Bufferbloat.net"
 disable404: false
-canonifyURLs: true
-relativeURLs: true
+canonifyURLs: false
+relativeURLs: false
 
 pluralizeListTitles: false
 metadataFormat: yaml
