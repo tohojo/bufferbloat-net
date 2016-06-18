@@ -2,7 +2,7 @@ baseurl: "https://www.bufferbloat.net/projects/"
 languageCode: "en-us"
 title: "Bufferbloat.net"
 disable404: false
-canonifyURLs: false
+canonifyURLs: true
 relativeURLs: false
 
 pluralizeListTitles: false
