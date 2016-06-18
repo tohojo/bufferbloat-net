@@ -1,4 +1,11 @@
-{{ partial "header.html" . }}
+<!doctype html>
+<html lang="en">
+<head>
+    {{ partial "meta.html" . }}
+
+    <title>404 - {{ .Site.Title }}</title>
+    {{ partial "header.includes.html" . }}
+</head>
 <body>
 {{ partial "navbar.html" . }}
 <div class="container">
