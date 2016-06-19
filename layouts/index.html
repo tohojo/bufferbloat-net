@@ -3,7 +3,7 @@
 {{ partial "navbar.html" . }}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-9">
             <div class="well well-sm">
               <h1>Bufferbloat</h1>
 <p>Bufferbloat is the undesirable latency that comes from a router or other network equipment buffering too much data.</p>
@@ -24,7 +24,7 @@
 
 
   <ul>
-  <li>Gather together experts to tackle networking queue management and system problem(s), particularly those that effect wireless networks, home gateways, and edge routers</li>
+  <li>Gather together experts to tackle networking queue management and system problem(s), particularly those that affect wireless networks, home gateways, and edge routers</li>
     <li>Spread the word to correct basic assumptions regarding goodput and good  buffering on the laptop, home gateway, core routers and servers.</li>
     <li>Produce tools to demonstrate and diagnose the problem</li>
     <li>Make experiments in advanced congestion management</li>
@@ -43,19 +43,6 @@
               on github</a>. Pull requests to improve things are welcome.</p>
             </div>
         </div>
-        <div class="col-md-4">
-          <div class="well well-sm">
-          <a href="{{ "/index.xml" | relURL }}">
-            <img src="{{ "/images/feed-icon.svg" | relURL }}" alt="RSS feed"
-            width="20" height="20" style="float: right" />
-          </a>
-          <h2>News</h2>
-                {{ range first 5 (where .Site.Pages.ByDate.Reverse "Type" "=" "news")}}
-                  {{ .Render "summary" }}
-                {{ end }}
-          </div>
-        </div>
-
         <!-- Sidebar -->
         <div class="col-md-3">
         {{ partial "menu.html" . }}
