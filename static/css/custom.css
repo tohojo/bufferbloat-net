@@ -163,3 +163,15 @@ code.has-jax {font: inherit;
 .read-more-link {
     text-align: right;
 }
+
+.news-title, .wiki-title {
+    font-size: small;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 5px;
+}
+
+.news-title .type, .wiki-title .type {
+    color: #aaa;
+    font-size: 80%;
+    margin-left: 5px;
+}
