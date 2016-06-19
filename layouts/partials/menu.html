@@ -1,12 +1,29 @@
     {{ if .Section }}{{ partial "section-panel.html" .Section }}{{ end }}
+
     <div class="panel panel-default">
         <div class="panel-heading">
-	  <img src="{{ "/images/wifi.svg" | relURL }}" width="32"></img>
-            <h4>Find us elsewhere</h4>
+          <a href="/index.xml">
+            <img src="/images/feed-icon.svg" alt="RSS feed"
+            width="20" height="20" style="float: right" />
+          </a>
+          <h4>Recent News & Articles</h4>
+        </div>
+        <div class="panel-body"><small>
+          {{ range first 5 (where .Site.Pages.ByDate.Reverse "Type" "=" "news")}}
+                  {{ .Render "title" }}
+                {{ end }}</small>
+        </div>
+        <div class="panel-heading">
+
+
+	         <img src="/images/wifi.svg" width="32" />
+          <h4>Find us elsewhere</h4>
         </div>
         <div class="panel-body">
-          <a href="https://www.twitter.com/#bufferbloat">Twitter #bufferbloat</a>
-          ,<a href="https://plus.google.com/u/0/explore/bufferbloat">G+</a>
+          <a href="https://www.twitter.com/#bufferbloat">#bufferbloat</a>  on Twitter<br />
+          <a href="https://plus.google.com/u/0/explore/bufferbloat">Google+</a> group<br />
+          <a href="http://richb-hanover.github.io/bufferbloat-site">Archived Bufferbloat pages</a> from the Wayback Machine<br />
+          
 
 	  <h4>Sponsors</h4>
 	  <a href="http://corporate.comcast.com/comcast-voices/calling-all-researchers-comcast-innovation-fund-seeking-projects">Comcast Research Innovation Fund</a><br />

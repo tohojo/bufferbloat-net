@@ -20,8 +20,8 @@ systems. One WiFi hop is between any company and a large fraction of its
 users; yet we have paid scant attention to how well WiFi functions, and
 nearly none at all at how it will continue to scale to the next 300
 million hotspots, and 10 billion new users and devices in the next 4
-years. WiFi devices now cost as little as \$3, Linux WiFi devices as
-little as \$9. A large fraction of these devices run/will run Linux, and
+years. WiFi devices now cost as little as US$3, Linux WiFi devices as
+little as US$9. A large fraction of these devices run/will run Linux, and
 the current Linux WiFi stack and drivers are far from optimal.
 
 There has been little cross-fertilization between the participants of

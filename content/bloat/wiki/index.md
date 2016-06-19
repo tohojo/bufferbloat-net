@@ -9,7 +9,7 @@ aliases:
 Introduction to Bufferbloat
 ---------------------------
 
-We've written an [Introduction](Introduction.md) to the bufferbloat problem
+We've written an [Introduction](./Introduction.md) to the bufferbloat problem
 that we believe is both accessible to non-technical readers and
 informative to techies. We recommend you start there to get a feel for
 the nature and scope of the problem. Then, read our
