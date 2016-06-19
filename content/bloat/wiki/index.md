@@ -51,6 +51,3 @@ lists](https://lists.bufferbloat.net) on which we're developing
 anti-bufferbloat fixes, diagnostic tools, documentation, and other fun
 things. You can also look at a [ToDo](ToDo.md) list of projects that
 need work.
-
-Please [join the project](http://www.bufferbloat.net/account/register)
-and pitch in.

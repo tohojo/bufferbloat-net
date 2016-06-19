@@ -3,8 +3,9 @@
           <h4>{{ . | title }} Project</h4>
         </div>
         <div class="panel-body">
-          <a href="/{{ . | lower }}/news">News items</a><br />
-          <a href="/{{ . | lower }}">List of Wiki pages</a><br />
-          <a href="/{{ . | lower }}/issues">List of bugs</a>
+          {{ $section := lower . }}
+          <a href="{{ printf "/%s/news" $section | relURL }}">News items</a><br />
+          <a href="{{ printf "/%s" $section | relURL }}">List of Wiki pages</a><br />
+          <a href="{{ printf "/%s/issues" $section | relURL }}">List of bugs</a>
         </div>
     </div>

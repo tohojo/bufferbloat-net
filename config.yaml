@@ -3,7 +3,7 @@ languageCode: "en-us"
 title: "Bufferbloat.net"
 disable404: false
 canonifyURLs: true
-relativeURLs: true
+relativeURLs: false
 
 pluralizeListTitles: false
 metadataFormat: yaml
