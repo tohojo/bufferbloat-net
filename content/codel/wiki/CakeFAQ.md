@@ -1,4 +1,3 @@
-
 ---
 title: CakeFAQ
 date: 2015-11-19T03:19:20
@@ -8,7 +7,7 @@ type: wiki
 Cake FAQ
 ========
 
-\[cake\] is the comprehensive queue management system the bufferbloat
+[Cake](Cake.md) is the comprehensive queue management system the bufferbloat
 project has been working on since 2013 and is nearing release. It is the
 rollup of 3 years of deployment experience using the htb + fq\_codel
 based <link>sqm</link>-scripts.
