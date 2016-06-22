@@ -118,7 +118,7 @@ as their production router.
 Although we recommend you use a supported build from either [OpenWrt](http://openwrt.org) or the [LEDE Project](http://lede-project.org), you can download the final CeroWrt 3.10.50-1 build from:
 
 {{< attachment name="CeroWrt 3.10.50-1 for WNDR3700v2" type="binary" description="" filename="140724000000_openwrt-ar71xx-generic-wndr3700v2-squashfs-factory3.10.50-1.img" >}}
-{{< attachment name="CeroWrt 3.10.50-1 for WNDR3800" type="binary" description="" filename="140724000000_openwrt-ar71xx-generic-wndr3800-squashfs-factory3.10.50-1.img" >}}
+{{< attachment name="CeroWrt 3.10.50-1 for WNDR3800" type="binary" description="" filename="140724000000_openwrt-ar71xx-generic-wndr3800-squashfs-factory3.10.50-1.img"  >}} 
 
 [comment]: <> ([All CeroWrt Builds](http://snapon.cs.kau.se./~cero2/cerowrt/wndr/))
 [comment]: <> (  (mirrored on [snapon](http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/)) )
