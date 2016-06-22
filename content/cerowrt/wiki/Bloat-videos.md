@@ -69,7 +69,7 @@ Toke Høiland-Jørgensen
 
 -   [Steady state, fairness and transient behaviour of modern
     AQMs](http://netseminar.stanford.edu/seminars/10_30_14.pdf)
-    filmed at: [Stanford netseminar](http://netseminar.stanford.edu/2014-index.html) | 
+    filmed on 20 October 2014 at: [Stanford netseminar](http://netseminar.stanford.edu/2014-index.html) | 
     [watch](https://www.youtube.com/watch?v=kePhqfKA3SM)
 
 Dave T&auml;ht's "Water Videos", November 2012
