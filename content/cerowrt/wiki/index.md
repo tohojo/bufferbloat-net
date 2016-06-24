@@ -97,32 +97,27 @@ capabilities
 Sources of Information about the Bufferbloat Project
 ----------------------------------------------------
 
-Glossary for Bufferbloat Topics: [Glossary](/bloat/wiki/Glossary.md)\
-General Bufferbloat list: https://lists.bufferbloat.net/listinfo/bloat\
-CeroWrt-devel list:
-https://lists.bufferbloat.net/listinfo/cerowrt-devel\
-CeroWrt-Commits list:
-https://lists.bufferbloat.net/pipermail/cerowrt-commits/\
-IRC: Find us on [IRC on
-chat.freenode.net](irc://chat.freenode.net:6667/bufferbloat),
-\#bufferbloat channel\
-[Assorted Bufferbloat Videos](Bloat-videos.md)
+- Glossary for Bufferbloat Topics: [Glossary](/bloat/wiki/Glossary.md)
+- General Bufferbloat list: https://lists.bufferbloat.net/listinfo/bloat
+- CeroWrt-devel list: https://lists.bufferbloat.net/listinfo/cerowrt-devel
+- CeroWrt-Commits list: https://lists.bufferbloat.net/pipermail/cerowrt-commits
+- IRC: Find us on [IRC on chat.freenode.net](irc://chat.freenode.net:6667/bufferbloat), \#bufferbloat channel
+- [Assorted Bufferbloat Videos](Bloat-videos.md)
 
 Try the Software
 ----------------
 
-The current build is solid. We believe it solves virtually all the
+The latest CeroWrt build is solid. We believe it solves virtually all the
 bufferbloat problem, and deserves wider use. Lots of people are using it
-as their production router. Download the current CeroWrt 3.10.50-1
-build:
+as their production router. 
 
--   [CeroWrt 3.10.50-1 for
-    WNDR3700v2](http://www.bufferbloat.net/attachments/download/226/openwrt-ar71xx-generic-wndr3700v2-squashfs-factory3.10.50-1.img)
--   [CeroWrt 3.10.50-1 for
-    WNDR3800](http://www.bufferbloat.net/attachments/download/227/openwrt-ar71xx-generic-wndr3800-squashfs-factory3.10.50-1.img)
--   [All CeroWrt Builds](http://snapon.cs.kau.se./~cero2/cerowrt/wndr/)
-    (mirrored
-    on[snapon](http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/))
+Since all development on CeroWrt stopped in July 2014, we recommend you use a supported build from either [OpenWrt](http://openwrt.org) or the [LEDE Project](http://lede-project.org). However, you can download the final CeroWrt 3.10.50-1 build from:
+
+{{< attachment name="CeroWrt 3.10.50-1 for WNDR3700v2" type="binary" description="" filename="140724000000_openwrt-ar71xx-generic-wndr3700v2-squashfs-factory3.10.50-1.img" >}}
+{{< attachment name="CeroWrt 3.10.50-1 for WNDR3800" type="binary" description="" filename="140724000000_openwrt-ar71xx-generic-wndr3800-squashfs-factory3.10.50-1.img"  >}} 
+
+[comment]: <> ([All CeroWrt Builds](http://snapon.cs.kau.se./~cero2/cerowrt/wndr/))
+[comment]: <> (  (mirrored on [snapon](http://snapon.lab.bufferbloat.net/~cero2/cerowrt/wndr/)) )
 
 Hardware Requirements
 ---------------------
