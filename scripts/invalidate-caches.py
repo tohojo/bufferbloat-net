@@ -37,7 +37,7 @@ if sys.version_info[0] == 2:
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler())
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 MAX=30 # Max number of URLs in one request
 
@@ -49,8 +49,12 @@ try:
     }
     DOMAIN=os.environ['CF_DOMAIN']
     PREFIX=os.environ['CF_URL_PREFIX']
+    if 'CF_LOG_FILE' in os.environ:
+        h = logging.FileHandler(os.environ['CF_LOG_FILE'])
+        h.setFormatter(logging.Formatter(fmt='%(asctime)s: %(message)s'))
+        logger.addHandler(h)
 except KeyError:
-    logger.error(" + Unable to locate Cloudflare credentials in environment!")
+    logger.error("Unable to locate Cloudflare credentials in environment!")
     sys.exit(1)
 
 
@@ -64,13 +68,15 @@ def _get_zone_id(domain):
 
 # https://api.cloudflare.com/#zone-purge-individual-files-by-url-and-cache-tags
 def purge_cache_urls(zone_id, urls):
+    for u in urls:
+        logger.debug("Purging URL: '{0}'.".format(u))
     url = "https://api.cloudflare.com/client/v4/zones/{0}/purge_cache".format(zone_id)
     payload = {
         'files': urls,
     }
     r = requests.delete(url, headers=CF_HEADERS, json=payload)
     r.raise_for_status()
-    logger.debug(" + Purged {0} URLs.".format(len(urls)))
+    logger.info("Purged {0} URLs.".format(len(urls)))
 
 def purge_urls(urls):
     zone_id = _get_zone_id(DOMAIN)
@@ -89,7 +95,6 @@ def main(urlfile):
                 urls.append(PREFIX+"/"+os.path.split(line)[0]+"/")
             else:
                 urls.append(PREFIX+"/"+line)
-    logger.debug(" + Invalidating URLs: {0}".format(urls))
     purge_urls(urls)
 
 if __name__ == '__main__':
