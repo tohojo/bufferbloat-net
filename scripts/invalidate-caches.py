@@ -36,8 +36,10 @@ if sys.version_info[0] == 2:
     requests.packages.urllib3.contrib.pyopenssl.inject_into_urllib3()
 
 logger = logging.getLogger(__name__)
-logger.addHandler(logging.StreamHandler())
 logger.setLevel(logging.DEBUG)
+h = logging.StreamHandler()
+h.setLevel(logging.INFO)
+logger.addHandler(h)
 
 MAX=30 # Max number of URLs in one request
 
