@@ -1,4 +1,3 @@
-
 ---
 title: Build cluster machines wanted
 date: 2012-08-13T09:12:23

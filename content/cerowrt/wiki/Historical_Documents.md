@@ -1,4 +1,3 @@
-
 ---
 title: Historical Documents
 date: 2012-03-17T09:39:37

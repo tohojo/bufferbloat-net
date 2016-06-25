@@ -1,4 +1,3 @@
-
 ---
 title: Release Strategy
 date: 2012-02-13T14:40:14

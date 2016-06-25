@@ -1,4 +1,3 @@
-
 ---
 title: Hardware Reports on FQ CODEL
 date: 2013-08-30T11:16:21

@@ -1,4 +1,3 @@
-
 ---
 title: "Talk at Bell Labs is up"
 date: 2011-01-28T08:25:15

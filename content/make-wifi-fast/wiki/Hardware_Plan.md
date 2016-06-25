@@ -1,4 +1,3 @@
-
 ---
 title: Hardware Plan
 date: 2014-08-09T10:29:34

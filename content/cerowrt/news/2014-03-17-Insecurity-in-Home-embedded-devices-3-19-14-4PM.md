@@ -1,4 +1,3 @@
-
 ---
 title: "Insecurity in Home embedded devices 3/19/14 4PM"
 date: 2014-03-17T16:45:37

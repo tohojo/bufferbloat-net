@@ -1,4 +1,3 @@
-
 ---
 title: Jupiter
 date: 2011-08-11T15:25:26

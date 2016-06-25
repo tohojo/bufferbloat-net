@@ -1,4 +1,3 @@
-
 ---
 title: "CeroWrt News - January 2014"
 date: 2014-01-11T16:33:18

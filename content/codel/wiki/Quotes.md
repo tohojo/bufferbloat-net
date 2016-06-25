@@ -1,4 +1,3 @@
-
 ---
 title: Quotes
 date: 2015-07-04T20:43:25

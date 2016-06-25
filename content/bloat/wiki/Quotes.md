@@ -1,4 +1,3 @@
-
 ---
 title: Quotes
 date: 2011-01-27T19:59:37

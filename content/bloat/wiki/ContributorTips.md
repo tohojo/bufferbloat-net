@@ -1,4 +1,3 @@
-
 ---
 title: ContributorTips
 date: 2011-01-27T12:59:01

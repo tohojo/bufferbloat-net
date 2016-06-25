@@ -1,4 +1,3 @@
-
 ---
 title: BQL on everything
 date: 2014-08-09T11:01:10

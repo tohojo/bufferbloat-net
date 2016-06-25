@@ -1,4 +1,3 @@
-
 ---
 title: Daves Media Guidance
 date: 2015-09-28T11:11:19

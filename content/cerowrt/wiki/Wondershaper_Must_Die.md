@@ -1,4 +1,3 @@
-
 ---
 title: Wondershaper Must Die
 date: 2013-12-29T01:50:36

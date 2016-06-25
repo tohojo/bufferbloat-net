@@ -1,4 +1,3 @@
-
 ---
 title: Everything you wanted to know about Link Layer Adaptation
 date: 2014-01-11T07:30:01

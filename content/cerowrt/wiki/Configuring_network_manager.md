@@ -1,4 +1,3 @@
-
 ---
 title: Configuring network manager
 date: 2011-09-15T16:12:49

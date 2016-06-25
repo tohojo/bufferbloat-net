@@ -1,4 +1,3 @@
-
 ---
 title: Optimizing for 80211n
 date: 2011-11-01T23:01:11

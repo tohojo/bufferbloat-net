@@ -1,4 +1,3 @@
-
 ---
 title: Mission
 date: 2011-04-11T07:49:19

@@ -1,4 +1,3 @@
-
 ---
 title: BQL enabled drivers
 date: 2012-10-01T14:20:32

@@ -1,4 +1,3 @@
-
 ---
 title: Dogfood Principle
 date: 2011-01-27T06:29:23

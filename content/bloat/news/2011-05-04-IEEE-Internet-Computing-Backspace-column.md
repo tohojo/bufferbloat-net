@@ -1,4 +1,3 @@
-
 ---
 title: "IEEE Internet Computing Backspace column"
 date: 2011-05-04T16:41:39

@@ -1,4 +1,3 @@
-
 ---
 title: "November 2013: Update on CeroWrt"
 date: 2013-11-01T16:49:06

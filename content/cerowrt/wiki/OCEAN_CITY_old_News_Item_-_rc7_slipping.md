@@ -1,4 +1,3 @@
-
 ---
 title: OCEAN CITY old News Item - rc7 slipping
 date: 2012-03-17T09:20:46

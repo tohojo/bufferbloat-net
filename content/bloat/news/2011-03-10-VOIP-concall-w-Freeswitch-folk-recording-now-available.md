@@ -1,4 +1,3 @@
-
 ---
 title: "VOIP concall w/Freeswitch folk recording now available"
 date: 2011-03-10T09:03:33

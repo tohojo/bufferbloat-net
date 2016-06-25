@@ -1,4 +1,3 @@
-
 ---
 title: Linux Tips
 date: 2011-02-02T07:37:05

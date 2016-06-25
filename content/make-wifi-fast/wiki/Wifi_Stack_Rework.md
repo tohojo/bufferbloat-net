@@ -1,4 +1,3 @@
-
 ---
 title: Wifi Stack Rework
 date: 2014-08-03T09:11:00

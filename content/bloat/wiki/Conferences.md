@@ -1,4 +1,3 @@
-
 ---
 title: Conferences
 date: 2011-02-07T23:13:40

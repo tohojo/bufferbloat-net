@@ -1,4 +1,3 @@
-
 ---
 title: Bobbie
 date: 2015-04-14T07:57:48

@@ -1,4 +1,3 @@
-
 ---
 title: "The first 34 days"
 date: 2011-03-04T11:44:08

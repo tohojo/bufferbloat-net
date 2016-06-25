@@ -1,4 +1,3 @@
-
 ---
 title: "Supplemental Quotes to the FCC Letter"
 date: 2015-10-14T20:44:58

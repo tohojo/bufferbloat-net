@@ -1,4 +1,3 @@
-
 ---
 title: "Videoconference Friday 12PM ET FCC vs open wifi firmware"
 date: 2015-10-15T19:11:04

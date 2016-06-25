@@ -1,4 +1,3 @@
-
 ---
 title: Dtaht test rig
 date: 2011-02-03T07:41:48

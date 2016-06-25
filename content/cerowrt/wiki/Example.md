@@ -1,4 +1,3 @@
-
 ---
 title: Example
 date: 2014-12-09T21:30:07

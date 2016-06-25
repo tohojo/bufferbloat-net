@@ -1,4 +1,3 @@
-
 ---
 title: Yurtlab
 date: 2012-10-01T21:55:12

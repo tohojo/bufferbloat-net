@@ -1,4 +1,3 @@
-
 ---
 title: "CACM Bufferbloat paper and case study is out."
 date: 2012-01-24T14:30:25

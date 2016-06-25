@@ -1,4 +1,3 @@
-
 ---
 title: Dealing with smoketests
 date: 2011-09-15T17:06:20

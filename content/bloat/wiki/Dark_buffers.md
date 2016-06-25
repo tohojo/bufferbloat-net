@@ -1,4 +1,3 @@
-
 ---
 title: Dark buffers
 date: 2011-01-25T16:30:44

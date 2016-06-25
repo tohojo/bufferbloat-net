@@ -1,4 +1,3 @@
-
 ---
 title: Analysis of existing firewalls and shapers
 date: 2011-06-20T05:28:52

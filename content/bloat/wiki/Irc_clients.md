@@ -1,4 +1,3 @@
-
 ---
 title: Irc clients
 date: 2011-07-08T12:41:58

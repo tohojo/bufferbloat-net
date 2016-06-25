@@ -1,4 +1,3 @@
-
 ---
 title: Papers
 date: 2011-01-26T20:22:48

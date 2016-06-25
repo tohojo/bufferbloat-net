@@ -1,4 +1,3 @@
-
 ---
 title: TechnicalIntro
 date: 2011-01-25T16:37:45

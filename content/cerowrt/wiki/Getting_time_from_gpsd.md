@@ -1,4 +1,3 @@
-
 ---
 title: Getting time from gpsd
 date: 2012-03-01T11:12:42

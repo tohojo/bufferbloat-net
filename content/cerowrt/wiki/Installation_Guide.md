@@ -1,4 +1,3 @@
-
 ---
 title: Installation Guide
 date: 2012-01-28T15:53:50

@@ -1,4 +1,3 @@
-
 ---
 title: RRUL Rogues Gallery
 date: 2013-01-14T13:13:11

@@ -1,4 +1,3 @@
-
 ---
 title: BQL series release notes
 date: 2012-01-30T14:20:17

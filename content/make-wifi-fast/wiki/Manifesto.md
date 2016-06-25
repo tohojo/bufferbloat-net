@@ -1,4 +1,3 @@
-
 ---
 title: Manifesto
 date: 2014-08-03T09:32:30

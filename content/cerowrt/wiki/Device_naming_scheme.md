@@ -1,4 +1,3 @@
-
 ---
 title: Device naming scheme
 date: 2011-07-09T11:10:04

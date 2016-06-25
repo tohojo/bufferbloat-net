@@ -1,4 +1,3 @@
-
 ---
 title: Equations
 date: 2011-04-26T04:11:32

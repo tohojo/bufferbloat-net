@@ -1,4 +1,3 @@
-
 ---
 title: Technical description of FQ CoDel
 date: 2014-02-10T07:49:12

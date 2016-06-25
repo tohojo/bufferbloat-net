@@ -1,4 +1,3 @@
-
 ---
 title: Custom homepage
 date: 2011-09-05T11:24:57

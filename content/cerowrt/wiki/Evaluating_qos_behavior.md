@@ -1,4 +1,3 @@
-
 ---
 title: Evaluating qos behavior
 date: 2011-09-05T11:17:08

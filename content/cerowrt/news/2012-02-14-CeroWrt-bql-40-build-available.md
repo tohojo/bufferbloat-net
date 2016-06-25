@@ -1,4 +1,3 @@
-
 ---
 title: "CeroWrt bql-40 build available"
 date: 2012-02-14T19:01:15

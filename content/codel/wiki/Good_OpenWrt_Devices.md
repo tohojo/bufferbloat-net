@@ -1,4 +1,3 @@
-
 ---
 title: Good OpenWrt Devices
 date: 2012-06-13T08:54:06

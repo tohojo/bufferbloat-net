@@ -1,4 +1,3 @@
-
 ---
 title: Save the Ants
 date: 2011-06-19T19:16:01

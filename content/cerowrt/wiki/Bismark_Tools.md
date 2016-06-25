@@ -1,4 +1,3 @@
-
 ---
 title: Bismark Tools
 date: 2012-03-31T09:00:33

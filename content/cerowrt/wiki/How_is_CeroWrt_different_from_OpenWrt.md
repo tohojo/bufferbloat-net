@@ -1,4 +1,3 @@
-
 ---
 title: How is CeroWrt different from OpenWrt
 date: 2013-03-16T11:51:40

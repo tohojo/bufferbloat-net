@@ -1,4 +1,3 @@
-
 ---
 title: RFC Improving DSCP support in Linux
 date: 2011-06-19T14:59:42

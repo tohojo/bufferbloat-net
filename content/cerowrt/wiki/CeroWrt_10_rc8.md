@@ -1,4 +1,3 @@
-
 ---
 title: CeroWrt 10 rc8
 date: 2011-11-25T06:02:03

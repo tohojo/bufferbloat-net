@@ -1,4 +1,3 @@
-
 ---
 title: Pure IPv6 based networking
 date: 2012-03-07T12:12:43

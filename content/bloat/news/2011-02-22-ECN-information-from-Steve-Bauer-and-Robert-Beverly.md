@@ -1,4 +1,3 @@
-
 ---
 title: "ECN information from Steve Bauer and Robert Beverly."
 date: 2011-02-22T13:36:52

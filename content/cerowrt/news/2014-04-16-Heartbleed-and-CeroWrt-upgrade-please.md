@@ -1,4 +1,3 @@
-
 ---
 title: "Heartbleed and CeroWrt - upgrade please!"
 date: 2014-04-16T11:05:11

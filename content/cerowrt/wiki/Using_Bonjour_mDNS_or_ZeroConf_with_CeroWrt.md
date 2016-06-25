@@ -1,4 +1,3 @@
-
 ---
 title: Using Bonjour mDNS or ZeroConf with CeroWrt
 date: 2012-09-10T19:23:47

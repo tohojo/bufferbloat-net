@@ -1,4 +1,3 @@
-
 ---
 title: "Jim Gettys in Spain for the BattleMesh"
 date: 2011-03-18T07:44:34

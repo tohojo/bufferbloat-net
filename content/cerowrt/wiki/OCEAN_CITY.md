@@ -1,4 +1,3 @@
-
 ---
 title: OCEAN CITY
 date: 2011-07-09T08:20:38

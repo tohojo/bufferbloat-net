@@ -1,4 +1,3 @@
-
 ---
 title: Minstrel Wireless Rate Selection
 date: 2012-07-08T12:42:28

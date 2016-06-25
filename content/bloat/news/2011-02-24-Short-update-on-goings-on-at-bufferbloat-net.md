@@ -1,4 +1,3 @@
-
 ---
 title: "Short update on goings on at bufferbloat.net"
 date: 2011-02-24T14:53:09

@@ -1,4 +1,3 @@
-
 ---
 title: Building Cerowrt on your own machine
 date: 2011-07-31T10:33:54

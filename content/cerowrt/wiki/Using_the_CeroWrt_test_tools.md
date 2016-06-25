@@ -1,4 +1,3 @@
-
 ---
 title: Using the CeroWrt test tools
 date: 2011-08-30T13:34:56

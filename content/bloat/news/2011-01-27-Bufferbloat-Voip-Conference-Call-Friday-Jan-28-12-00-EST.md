@@ -1,4 +1,3 @@
-
 ---
 title: "Bufferbloat & Voip Conference Call: Friday, Jan 28 12:00 EST"
 date: 2011-01-27T08:19:59

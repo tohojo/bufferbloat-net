@@ -1,4 +1,3 @@
-
 ---
 title: Diffserv RFC
 date: 2011-06-19T15:16:12

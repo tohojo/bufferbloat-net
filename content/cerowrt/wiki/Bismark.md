@@ -1,4 +1,3 @@
-
 ---
 title: Bismark
 date: 2011-07-14T08:03:45

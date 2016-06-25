@@ -1,4 +1,3 @@
-
 ---
 title: Setting up an interior gateway router
 date: 2014-03-26T09:01:50

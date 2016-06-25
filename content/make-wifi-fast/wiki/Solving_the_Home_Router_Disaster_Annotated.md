@@ -1,4 +1,3 @@
-
 ---
 title: Solving the Home Router Disaster Annotated
 date: 2014-08-03T07:46:29

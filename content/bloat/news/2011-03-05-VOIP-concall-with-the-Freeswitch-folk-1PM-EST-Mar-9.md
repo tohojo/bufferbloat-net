@@ -1,4 +1,3 @@
-
 ---
 title: "VOIP concall with the Freeswitch folk 1PM EST Mar 9"
 date: 2011-03-05T09:31:56

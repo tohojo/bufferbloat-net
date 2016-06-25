@@ -1,4 +1,3 @@
-
 ---
 title: Machines
 date: 2011-08-11T15:28:44

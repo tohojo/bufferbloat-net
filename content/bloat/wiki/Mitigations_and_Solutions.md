@@ -1,4 +1,3 @@
-
 ---
 title: Mitigations and Solutions
 date: 2011-02-02T17:43:21

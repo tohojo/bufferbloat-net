@@ -1,4 +1,3 @@
-
 ---
 title: Previous Dedications
 date: 2014-01-12T15:23:51

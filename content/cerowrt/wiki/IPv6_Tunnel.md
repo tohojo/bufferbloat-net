@@ -1,4 +1,3 @@
-
 ---
 title: IPv6 Tunnel
 date: 2012-03-17T06:41:20

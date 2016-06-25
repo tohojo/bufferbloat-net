@@ -1,4 +1,3 @@
-
 ---
 title: Best practices for benchmarking Codel and FQ Codel
 date: 2012-12-11T05:35:13

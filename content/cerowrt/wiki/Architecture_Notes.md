@@ -1,4 +1,3 @@
-
 ---
 title: Architecture Notes
 date: 2011-06-04T14:52:47

@@ -1,4 +1,3 @@
-
 ---
 title: Default network numbering
 date: 2011-07-09T20:18:03

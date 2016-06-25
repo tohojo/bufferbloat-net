@@ -1,4 +1,3 @@
-
 ---
 title: What's the naming scheme
 date: 2011-08-11T15:23:13

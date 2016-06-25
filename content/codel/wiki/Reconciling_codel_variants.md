@@ -1,4 +1,3 @@
-
 ---
 title: Reconciling codel variants
 date: 2012-08-11T21:53:21

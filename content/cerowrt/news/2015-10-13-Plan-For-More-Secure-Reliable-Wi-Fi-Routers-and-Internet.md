@@ -1,4 +1,3 @@
-
 ---
 title: "Plan For More Secure, Reliable Wi-Fi Routers - and Internet"
 date: 2015-10-13T22:01:38

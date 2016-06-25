@@ -1,4 +1,3 @@
-
 ---
 title: "CeroWrt 3.3-rc6-2 build available"
 date: 2012-03-07T18:08:31

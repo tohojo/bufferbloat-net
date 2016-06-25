@@ -1,4 +1,3 @@
-
 ---
 title: "It's (still) the latency, stupid*"
 date: 2012-11-29T07:59:14

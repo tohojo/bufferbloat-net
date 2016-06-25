@@ -1,4 +1,3 @@
-
 ---
 title: "CeroWrt Triumphs over Bufferbloat"
 date: 2015-03-10T07:47:37

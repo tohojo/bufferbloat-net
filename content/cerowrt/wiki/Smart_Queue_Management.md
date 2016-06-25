@@ -1,4 +1,3 @@
-
 ---
 title: Smart Queue Management
 date: 2013-12-29T01:38:45

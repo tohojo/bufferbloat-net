@@ -1,4 +1,3 @@
-
 ---
 title: Mitigations and solutions for Broadband
 date: 2011-02-02T17:46:00

@@ -1,4 +1,3 @@
-
 ---
 title: Tuning your CeroWrt default gateway
 date: 2014-03-26T09:56:40

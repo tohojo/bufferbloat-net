@@ -1,4 +1,3 @@
-
 ---
 title: Mitigations and Solutions for Home Gateways
 date: 2011-02-02T17:47:22

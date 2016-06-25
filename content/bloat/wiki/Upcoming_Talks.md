@@ -1,4 +1,3 @@
-
 ---
 title: Upcoming Talks
 date: 2014-10-12T12:53:40

@@ -1,4 +1,3 @@
-
 ---
 title: ACK prioritization
 date: 2011-06-20T05:43:13

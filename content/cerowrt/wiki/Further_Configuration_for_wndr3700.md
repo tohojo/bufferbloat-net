@@ -1,4 +1,3 @@
-
 ---
 title: Further Configuration for wndr3700
 date: 2011-07-09T09:31:29

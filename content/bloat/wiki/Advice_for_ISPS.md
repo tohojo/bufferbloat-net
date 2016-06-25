@@ -1,4 +1,3 @@
-
 ---
 title: Advice for ISPS
 date: 2015-06-18T10:51:28

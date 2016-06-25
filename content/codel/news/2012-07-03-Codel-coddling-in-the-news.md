@@ -1,4 +1,3 @@
-
 ---
 title: "Codel (coddling) in the news"
 date: 2012-07-03T08:09:00

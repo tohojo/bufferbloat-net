@@ -1,4 +1,3 @@
-
 ---
 title: "CeroWrt 3.10.50-1 -- Declaring Victory"
 date: 2015-02-18T19:21:11

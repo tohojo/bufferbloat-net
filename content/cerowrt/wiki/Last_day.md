@@ -1,4 +1,3 @@
-
 ---
 title: Last day
 date: 2011-07-15T08:35:47

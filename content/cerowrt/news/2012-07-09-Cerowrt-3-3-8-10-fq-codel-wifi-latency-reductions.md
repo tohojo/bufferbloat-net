@@ -1,4 +1,3 @@
-
 ---
 title: "Cerowrt 3.3.8-10 - fq_codel + wifi latency reductions"
 date: 2012-07-09T19:22:39

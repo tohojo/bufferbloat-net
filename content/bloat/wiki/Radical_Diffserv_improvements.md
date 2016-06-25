@@ -1,4 +1,3 @@
-
 ---
 title: Radical Diffserv improvements
 date: 2011-06-19T15:12:15

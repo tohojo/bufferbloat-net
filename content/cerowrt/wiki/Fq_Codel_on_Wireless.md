@@ -1,4 +1,3 @@
-
 ---
 title: Fq Codel on Wireless
 date: 2012-07-03T14:07:50

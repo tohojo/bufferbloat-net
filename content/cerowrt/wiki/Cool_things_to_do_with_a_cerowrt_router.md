@@ -1,4 +1,3 @@
-
 ---
 title: Cool things to do with a cerowrt router
 date: 2012-02-04T18:15:00

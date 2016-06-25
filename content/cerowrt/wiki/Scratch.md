@@ -1,4 +1,3 @@
-
 ---
 title: Scratch
 date: 2011-06-24T13:35:11

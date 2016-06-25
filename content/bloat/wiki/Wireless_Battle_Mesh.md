@@ -1,4 +1,3 @@
-
 ---
 title: Wireless Battle Mesh
 date: 2011-02-08T07:18:09

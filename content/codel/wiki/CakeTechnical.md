@@ -1,4 +1,3 @@
-
 ---
 title: CakeTechnical
 date: 2015-08-14T04:34:53

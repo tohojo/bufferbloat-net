@@ -1,4 +1,3 @@
-
 ---
 title: Automated Configuration of CeroWrt
 date: 2013-03-16T11:08:06

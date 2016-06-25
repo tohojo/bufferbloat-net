@@ -1,4 +1,3 @@
-
 ---
 title: "How do we solve the next big Internet emergency?"
 date: 2012-05-16T16:31:31
