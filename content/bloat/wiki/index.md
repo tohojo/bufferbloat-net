@@ -9,14 +9,14 @@ aliases:
 Introduction to Bufferbloat
 ---------------------------
 
-We've written an [Introduction](./Introduction.md) to the bufferbloat problem
+We've written an [introduction](./Introduction.md) to the bufferbloat problem
 that we believe is both accessible to non-technical readers and
 informative to techies. We recommend you start there to get a feel for
 the nature and scope of the problem. Then, read our
 [mission statement](Mission.md) to find out what we're doing
 about it.
 
-There's also a [Glossary](Glossary.md) that goes into more technical depth
+There's also a [glossary](Glossary.md) that goes into more technical depth
 on bufferbloat-related terminology. You may find an older
 [technical introduction](TechnicalIntro.md) interesting if you
 are a programmer or network engineer.
@@ -30,18 +30,18 @@ performance. If you're not sure you are seeing these, there are
 [experiments](Experiments.md) you can perform on your home
 hardware to detect bufferbloat problems. If you want to jump straight to
 fixing the problem, we have a
-[Mitigation and Solutions](Mitigations_and_Solutions.md) page.
+[mitigation and solutions](Mitigations_and_Solutions.md) page.
 
 Much of the original analysis and discussion of bufferbloat took place
 on technical blogs. We have collected a
 [tasty selection of blog references](Good_blog_discussions.md)
 for your reading pleasure.
 
-You can read bufferbloat-related [Quotes](Quotes.md) from the great,
+You can read bufferbloat-related [quotes](Quotes.md) from the great,
 near-great, and and not-so-great. A page of unashamedly geeky
-[Humor](Humor.md) exists as well.
+[humor](Humor.md) exists as well.
 
-There is also a list of [Product](Product.md) specific pages.
+There is also a list of [product](Product.md) specific pages.
 
 Mailing lists and Participating
 -------------------------------
