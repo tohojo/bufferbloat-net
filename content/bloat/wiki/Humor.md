@@ -35,16 +35,6 @@ Dave Täht
 
 “Wireless routers: We made them. They devolved. There are many copies.”
 
-The bufferbloat bdp equation:
-
-{{mathjax( dark buffers =
-txqueuelen+tx\_ring+powerSave+interference+technologies+aqms+bugs )}}
-
-{{mathjax( bandwidth \\times delay \\times \\sqrt(flows) + {(dark
-buffers) \\over (luck \* kluges)})}}
-
-where luck is in the range 0..1 and rapidly approaching 0.
-
 Conversations:
 --------------
 
