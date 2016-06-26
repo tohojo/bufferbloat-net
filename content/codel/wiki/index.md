@@ -35,7 +35,7 @@ accurate RTT estimates to elephant TCP flows, while allowing shorter
 access.
 
 We don't say **several orders of magnitude** lightly. We have [the
-benchmarks](http://www.bufferbloat.net/projects/codel/wiki/RRUL_Rogues_Gallery)
+benchmarks](RRUL_Rogues_Gallery.md)
 to back it up. Some more recent benchmarks on cable systems are here:
 http://burntchrome.blogspot.com/2014/05/fixing-bufferbloat-on-comcasts-blast.html
 - and there are multiple papers on the subject now of widely varying
@@ -57,7 +57,7 @@ default to fq\_codel.
 
 We are nearly done creating a successor to fq\_codel and the "sqm"
 system, called
-[cake](http://www.bufferbloat.net/projects/codel/wiki/CakeTechnical)
+[cake](/codel/wiki/CakeTechnical.md)
 which we addresses a few edge cases fq\_codel had, is faster code, and
 better all across the board.
 
@@ -67,9 +67,9 @@ Papers and Publications
 The most up to date descriptions of codel and fq\_codel are now the
 subject of IETF internet drafts.
 
-[Codel](http://tools.ietf.org/html/draft-nichols-tsvwg-codel-02)
+[Codel](https://tools.ietf.org/html/draft-ietf-aqm-codel)
 
-[FlowQueueCodel](http://tools.ietf.org/html/draft-hoeiland-joergensen-aqm-fq-codel-00)
+[FlowQueueCodel](https://tools.ietf.org/html/draft-ietf-aqm-fq-codel)
 
 Older Papers
 ------------
@@ -152,8 +152,7 @@ Linux systems shipped today.
 The CeroWrt research router project was started, specifically, to test
 new AQM technologies, and has been tracking codel closely.
 
-A pretty solid build [is now
-available](http://www.bufferbloat.net/projects/cerowrt/wiki/CeroWrt_310_Release_Notes)
+A pretty solid build [is now available](/cerowrt/wiki/CeroWrt_310_Release_Notes.md)
 
 The fq\_codel code has already migrated into the OpenWrt mainline (upon
 which Cerowrt is based), so the research has paid off! - there is more
