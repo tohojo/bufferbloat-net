@@ -168,11 +168,12 @@ queue management, we recomend sch\_fq instead of fq\_codel as of linux
 3.12.
 
 Either qdisc can be enabled by default via a single sysctl option in
-/etc/sysctl.conf
+`/etc/sysctl.conf`:
 
-net.core.default\_qdisc = fq\_codel \# best general purpose qdisc
+`net.core.default_qdisc = fq_codel`  - best general purpose qdisc
 
-net.core.default\_qdisc = fq \# for fat servers, fq\_codel for routers.
+`net.core.default_qdisc = fq` - for fat servers, fq_codel for routers.
+
 Note that in a virtualized environment the underlying server IS a
 router, the guest VMs are hosts and we don't have a lot of data
 regarding either qdiscs' performance at 10gigE speeds on vms - and early
