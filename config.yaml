@@ -9,6 +9,7 @@ pluralizeListTitles: false
 metadataFormat: yaml
 params:
   stylesheets: [ "bootstrap.css", "font-awesome.css", "custom.css" ]
+  recentTypes: [ "news", "wiki" ]
 author:
   name: The Bufferbloat community
   email: bloat@lists.bufferbloat.net

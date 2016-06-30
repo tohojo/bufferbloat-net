@@ -9,7 +9,7 @@
           <h4>Recent News &amp; Articles</h4>
         </div>
         <div class="panel-body">
-          {{ range first 5 .Site.Pages.ByDate.Reverse }}
+          {{ range first 5 (where .Site.Pages.ByDate.Reverse "Type" "in" .Site.Params.recentTypes)}}
                   {{ .Render "title" }}
                 {{ end }}
         </div>
