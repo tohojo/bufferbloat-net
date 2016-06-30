@@ -35,9 +35,12 @@ ongoing work into standardization efforts, and into something even
 better than fq\_codel, called [cake](/codel/wiki/Cake.md), which is not
 ready for prime time yet.
 
-Is your internet connection bloated? You can find out right now using
-the [Quick Test for Bufferbloat.](Quick_Test_for_Bufferbloat.md) - or see the [dslreports new
-speedtest](http://dslreports.com/speedtest) .
+Is your internet connection bloated? 
+------------------------------------
+You can find out right now using
+the [Quick Test for Bufferbloat](Quick_Test_for_Bufferbloat.md) - or just use [DSLReports Speed Test.](http://dslreports.com/speedtest)
+
+If you find bufferbloat is present, read [What to do about Bufferbloat.](What_to_do_about_Bufferbloat.md)
 
 News
 ----

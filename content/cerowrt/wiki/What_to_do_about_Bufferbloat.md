@@ -27,7 +27,7 @@ Management algorithms such as fq\_codel, PIE, or others.
 1.  We continue to be hopeful that commercial router vendors will offer
     SQM in their stock firmware. At this time, Ubuquiti and ipfire.org
     seem to include settings for fq\_codel.
-2.  Install the [OpenWrt Barrier Breaker](http://openwrt.org/) firmware
+2.  Install the [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
     at http://openwrt.org/ on your current router. These builds are now
     stable and include the luci-app-sqm package that includes the
     enhancements that we've tested and then pushed into the OpenWrt
@@ -84,8 +84,9 @@ for all.
 
 Furthermore, you can spend **a lot** of time updating priorities,
 setting up new filters, and checking to see whether VoIP, gaming, ssh,
-netflix, torrent, etc. are "balanced". (There is a whole\
-cottage industry in updating WonderShaper rule sets. [They all have terrible flaws](Wondershaper_Must_Die.md), and they don't help a
+netflix, torrent, etc. are "balanced". (There is a whole
+cottage industry in updating WonderShaper rule sets. 
+[They all have terrible flaws](Wondershaper_Must_Die.md), and they don't help a
 lot.) Worst of all, these rules create a maintenance hassle. Each new
 rule has to be adjusted in the face of new kinds of traffic. And if the
 router changes, or speed changes, or there's new traffic in the mix,
@@ -106,11 +107,11 @@ QoS. To do this:
     OpenWrt and CeroWrt routers, and a growing number of other devices.
     This one change automatically sets up the router to work well:
 
-\* Small flows of data (pings, DNS, ssh sessions, gaming, VoIP, TCP/HTTP
+    - Small flows of data (pings, DNS, ssh sessions, gaming, VoIP, TCP/HTTP
 connect messages & acks, etc.) go right through with minimal delay\
-\* Large flows (Netflix, file uploads/downloads, filesharing, etc)
+    - Large flows (Netflix, file uploads/downloads, filesharing, etc)
 automatically adjust their rates\
-\* All traffic gets a fair share of the bottleneck traffic capacity
+    - All traffic gets a fair share of the bottleneck traffic capacity
 
 1.  Measure. Try to detect if all your data types/flows are as
     responsive as you like. We often find that there is no need for
@@ -120,7 +121,7 @@ automatically adjust their rates\
 2.  If you **can** determine that some traffic needs to priority, then
     set up some QoS rules. The number of rules will probably be small,
     perhaps only applying to a couple specific traffic types.
-3.  This final rule actually goes with 4) above... If prioritization/QoS
+3.  And finally... If prioritization/QoS
     doesn't solve the problem, it may be necessary to get
     more bandwidth. When SQM is in place, the need for prioritization
     typically arises when there's already too much data to send on a
