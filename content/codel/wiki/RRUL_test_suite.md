@@ -23,7 +23,7 @@ RRUL prototype
 --------------
 
 A rrul prototype is being developed as part of the
-[netperf-wrappers](https://github.com/tohojo/netperf-wrapper) tests. As
+[Flent](https://flent.org) tests. As
 the title suggests, the tests are being wrapped around the popular
 [netperf](http://www.netperf.org) netperf network analysis tool.
 Requirements are a recent version of netperf, python, matplotlib,

@@ -142,7 +142,7 @@ and so on.
 Better Benchmarks and tools
 ---------------------------
 
-Leveraging the netperf-wrapper test suite, we hope to encourage industry
+Leveraging the Flent test suite, we hope to encourage industry
 and users to look at the real problems of wifi on voip,
 videoconferencing, gaming, and web traffic. There are other benchmarks
 being developed that look hard at the problems in bursty traffic as

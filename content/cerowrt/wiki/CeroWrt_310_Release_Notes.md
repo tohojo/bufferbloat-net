@@ -273,7 +273,7 @@ default gw?
 If on the other hand, you have a jtag debugger handy, and don't have a
 iwl card on your laptop, and can look into the wifi issues, please do
 so... (all you have to do is bump up /etc/xinetd.d/netserver to 16 and
-run the netperf-wrapper against it for a few minutes)
+run the Flent against it for a few minutes)
 
 There are otherwise a huge number of interesting things that have
 accumulated for this release cycle.

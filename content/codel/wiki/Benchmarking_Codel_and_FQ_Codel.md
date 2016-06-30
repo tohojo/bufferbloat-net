@@ -24,7 +24,7 @@ WHILE doing a ping. A netperf, WHILE making a phone call, trying to hold
 the latency and jitter of the smaller stream (ping or voip)small.
 
 We have developed the
-[netperf-wrapper](https://github.com/tohojo/netperf-wrapper) tool suite
+[Flent](https://flent.org) tool suite
 to make benchmarking these various network attributes easier, with
 results that can be easily shared and graphed several dozen ways. It is
 available for Linux, BSD, and BSD-derived systems such as OSX.

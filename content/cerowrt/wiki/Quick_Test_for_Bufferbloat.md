@@ -44,8 +44,8 @@ The Best Tests for bufferbloat:
 
 The suite of tests we developed to diagnose bufferbloat and other
 connectivity problems are good to 40GigE, but require the
-[netperf-wrapper rrul test
-suite](https://github.com/tohojo/netperf-wrapper) . Using the tools
+[Flent rrul test
+suite](https://flent.org) . Using the tools
 therein it is possible to get a good feel for how the connection is
 behaving while [you tune a shaper to fix
 it](http://snapon.lab.bufferbloat.net/~cero2/jimreisert/results.html).
@@ -94,7 +94,7 @@ Other tools for measuring network performance and latency
 4.  Both betterspeedtest.sh and netperfrunner.sh use the
     [**netperf**](http://netperf.org/netperf/) program (built
     into CeroWrt) to drive traffic to see its performance.
-5.  [**netperf-wrapper**](https://github.com/tohojo/netperf-wrapper) is
+5.  [**Flent**](https://flent.org) is
     a handy tool for running the RRUL test and producing attractive
     graphs of the results. (RRUL specifies that multiple netperf
     sessions run simultaneously to heavily load the network in

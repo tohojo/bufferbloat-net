@@ -378,7 +378,7 @@ Some example results while a rrul test was running:
       drops          173          21           0           0
       marks            0           0           0           0
 
-A problem I have is in reconciling the netperf-wrapper plots which hit a
+A problem I have is in reconciling the Flent plots which hit a
 minimum of 2ms for sparse flows, where I typically see \~200us delay in
 the qdiscs themselves. I have generally not cared at all about about
 anything less than 3ms prior to now.
