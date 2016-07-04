@@ -36,10 +36,14 @@ You will need a router whose manufacturer understands the principles of
 bufferbloat, and has updated the firmware to use one of the Smart Queue
 Management algorithms such as fq_codel, PIE, or others.
 
-1.  We continue to be hopeful that commercial router vendors will offer
+1.  If your router has SQM settings, you can measure latency under load without SQM, 
+    then turn on SQM and iterate: adjust the router settings and measure latency 
+    until the latency gets as low as possible while retaining good speeds.
+    See, for example, this [tuning session.](Getting_SQM_Running_Right)
+2.  We continue to be hopeful that commercial router vendors will offer
     SQM in their stock firmware. At this time, Ubiquiti and ipfire.org
     seem to include settings for fq_codel.
-2.  Install the [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
+3.  Install the [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
     at http://openwrt.org/ on your current router. These builds are now
     stable and include the luci-app-sqm package that includes the
     enhancements that we've tested and then pushed into the OpenWrt
@@ -49,10 +53,10 @@ Management algorithms such as fq_codel, PIE, or others.
     sqm-scripts and its dependencies. Then use the Network -&gt; SQM QoS
     menu to configure. There's a guide at the OpenWrt wiki
     http://wiki.openwrt.org/doc/howto/sqm
-3.  Or install suitable DD-WRT (www.dd-wrt.com) or
+4.  Or install suitable DD-WRT (www.dd-wrt.com) or
     Gargoyle (www.gargoyle-router.com) firmware. We understand that
     current builds of both products support fq_codel.
-4.  Finally, if none of these seem to be options, call your router
+5.  Finally, if none of these seem to be options, call your router
     vendor's support line. With the information from the DSLReports
     Speed Test or the Quick Test for Bufferbloat in hand, you can
     mention that the ping times get really high when up/downloading
