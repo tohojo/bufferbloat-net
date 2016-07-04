@@ -15,13 +15,13 @@ Download and upload speeds remained high, latency remained low, and there was no
 
 _How to read the plots below. This is the default display of the RRUL test showing download speed (top), upload speed (middle), and latency (msec, bottom). The black line represents the average of four simultaneous upload/downloads: multiply four to get the actual data rates. For example, the top chart shows (0.8 mbps * 4 = 3.3mbps); middle chart shows (5.4mbps * 4 = 21.6 mbps), and average latency of 72-75 msec during the test. NB: These charts were measured from the remote end, and thus the top and middle chart directions are swapped.)_
 
-![](/attachments/ipv6_withsqm-24-4400-long.svg)
+![](/attachments/sqm-setup-ipv6_withsqm-24-4400-long.svg)
 
 *Dave picks up the narrative...*
 
 "After installing the latest CeroWrt and leaving SQM *turned off*, Jim allowed me in to run the RRUL test remotely. This was how his cable connection behaved without any latency control. We see the usual 1-2 seconds worth of induced latency common to (and bedeviling!) current cable deployments. _(As noted above, the up and download figures for these tests are reversed as I was running RRUL from a remote server, not from within Jim's network, as is normally done.)_
 
-![](/attachments/ipv6_withsqm-3.svg)
+![](/attachments/sqm-setup-ipv6_withsqm-3.svg)
 
 "While awesome to be able to run this test over native IPv6, 1.2 seconds of latency left something to be desired. (The latency problem has nothing to do with IPv6, or IPv4, but bufferbloat in the modem and CMTS).
 
@@ -30,17 +30,17 @@ _How to read the plots below. This is the default display of the RRUL test showi
 "So taking a guess at the bandwidth from the averages (the black line * 4) on the up/down graphs, we tried setting setting CeroWrt's Smart Queue Management system (SQM) to 38mbits down and 8 up. 
 (Well, actually I goofed when I looked at the graphs: 7*4 = 28, not 38). Note also that the black lines do not correctly add in the bandwidth used up by the tcp acks in the opposite direction. On some systems you need to factor in ~1/40th the bandwidth used in the opposite direction for a more correct estimate.
 
-![](/attachments/ipv6.svg)
+![](/attachments/sqm-setup-ipv6.svg)
 
 "A little better, but it still looks as if the data was taking a side jaunt to the moon!
 
 "Taking another guess, we tried, 24mbps down and 6mbps up.
 
-![](/attachments/ipv6_withsqm-24-6.svg)
+![](/attachments/sqm-setup-ipv6_withsqm-24-6.svg)
 
 "Much better! But given the increase in latency and the average where it was, it was apparent that 6 mbit up was still too much, so we knocked that down to 4400, and got this:
 
-![](/attachments/ipv6_withsqm-24-4400.svg)
+![](/attachments/sqm-setup-ipv6_withsqm-24-4400.svg)
 
 "A total increase of observable latency over the baseline of 65ms of 10 milliseconds (vs 1.2 seconds! A 110x improvement... ) and good sharing between streams and good throughput. And thus, we declared victory, and then talked for an hour doing various other tests while the videoconference continued to rock.
 
