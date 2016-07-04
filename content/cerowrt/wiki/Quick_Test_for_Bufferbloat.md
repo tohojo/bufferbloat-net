@@ -51,7 +51,6 @@ connectivity problems are good to 40GigE, but require the
 (Flent was previously named "netperf-wrapper".) 
 Using the Flent tools, it is possible to get a good feel for how the connection is
 behaving while you tune your settings. 
-[comment]: <> (See, for example, this [tuning session](http://snapon.lab.bufferbloat.net/~cero2/jimreisert/results.html))
 
 ## Other network performance and latency tools
 
