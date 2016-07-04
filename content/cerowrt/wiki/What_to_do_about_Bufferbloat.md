@@ -25,7 +25,7 @@ bufferbloat, and has updated the firmware to use one of the Smart Queue
 Management algorithms such as fq\_codel, PIE, or others.
 
 1.  We continue to be hopeful that commercial router vendors will offer
-    SQM in their stock firmware. At this time, Ubuquiti and ipfire.org
+    SQM in their stock firmware. At this time, Ubiquiti and ipfire.org
     seem to include settings for fq\_codel.
 2.  Install the [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
     at http://openwrt.org/ on your current router. These builds are now
