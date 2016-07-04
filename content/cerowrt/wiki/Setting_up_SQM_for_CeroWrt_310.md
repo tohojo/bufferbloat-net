@@ -214,7 +214,7 @@ Internet. The general rule for selecting the Link Layer Adaption is:
     other parameters will be ignored.
 
 If you are not sure what kind of link you have, first try using "None",
-then run the [Quick Test for Bufferbloat](Quick_Test_for_Bufferbloat.md). If the results are
+then run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md). If the results are
 good, you’re done. Next, try the ATM choice, then the Ethernet choice to
 see which performs best. Read the **Details** (below) to learn more
 about tuning the parameters for your link.
