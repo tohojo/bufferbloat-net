@@ -42,7 +42,7 @@ _How to read the plots below. This is the default display of the RRUL test showi
 
 ![](/attachments/sqm-setup-ipv6_withsqm-24-4400.svg)
 
-"A total increase of observable latency over the baseline of 65ms of 10 milliseconds (vs 1.2 seconds! A 110x improvement... ) and good sharing between streams and good throughput. And thus, we declared victory, and then talked for an hour doing various other tests while the videoconference continued to rock.
+"A total increase of observable latency of 10 milliseconds over the baseline of 65ms (vs an increase of 1.2 seconds! A 110x improvement... ) and good sharing between streams and good throughput. And thus, we declared victory, and then talked for an hour doing various other tests while the videoconference continued to rock."
 
 **Final Notes:**
 
