@@ -34,6 +34,7 @@ A benchmark that quickly tests for the characteristics of a loaded network compr
 
 ## Test Requirements
 
+<<<<<<< HEAD
 -  MUST test ipv6 and ipv4 simultaneously if available
 -  MUST test for classification preservation and optimization
 -  MUST run long enough to defeat bursty bandwidth optimizations such as PowerBoost and discard data from that interval.
@@ -47,6 +48,21 @@ A benchmark that quickly tests for the characteristics of a loaded network compr
 -  COULD require special kernel assistance (such as web100) on the servers
 -  SHOULD test for ECT(0) and ECT(1) ECN markings
 -  SHOULD test for classification preservation/alteration
+=======
+• MUST test ipv6 and ipv4 simultaneously if available
+• MUST test for classification preservation and optimization
+• MUST run long enough to defeat bursty bandwidth optimizations such as PowerBoost and discard data from that interval.
+• MUST measure unloaded network performance of web pages, CIR and VOIP-like streams
+• MUST measure network performance under a saturating background load, of web pages, CIR and VOIP-like streams
+• MUST test UDP and TCP.
+• MUST track and sum bi-directional throughput, using estimates for ACK sizes of ipv4, ipv6, and encapsulated ipv6 packets, udp and tcp_rr packets, etc.
+• MUST have the test server(s) within 80ms of the testing client
+• MUST track CPU loading as a factor in being able to drive the test at full speed or not. Insufficient CPU available should invalidate the tests.
+• MUST run in userspace on the client(s)
+• COULD require special kernel assistance (such as web100) on the servers
+• SHOULD test for ECT(0) and ECT(1) ECN markings
+• SHOULD test for classification preservation/alteration
+>>>>>>> Added text of of RRUL_Spec from github
 
 ## Test Versioning
 
@@ -54,6 +70,7 @@ As typical workloads change over time (example: the typical web page has grown i
 
 ## Variables Under Test
 
+<<<<<<< HEAD
 -  Aggregate (up,down and bidirectional) Bandwidth, including ACK overhead
 -  Up/Down Latency and Jitter of CIR, UDP, and TCP streams
 -  Up/Down Stream Delay
@@ -67,10 +84,26 @@ As typical workloads change over time (example: the typical web page has grown i
 ## Test Flow
 
 ### Load Generation Component
+=======
+• AGGREGATE (up,down and bidirectional) BANDWIDTH, including ACK overhead
+• UP/DOWN LATENCY and JITTER of CIR UDP and TCP STREAMS
+• UP/DOWN STREAM DELAY
+• PACKET LOSS on CIR UDP and TCP STREAMS 
+• STREAM START TIME SLEW
+• DNS LOOKUP SPEED
+• SHORT FLOW TRANSFER RATE
+• CLASSIFICATION PRESERVATION and OPTIMIZATION
+
+
+## TEST FLOW
+
+### LOAD GENERATION COMPONENT
+>>>>>>> Added text of of RRUL_Spec from github
   To shorten the ramp-up-to-saturation period, multiple TCP streams will be used. The smallest number of streams required to fully test up/down bandwidth is 4 in each direction. It is anticipated that this will cause “interesting” behavior in networks running at speeds below 5Mbit, as a full size (1500 byte) packet takes 13ms to transmit at 1Mbit. The sum of bandwidth required for the other CIR tests and ACK returns is less than the overhead of a single TCP upstream, with the web component generating a presently unknown load in the downstream and upstream directions. 
   The presence of multiple streams will partially defeat ack optimization techniques.
   Analysis of start time slew, relative interstream bandwidth on a 100ms period, vis a vis classification and underlying (ipv4,ipv6) protocol will be kept. 
 
+<<<<<<< HEAD
 ### Web Component
 
 Analyzing web site behavior under load is critical to this test. A typical web page consists of dozens of dns lookups and dozens of (usually short) TCP flows.  
@@ -96,6 +129,33 @@ The realtime component is intended to analyze the behavior of very sparse stream
   The equivalent of tcptraceroute or mtr shall be run continuously in both directions to identify the bottleneck source.
 
 ## The RRUL Score
+=======
+### WEB COMPONENT
+
+  Analyzing web site behavior under load is critical to this test. A typical web page consists of dozens of dns lookups and dozens of (usually short) TCP flows.  
+
+  While under the sorts of loads envisioned by RRUL2013, a “typical” web page load will be executed multiple times, with one series without load, and another series, with load. The best analog for this benchmark is currently the chrome-benchmark. The core statistics from the chrome benchmark relevant to this test are the “commit load mean”, stddev, 95% CI (for the network only however) and the total load time samples.
+
+This portion of the test will take your favorite website as a target and show you how much it will slow down, under load.
+
+  For a reference test, instead - an analysis of typical web behavior as of 2013 for the top 100 alexa web sites (notably interactive cloud based ones such as google, xfinity, amazon, and salesforce.com) would need to be performed so that their behavior can be appropriately simulated.
+
+### REALTIME COMPONENT
+  The realtime component is intended to analyze the behavior of very sparse streams, such as those generated by DNS, DHCP, SSH, MOSH, remote management protocols (SNMP, RDP & X11), etc. A simple set of “fastest possible” UDP and TCP exchanges roughly equivalent to the netperf “RR” benchmarks will suffice, with reference to the unloaded RR times for presentation purposes. Timestamps should be transmitted and retained to measure delay and jitter on both an upstream and downstream basis.
+
+### VOIP COMPONENT
+
+• UDP Streams marked with 3 diffserv classifications will be emitted on a 10ms interval in both directions.
+• UDP packet size will be typical of a G.711 encoding
+• Bidirectional delay statistics shall be collected and displayed
+• Bidirectional packet loss statistics shall be collected and displayed
+• JITTER in excess of 30ms shall be treated as packet loss.
+
+### ANALYSIS COMPONENT
+  The equivalent of tcptraceroute or mtr shall be run continuously in both directions to identify the bottleneck source.
+
+## THE RRUL SCORE
+>>>>>>> Added text of of RRUL_Spec from github
 
 An optimum result would be: zero packet loss for the realtime and voip-like streams, jitter below 30ms for same, streams marked CS1 transmitting at 5% or less of available bandwidth (but not starved), streams marked EF at 30% or less (but not 95%!), and roughly equal sharing of bandwidth, jitter, and delay  (accounting for ACK and MTU differences) between IPv4 and IPv6 streams of the same types. 
 
@@ -111,6 +171,7 @@ You'll note that there is NO number envisioned for the presentation of “bandwi
 
 --------------
 
+<<<<<<< HEAD
 ## Alternative Test Methods
 
 ### Test Methods ruled out 
@@ -126,6 +187,21 @@ You'll note that there is NO number envisioned for the presentation of “bandwi
 -  The behavior of VPN traffic is not analyzed.
 
 ### Problems with Existing Tests
+=======
+### TEST METHODS ruled out 
+
+• UDP flooding – this method, while quickly filling queues, does not resemble typical traffic. It is perhaps useful to do in conjunction with these tests as to observe the effect of malware attempting to saturate the network.
+• Ping and ping6 – ICMP is often de-prioritized or lost, first, under load. However the presence/absence of useful ICMP messages (such as ETOOBIG) would be good to track.
+
+### POSSIBLE PROBLEMS 
+
+• Some video streaming providers inject a burst of data into the network every 10 seconds instead of using normal TCP metrics to measure bandwidth over the course of a flow. The RRUL tests do not simulate that behavior.
+• The tests proposed test the performance of TCP streams mostly. Short RTT times to the servers are required to ramp up to full bandwidth.
+• The effect of bittorrent like flows (dozens or hundreds of low rate streams) is not analyzed.
+• The behavior of VPN traffic is not analyzed.
+
+### PROBLEMS WITH EXISTING TESTS
+>>>>>>> Added text of of RRUL_Spec from github
 
 - SPEEDTEST.NET
   Currently tests for ping response time, and up and download bandwidth, in isolation. It is unknown to what extent a flash based application can thread and execute these tests simultaneously.
@@ -147,13 +223,21 @@ You'll note that there is NO number envisioned for the presentation of “bandwi
 
 - MACOSX - tbd
 
+<<<<<<< HEAD
 ## Appendix A (prototyping these tests)
+=======
+## APPENDIX A (prototyping these tests)
+>>>>>>> Added text of of RRUL_Spec from github
 
 The most flexible and trusted tool commonly available is netperf. Aside from the web and voip related tests described herein, netperf can be parsed (or extended) to yield most of the results required. 
 
 Each of the netperf results need to be captured and analyzed separately and in combination via a wrapper such as: https://github.com/tohojo/netperf-wrapper, however enhancing netperf and/or developing a new suite of tests suitable for wide deployment would be more accurate and useful.
 
+<<<<<<< HEAD
 ### Simplest Example
+=======
+### SIMPLEST EXAMPLE
+>>>>>>> Added text of of RRUL_Spec from github
 
 ````
 #!/bin/sh
@@ -183,7 +267,11 @@ The first plot shows 76ms of delay under load, significant jitter, and some misb
 This test does not run fast enough or effectively enough on slower, longer RTT ISP networks, and something more extreme is needed. Certainly in this case, a chrome-benchmark could be run at the same time, to calculate web page loads, under this load. 
 
 
+<<<<<<< HEAD
 ### More Complete Example
+=======
+### MORE FULL EXAMPLE
+>>>>>>> Added text of of RRUL_Spec from github
 
 ````
 #!/bin/sh
@@ -250,9 +338,15 @@ wait
 
 ### Flaws in the full example
 
+<<<<<<< HEAD
 -  There is not an explicit voip test above. The ping is a poor substitute.
 -  Summing the actual bandwidth used by the various tests would make it possible to normalize the score better.
 -  There is a test version of a netperf-wrapper script for most of the above tests available as “rrul.ini” from the netperf-wrapper source-code site.
+=======
+• There is not an explicit voip test above. The ping is a poor substitute.
+• Summing the actual bandwidth used by the various tests would make it possible to normalize the score better.
+• There is a test version of a netperf-wrapper script for most of the above tests available as “rrul.ini” from the netperf-wrapper source-code site.
+>>>>>>> Added text of of RRUL_Spec from github
 
 
 ### More test design options:
@@ -262,7 +356,11 @@ wait
 - **Alternative TCP Stacks** Implement a complete TCP stack in the application, so that packet loss, CWND reduction, window fiddling, etc, can be monitored and graphed.
 
 
+<<<<<<< HEAD
 ## Comments On This Specification
+=======
+## Comments So Far
+>>>>>>> Added text of of RRUL_Spec from github
 
 _Rick Jones (author of netperf):_
 
