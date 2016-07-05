@@ -1,11 +1,12 @@
 ---
-title: Realtime Response Under Load (RRUL) Test 
-date: 2012-11-06T12:00:00
-lastmod: 2016-07-05T08:00:00
+title: Realtime Response Under Load (RRUL) Specification 
+date: 2016-07-05T10:00:00-04:00
+lastmod: 2016-07-05T10:01:00-04:00
 type: wiki
 ---
 
-# Realtime Response Under Load (RRUL) Test  
+# Realtime Response Under Load (RRUL) Specification
+
 _DRAFT: .07; Published 6 November 2012_
 
 _AUTHOR: Dave Täht_
