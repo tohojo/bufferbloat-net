@@ -15,34 +15,33 @@ An RRUL test run saturates the network by initiating eight data connections to/f
 
 ## Sample RRUL Chart
 
-Here is a sample RRUL chart, showing the results of a cable modem that uses a simple (and common) FIFO queue discipline, which does not do any traffic management. The chart shows performance with these plots:
+Here is a sample RRUL chart, showing the results from a cable modem (nominally 20 Mbit/s down, 8 MBit/s up) using pfifo queueing. The chart shows performance with these plots:
 
-- **Download plot** showing the average download speed (Mbits/sec, in black) of the four diffserv connections (other colors.) 
-- **Upload plot** showing the average upload speed (Mbits/sec, black) of the four diffserv class connections (other colors) 
+- **Download plot** showing the average download speed (Mbits/sec, in black) of the four diffserv connections (individual colors.) 
+- **Upload plot** showing the average upload speed (Mbits/sec, black) of the four diffserv class connections (individual colors) 
 - **Latency plot** showing the average latency (msec, in black) of all the connections.
 - **Horizontal axis** for all plots is seconds, showing the test duration.
 
 The Download and Upload plots show speeds for _each_ connection: multiply the average by four to get the actual link speeds.
 
-**Explanation of the pfifo chart**
-
-The chart shows the typical (poor) performance of equipment that uses pfifo queueing:
-
-1. The Download plot shows the average starting around 2.5 Mbit/s. By 30 seconds into the test, it falls to about 0.5 Mbit/s. Only at the end of the test at 60 seconds does the average peak around 4.0 Mbit/s. The average rate across the 60-second test is below 2.0 Mbit/s, or about 8 Mbit/s.
-2. The Upload speed is much more consistent, showing about 2 Mbit/s (~8 Mbit/s total) for the entire test run.
-3. The Latency plot starts at a few msec when the link is idle, but it rapidly goes between 150-250 msec when there is traffic. This latency is the "bufferbloat" that harms network performance.
-
 ![](/attachments/rrul_chart_campground_pfifo_fast.svg)
 
-**After Installing and Configuring fq_codel SQM**
+**Explanation of the pfifo chart (above)**
+
+The chart shows the typical (poor) performance of equipment that uses pfifo, a common queue discipline, which does not do any traffic or queue management:
+
+1. The Download plot shows the average starting around 2.5 Mbit/s. By 30 seconds into the test, it falls to about 0.5 Mbit/s. Only at the end of the test at 60 seconds does the average peak around 4.0 Mbit/s. The average rate across the 60-second test is below 2.0 Mbit/s, or a total of about 8 Mbit/s.
+2. The Upload speed is much more consistent, showing about 2 Mbit/s (~8 Mbit/s total) for the entire test run.
+3. The Latency plot starts at a few msec when the link is idle, but it rapidly jumps to between 150-250 msec when there is traffic. This latency is the "bufferbloat" that harms network performance.
+
+**After Installing and Configuring SQM**
 
 We configured the Smart Queue Management (SQM) facility on the router to control queue lengths within the router. This results in a huge improvement in latency *and* download speeds while sacrificing a very small amount of upload capacity.
 
-**Explanation of the fq_codel chart**
-
-1. The Download speed average is far more consistent, around 4.2 Mbit/s (total of 16.8 Mbit/s, double the pfifo average 8 Mbit/s).
-2. The Upload speed average is about 1.8 Mbit/s (a bit lower than the 2 Mbit/s of pfifo).
-3. The big win is in latency: the idle latency of 16-18 msec only increases by 4-8 msec during the entire test run. This is a 25x improvement (8 msec vs 200 msec), and would result in dramatically better "feel" to the network.
-
 ![](/attachments/rrul_chart_campground_lupin_qos.svg)
 
+**Explanation of the fq_codel chart (above)**
+
+1. The Download speed average is far more consistent, around 4.2 Mbit/s (total of 16.8 Mbit/s, double the pfifo average of ~8 Mbit/s).
+2. The Upload speed average is about 1.8 Mbit/s (a bit lower than the 2 Mbit/s of pfifo).
+3. The big win is in latency: the idle latency of 16-18 msec only increases by 4-8 msec during the entire test run. This is a 25x improvement (8 msec vs 200 msec), and would result in dramatically better "feel" to the network.
