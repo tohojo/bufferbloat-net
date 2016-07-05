@@ -30,6 +30,7 @@ _How to read the plots below. This is the default display of the RRUL test showi
 "So taking a guess at the bandwidth from the averages (the black line * 4) on the up/down graphs, we tried setting setting CeroWrt's Smart Queue Management system (SQM) to 38mbits down and 8 up. 
 (Well, actually I goofed when I looked at the graphs: 7*4 = 28, not 38). Note also that the black lines do not correctly add in the bandwidth used up by the tcp acks in the opposite direction. On some systems you need to factor in ~1/40th the bandwidth used in the opposite direction for a more correct estimate.
 
+
 ![](/attachments/sqm-setup-ipv6.svg)
 
 "A little better, but it still looks as if the data was taking a side jaunt to the moon!
@@ -42,7 +43,7 @@ _How to read the plots below. This is the default display of the RRUL test showi
 
 ![](/attachments/sqm-setup-ipv6_withsqm-24-4400.svg)
 
-"A total increase of observable latency of 10 milliseconds over the baseline of 65ms (vs an increase of 1.2 seconds! A 110x improvement... ) and good sharing between streams and good throughput. And thus, we declared victory, and then talked for an hour doing various other tests while the videoconference continued to rock."
+"We had a baseline latency of 65ms with an increase of 10 milliseconds (vs. an increase of 1.2 seconds! A 110x improvement... ) and good sharing between streams and good throughput. And thus, we declared victory, and then talked for an hour doing various other tests while the videoconference continued to rock."
 
 **Final Notes:**
 
