@@ -7,11 +7,12 @@ type: wiki
 
 # Realtime Response Under Load (RRUL) Specification
 
-_DRAFT: .07; Published 6 November 2012_
+_DRAFT: .07; Originally published 6 November 2012_
 
 _AUTHOR: Dave Täht_
 
-_This page is an HTML version of the original Word document at: https://github.com/dtaht/deBloat/tree/master/spec 
+_This page is an HTML version of the original Word document at: 
+https://github.com/dtaht/deBloat/tree/master/spec 
 It has small formatting changes, but no editorial or grammatical changes to the original document._
 
 _The [Flent](http://flent.org) network testing tool implements this specification._
