@@ -94,9 +94,10 @@ def main(urlfile):
             if line.endswith(".gz"):
                 continue
             if line.endswith("index.html"):
-                urls.append(PREFIX+"/"+os.path.split(line)[0]+"/")
+                url = PREFIX+"/"+os.path.split(line)[0]+"/"
             else:
-                urls.append(PREFIX+"/"+line)
+                url = PREFIX+"/"+line
+            urls.append(url.replace("//", "/"))
     purge_urls(urls)
 
 if __name__ == '__main__':
