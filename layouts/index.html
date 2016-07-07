@@ -6,39 +6,74 @@
         <div class="col-md-9">
             <div class="well well-sm">
               <h1>Bufferbloat</h1>
-<p>Bufferbloat is the undesirable latency that comes from a router or other network equipment buffering too much data.</p>
+              <p>Bufferbloat is the undesirable latency that comes from a router
+              or other network equipment buffering too much data.</p>
 
-  <p>The <a href="{{ "/bloat/wiki/" | relURL }}">Bufferbloat</a> projects provide a webspace for addressing chaotic and laggy network performance. We have a number of projects in flight:</p>
+              <p>The <a href="{{ "/bloat/wiki/" | relURL }}">Bufferbloat</a>
+              projects provide a webspace for addressing chaotic and laggy
+              network performance. We have a number of projects in flight:</p>
 
-  <p>The <strong>Request to FCC for Saner Software Policies</strong> is a response to Docket ET 15-170 which appears to require vendors to lock down the software in Wi-Fi routers, prohibiting experimentation and field testing of new techniques. Read the <a href="https://web.archive.org/web/20160429233622/http://www.businesswire.com/news/home/20151014005564/en#.Vh4ojflViko" class="external">Press Release</a> and our <a href="https://web.archive.org/web/20160429233622/http://huchra.bufferbloat.net/~d/fcc_saner_software_practices.pdf" class="external">Letter to the FCC</a></p>
+              <p>The <strong>Request to FCC for Saner Software Policies</strong>
+              is a response to Docket ET 15-170 which appears to require vendors
+              to lock down the software in Wi-Fi routers, prohibiting
+              experimentation and field testing of new techniques. Read
+              the <a href="https://web.archive.org/web/20160429233622/http://www.businesswire.com/news/home/20151014005564/en#.Vh4ojflViko"
+              class="external">Press Release</a> and
+              our <a href="https://web.archive.org/web/20160429233622/http://huchra.bufferbloat.net/~d/fcc_saner_software_practices.pdf"
+              class="external">Letter to the FCC</a></p>
 
-  <p>The <strong>Bufferbloat</strong> project has largely addressed latency associated with too much buffering in routers. The CoDel and fq_codel algorithms are the first fundamental advance in the state of the art of network Active Queue Management in many, many years. These algorithms have been deployed in millions of computers, and reduce the induced delay from competing traffic on a bottleneck link to the order of 20 msec.</p>
+              <p>The <strong>Bufferbloat</strong> project has largely addressed
+              latency associated with too much buffering in routers. The CoDel
+              and fq_codel algorithms are the first fundamental advance in the
+              state of the art of network Active Queue Management in many, many
+              years. These algorithms have been deployed in millions of
+              computers, and reduce the induced delay from competing traffic on
+              a bottleneck link to the order of 20 msec.</p>
 
-  <p>The <strong>Make-Wi-Fi-Fast</strong> project, with many of the same team members as the Bufferbloat project, intends to improve Wi-Fi's speed and use of the spectrum by inserting CoDel/fq_codel into the Wi-Fi queues, and actively measuring the power required for successful transmission, in order to minimize contention and interference on the RF channel.</p>
+              <p>The <strong>Make-Wi-Fi-Fast</strong> project, with many of the
+              same team members as the Bufferbloat project, intends to improve
+              Wi-Fi's speed and use of the spectrum by inserting CoDel/fq_codel
+              into the Wi-Fi queues, and actively measuring the power required
+              for successful transmission, in order to minimize contention and
+              interference on the RF channel.</p>
 
-  <p>These are all united by a desire to:</p>
+              <p>These are all united by a desire to:</p>
 
-  <ul>
-  <li>Gather together experts to tackle networking queue management and system problem(s), particularly those that affect wireless networks, home gateways, and edge routers</li>
-    <li>Spread the word to correct basic assumptions regarding goodput and good  buffering on the laptop, home gateway, core routers and servers.</li>
-    <li>Produce tools to demonstrate and diagnose the problem</li>
-    <li>Make experiments in advanced congestion management</li>
-    <li>Produce patches to popular operating systems at the device driver, queuing, and TCP/ip layers to fix the problems.</li>
-  </ul>
+              <ul>
+                <li>Gather together experts to tackle networking queue
+                management and system problem(s), particularly those that affect
+                wireless networks, home gateways, and edge routers</li>
 
-  <p>There are <a href="https://lists.bufferbloat.net/" class="external">several mailing lists</a>, git repositories, and people here that are attempting to address the Bufferbloat and making Wi-Fi fast issues at various levels. We welcome you to join us in this endeavor!</p>
+                <li>Spread the word to correct basic assumptions regarding
+                goodput and good buffering on the laptop, home gateway, core
+                  routers and servers.</li>
 
-  <h3 id="Help">Help Us</h3>
+                <li>Produce tools to demonstrate and diagnose the problem</li>
 
-          <p>This is an export of the old bufferbloat.net site, converted to Hugo
-          format. The sources
-          are <a href="https://github.com/tohojo/bufferbloat-net">available
+                <li>Make experiments in advanced congestion management</li>
+
+                <li>Produce patches to popular operating systems at the device
+                driver, queuing, and TCP/ip layers to fix the problems.</li>
+              </ul>
+
+              <p>There are <a href="https://lists.bufferbloat.net/"
+              class="external">several mailing lists</a>, git repositories, and
+              people here that are attempting to address the Bufferbloat and
+              making Wi-Fi fast issues at various levels. We welcome you to join
+              us in this endeavor!</p>
+
+              <h3 id="Help">Help Us</h3>
+
+              <p>This is an export of the old bufferbloat.net site, converted to
+              Hugo format. The sources
+              are <a href="https://github.com/tohojo/bufferbloat-net">available
               on github</a>. Pull requests to improve things are welcome.</p>
+
             </div>
         </div>
         <!-- Sidebar -->
         <div class="col-md-3">
-        {{ partial "menu.html" . }}
+          {{ partial "menu.html" . }}
         </div>
     </div>
 {{ partial "footer.copyright.html" . }}
