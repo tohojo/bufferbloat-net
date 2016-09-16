@@ -89,7 +89,7 @@ Simulations
 -----------
 
 Kathie Nichols' and Van Jacobson's original [ns2 simulation of
-codel](http://www.pollere.net/CoDel.html)\
+codel](http://www.pollere.net/Codel.html)\
 Their most current ns2 code is now available [via
 git](https://github.com/dtaht/ns2)
 
