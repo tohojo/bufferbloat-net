@@ -76,7 +76,7 @@ Older Papers
 
 [Controlling Queue Delay](http://queue.acm.org/detail.cfm?id=2209336)
 ACM Queue, Kathleen Nichols, Van Jacobson, May, 2012\
-[Codel](http://www.pollere.net/CoDel.html) page at
+[Codel](http://www.pollere.net/Codel.html) page at
 [Pollere](http://www.pollere.net) . Pollere does research on and
 analysis of network performance via modeling and simulation,
 measurement,and laboratory prototypes.\
