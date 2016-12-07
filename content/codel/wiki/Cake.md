@@ -65,7 +65,8 @@ their QoS systems.
 ### Command line interface is WAY simpler than htb + fq\_codel
 
 
-    tc qdisc add dev eth2 root cake bandwidth 50mbitUsage: ... cake [ bandwidth RATE | unlimited* | autorate_ingress ]
+    tc qdisc add dev eth2 root cake bandwidth 50mbit
+    Usage: ... cake [ bandwidth RATE | unlimited* | autorate_ingress ]
                     [ rtt TIME | datacentre | lan | metro | regional | internet* | oceanic | satellite | interplanetary ]
                     [ besteffort | squash | precedence | diffserv8 | diffserv4* ] # diffserv variants including none
                     [ flowblind | srchost | dsthost | hosts | flows* ] # hash algorithm on what fields
