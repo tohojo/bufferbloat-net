@@ -103,9 +103,12 @@ Enable <link>ECN</link>, <link>SACK</link>, and <link>DSACK</link>
 These sysctl settings can be stored in the main /etc/sysctl.conf file,
 or in a file in the /etc/sysctl.d directory.
 
-@ net.ipv4.tcp\_ecn=1\
-net.ipv4.tcp\_sack=1\
-net.ipv4.tcp\_dsack=1@
+
+```
+net.ipv4.tcp_ecn=1
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_dsack=1
+```
 
 Note that there is still some broken ECN CPE (e.g. home router)
 equipment out there; if you have problems in some environments, please
@@ -129,15 +132,19 @@ many cases ethtool is not supported, however, if you can, reduce these
 buffers to the bare minimum for good performance. Few devices support
 going as low as this:
 
-@ ethtool -G eth0 tx 4\
-ethtool -G wlan0 tx 4@
+```
+ethtool -G eth0 tx 4
+ethtool -G wlan0 tx 4
+```
 
 But many can get to 20 or below. See also: [Known Bloated Drivers](Bloated_Driver_List.md) for more information and patches.
 
 You can observe your existing settings with:
 
-@ ethtool -g eth0\
-ethtool -g wlan0@
+```
+ethtool -g eth0
+ethtool -g wlan0
+```
 
 Reduce transmit queue length
 ----------------------------
@@ -147,8 +154,10 @@ either.
 
 This is a separate setting for each network interface. Examples:
 
-@ ifconfig wlan0 txqueuelen 16\
-ifconfig eth0 txqueuelen 50@
+```
+ifconfig wlan0 txqueuelen 16
+ifconfig eth0 txqueuelen 50
+```
 
 (50 is the default transmit queue length on FreeBSD.)
 

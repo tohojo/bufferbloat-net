@@ -25,10 +25,13 @@ can be enabled in the general case. In the meantime feel free to try it.
 <link>SACK</link> and <link>DSACK</link> are enabled. These do help.
 
 It's very easy to enable these three options, under various forms of
-Linux. Into your /etc/sysctl.conf you can put\
-@ net.ipv4.tcp\_ecn=1\
-net.ipv4.tcp\_sack=1\
-net.ipv4.tcp\_dsack=1@
+Linux. Into your /etc/sysctl.conf you can put
+
+```
+net.ipv4.tcp_ecn=1
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_dsack=1
+```
 
 [IPv6](IPv6.md) is enabled in primary DNS and as part of the main
 website(s) themselves. IPv6 behavior is potentially worse, as IPv6

@@ -25,26 +25,32 @@ small flows might get through eventually, with higher probability.
 
 ### Windows Vista / Windows 7 users can enable "Compound TCP",
 
-@ netsh int tcp set global congestionprovider=ctcp\
-netsh int tcp set global ecncapability=enabled@
+```
+netsh int tcp set global congestionprovider=ctcp
+netsh int tcp set global ecncapability=enabled
+```
 
 ### Windows 8 and later
 
-The use of netsh int tcp set global congestionprovider=ctcp has been
+The use of `netsh int tcp set global congestionprovider=ctcp` has been
 depreciated. In order to set or change the congestionprovider the
 following command must be used:
 
+```
 set-nettcpsetting -CongestionProvider CTCP
+```
 
 However, CTCP is the default on windows 8 and later.
 
-Type get-nettcpsetting to view other settings that used to be part of
-netsh tcp global.﻿
+Type `get-nettcpsetting` to view other settings that used to be part of
+netsh tcp global.
 
 ECN is a global setting and is still configurable, even on clients,
 through netsh by running:
 
-`netsh int tcp set global ecn=enable`
+```
+netsh int tcp set global ecn=enable
+```
 
 On Windows Server 2012, you can change this setting through the custom
 template or netsh.
