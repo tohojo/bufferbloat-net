@@ -1,7 +1,7 @@
 ---
 title: RRUL Chart Explanation
-date: 2016-07-06T11:00:00-04:00
-lastmod: 2016-07-06T11:00:00-04:00
+date: 2016-12-27T11:00:00-04:00
+lastmod: 2016-12-27T11:00:00-04:00
 type: wiki
 ---
 
@@ -9,44 +9,58 @@ type: wiki
 
 The [Realtime Response Under Load (RRUL)](RRUL_Spec.md) test performs accurate, automated, and repeatable measurements of network performance. RRUL is especially well suited to measuring induced latency when heavy traffic is present. This latency is often called "bufferbloat".
 
-The charts on this page were created by [Flent,](http://flent.org) a Python program that runs the RRUL (and other) tests and creates graphs of the result. This page is a tutorial for understanding the test results as shown in the RRUL chart.
+The charts on this page were created by [Flent,](http://flent.org) a Python program that runs the RRUL (and other) tests and creates graphs of the result. This page describes the charts created by the Flent program.
 
 An RRUL test run saturates the network by initiating eight data connections to/from a netperf server at a remote location (four simultaneous connections sending data in each direction). Each connection has a different diffserv class to compare their performance and fairness. In addition, the RRUL test measures latency across the network with ICMP or UDP pings.
 
-## Sample RRUL Chart before tuning
+## The Charts
 
-Here is a sample RRUL chart - it has these plots:
+Flent produces three major types of charts:
 
-- **Download plot** showing the average download speed (Mbits/sec, in black) of the four diffserv connections (individual colors.) 
-- **Upload plot** showing the average upload speed (Mbits/sec, black) of the four diffserv class connections (individual colors) 
+1. [RRUL Three-plot Charts,](#rrul-charts) showing download, upload, latency in three plots
+2. [Cumulative Distribution Function (CDF) charts](#cumulative-distribution-function-cdf-plots) that show the distribution of latency readings
+3. [Box Plots](#flent-box-plots) show a comparison between multiple Flent test runs
+
+### RRUL Three-Plot Charts
+
+A three-plot RRUL Chart shows:
+
+- **Download plot** showing the average download speed (Mbits/sec, in black) of the four diffserv connections (individual colors.) Multiply the average by four to get the actual throughput/link speed.
+- **Upload plot** showing the average upload speed (Mbits/sec, black) of the four diffserv class connections (individual colors.) Multiply the average by four to get the actual throughput/link speed.
 - **Latency plot** showing the average latency (msec, in black) of all the connections.
-- **Horizontal axis** for all plots is seconds, showing the test duration.
+- **Horizontal axis** for all plots is seconds, across the test duration.
 
-_Note:_ The Download and Upload plots show speeds for _each_ connection: multiply the average by four to get the actual link speeds.
+![](/attachments/flent_charts/rrul-good-bad.png)
 
-_Note:_ The measured download and upload rates tend to be lower than the full rated speed of the connection. This is because the TCP Ack traffic uses a significant fraction (often as much as 20%) of the capacity in the opposite direction. This does not skew RRUL results, because all tests will have the same testing conditions.
+The image above shows two Flent RRUL runs, with good (on the left) and poor latency control (on the right).
 
-![](/attachments/rrul_chart_campground_pfifo_fast.svg)
+1. Good latency control <a href="/attachments/flent_charts/wndr3800-lede-piece-cake-135-12.all.png" target="_blank">(Full size)</a> Notice how the black (average) plot shows constant traffic at 4x31mbps for download; upload is constant at 4x2.8mbps, and the latency is very steady around 15 msec.
+2. Poor latency control <a href="/attachments/flent_charts/wndr3800-lede-cake-unlimited.all.png" target="_blank">(Full size)</a> Although the black download and upload rates are roughly the same, their values vary significantly. In addition, each of the four connections (in color) show far more variability. But most important, the latency jumps up from ~15 msec when idle to 250 msec during the test. This indicates bufferbloat.
 
-**Explanation of the pfifo chart (above)**
+_Note:_ The measured download and upload rates tend to be lower than the full rated speed of the ISP connection. This is because the TCP Ack traffic uses a significant fraction (often as much as 20%) of the capacity in the opposite direction. This does not skew RRUL results, because all tests will have the same testing conditions.
 
-The chart above shows results from testing an ordinary cable modem (nominally 20 Mbit/s down, 8 MBit/s up) that uses the common pfifo queueing which does not do any traffic or queue management. It shows several areas of poor performance: 
+### Cumulative Distribution Function (CDF) Plots
 
-1. The Download plot shows the average starting around 2.5 Mbit/s. By 30 seconds into the test, it falls to about 0.5 Mbit/s. Only at the end of the test at 60 seconds does the average peak around 4.0 Mbit/s. The average rate across the 60-second test is below 2.0 Mbit/s, or a total of about 8 Mbit/s.
-2. The Upload speed is much more consistent, showing about 2 Mbit/s (~8 Mbit/s total) for the entire test run.
-3. The Latency plot starts at a few msec when the link is idle, but it rapidly jumps to between 150-250 msec when there is traffic. This latency is the "bufferbloat" that harms network performance.
+The Cumulative Distribution Function charts (CDF) show the percentage of readings with latency below a certain time. The two charts below show the same test runs as the charts above: one (on the left) showing good latency control, while the one on the right shows poor control.
 
-## After Installing and Configuring SQM
+![](/attachments/flent_charts/cdf-good-bad.png)
 
-We configured the Smart Queue Management (SQM) facility on the router to control queue lengths within the router. This results in a huge improvement in latency *and* download speeds while sacrificing a very small amount of upload capacity.
+1. Good latency control <a href="/attachments/flent_charts/wndr3800-lede-piece-cake-135-12.cdf.png" target="_blank">(Full size)</a> Notice that most latency samples are below 15 msec, and nearly 100% are less than 20 msec.
+2. Poor latency control <a href="/attachments/flent_charts/wndr3800-lede-cake-unlimited.cdf.png" target="_blank">(Full size)</a> A small fraction (a few percent) of the samples are less than 50 msec; 50% are > 250 msec (12x longer); with a long tail that's greater than a third of a second.
 
-![](/attachments/rrul_chart_campground_lupin_qos.svg)
+### Flent Box Plots
 
-**Explanation of the fq_codel chart (above)**
+In addition to displaying the results of the current run, Flent can save those results for later analysis. The Box Plot displays the result of multiple test runs to provide a comparison.
 
-After applying suitable settings for the SQM in the router (that then feeds the cable modem), the performance is considerably better:
+![](/attachments/flent_charts/wnddr3800-cake-comparison-small.png)
 
-1. The Download speed average is higher, and far more consistent - around 4.2 Mbit/s (total of 16.8 Mbit/s, double the pfifo average of ~8 Mbit/s). 
-2. In addition, the bandwidth (download and upload) is shared more evenly between each of the connections (in colors).
-3. The Upload speed average is about 1.8 Mbit/s (a bit lower than the 2 Mbit/s of pfifo).
-4. The big win is in latency: there is a small increase of 4-8 msec over the baseline idle latency of 16-18 msec during the entire test run. This is a 25x improvement (8 msec vs 200 msec), and would result in dramatically better "feel" to the network.
+The chart above shows four test runs <a href="/attachments/flent_charts/wnddr3800-cake-comparison.png" target="_blank">(Full size):</a> 
+
+1. **No SQM control (green):** The (total) download speed averaged a bit above 120 mbps (4 connections at 30 mbps), but the green rectangle indicated that the values between the 25th and 75th percentile varied between 110 and 140 mbps. The dotted lines show the full range of measured values were between 75 and 180 mbps. 
+2. **HTB+fq_codel qdisc (orange):** The average download was lower: about 75 mbps, but with less variability and latency. (The lowered speed came from the router's inability to process packets fast enough using HTB+fq_codel.)
+3. **layer cake qdisc (purple):** The more efficient layer cake algorithm allowed the router CPU to keep the download rate high while minimizing variability.
+4. **piece of cake qdisc (red):** This gave a bit larger download speed bump (~130 mbps), with similar (low) variability.
+ 
+Note that all four plots show that upload speeds perform at the rated  ISP link speed, and the last three qdisc's (2-4) gave very good control over latency, with "piece of cake" being a slight winner.
+
+*Many thanks to Aaron Wood for permission to use images from his blog post about setting up SQM, QoS, fq_codel, and cake. Read more at: http://burntchrome.blogspot.com/2016/12/cake-latest-in-sqm-qos-schedulers.html*
