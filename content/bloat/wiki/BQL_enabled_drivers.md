@@ -3,6 +3,8 @@ title: BQL enabled drivers
 date: 2012-10-01T14:20:32
 lastmod: 2015-06-26T07:09:34
 type: wiki
+aliases:
+  - /bloat/wiki/Bloated_Driver_List
 ---
 BQL enabled drivers
 ===================
