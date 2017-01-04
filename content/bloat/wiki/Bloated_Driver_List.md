@@ -42,20 +42,18 @@ buffers, at the device driver layer.
 
 ### Ethernet
 
-  ---------- ------------------------------- --------- ----------------------- ---------
-  Driver     Where found                     Buffers   Mitigation              Patches
-  e1000e     Laptops                         256       ethtool -G eth0 tx 64   None
-  kirkwood   Openrd,Various Plug computers   256       ethtool -G ethX tx 20   None
-  ar7100     WNDR5700, Nanostation M5        64        None                    None
-  ---------- ------------------------------- --------- ----------------------- ---------
+  Driver    | Where found                    | Buffers  | Mitigation             | Patches
+  ----------| -------------------------------| ---------| -----------------------| ---------
+  e1000e    | Laptops                        | 256      | ethtool -G eth0 tx 64  | None
+  kirkwood  | Openrd,Various Plug computers  | 256      | ethtool -G ethX tx 20  | None
+  ar7100    | WNDR5700, Nanostation M5       | 64       | None                   | None
 
 ### Wireless
 
-  ----------- -------------------------- ---------------------- ------------ ---------------------------------------------
-  Driver      Where found                Buffers                Mitigation   Patches
-  ath9k[^1]   WNDR5700, Nanostation M5   512, multiple queues   32 w/patch   Much better in cerowrt, out of tree patches
-  IWL         Laptops                    256                    None         In progress
-  ----------- -------------------------- ---------------------- ------------ ---------------------------------------------
+  Driver     | Where found               | Buffers               | Mitigation  | Patches
+  -----------| --------------------------| ----------------------| ------------| ---------------------------------------------
+  ath9k[^1]  | WNDR5700, Nanostation M5  | 512, multiple queues  | 32 w/patch  | Much better in cerowrt, out of tree patches
+  IWL        | Laptops                   | 256                   | None        | In progress
 
 Mac
 ---
