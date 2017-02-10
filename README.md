@@ -30,7 +30,7 @@ CSS files used for the site layout, and the `layouts` directory contains
 the templates Hugo uses to build the site. For more information on how
 the latter works, consult the documentation at https://gohugo.io.
 
-## Contributing
+## Contributing to the Site
 
 To contribute to the site, simply clone the repository, make your
 changes to the markdown file corresponding to the page you wish to edit,
@@ -38,14 +38,16 @@ commit the results and open a pull request against this repository.
 It is also possible to file issues to point out errors or omissions, or
 give suggestions for the content.
 
-Note that Hugo version 0.16 or higher is required to build the site.
+The site is build using the [Hugo static site generator.](https://gohugo.io/) Version 0.16 or higher is required to build the site.
+
+### Live Editing
 
 When making changes, you can see a local version of the site by
 installing Hugo and running `hugo serve` in this directory. That will
 run a web server on localhost, which you can navigate to and see a live
 version of the site.
 
-### Creating a new news item
+### Creating a new News Item
 
 You can use the hugo binary to create a new news item with appropriate
 front matter (the stuff in the top that tells Hugo that this is a news

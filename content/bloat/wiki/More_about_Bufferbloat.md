@@ -1,72 +1,16 @@
 ---
-title: What to do about Bufferbloat
-date: 2015-03-25T21:45:33
-lastmod: 2015-11-17T08:16:12
+title: More about Bufferbloat
+date: 2017-02-10T09:16:12
+lastmod: 2017-02-10T11:26:12
 type: wiki
 ---
-# What to do about Bufferbloat
+# More about Bufferbloat
 
-Bufferbloat is high latency (or lag) that occurs when there's other
-traffic on your network. Use the [DSLReports Speed
-Test](http://dslreports.com/speedtest) or run on of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it's present.
-
-**TL;DR** - if tests show bufferbloat, your router is letting bulk
-traffic (uploads/downloads) interfere with (and slow down) your
-time-sensitive traffic (gaming, Skype, Facetime, etc.) Twiddling with
-QoS might help, but a faster internet connection probably won't help at all. You
-will need to find a way to fix the **router.**
-
-## How Can I Tell if My Router Has Bufferbloat?
-
--   Use any of the tests on [Tests for Bufferbloat](Tests_for_Bufferbloat.md)
--   A good router that protects against bufferbloat will hold the
-    induced latency (extra latency above the no-traffic levels) below
-    30 msec.
--   Above 100 msec, people will notice that the network feels slow:
-    voice calls begin to sound bad, web browsing feels sticky, and
-    you start to lag out when gaming.
--   If ping times/latency gets high while the speed test is running and drop back
-    down when the speed test completes, it means your router is bloated.
-    You have probably noticed that the network feels draggy or slow when
-    other people use the network.
-
-## To Eliminate Bufferbloat in your Network...
-
-You will need a router whose manufacturer understands the principles of
-bufferbloat, and has updated the firmware to use one of the Smart Queue
-Management algorithms such as fq_codel, PIE, or others.
-
-1.  If your router has SQM settings, you can measure latency under load without SQM, 
-    then turn on SQM and iterate: adjust the router settings and measure latency 
-    until the latency gets as low as possible while retaining good speeds.
-    See, for example, this [tuning session.](Getting_SQM_Running_Right)
-2.  We continue to be hopeful that commercial router vendors will offer
-    SQM in their stock firmware. At this time, Ubiquiti and ipfire.org
-    seem to include settings for fq_codel.
-3.  Install the [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
-    at http://openwrt.org/ on your current router. These builds are now
-    stable and include the luci-app-sqm package that includes the
-    enhancements that we've tested and then pushed into the OpenWrt
-    mainline source code. Use the [Supported
-    Devices](http://wiki.openwrt.org/toh/start) page to find
-    your router. Then install the luci-app-sqm package to get
-    sqm-scripts and its dependencies. Then use the Network -&gt; SQM QoS
-    menu to configure. There's a guide at the OpenWrt wiki
-    http://wiki.openwrt.org/doc/howto/sqm
-4.  Or install suitable DD-WRT (www.dd-wrt.com) or
-    Gargoyle (www.gargoyle-router.com) firmware. We understand that
-    current builds of both products support fq_codel.
-5.  Finally, if none of these seem to be options, call your router
-    vendor's support line. With the information from the DSLReports
-    Speed Test or the Quick Test for Bufferbloat in hand, you can
-    mention that the ping times get really high when up/downloading
-    files, and that it really hurts your network performance. Ask if
-    they're working on the problem, and when they're going to release a
-    firmware update that solves it.
+Read more about various details of Smart Queue Management here:
 
 ## Why does SQM work so well?
 
-Why do fq_codel, PIE, etc. and other qdisc's work so well? These smart
+Why do cake, fq_codel, PIE, etc. and other qdisc's work so well? These smart
 queue management (SQM) algorithms put each flow's traffic into its own
 queue. (A "flow" is typically defined as traffic from a single IP
 addresses/port to another address/port.) Then the qdisc makes sure that
