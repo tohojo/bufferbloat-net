@@ -118,7 +118,8 @@ Set the size of the ring buffer for the network interface
 ---------------------------------------------------------
 
 NOTE: THIS HACK IS NO LONGER NEEDED on many ethernet drivers in Linux
-3.3, which has Byte Queue Limits instead, which does a far better job.
+3.3, which has [Byte Queue Limits](/bloat/wiki/BQL_enabled_drivers.md)
+instead, which does a far better job.
 
 In modern devices, the dma tx queue often defaults to settings suitable
 for transmission on a pure GigE (or faster) network.
@@ -137,7 +138,7 @@ ethtool -G eth0 tx 4
 ethtool -G wlan0 tx 4
 ```
 
-But many can get to 20 or below. See also: [Known Bloated Drivers](Bloated_Driver_List.md) for more information and patches.
+But many can get to 20 or below.
 
 You can observe your existing settings with:
 

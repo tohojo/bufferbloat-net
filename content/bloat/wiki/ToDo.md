@@ -133,7 +133,6 @@ Dave Taht's to-do list:
 -   [Linux Tips](Linux_Tips.md)
 -   <link>Mac Tips</link>
 -   [Windows Tips](Windows_Tips.md)
--   [Bloated Driver List](Bloated_Driver_List.md)
 -   [IPv6](IPv6.md)
 -   [Glossary](Glossary.md) [Dark Buffers](Dark_buffers.md) <link>Latency</link>
     <link>RTT</link> <link>TXQUEUELEN</link> <link>DMA\_TX\_QUEUE</link>
