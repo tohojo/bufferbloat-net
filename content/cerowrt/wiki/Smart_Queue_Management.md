@@ -38,7 +38,7 @@ management" system was the venerated
 early 2000s as the linux based shaper of choice. It was widely deployed
 in internet cafes around the world, and in Linux users' homes and
 workplaces. Although for the time it was a breakthrough, it has since
-been obsoleted by events and bugs in its design. See [Wondershaper Must Die](Wondershaper_Must_Die.md).
+been obsoleted by events and bugs in its design. See [Wondershaper Must Die](/bloat/wiki/Wondershaper_Must_Die.md).
 
 Much work on AQM (active queue length management) technologies like RED
 and BLUE took place in the period 1990-2002. Many variants of RED

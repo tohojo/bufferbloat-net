@@ -61,7 +61,7 @@ behaving while you tune your settings.
     the effects of Powerboost or other special cases implemented by
     ISPs, it can definitely point out situations where
     you're "bufferbloated".
-2.  **[betterspeedtest.sh](https://github.com/richb-hanover/CeroWrtScripts/blob/master/betterspeedtest.sh)** from [CeroWrtScripts bundle](CeroWrtScripts.md)
+2.  **[betterspeedtest.sh](https://github.com/richb-hanover/CeroWrtScripts/blob/master/betterspeedtest.sh)** from [CeroWrtScripts bundle](/cerowrt/wiki/CeroWrtScripts.md)
     is a script you can run on Linux/OSX or on CeroWrt to get
     concrete, repeatable tests of your network. It performs the same
     kind of download/upload test that is available from speedtest.net.

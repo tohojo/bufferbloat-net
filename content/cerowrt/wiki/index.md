@@ -9,6 +9,13 @@ aliases:
 Overview of the CeroWrt Project
 ===============================
 
+**The CeroWrt Project is complete. The last build (3.10.50-1)
+was released in July 2014. The principles learned from that research
+project have been transferred to the Linux kernel, [OpenWrt](https://openwrt.org)
+and most recently, the [LEDE Project.](https://lede-project.org)** 
+
+*These page remain as a historical reference of the work that was done to complete CeroWrt.*
+
 Bufferbloat is the undesirable latency that comes from a router or other
 network equipment buffering too much data. It is a huge drag on Internet
 performance created, ironically, by previous attempts to make it work
@@ -38,9 +45,9 @@ ready for prime time yet.
 Is your internet connection bloated? 
 ------------------------------------
 You can find out right now using
-one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) - or just use [DSLReports Speed Test.](http://dslreports.com/speedtest)
+one of the [Tests for Bufferbloat](/bloat/wiki/Tests_for_Bufferbloat.md) - or just use [DSLReports Speed Test.](http://dslreports.com/speedtest)
 
-If you find bufferbloat is present, read [What to do about Bufferbloat.](What_to_do_about_Bufferbloat.md)
+If you find bufferbloat is present, read [What to do about Bufferbloat.](/bloat/wiki/What_to_do_about_Bufferbloat.md)
 
 News
 ----
