@@ -1,8 +1,0 @@
-language: go
-install: go get -v github.com/tohojo/hugo
-script:
-  - hugo
-notifications:
-    email:
-        on_failure: always
-
