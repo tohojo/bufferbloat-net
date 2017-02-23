@@ -7,8 +7,9 @@ type: wiki
 # What to do about Bufferbloat?
 
 Bufferbloat is high latency (or lag) that occurs when there's other
-traffic on your network. Use the [DSLReports Speed
-Test](http://dslreports.com/speedtest) or run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it's present.
+traffic on your network. 
+Use the [DSLReports Speed Test](http://dslreports.com/speedtest) 
+or run one of the [Tests for Bufferbloat](/bloat/wiki/Tests_for_Bufferbloat.md) to see if it's present.
 
 **TL;DR** - if tests show bufferbloat, your router is letting bulk
 traffic (uploads/downloads) interfere with (and slow down) your
@@ -18,7 +19,7 @@ will need to find a way to fix the **router.**
 
 ## How Can I Tell if My Router Has Bufferbloat?
 
--   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](Tests_for_Bufferbloat.md)
+-   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](/bloat/wiki/Tests_for_Bufferbloat/)
 -   A good router that protects against bufferbloat will hold the
     induced latency (extra latency above the no-traffic levels) below
     30 msec.
