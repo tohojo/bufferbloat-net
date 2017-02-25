@@ -42,14 +42,14 @@ to bumper at the road's highest safe speed.
 Our "vehicles" are standing in for Internet packets, of course, and our
 road is a network link. The 'bandwidth' of the link is like the total
 mount of stuff the cars can carry from one end to the other per second;
-the 'latency' is like the amount of time it takes any given ar to get
+the 'latency' is like the amount of time it takes any given car to get
 from one end to the other.
 
 One of the problems road networks have to cope with is traffic
 congestion. If too many cars try to use the road at once, bad things
 happen. One of those bad things is cars running off the road and
 crashing. The Internet analog of this is called 'packet loss'. We want
-to hold it to a minimum - however we do not want to eliminate it it
+to hold it to a minimum - however we do not want to eliminate it
 entirely.
 
 There's an easy way to attack a road congestion problem that's not
