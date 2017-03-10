@@ -175,3 +175,37 @@ code.has-jax {font: inherit;
     font-size: 80%;
     margin-left: 5px;
 }
+
+figure {
+    border: 1px solid #ddd;
+    max-width: 90%;
+    display: inline-block;
+    margin: 5px;
+}
+
+figure img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+figure.small {
+    max-width: 50em;
+}
+
+figcaption {
+    font-size: small;
+    background-color: #ddd;
+    padding: 5px;
+}
+
+figcaption p {
+    margin: 0px;
+}
+
+.post figcaption h4 {
+    font-size: 100%;
+    display: inline;
+    margin: 0px 10px 0px 0px;
+    float: left;
+}
