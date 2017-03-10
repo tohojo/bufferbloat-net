@@ -15,7 +15,7 @@ router buffering too much data.
 
 If the tests below show high latency (say, above 50 msec), 
 read our recommendations at
-[What to do about Bufferbloat](What_to_do_about_Bufferbloat.md)
+[What can I do about Bufferbloat](What_can_I_do_about_Bufferbloat.md)
 
 ## _Easy_ Test for Bufferbloat
 
