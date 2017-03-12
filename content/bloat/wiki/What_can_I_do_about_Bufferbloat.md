@@ -1,14 +1,17 @@
 ---
-title: What to do about Bufferbloat?
-date: 2017-02-10T11:30:12
-lastmod: 2017-02-10T11:30:12
+title: What Can I Do About Bufferbloat?
+date: 2017-03-10T09:10:12
+lastmod: 2017-03-10T09:20:12
 type: wiki
+aliases:
+    - /projects/bloat/what_to_do_about_bufferbloat.md
 ---
-# What to do about Bufferbloat?
+# What Can I Do About Bufferbloat?
 
 Bufferbloat is high latency (or lag) that occurs when there's other
-traffic on your network. Use the [DSLReports Speed
-Test](http://dslreports.com/speedtest) or run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it's present.
+traffic on your network. 
+Use the [DSLReports Speed Test](http://dslreports.com/speedtest) 
+or run one of the [Tests for Bufferbloat](/bloat/wiki/Tests_for_Bufferbloat.md) to see if it's present.
 
 **TL;DR** - if tests show bufferbloat, your router is letting bulk
 traffic (uploads/downloads) interfere with (and slow down) your
@@ -18,7 +21,7 @@ will need to find a way to fix the **router.**
 
 ## How Can I Tell if My Router Has Bufferbloat?
 
--   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](Tests_for_Bufferbloat.md)
+-   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](/bloat/wiki/Tests_for_Bufferbloat/)
 -   A good router that protects against bufferbloat will hold the
     induced latency (extra latency above the no-traffic levels) below
     30 msec.
@@ -40,11 +43,12 @@ Management algorithms such as fq_codel, PIE, or others.
     then turn on SQM and iterate: adjust the router settings and measure latency 
     until the latency gets as low as possible while retaining good speeds.
     See, for example, this [tuning session.](Getting_SQM_Running_Right)
-2.  We continue to be hopeful that commercial router vendors will offer
+2.  We continue to be hopeful that other commercial router vendors will offer
     SQM in their stock firmware. 
-    The [IQrouter](http://evenroute.com) provides a good setup wizard for
+    * The [IQrouter](http://evenroute.com) provides a good setup wizard for
     configuring SQM, and automatically tuning its settings.
-    Ubiquiti and ipfire.org also include settings for fq_codel. 
+    * Ubiquiti and 
+    * ipfire.org also include settings for fq_codel. 
 3.  Install the [LEDE 17.01](https://lede-project.org) or 
     [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
     on your current router. These builds are now
