@@ -11,12 +11,12 @@ aliases:
 This project focuses on reducing latency throughout the wifi stack, firmware,
 and hardware. 
 
-**Our Manifesto - Wi-Fi does not need to be slow!**
+> **The Make Wi-Fi Fast Manifesto - Wi-Fi does not need to be slow!**
+> 
+> The hardware now available for Wi-Fi can accomplish tremendous performance, but it is hobbled by software designs that guarantee high latency under load. 
+> This, in turn, dramatically lowers performance in real-world settings (multiple users, home routers, commercial access points) leading to the *myth* that "Wi-Fi is slow."
 
-The hardware now available for Wi-Fi can accomplish tremendous performance, but it is hobbled by software designs that guarantee high latency under load. 
-This, in turn, dramatically lowers performance in real-world settings (multiple users, home routers, commercial access points) leading to the *myth* that "Wi-Fi is always slow."
-
-We believe that the same sort of systems thinking that went on in the Bufferbloat Project can lead to 
+> We believe that the same sort of systems thinking that went on in the Bufferbloat Project can lead to 
 performance improvements of an order of magnitude or more in Wi-Fi.
 
 ## Current Status
@@ -24,8 +24,8 @@ performance improvements of an order of magnitude or more in Wi-Fi.
 As of early 2017, we have achieved many of these improvements, specifically a decrease of latency by at least an order of magnitude, with fair sharing of air time across fast and slow devices.
 
 * Working software is available in <a href="https://lede-project.org" target="blank">LEDE firmware</a> that runs on off-the-shelf routers, x86 boxes, and embedded systems.
-* An academic paper has been published to describe the current state of the working software, 
-<a href="https://arxiv.org/abs/1703.00064">Ending the Anomaly: Achieving Low Latency and Airtime Fairness in Wifi</a> (preprint)
+* An academic paper describing the current state of the working software has been submitted for publication; a preprint is available at 
+[Ending the Anomaly: Achieving Low Latency and Airtime Fairness in Wifi](https://arxiv.org/abs/1703.00064).
 * An earlier recorded presentation and status of [the Make Wifi Fast Project](https://www.youtube.com/watch?v=-vWrFCZXOWk)
 
 ## Rationale
