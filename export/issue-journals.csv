@@ -4977,7 +4977,7 @@ On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org> wrote:
 >>>>>>
 >>>>>>  Andrew also sent along another patch...
 >>>>>>
->>>>>>  On Fri, Jul 29, 2011 at 2:03 AM, Felix Fietkau <nbd@openwrt.org>
+>>>>>>  On Fri, Jul 29, 2011 at 2:03 AM, Felix Fietkau<nbd@openwrt.org
 >>>>>>  <mailto:nbd@openwrt.org>>   wrote:
 >>>>>>
 >>>>>>    No retrans not good. No retrans make gaps in client side reorder
@@ -4995,9 +4995,9 @@ On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org> wrote:
 >>>>>>        <mailto:andrewmcgr@gmail.com>>**>
 >>>>>>        Date: Thu, Jul 28, 2011 at 5:37 PM
 >>>>>>        Subject: Patch for stuck retransmits
->>>>>>        To: dave.taht@gmail.com
+>>>>>>        To: dave.taht@gmail.com<mailto:dav**e.taht@gmail.com<dave.taht@gmail.com>
 >>>>>> >
->>>>>>        
+>>>>>>        <mailto:dave.taht@gmail.com<**mailto:dave.taht@gmail.com>>
 >>>>>>
 >>>>>>
 >>>>>>        Here's the patch, against
@@ -5064,7 +5064,7 @@ On 2011-08-01 1:41 PM, Dave Taht wrote:
 > having it be tuple sensitive, but that's something longer term than
 > merely what we are discussing now.
 >
-> On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org>
+> On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org
 > <mailto:nbd@openwrt.org>> wrote:
 >
 >     I have a better idea: Instead of limiting this value to 2, why not
@@ -5177,7 +5177,7 @@ On 2011-08-01 1:41 PM, Dave Taht wrote:
 >
 >                           On Fri, Jul 29, 2011 at 2:03 AM, Felix
 >                         Fietkau<nbd@openwrt.org <mailto:nbd@openwrt.org>
->                         <mailto:nbd@openwrt.org>
+>                         <mailto:nbd@openwrt.org
 >                         <mailto:nbd@openwrt.org>>>   wrote:
 >
 >                             No retrans not good. No retrans make gaps in
@@ -5399,7 +5399,7 @@ On Mon, Aug 1, 2011 at 6:29 AM, Felix Fietkau <nbd@openwrt.org> wrote:
 >>
 >>                          On Fri, Jul 29, 2011 at 2:03 AM, Felix
 >>                        Fietkau<nbd@openwrt.org <mailto:nbd@openwrt.org>
->>                        <mailto:nbd@openwrt.org>
+>>                        <mailto:nbd@openwrt.org
 >>
 >>                        <mailto:nbd@openwrt.org>>>   wrote:
 >>
@@ -5492,7 +5492,7 @@ On 2011-08-01 2:47 PM, Dave Taht wrote:
 > |
 >
 >
-> On Mon, Aug 1, 2011 at 6:29 AM, Felix Fietkau <nbd@openwrt.org>
+> On Mon, Aug 1, 2011 at 6:29 AM, Felix Fietkau <nbd@openwrt.org
 > <mailto:nbd@openwrt.org>> wrote:
 >
 >     Last time I tried limiting the aggregation size that much, it ended
@@ -5554,7 +5554,7 @@ On 2011-08-01 2:47 PM, Dave Taht wrote:
 >         having it be tuple sensitive, but that's something longer term than
 >         merely what we are discussing now.
 >
->         On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org>
+>         On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org
 >         <mailto:nbd@openwrt.org>
 >         <mailto:nbd@openwrt.org <mailto:nbd@openwrt.org>>> wrote:
 >
@@ -5697,7 +5697,7 @@ On 2011-08-01 2:47 PM, Dave Taht wrote:
 >
 >                                   On Fri, Jul 29, 2011 at 2:03 AM, Felix
 >                                 Fietkau<nbd@openwrt.org
->         <mailto:nbd@openwrt.org> <mailto:nbd@openwrt.org>
+>         <mailto:nbd@openwrt.org> <mailto:nbd@openwrt.org
 >         <mailto:nbd@openwrt.org>>
 >         <mailto:nbd@openwrt.org <mailto:nbd@openwrt.org>
 >
@@ -5895,7 +5895,7 @@ http://www.bufferbloat.net/projects/cerowrt/wiki/Experiment_-_QoS"
 > >>>>>>
 > >>>>>>  Andrew also sent along another patch...
 > >>>>>>
-> >>>>>>  On Fri, Jul 29, 2011 at 2:03 AM, Felix Fietkau<nbd@openwrt.org>
+> >>>>>>  On Fri, Jul 29, 2011 at 2:03 AM, Felix Fietkau<nbd@openwrt.org
 > >>>>>>  <mailto:nbd@openwrt.org>>   wrote:
 > >>>>>>
 > >>>>>>    No retrans not good. No retrans make gaps in client side reorder
@@ -5913,9 +5913,9 @@ http://www.bufferbloat.net/projects/cerowrt/wiki/Experiment_-_QoS"
 > >>>>>>        <mailto:andrewmcgr@gmail.com>>**>
 > >>>>>>        Date: Thu, Jul 28, 2011 at 5:37 PM
 > >>>>>>        Subject: Patch for stuck retransmits
-> >>>>>>        To: dave.taht@gmail.com
+> >>>>>>        To: dave.taht@gmail.com<mailto:dav**e.taht@gmail.com<dave.taht@gmail.com>
 > >>>>>> >
-> >>>>>>        
+> >>>>>>        <mailto:dave.taht@gmail.com<**mailto:dave.taht@gmail.com>>
 > >>>>>>
 > >>>>>>
 > >>>>>>        Here's the patch, against
@@ -6111,7 +6111,7 @@ On Mon, Aug 1, 2011 at 9:35 AM, Andrew McGregor <andrewmcgr@gmail.com>wrote:
 >>> having it be tuple sensitive, but that's something longer term than
 >>> merely what we are discussing now.
 >>>
->>> On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org>
+>>> On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau <nbd@openwrt.org
 >>> <mailto:nbd@openwrt.org>> wrote:
 >>>
 >>>    I have a better idea: Instead of limiting this value to 2, why not
@@ -6381,7 +6381,7 @@ On 2011-08-01 5:38 PM, Andrew McGregor wrote:
 >>>         having it be tuple sensitive, but that's something longer term than
 >>>         merely what we are discussing now.
 >>>
->>>         On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau<nbd@openwrt.org>
+>>>         On Mon, Aug 1, 2011 at 2:42 AM, Felix Fietkau<nbd@openwrt.org
 >>>         <mailto:nbd@openwrt.org>
 >>>         <mailto:nbd@openwrt.org<mailto:nbd@openwrt.org>>>  wrote:
 >>>
@@ -6523,8 +6523,8 @@ On 2011-08-01 5:38 PM, Andrew McGregor wrote:
 >>>                                   Andrew also sent along another patch...
 >>>
 >>>                                   On Fri, Jul 29, 2011 at 2:03 AM, Felix
->>>                                 Fietkau<nbd@openwrt.org>
->>>         <mailto:nbd@openwrt.org>  <mailto:nbd@openwrt.org>
+>>>                                 Fietkau<nbd@openwrt.org
+>>>         <mailto:nbd@openwrt.org>  <mailto:nbd@openwrt.org
 >>>         <mailto:nbd@openwrt.org>>
 >>>         <mailto:nbd@openwrt.org<mailto:nbd@openwrt.org>
 >>>
@@ -6546,7 +6546,7 @@ On 2011-08-01 5:38 PM, Andrew McGregor wrote:
 >>>                                         ---------- Forwarded message
 >>>         ----------
 >>>                                         From: *Andrew
->>>                                 McGregor*<andrewmcgr@gmail.com>
+>>>                                 McGregor*<andrewmcgr@gmail.com
 >>>         <mailto:andrewmcgr@gmail.com>
 >>>         <mailto:andrewmcgr@gmail.com<mailto:andrewmcgr@gmail.com>>
 >>>         <mailto:andrewmcgr@gmail.com<mailto:andrewmcgr@gmail.com>
@@ -6559,13 +6559,13 @@ On 2011-08-01 5:38 PM, Andrew McGregor wrote:
 >>>                                         Subject: Patch for stuck retransmits
 >>>                                         To: dave.taht@gmail.com
 >>>         <mailto:dave.taht@gmail.com>
->>>         <mailto:dave.taht@gmail.com>
+>>>         <mailto:dave.taht@gmail.com
 >>>         <mailto:dave.taht@gmail.com>><__mailto:dav__e.taht@gmail.com
 >>>         <mailto:dav__e.taht@gmail.com>
 >>>
 >>>         <mailto:dave.taht@gmail.com<mailto:dave.taht@gmail.com>>>
 >>>         <mailto:dave.taht@gmail.com<mailto:dave.taht@gmail.com>
->>>         <mailto:dave.taht@gmail.com>
+>>>         <mailto:dave.taht@gmail.com
 >>>         <mailto:dave.taht@gmail.com>><____mailto:dave.taht@gmail.com
 >>>         <mailto:dave.taht@gmail.com>
 >>>

@@ -6,8 +6,6 @@ type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
     - /cerowrt/wiki/What_to_do_about_Bufferbloat/
-    - /cerowrt/wiki/What_to_do_about_Bufferbloat.md
-    - /cerowrt/wiki/What_t.md
 ---
 # What Can I Do About Bufferbloat?
 
@@ -40,24 +38,25 @@ will need to find a way to fix the **router.**
 
 You will need a router whose manufacturer understands the principles of
 bufferbloat, and has updated the firmware to use one of the Smart Queue
-Management algorithms such as fq_codel, PIE, or others.
+Management algorithms such as cake, fq_codel, PIE, or others.
 
 1.  If your router has SQM settings, you can measure latency under load without SQM, 
     then turn on SQM and iterate: adjust the router settings and measure latency 
     until the latency gets as low as possible while retaining good speeds.
     See, for example, this [tuning session.](Getting_SQM_Running_Right)
-2.  We continue to be hopeful that other commercial router vendors will offer
-    SQM in their stock firmware. 
+2.  We continue to be hopeful that commercial router vendors will offer
+    SQM in their stock firmware. Here is a list of those that do:
     * The [IQrouter](http://evenroute.com) provides a good setup wizard for
     configuring SQM, and automatically tuning its settings.
-    * Ubiquiti and 
-    * ipfire.org also include settings for fq_codel. 
+    * The [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings
+    * [Ubiquiti](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings
+    * [ipfire.org](http://wiki.ipfire.org/en/configuration/services/qos) has fq_codel settings
 3.  Install the [LEDE 17.01](https://lede-project.org) or 
     [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
     on your current router. These builds are now
     stable and include the luci-app-sqm package.
-    There's a guide at the OpenWrt wiki
-    http://wiki.openwrt.org/doc/howto/sqm
+    There's a guide at the LEDE web site:
+    https://lede-project.org/docs/howto/sqm
 4.  Or install suitable DD-WRT (www.dd-wrt.com) or
     Gargoyle (www.gargoyle-router.com) firmware. We understand that
     current builds of both products support fq_codel.

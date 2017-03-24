@@ -26,7 +26,7 @@ the center of the universe.
 Eating our own dogfood
 ----------------------
 
-We believe in [earing our own dogfood](Dogfood_Principle.md).
+We believe in [eating our own dogfood](Dogfood_Principle.md).
 The bufferbloat servers are tuned and administered using the same
 bufferbloat-mitigation techniques we develop for others to use.
 
