@@ -1,14 +1,18 @@
 ---
-title: What to do about Bufferbloat?
-date: 2017-02-10T11:30:12
-lastmod: 2017-02-10T11:30:12
+title: What Can I Do About Bufferbloat?
+date: 2017-03-10T09:10:12
+lastmod: 2017-03-10T09:20:12
 type: wiki
+aliases:
+    - /bloat/wiki/What_to_do_about_Bufferbloat/
+    - /cerowrt/wiki/What_to_do_about_Bufferbloat/
 ---
-# What to do about Bufferbloat?
+# What Can I Do About Bufferbloat?
 
 Bufferbloat is high latency (or lag) that occurs when there's other
-traffic on your network. Use the [DSLReports Speed
-Test](http://dslreports.com/speedtest) or run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it's present.
+traffic on your network. 
+Use the [DSLReports Speed Test](http://dslreports.com/speedtest) 
+or run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it's present.
 
 **TL;DR** - if tests show bufferbloat, your router is letting bulk
 traffic (uploads/downloads) interfere with (and slow down) your
@@ -18,7 +22,7 @@ will need to find a way to fix the **router.**
 
 ## How Can I Tell if My Router Has Bufferbloat?
 
--   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](Tests_for_Bufferbloat.md)
+-   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](Tests_for_Bufferbloat/)
 -   A good router that protects against bufferbloat will hold the
     induced latency (extra latency above the no-traffic levels) below
     30 msec.
@@ -34,23 +38,25 @@ will need to find a way to fix the **router.**
 
 You will need a router whose manufacturer understands the principles of
 bufferbloat, and has updated the firmware to use one of the Smart Queue
-Management algorithms such as fq_codel, PIE, or others.
+Management algorithms such as cake, fq_codel, PIE, or others.
 
 1.  If your router has SQM settings, you can measure latency under load without SQM, 
     then turn on SQM and iterate: adjust the router settings and measure latency 
     until the latency gets as low as possible while retaining good speeds.
     See, for example, this [tuning session.](Getting_SQM_Running_Right)
 2.  We continue to be hopeful that commercial router vendors will offer
-    SQM in their stock firmware. 
-    The [IQrouter](http://evenroute.com) provides a good setup wizard for
+    SQM in their stock firmware. Here is a list of those that do:
+    * The [IQrouter](http://evenroute.com) provides a good setup wizard for
     configuring SQM, and automatically tuning its settings.
-    Ubiquiti and ipfire.org also include settings for fq_codel. 
+    * The [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings
+    * [Ubiquiti](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings
+    * [ipfire.org](http://wiki.ipfire.org/en/configuration/services/qos) has fq_codel settings
 3.  Install the [LEDE 17.01](https://lede-project.org) or 
     [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
     on your current router. These builds are now
     stable and include the luci-app-sqm package.
-    There's a guide at the OpenWrt wiki
-    http://wiki.openwrt.org/doc/howto/sqm
+    There's a guide at the LEDE web site:
+    https://lede-project.org/docs/howto/sqm
 4.  Or install suitable DD-WRT (www.dd-wrt.com) or
     Gargoyle (www.gargoyle-router.com) firmware. We understand that
     current builds of both products support fq_codel.
