@@ -56,7 +56,7 @@ Management algorithms such as cake, fq_codel, PIE, or others.
     on your current router. These builds are now
     stable and include the luci-app-sqm package.
     There's a guide at the LEDE web site:
-    https://lede-project.org/docs/howto/sqm
+    https://lede-project.org/docs/user-guide/sqm
 4.  Or install suitable DD-WRT (www.dd-wrt.com) or
     Gargoyle (www.gargoyle-router.com) firmware. We understand that
     current builds of both products support fq_codel.
