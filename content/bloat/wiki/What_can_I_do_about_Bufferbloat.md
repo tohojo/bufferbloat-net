@@ -51,8 +51,7 @@ Management algorithms such as cake, fq_codel, PIE, or others.
     * The [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings
     * [Ubiquiti](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings
     * [ipfire.org](http://wiki.ipfire.org/en/configuration/services/qos) has fq_codel settings
-3.  Install the [LEDE 17.01](https://lede-project.org) or 
-    [OpenWrt Chaos Calmer](http://openwrt.org/) firmware
+3.  Install the [LEDE 17.01.4](https://lede-project.org) (or newer) firmware
     on your current router. These builds are now
     stable and include the luci-app-sqm package.
     There's a guide at the LEDE web site:
