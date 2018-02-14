@@ -30,7 +30,7 @@ with fair sharing of airtime across fast and slow devices.
   that runs on off-the-shelf routers, x86 boxes, and embedded systems.
 
 * An academic paper describing the mechanism has been published at the
-  2017 USENIX ATC: [Ending the Anomaly: Achieving Low Latency and Airtime Fairness in Wifi](https://www.usenix.org/conference/atc17/technical-sessions/presentation/hoilan-jorgesen).
+  2017 USENIX Annual Technical Conference: [Ending the Anomaly: Achieving Low Latency and Airtime Fairness in Wifi](https://www.usenix.org/conference/atc17/technical-sessions/presentation/hoilan-jorgesen).
 
 * Ongoing work was discussed at the Linux network developers conference
   (NetDev 2.2) in November 2017. The session was recorded
