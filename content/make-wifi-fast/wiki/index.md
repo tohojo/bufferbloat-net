@@ -1,7 +1,7 @@
 ---
 title: Make-Wifi-Fast Project
-date: 2017-03-12T13:00:14
-lastmod: 2017-03-12T13:00:14
+date: 2018-02-14T15:38:14
+lastmod: 2018-02-14T15:38:14
 type: wiki
 aliases:
     - /make-wifi-fast/wiki/Wiki
