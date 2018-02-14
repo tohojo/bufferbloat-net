@@ -21,12 +21,20 @@ performance improvements of an order of magnitude or more in Wi-Fi.
 
 ## Current Status
 
-As of early 2017, we have achieved many of these improvements, specifically a decrease of latency by at least an order of magnitude, with fair sharing of air time across fast and slow devices.
+As of early 2018, we have achieved many of these improvements,
+specifically a decrease of latency by at least an order of magnitude,
+with fair sharing of airtime across fast and slow devices.
 
-* Working software is available in <a href="https://lede-project.org" target="blank">LEDE firmware</a> that runs on off-the-shelf routers, x86 boxes, and embedded systems.
-* An academic paper describing the current state of the working software has been submitted for publication; a preprint is available at 
-[Ending the Anomaly: Achieving Low Latency and Airtime Fairness in Wifi](https://arxiv.org/abs/1703.00064).
-* An earlier recorded presentation and status of [the Make Wifi Fast Project](https://www.youtube.com/watch?v=-vWrFCZXOWk)
+* Working software is available in the Linux kernel, as well as the <a
+  href="https://openwrt.org" target="blank">OpenWrt firmware</a>
+  that runs on off-the-shelf routers, x86 boxes, and embedded systems.
+
+* An academic paper describing the mechanism has been published at the
+  2017 USENIX ATC: [Ending the Anomaly: Achieving Low Latency and Airtime Fairness in Wifi](https://www.usenix.org/conference/atc17/technical-sessions/presentation/hoilan-jorgesen).
+
+* Ongoing work was discussed at the Linux network developers conference
+  (NetDev 2.2) in November 2017. The session was recorded
+  [and is available from the NetDev web site](https://www.netdevconf.org/2.2/session.html?jorgensen-wifistack-talk).
 
 ## Rationale
 
@@ -83,5 +91,5 @@ https://docs.google.com/document/d/1Se36svYE1Uzpppe1HWnEyat\_sAGghB3kE285LElJBW4
     that can support it, and to get it better documented so that more
     new drivers use it, would be good.
 -   **Re-working Wi-Fi:** Read the [Wifi Stack Rework](Wifi_Stack_Rework.md) page,
-    or more importantly, read the <a href="https://arxiv.org/abs/1703.00064">Ending the Anomaly</a> paper.
+    or more importantly, read the [Ending the Anomaly](https://www.usenix.org/conference/atc17/technical-sessions/presentation/hoilan-jorgesen) paper.
 
