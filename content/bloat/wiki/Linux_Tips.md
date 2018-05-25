@@ -111,11 +111,11 @@ net.ipv4.tcp_dsack=1
 ```
 
 Note that there have been broken routers and networks that are intolerant
-of certain tcp options (or the ordering of those options); we believe these
+of certain TCP options (or the ordering of those options); we believe these
 problems to have virtually disappeared.  If you have problems in some
 environments, please let us know.
 
-ECN only works if fully enabled on tcp initiator, supported on tcp receiver,
+ECN only works if fully enabled on TCP initiator, supported on TCP receiver,
 and the bottleneck router uses an ECN-enabled queue management system such
 as fq_codel.
 
