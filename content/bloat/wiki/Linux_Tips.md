@@ -97,22 +97,27 @@ drivers and hardware is why this is going to be an interesting problem
 Loaded guns can hurt if you aim them at your foot and pull the trigger.
 So please do be careful, and think...
 
-Enable <link>ECN</link>, <link>SACK</link>, and <link>DSACK</link>
-------------------------------------------------------------------
+Enable FQ_CODEL, ECN, SACK, and DSACK
+-------------------------------------
 
 These sysctl settings can be stored in the main /etc/sysctl.conf file,
 or in a file in the /etc/sysctl.d directory.
 
-
 ```
+net.core.default_qdisc=fq_codel
 net.ipv4.tcp_ecn=1
 net.ipv4.tcp_sack=1
 net.ipv4.tcp_dsack=1
 ```
 
-Note that there is still some broken ECN CPE (e.g. home router)
-equipment out there; if you have problems in some environments, please
-let us know.
+Note that there have been broken routers and networks that are intolerant
+of certain TCP options (or the ordering of those options); we believe these
+problems to have virtually disappeared.  If you have problems in some
+environments, please let us know.
+
+ECN only works if fully enabled on TCP initiator, supported on TCP receiver,
+and the bottleneck router uses an ECN-enabled queue management system such
+as fq_codel.
 
 Set the size of the ring buffer for the network interface
 ---------------------------------------------------------
