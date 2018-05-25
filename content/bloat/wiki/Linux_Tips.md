@@ -115,9 +115,9 @@ of certain tcp options (or the ordering of those options); we believe these
 problems to have virtually disappeared.  If you have problems in some
 environments, please let us know.
 
-ECN enablement is particularly important on end-hosts.
-If configuring a router/forwarder, check that any custom queueing
-configuration is compatible with fq_codel.
+ECN only works if fully enabled on tcp initiator, supported on tcp receiver,
+and the bottleneck router uses an ECN-enabled queue management system such
+as fq_codel.
 
 Set the size of the ring buffer for the network interface
 ---------------------------------------------------------
