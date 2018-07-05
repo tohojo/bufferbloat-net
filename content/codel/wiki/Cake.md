@@ -291,8 +291,9 @@ To use it properly, you will also need to build and install the iproute
 with cake support:
 
 
-    git clone git://kau.toke.dk/cake/iproute2/ iproute2-cake
-    cd iproute2-cake
+    git clone https://github.com/dtaht/tc-adv
+    cd tc-adv
+    ./configure
     make
     sudo make install
 
