@@ -38,10 +38,13 @@ those other speed test sites if you run a ping test simultaneously. To do this:
     ping, typically with times in the 20-100 msec range.
 2.  Run a speed test simultaneously. To do this, start one of the speed
     test services below:
+    -   http://fast.com 
     -   http://speedtest.net
     -   http://testmy.net
     -   http://speedof.me
 
+    (fast.com [now tests for latency under load](https://media.netflix.com/en/company-blog/fast-com-now-measures-latency-and-upload-speed) but we'd like more folk to 
+     check their results against our quick test)
 3.  Watch the ping times while the speed test is running. If the times jump
     up when uploading or downloading, then your router is probably bloated.
 
@@ -50,7 +53,6 @@ those other speed test sites if you run a ping test simultaneously. To do this:
 The suite of tests we developed to diagnose bufferbloat and other
 connectivity problems are good to 40GigE, but require the
 [Flent RRUL test suite](https://flent.org) 
-(Flent was previously named "netperf-wrapper".) 
 Using the Flent tools, it is possible to get a good feel for how the connection is
 behaving while you tune your settings. 
 
