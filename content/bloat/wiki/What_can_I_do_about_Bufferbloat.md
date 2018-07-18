@@ -18,7 +18,7 @@ or run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it
 traffic (uploads/downloads) interfere with (and slow down) your
 time-sensitive traffic (gaming, Skype, Facetime, etc.) Twiddling with
 QoS might help, but a faster internet connection probably won't help at all. You
-will need to find a way to fix the **router.**
+need to find a way to fix the **router.**
 
 ## How Can I Tell if My Router Has Bufferbloat?
 
