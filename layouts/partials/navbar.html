@@ -11,13 +11,12 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                  {{ range $section, $pages := .Site.Sections }}
-                  <li><a href="{{ printf "/%s/wiki" $section | relURL }}">{{ title $section }}</a></li>
-                  {{ end }}
-                    <!--
-                    And here is where you'd add more links to sections, or anywhere you like.
-                    <li><a href="#">About Me</a></li>
-                    -->
+                  <li><a href="/bloat/wiki">Bloat</a></li>
+                  <li><a href="/codel/wiki">FQ-Codel</a></li>
+                  <li><a href="https://github.com/heistp/irtt">IRTT</a></li>
+                  <li><a href="https://flent.org">Flent</a></li>
+                  <li><a href="/make-wifi-fast/wiki">Make-Wifi-Fast</a></li>
+                  <li><a href="/ecn-sane/wiki">ECN-Sane</a></li>
                 </ul>
             </div>
         </div>
