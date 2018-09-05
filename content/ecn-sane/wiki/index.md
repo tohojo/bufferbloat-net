@@ -1,7 +1,7 @@
 ---
 title: ECN-Sane Project
-date: 2018-08-24T15:38:14
-lastmod: 2018-08-24T15:38:14
+date: 2018-09-03T15:38:14
+lastmod: 2018-09-03T15:38:14
 type: wiki
 aliases:
     - /ecn-sane/wiki/Wiki
@@ -9,32 +9,40 @@ aliases:
 
 # About the ecn-sane project
 
-This project is started in the hope that a clear path forward for ecn enablement across the edge of the Internet will emerge. 
+As the accidental co-authors of what may well become the world's largest ECN-enabled AQM deployment, our ecn-sane project is started in the hope that a clear, safe, sane path forward for ECN enablement across the edge of the Internet will emerge. 
 
-Neither the original codel or pie aqm research covered ECN.
+## What is ECN?
 
-Howerver, 'fq_pie' and 'fq_codel', enable ecn by default, because, in
-*very* limited tests in 2012, it seemed to work. 
+[Explicit Congestion Notification](https://en.wikipedia.org/wiki/Explicit_Congestion_Notification) is a means to do network congestion control
+without dropping packets. 
 
-But ECN'd behaviors are observably different than drop, and different
-AQMs treat it differently. 
+## Why are we concerned about it?
 
-Pie starts dropping ecn enabled packets once the drop probability cracks 10.
-RED behaves similarly.
+Neither the original codel or pie AQM research covered ECN.
 
-Our same limited tests showed codel alone to be somewhat ineffective
-against ecn, and in both pie and codel's single queue implementations
-we left it disabled by default.  [wiki/codel/Cake](sch_cake) developed a more refined
-approach to ecn management. The [sqm-scripts](FIXME)- enable ecn for inbound
-universally and disable it for outbound. Inconsistencies in ecn
-behavior abound in both AQMs and TCPs.
+Howerver, the fair queueing variants of these algorithms, the 'fq_pie' and 'fq_codel' qdiscs enabled ECN by default, because, in
+*very* limited tests by bufferbloat.net members in 2012, it seemed to work well. 
+FQ_Codel, in particular, is in increasingly wide deployment. We've long encouraged individual users to try it out... and then, in 2017... Apple enabled it universally across their devices and stacks.
+
+ECN'd behaviors are observably different than drop, and different
+AQMs treat it differently.  The pie algorithm starts dropping ecn enabled packets once the drop probability cracks 10. RED behaves similarly. Codel does not drop until it runs out of packet space. 
+
+Our limited tests showed codel alone to be somewhat ineffective
+against ECN, and in both pie and codel's single queue implementations
+in Linux we left it disabled by default.  [Cake](/codel/wiki/Cake)
+developed a more refined approach to ECN
+management. The [sqm-scripts](https://github.com/tohojo/sqm-scripts)
+enable ECN for inbound universally and disable it for outbound. Our
+[FQ_Codel implementation for WiFi](https://www.usenix.org/system/files/conference/atc17/atc17-hoiland-jorgensen.pdf), now shipping in quantity millions, enables it
+universally. Inconsistencies in ECN behavior abound in both AQMs and
+TCPs.
 
 Much of this project will be focused on analyzing and reducing any
-additional congestion potentially caused by modern tcps with ecn
-enabled.
+additional congestion caused by modern protocols with ecn enabled, as
+well as examining potential side-effects on other protocols.
 
 We expect much work to take place on the mailing list. Like all
-bufferbloat.net lists, ecn-sane is an open mailing list, however,
+[bufferbloat.net lists](https://lists.bufferbloat.net), ecn-sane is an open mailing list, however,
 given the level of religious advocacy of ecn elsewhere on the Internet,
 it has [several policies](rules) that are new to bufferbloat.net.
 
@@ -46,7 +54,7 @@ People will be banned, after 3 warnings, from the email list, for the following 
 
 Additionally:
 
-* Project members should identify themselves as part of the [red, blue, yellow and purple teams](rules)
+* Project members should identify themselves and flag experiments as part of the [red, blue, yellow and purple teams](rules), but it is not required. 
 
 Scientific skepticism of [both negative and positive results](https://conferences.sigcomm.org/sigcomm/2014/doc/slides/137.pdf) is utterly required here.
 
@@ -57,14 +65,14 @@ low, and to make progress forward on this sensitive topic.
 
 ## Explore the possible negative effects of a partially or fully ecn-enabled internet on
 
-* Gaming, voice, DNS traffic
+* Gaming, voice, and DNS traffic
 * Explore improvements to voip (higher bit resolutions, 2.5ms sample rates, etc)
 * Analyze Unresponsive senders
 * ECN-enabled DDOS attacks
-* What does it do VOIP MOS score
+* What does it do VOIP MOS scores?
 * Side effects on routing protocols (such as Babel, ISIS and ARP)
 * Effects of deploying it on protocols such as bittorrent
-* Discover what of rfcXXXX holds in today's IW10 environment
+* Discover what of rfcXXXXes holds in today's IW10 environment
 
 ## What new can be accomplished by constructive use of ECN?
 

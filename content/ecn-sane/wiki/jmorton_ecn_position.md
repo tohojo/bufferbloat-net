@@ -1,7 +1,7 @@
 ---
 title: Jonathan Morton's Take on ECN
-date: 2018-08-30T15:38:14
-lastmod: 2018-08-24T15:38:14
+date: 2018-09-04T15:38:14
+lastmod: 2018-09-04T15:38:14
 type: wiki
 tags: ecn-purple
 

@@ -13,17 +13,17 @@ We expect much work to take place on the mailing list. Like all bufferbloat.net 
 
 People will be banned, after 3 warnings, from the email list, for the following reasons:
 
-* Unwillingness or inability to repeat experiments against modern versions of cubic, bbr and reno
-* Non-publication of sufficient code required for others to repeat your experiments
-* Unbridled advocacy OR outright hatred of ECN
+* Unwillingness or inability to repeat experiments against modern versions of cubic, bbr and reno.
+* Non-publication of sufficient code required for others to repeat your experiments.
+* Unbridled advocacy OR outright hatred of ECN.
 
 Additionally:
 
-* Project members should identify themselves as part of the red, blue, yellow, purple or green teams, but it's not required.
+* Project members should identify themselves as part of the [grey](/tags/ecn-grey), [yellow](/tags/ecn-yellow), [pink](/tags/ecn-pink), [red](/tags/ecn-red), [blue](/tags/ecn-blue), [purple](/tags/ecn-purple) or [green](/tags/ecn-green) teams, but it's not required.
 
 With a scientific approach there is no need to argue over anything with stress, or to give others coronaries, as it were. There is no shame in being “wrong”, nor everlasting glory in being “right”, about anything, if one yields to well-gathered evidence. There’s just the scientific process. The bulldozer of science.
 
-We suggest this as one part of any policy to avoid logical fallacies, and to at least admit or recognize them when we do.
+We suggest this - and a good sense of humor! - as a part of any policy to avoid logical fallacies, and to at least admit or recognize them when we do.
 
 We don’t see too many logical fallacies from this crowd. What we see more often is that we sometimes lack the data to draw certain conclusions, because we don’t always have the time and resources to collect it. So we use our intuition when we have to (and there are some pretty darn good ones in this group), but we do have to be careful about what final conclusions we draw. Assertions and hypotheses for sake of discussion starters should be fine, and we shouldn’t be afraid to be wrong with those, lest we freeze before saying or trying anything. We will try to avoid [Argumentum ad baculum](FIXME), [Proof by intimidation](https://en.wikipedia.org/wiki/Proof_by_intimidation), [Thought terminating cliche's](https://en.wikipedia.org/wiki/Cliché#Thought-terminating_cliché), [Single cause fallacies](https://en.wikipedia.org/wiki/Fallacy_of_the_single_cause), [Regression fallacies](https://en.wikipedia.org/wiki/Regression_fallacy),
 [Proof by repeated Assertion](https://en.wikipedia.org/wiki/Proof_by_assertion), and [Argument from authority](https://en.wikipedia.org/wiki/Argument_from_authority)
@@ -32,29 +32,36 @@ Prior to now, the 21 one year long bikeshed around ECN has been around - those t
 
 # TEAMS
 
+## GREY - Don't care about ECN one way or another
+
+Toke Høiland-Jørgensen's position is [here](https://www.youtube.com/watch?v=CxK_nA2iVXw), at least until he finishes his thesis.
+
 ## RED - Opposed to wide deployment of ECN
 
-A the moment there is no-one on the red team.
+At the moment there is no-one on the red team.
 
-## PINK - ECN's definition needs to be changed to deploy
+## PINK - ECN's definition needs to be totally changed to deploy
 
-This group is well populated currently outside this project. Members of that group are welcome here so long as they play
-by the rules.
+This group is well populated currently outside this project. Members of that group are welcome here so long as they play by the rules.
 
 ## YELLOW - Chicken about wide deployment of ECN
 
-The PI for this is Dave Taht. His position paper is [here](../dtaht_ecn_editorial).
+The PI for this is Dave Taht. His position paper is [here](dtaht_ecn_editorial).
 
-## PURPLE - ECN is awesome
+## PURPLE - How does ECN need to evolve to reach its potential?
 
-We have several candidates for this team. The color might change. This classification can be changed.
+The color might change. This classification can be changed.
+Jonathon Morton's position is [here](jmorton_ecn_position).
 
-## BLUE - we are GO for ECN everwhere!
+## BLUE - we are GO for ECN on EVERYTHING!
 
 This group is well populated currently outside this project.
-Members of that group are welcome here so long as they play
-by the rules.
 
 ## GREEN - ECN is safe for universal deployment
 
 At the moment there *should* be nobody on the green team. 
+
+# Obligatory FutureRama Snippet
+
+{{< youtube id="1-bCIA_vyVc" autoplay="false" >}}
+
