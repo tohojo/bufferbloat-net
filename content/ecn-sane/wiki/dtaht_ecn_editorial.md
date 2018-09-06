@@ -9,7 +9,7 @@ tags: ecn-yellow
 
 # Dave Taht's take on ECN
 
-When it comes to ECN, I am firmly on the [yellow team](/tags/ecn-yellow): I'm *chicken*.
+When it comes to ECN, I am firmly on the yellow team: I'm *chicken*.
 
 I just used rigorous argument and moral authority on what is now probably the worlds largest active ecn in the edge deployment, to [block systemd's attempt at universal enablement in Linux](https://github.com/systemd/systemd/issues/9748). As an accidental co-author of what is now the largest edge-user ecn-enabled fq + aqm deployment in fq_codel, the sqm-scripts, and the newest implementation in the ath9k and athk wifi code... and now sch_cake... I lose sleep over the ecn component only.
 
