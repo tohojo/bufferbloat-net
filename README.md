@@ -38,7 +38,8 @@ commit the results and open a pull request against this repository.
 It is also possible to file issues to point out errors or omissions, or
 give suggestions for the content.
 
-The site is build using the [Hugo static site generator.](https://gohugo.io/) Version 0.16 or higher is required to build the site.
+The site is build using the [Hugo static site generator.](https://gohugo.io/)
+Version 0.16 (not higher!) is required to build the site.
 
 ### Live Editing
 
