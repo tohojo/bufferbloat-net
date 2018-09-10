@@ -20,7 +20,7 @@ without dropping packets.
 
 Neither the original codel or pie AQM research covered ECN.
 
-Howerver, the fair queueing variants of these algorithms, the 'fq_pie' and 'fq_codel' qdiscs enabled ECN by default, because, in
+However, the fair queueing variants of these algorithms, the 'fq_pie' and 'fq_codel' qdiscs enabled ECN by default, because, in
 *very* limited tests by bufferbloat.net members in 2012, it seemed to work well. 
 FQ_Codel, in particular, is in increasingly wide deployment. We've long encouraged individual users to try it out... and then, in 2017... Apple enabled it universally across their devices and stacks.
 
@@ -84,7 +84,7 @@ low, and to make progress forward on this sensitive topic.
 
 ## Explore constructive means of coping with ECN for traditional UDP applications
 
-* defensive measures for an overwhelmingly ecned network
+* defensive measures for an overwhelmingly ECN'd network
 (an example would be to ecn mark two out of five voip packets)
 
 ## Explore fixes for tcp cubic, reno, and BBR and what other TCPs may apply
