@@ -9,7 +9,7 @@ type: wiki
 
 This project intends to thoroughly evaluate the effects of ECN across the edge of the Internet.
 
-We expect much work to take place on the mailing list. Like all bufferbloat.net lists, ecn-sane is an open mailing list, however, given the level of religeous advocacy of ECN elsewhere on the Internet, it has several policies that are new to bufferbloat.net.
+We expect much work to take place on the mailing list. Like all bufferbloat.net lists, ecn-sane is an open mailing list, however, given the level of religious advocacy of ECN elsewhere on the Internet, it has several policies that are new to bufferbloat.net.
 
 People will be banned, after 3 warnings, from the email list, for the following reasons:
 
