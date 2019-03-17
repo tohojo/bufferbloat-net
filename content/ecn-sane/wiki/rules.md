@@ -57,9 +57,10 @@ The PI for this is Dave Taht, as explained in [his position paper](dtaht_ecn_edi
 
 ## PURPLE - How does ECN need to evolve to reach its potential?
 
-The color might change. This classification can be changed.
-[Jonathon Morton's position](jmorton_ecn_position) and [Pete Heist's
-position](pheist_ecn_thoughts) fall in this category.
+The color might change. This classification can be changed. [Jonathon Morton's
+position](jmorton_ecn_position) and [Pete Heist's position](pheist_ecn_thoughts)
+fall in this category, as does [Loganaden
+Velvindron](https://lists.bufferbloat.net/pipermail/ecn-sane/2019-March/000093.html).
 
 ## BLUE - we are GO for ECN on EVERYTHING!
 
