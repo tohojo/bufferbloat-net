@@ -5,6 +5,7 @@ lastmod: 2018-09-03T15:38:14
 type: wiki
 aliases:
     - /ecn-sane/wiki/Wiki
+    - /wiki/ecn-sane
 ---
 
 # About the ecn-sane project
