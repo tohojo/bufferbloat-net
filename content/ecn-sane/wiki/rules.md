@@ -62,7 +62,8 @@ Jonathon Morton's position is [here](jmorton_ecn_position). Pete Heist's positio
 
 ## BLUE - we are GO for ECN on EVERYTHING!
 
-This group is well populated currently outside this project.
+This group is well populated currently outside this project. In addition [Jake
+Holland is blue with yellow stripes](jholland_ecn_position).
 
 ## GREEN - ECN is safe for universal deployment
 
