@@ -34,7 +34,7 @@ Prior to now, the 21 one year long bikeshed around ECN has been around - those t
 
 ## GREY - Don't care about ECN one way or another
 
-Toke Høiland-Jørgensen's position is [here](https://www.youtube.com/watch?v=CxK_nA2iVXw), at least until he finishes his thesis.
+[Toke Høiland-Jørgensen's position](https://www.youtube.com/watch?v=CxK_nA2iVXw), at least until he finishes his thesis.
 
 ## RED - Opposed to wide deployment of ECN
 
@@ -46,7 +46,7 @@ This group is well populated currently outside this project. Members of that gro
 
 ## YELLOW - Chicken about wide deployment of ECN
 
-The PI for this is Dave Taht. His position paper is [here](dtaht_ecn_editorial).
+The PI for this is Dave Taht, as explained in [his position paper](dtaht_ecn_editorial).
 
 ## SEERSUCKER - With a particular reservation
 
@@ -58,7 +58,8 @@ The PI for this is Dave Taht. His position paper is [here](dtaht_ecn_editorial).
 ## PURPLE - How does ECN need to evolve to reach its potential?
 
 The color might change. This classification can be changed.
-Jonathon Morton's position is [here](jmorton_ecn_position). Pete Heist's position is [here](pheist_ecn_thoughts).
+[Jonathon Morton's position](jmorton_ecn_position) and [Pete Heist's
+position](pheist_ecn_thoughts) fall in this category.
 
 ## BLUE - we are GO for ECN on EVERYTHING!
 
