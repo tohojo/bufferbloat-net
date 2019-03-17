@@ -1,7 +1,7 @@
 ---
 title: Dave Taht's Stance on ECN
-date: 2019-03-17 01:14:22
-lastmod: 2019-03-17 12:36:00
+date: 2019-03-17T01:14:22
+lastmod: 2019-03-17T12:36:00
 type: wiki
 tags: ecn-blue
 
