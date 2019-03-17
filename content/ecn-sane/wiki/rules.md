@@ -48,6 +48,13 @@ This group is well populated currently outside this project. Members of that gro
 
 The PI for this is Dave Taht. His position paper is [here](dtaht_ecn_editorial).
 
+## SEERSUCKER - With a particular reservation
+
+> "I think ECN needs to be demonstrated to be needed and useful, especially given
+> BBR."
+
+- Vint Cerf
+
 ## PURPLE - How does ECN need to evolve to reach its potential?
 
 The color might change. This classification can be changed.
