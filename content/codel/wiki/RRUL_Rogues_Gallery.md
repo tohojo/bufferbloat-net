@@ -24,7 +24,7 @@ tail and no other optimizations:
 ![](/attachments/campground/campground_pfifo_fast.svg)
 
 After rate shaping was employed via [this HTB + nfq\_codel
-script](/attachments/campground/lupin_qos.sh) ,
+script](https://bufferbloat.net/attachments/campground/lupin_qos.sh) ,
 which gives EF packets a max of 33% of the bandwidth, and background
 traffic a max of 20% under contention, this is what that network now
 looks like:
