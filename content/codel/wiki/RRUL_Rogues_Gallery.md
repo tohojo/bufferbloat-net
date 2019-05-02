@@ -21,21 +21,21 @@ Various fq\_codel based rate shaping prototypes are under test at the
 An initial test of the comcast based connection, using standard drop
 tail and no other optimizations:
 
-![](http://snapon.lab.bufferbloat.net/~d/campground/campground_pfifo_fast.svg)
+![](/attachments/campground/campground_pfifo_fast.svg)
 
 After rate shaping was employed via [this HTB + nfq\_codel
-script](http://snapon.lab.bufferbloat.net/~d/campground/lupin_qos.sh) ,
+script](/attachments/campground/lupin_qos.sh) ,
 which gives EF packets a max of 33% of the bandwidth, and background
 traffic a max of 20% under contention, this is what that network now
 looks like:
 
-![](http://snapon.lab.bufferbloat.net/~d/campground/campground_lupin_qos.svg)
+![](/attachments/campground/campground_lupin_qos.svg)
 
 Bandwidth went up, and more importantly the increase in latency under
 load dropped to less than 4ms on average. However averages are
 misleading, and a RRUL CDF plot is more accurate.
 
-![](http://snapon.lab.bufferbloat.net/~d/campground/cdf1.svg)
+![](/attachments/campground/cdf1.svg)
 
 It was actually impossible to get an accurate measure of the actual
 bandwidth available using the non-rate shaped version! Using the RRUL
@@ -46,7 +46,7 @@ achieved was very, very different, closer to 20Mbit down, 8 up.
 
 This is fq\_codel, by itself, without rate shaping, on this link:
 
-![](http://snapon.lab.bufferbloat.net/~d/campground/campground_fq_codel.svg)
+![](/attachments/campground/campground_fq_codel.svg)
 
 Although the results are more "fair", they aren't very much more fair.
 Most of the buffering moved into the cable modem and CMTS where it was
@@ -60,13 +60,13 @@ It is perhaps more illustrative than RRUL alone, to run it twice. In
 this test series a second copy of the RRUL test was run at T+30 seconds,
 and the first RRUL test extended to run for 120 seconds (-H 120)
 
-![](http://snapon.lab.bufferbloat.net/~d/campground/campground_lupin_qos-competing-120.svg)
+![](/attachments/campground/campground_lupin_qos-competing-120.svg)
 
 As you can see, the second test kicks in quite rapidly, and when
 complete, the other test scales back up to full bandwidth, quite
 rapidly.
 
-![](http://snapon.lab.bufferbloat.net/~d/campground/campground_pfifo_fast-competing-120.svg)
+![](/attachments/campground/campground_pfifo_fast-competing-120.svg)
 
 In the above test the second test doesn't ramp up to full bandwidth for
 over 20 seconds after test start, and the TCP streams are very "unfair"
@@ -80,7 +80,7 @@ Verizon FIOS Testing at 25Mbit up and 25Mbit down
 
 Before a fq\_codel enabled shaper is deployed:
 
-![](http://snapon.lab.bufferbloat.net/~d/verizon/noshaper/ipv4-icei.svg)
+![](/attachments/verizon-noshaper-ipv4-icei.svg)
 
 Verizon seems to have egress buffering under control, but probably has
 an ingress buffer set to a good value for their highest end 300Mbit
@@ -88,7 +88,7 @@ service.
 
 After a fq\_codel enabled shaper is deployed:
 
-![](http://snapon.lab.bufferbloat.net/~d/verizon/finalshaper/ipv4-icei.svg)
+![](/attachments/verizon-finalshaper-ipv4-icei.svg)
 
 5 times the upload bandwidth, and roughly 1/7 the observed latency.
 
