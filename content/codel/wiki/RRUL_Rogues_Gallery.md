@@ -103,7 +103,7 @@ same time. This is the behavior that the RED algorithm and successors in
 particular were designed to avoid... if they had ever been deployed. The
 second chart in this image shows what TCP global sync looks like.
 
-![](http://huchra.bufferbloat.net/~d/denmark-germany-wired-2.png)
+![](/attachments/denmark-germany-wired-2.png)
 
 These results were obtained over a 40ms link between Denmark and
 Germany, on a device that probably had a very short TXQUEUE. So this is
