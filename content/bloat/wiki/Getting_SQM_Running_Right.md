@@ -1,11 +1,23 @@
 ---
 title: Getting SQM Running Right
 date: 2016-07-04T12:00:00
-lastmod: 2016-07-04T12:00:00
+lastmod: 2019-07-04T18:10:12
 type: wiki
 ---
 
 # Getting SQM Running Right
+
+The Smart Queue Management (SQM) system on OpenWrt makes it easy to configure a
+rate limiter on your router. The goal is to set the software shaper to a
+bandwidth that is slightly lower than the actual (bloated) bottleneck in the
+hardware, so we can control the queue using FQ-CoDel or CAKE. In many cases,
+there is no real ground truth about the right setting, but we can find one by
+trial and error (tuning and doing repeated measurements until things improve).
+
+The below is a (somewhat dated, but still relevant) example of how such a tuning
+session can work.
+
+## A walk-through of a tuning session
 
 This is a report of Dave Täht's experience tuning Cerowrt's Smart Queue Management (SQM) system for a cable modem at Jim Reisert's home. The SQM system (which works on any Linux-derived system) uses HTB + fq_codel underneath to give low latency to competing streams, and the codel AQM system to keep overall queue lengths short. 
 
