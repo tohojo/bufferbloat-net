@@ -61,8 +61,15 @@ Congestion Control (TCP)
 definition needed - references to TCP Vegas, TCP cubic and others? or
 separate definitions?
 
-{{include(Dark Buffers)}}
--------------------------
+Dark buffers
+------------
+
+Large network buffers can be thought of as 'dark buffers', analogous to
+'dark matter' in the universe. They are undetectable under most
+circumstances, and you can detect them only by indirect means. Buffers
+do not cause problems when they are empty. But when they fill they
+introduce additional latency (and create other problems, possibly very
+severe) to other traffic sharing the link.
 
 Explicit Congestion Notification (ECN)
 --------------------------------------
