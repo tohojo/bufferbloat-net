@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2017-03-10T09:20:12
+lastmod: 2019-07-04T18:07:12
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -14,25 +14,36 @@ traffic on your network.
 Use the [DSLReports Speed Test](http://dslreports.com/speedtest) 
 or run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it's present.
 
-**TL;DR** - if tests show bufferbloat, your router is letting bulk
-traffic (uploads/downloads) interfere with (and slow down) your
-time-sensitive traffic (gaming, Skype, Facetime, etc.) Twiddling with
-QoS might help, but a faster internet connection probably won't help at all. You
-need to find a way to fix the **router.**
+**TL;DR** - if tests show bufferbloat, the device at your bottleneck link (most
+likely your router) is letting bulk traffic (uploads/downloads) interfere with
+(and slow down) your time-sensitive traffic (gaming, Skype, Facetime, etc.)
+Twiddling with QoS might help, but a faster internet connection probably won't
+help at all. You need to find a way to fix the **router.**
 
-## How Can I Tell if My Router Has Bufferbloat?
+## How Can I Tell if My Network Has Bufferbloat?
 
 -   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](Tests_for_Bufferbloat/)
--   A good router that protects against bufferbloat will hold the
+-   A good network that protects against bufferbloat will hold the
     induced latency (extra latency above the no-traffic levels) below
     30 msec.
 -   Above 100 msec, people will notice that the network feels slow:
     voice calls begin to sound bad, web browsing feels sticky, and
     you start to lag out when gaming.
 -   If ping times/latency gets high while the speed test is running and drop back
-    down when the speed test completes, it means your router is bloated.
+    down when the speed test completes, it means your network is bloated.
     You have probably noticed that the network feels draggy or slow when
     other people use the network.
+
+The **most likely** culprit is your router - this is where the bottleneck in
+most people's network connection is, because your internet connection is slower
+than the network inside your house.
+
+**However**, any device can suffer from bufferbloat, which will manifest itself
+as soon as that device becomes a bottleneck for network traffic. [WiFi is a good
+example](https://www.bufferbloat.net/projects/make-wifi-fast/wiki/), but there
+are other sources as well: for example, if your computer is connected to the
+router using a bad Ethernet device, that can be a source of bufferbloat. If in
+doubt, measure from multiple devices to locate the real culprit!
 
 ## To Eliminate Bufferbloat in your Network...
 
