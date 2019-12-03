@@ -32,9 +32,9 @@ Van Jacobson (of Google) introduces the codel solution and the packet fountain a
 [Van
 Jacobson](http://www.wired.com/wiredenterprise/2012/05/van-jacobson/)
 speaking about [TCP, Congestion, and CoDel
-cure](http://recordings.conf.meetecho.com/Recordings/watch.jsp?recording=IETF84_TSVAREA&chapter=part_3)
-. The quality of the video is sadly poor, and his slides
-([here](https://plus.google.com/u/0/107942175615993706558/posts/eG8wZh7Qshs)
+cure](https://archive.org/details/video1_20191129). 
+The quality of the video is sadly poor, and his slides
+([here](https://www.ietf.org/proceedings/84/slides/slides-84-tsvarea-4.pdf)
 ) not in sync, but follow along, if you can.
 
 IETF demo side-by-side of a normal cable modem vs fq\_codel
