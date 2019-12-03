@@ -32,8 +32,8 @@ Van Jacobson (of Google) introduces the codel solution and the packet fountain a
 [Van
 Jacobson](http://www.wired.com/wiredenterprise/2012/05/van-jacobson/)
 speaking about [TCP, Congestion, and CoDel
-cure](https://archive.org/details/video1_20191129
-. The quality of the video is sadly poor, and his slides
+cure](https://archive.org/details/video1_20191129). 
+The quality of the video is sadly poor, and his slides
 ([here](https://www.ietf.org/proceedings/84/slides/slides-84-tsvarea-4.pdf)
 ) not in sync, but follow along, if you can.
 
