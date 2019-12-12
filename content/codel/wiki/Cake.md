@@ -1,7 +1,7 @@
 ---
 title: Cake
 date: 2015-04-11T11:10:42
-lastmod: 2015-12-10T12:30:46
+lastmod: 2019-12-11T17:49:00
 type: wiki
 ---
 Cake - Common Applications Kept Enhanced
@@ -350,7 +350,7 @@ it. A simple configuration (sqm-scripts example below) would be:
     tc qdisc add dev eth2 handle ffff: ingress
     tc qdisc del dev ifb4eth2 root
     tc qdisc add dev ifb4eth2 root cake bandwidth 110000kbit besteffort
-    ifconfig ifb4eth2 up # if you don't bring the device up your connection will lock up on the next step.
+    ip link set ifb4eth2 up # if you don't bring the device up your connection will lock up on the next step.
     tc filter add dev eth2 parent ffff: protocol all prio 10 u32 match u32 0 0 flowid 1:1 action mirred egress redirect dev ifb4eth2
 
 We have generally found that most diffserv inbound priorities are wrong,
