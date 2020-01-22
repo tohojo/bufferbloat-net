@@ -45,7 +45,6 @@ Testing tools
 -   [Measurement Lab
     Tools](http://www.measurementlab.net/measurement-lab-tools)
 -   [Speedtest.net](http://www.speedtest.net/)
--   [Pingtest.net](http://www.pingtest.net/)
 -   [DSL Reports Smokeping Page](http://www.dslreports.com/smokeping)
 -   [Smokeping](http://oss.oetiker.ch/smokeping/)
 -   [httping](http://www.vanheusden.com/httping/) - latest version has

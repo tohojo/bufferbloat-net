@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2019-07-04T18:07:12
+lastmod: 2020-01-08T09:07:12
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -11,41 +11,19 @@ aliases:
 
 Bufferbloat is high latency (or lag) that occurs when there's other
 traffic on your network. 
-Use the [DSLReports Speed Test](http://dslreports.com/speedtest) 
-or run one of the [Tests for Bufferbloat](Tests_for_Bufferbloat.md) to see if it's present.
 
-**TL;DR** - if tests show bufferbloat, the device at your bottleneck link (most
+**TL;DR** [Use the DSLReports Speed Test](http://dslreports.com/speedtest)
+to see if you have bufferbloat.
+*Longer answer:* read the [Tests for Bufferbloat](./Tests_for_Bufferbloat.md) page.
+
+If the DSLReports test shows a letter grade worse than a B, you probably have bufferbloat.
+That means the device at your bottleneck link (most
 likely your router) is letting bulk traffic (uploads/downloads) interfere with
 (and slow down) your time-sensitive traffic (gaming, Skype, Facetime, etc.)
-Twiddling with QoS might help, but a faster internet connection probably won't
+Twiddling with QoS might help, and a faster internet connection probably won't
 help at all. You need to find a way to fix the **router.**
 
-## How Can I Tell if My Network Has Bufferbloat?
-
--   Use [DSL Reports Speed Test](http://dslreports.com/speedtest) or any of the other tests on [Tests for Bufferbloat](Tests_for_Bufferbloat/)
--   A good network that protects against bufferbloat will hold the
-    induced latency (extra latency above the no-traffic levels) below
-    30 msec.
--   Above 100 msec, people will notice that the network feels slow:
-    voice calls begin to sound bad, web browsing feels sticky, and
-    you start to lag out when gaming.
--   If ping times/latency gets high while the speed test is running and drop back
-    down when the speed test completes, it means your network is bloated.
-    You have probably noticed that the network feels draggy or slow when
-    other people use the network.
-
-The **most likely** culprit is your router - this is where the bottleneck in
-most people's network connection is, because your internet connection is slower
-than the network inside your house.
-
-**However**, any device can suffer from bufferbloat, which will manifest itself
-as soon as that device becomes a bottleneck for network traffic. [WiFi is a good
-example](https://www.bufferbloat.net/projects/make-wifi-fast/wiki/), but there
-are other sources as well: for example, if your computer is connected to the
-router using a bad Ethernet device, that can be a source of bufferbloat. If in
-doubt, measure from multiple devices to locate the real culprit!
-
-## To Eliminate Bufferbloat in your Network...
+**To Eliminate Bufferbloat in your Network...**
 
 You will need a router whose manufacturer understands the principles of
 bufferbloat, and has updated the firmware to use one of the Smart Queue
@@ -55,19 +33,20 @@ Management algorithms such as cake, fq_codel, PIE, or others.
     then turn on SQM and iterate: adjust the router settings and measure latency 
     until the latency gets as low as possible while retaining good speeds.
     See, for example, this [tuning session.](Getting_SQM_Running_Right)
-2.  We continue to be hopeful that commercial router vendors will offer
-    SQM in their stock firmware. Here is a list of those that do:
-    * The [IQrouter](http://evenroute.com) provides a good setup wizard for
-    configuring SQM, and automatically tuning its settings.
-    * The [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings
-    * [Ubiquiti](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings
-    * [ipfire.org](http://wiki.ipfire.org/en/configuration/services/qos) has fq_codel settings
-3.  Install the [LEDE 17.01.4](https://lede-project.org) (or newer) firmware
+2.  Several commercial router vendors offer SQM in their stock firmware. 
+    Here is a list of those we found:
+    * [IQrouter](http://evenroute.com) provides a good setup wizard for
+    configuring SQM, and automatically tunes its settings. 
+    It's good to about 200-250 mbps.
+    * [Ubiquiti gear](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings. People say its EdgeRouter will handle over 400 mbps.
+    * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.
+    * [ipfire.org](https://wiki.ipfire.org/configuration/services/qos) has fq_codel settings.
+3.  Install the [OpenWrt 18.06](https://OpenWrt.org) (or newer) firmware
     on your current router. These builds are now
     stable and include the luci-app-sqm package.
-    There's a guide at the LEDE web site:
-    https://lede-project.org/docs/user-guide/sqm
-4.  Or install suitable DD-WRT (www.dd-wrt.com) or
+    There's a guide at the OpenWrt web site:
+    https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm .  
+    Or install suitable DD-WRT (www.dd-wrt.com) or
     Gargoyle (www.gargoyle-router.com) firmware. We understand that
     current builds of both products support fq_codel.
 5.  Finally, if none of these seem to be options, call your router

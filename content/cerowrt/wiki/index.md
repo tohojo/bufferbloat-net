@@ -11,10 +11,15 @@ Overview of the CeroWrt Project
 
 **The CeroWrt Project is complete. The last build (3.10.50-1)
 was released in July 2014. The principles learned from that research
-project have been transferred to the Linux kernel, [OpenWrt](https://openwrt.org)
-and most recently, the [LEDE Project.](https://lede-project.org)** 
+project have been transferred to the Linux kernel and [OpenWrt](https://openwrt.org).**
 
-*These page remain as a historical reference of the work that was done to complete CeroWrt.*
+*Note: These pages remain as a historical reference for the work that was done to complete CeroWrt, 
+and as a record of the initial research work for codel & fq_codel.
+See the <a href="/cerowrt">CeroWrt Index</a> page for all CeroWrt documentation.*
+
+*Note: The "LEDE Project" was a fork of OpenWrt in 2016. 
+In 2018, all changes to LEDE became the new OpenWrt mainline. 
+Any reference in this wiki to "LEDE" applies to OpenWrt as well.*
 
 Bufferbloat is the undesirable latency that comes from a router or other
 network equipment buffering too much data. It is a huge drag on Internet
@@ -34,8 +39,8 @@ both the wired and wireless components of the stack.
 The code was 100% open source, top to bottom. No binary blobs
 whatsoever. Every aspect of the code and hardware can be inspected
 and/or modified. As a project, most of the results have been pushed up
-into mainline linux, OpenWrt "Chaos Calmer" and "Barrier Breaker"
-releases, many firewall and router distributions and it is beginning to
+into mainline linux, OpenWrt releases, 
+many firewall and router distributions and it is beginning to
 appear in commercial firmware. Active research (due to lack of funding,
 and succeeding in the primary goals) has ceased, with the exception of
 ongoing work into standardization efforts, and into something even
@@ -62,8 +67,8 @@ list](https://lists.bufferbloat.net/listinfo/cerowrt-devel) for more
 details.
 
 *Note:* All the important features of the CeroWrt software are now
-available in mainline [OpenWrt](http://openwrt.org) Barrier Breaker and
-Chaos Calmer builds. You may be better served by installing one of those
+available in mainline [OpenWrt](http://openwrt.org) builds. 
+You may be better served by installing one of those
 supported builds that are available on a much wider range of router
 hardware.
 
@@ -120,7 +125,10 @@ The latest CeroWrt build is solid. We believe it solves virtually all the
 bufferbloat problem, and deserves wider use. Lots of people are using it
 as their production router. 
 
-Since all development on CeroWrt stopped in July 2014, we recommend you use a supported build from either [OpenWrt](http://openwrt.org) or the [LEDE Project](http://lede-project.org). However, you can download the final CeroWrt 3.10.50-1 build from:
+Since all development on CeroWrt stopped in July 2014, 
+we recommend you use a supported build from [OpenWrt](http://openwrt.org)
+<strike>or the [LEDE Project](http://lede-project.org)</strike>. 
+However, you can download the final CeroWrt 3.10.50-1 build from:
 
 {{< attachment name="CeroWrt 3.10.50-1 for WNDR3700v2" type="binary" description="" filename="140724000000_openwrt-ar71xx-generic-wndr3700v2-squashfs-factory3.10.50-1.img" >}}
 {{< attachment name="CeroWrt 3.10.50-1 for WNDR3800" type="binary" description="" filename="140724000000_openwrt-ar71xx-generic-wndr3800-squashfs-factory3.10.50-1.img"  >}} 

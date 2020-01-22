@@ -9,6 +9,16 @@ aliases:
 Introduction to Bufferbloat
 ---------------------------
 
+Bufferbloat is the undesirable latency that comes from a router or other network equipment buffering too much data. 
+
+**TL;DR**
+
+1. If you want to measure bufferbloat, go to [DSLReports/speedtest](), or read more at the [Tests for Bufferbloat](./Tests_for_Bufferbloat.md) page.
+2. To fix your bufferbloat, check out [What Can I Do About Bufferbloat?](./What_can_I_do_about_Bufferbloat/)
+
+The Details
+-----------
+
 We've written an [introduction](./Introduction.md) to the bufferbloat problem
 that we believe is both accessible to non-technical readers and
 informative to techies. We recommend you start there to get a feel for

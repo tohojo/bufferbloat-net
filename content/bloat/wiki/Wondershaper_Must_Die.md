@@ -1,7 +1,7 @@
 ---
 title: Wondershaper Must Die
 date: 2013-12-29T01:50:36
-lastmod: 2015-05-25T18:37:25
+lastmod: 2020-01-08T18:37:25
 type: wiki
 ---
 Wondershaper Must Die (editorial by Dave Taht)
@@ -9,8 +9,8 @@ Wondershaper Must Die (editorial by Dave Taht)
 
 *Note: This editorial was written in December 2013, and has been updated
 from time to time. But what should you use instead of Wondershaper?
-CeroWrt's full suite of SQM shaping is now available in [OpenWrt](http://openwrt.org) and more recently, the [LEDE Project](https://lede-project.org). Use SQM - it works
-great.*
+There is a full suite of SQM shaping available now in [OpenWrt](http://openwrt.org). 
+Use SQM - it works great.*
 
 Wondershaper was great for its time (2002). It was one of the first
 integrated Smart Queue Management systems, incorporating
@@ -59,7 +59,9 @@ server... It's now 3 years of nearly full time work on bufferbloat later
 and I'm just now getting around to writing the original intended rant.
 My comments on the code are in \#\#s.
 
-Wondershaper annotated source code
+*Update 8 Jan 2020: CeroWrt is now OpenWrt; Remove references to LEDE Project*
+
+Annotated Wondershaper source code
 ==================================
 
     #!/bin/bash

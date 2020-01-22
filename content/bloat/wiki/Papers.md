@@ -41,13 +41,12 @@ Bufferbloat](http://akira.ruc.dk/~tohojo/bufferbloat/bufferbloat-final.pdf)
 http://simula.stanford.edu/sedcl/files/dctcp-final.pdf
 
 [Fast Object-Based data transfer
-System(FOBS)](http://www.umcs.maine.edu/~dickens/pubs/HPDC.FINAL.pdf)
+System (FOBS)](http://www.umcs.maine.edu/~dickens/pubs/HPDC.FINAL.pdf)
 
 [Simple Available Bandwidth Utilization
-Library(SABUL)](http://pubs.rgrossman.com/dl/journal-028.pdf)
+Library (SABUL)](http://papers.rgrossman.com/journal-019.pdf)
 
-[Reliable Blast UDP
-(RBUDP)](http://www.evl.uic.edu/files/pdf/cluster2002.pdf)
+[Reliable Blast UDP (RBUDP)](http://www.evl.uic.edu/files/pdf/cluster2002.pdf)
 
 [Bittorrent
 Broadnets](http://www.cs.clemson.edu/~jmarty/papers/bittorrentBroadnets.pdf)
