@@ -1,7 +1,7 @@
 ---
 title: RRUL Chart Explanation
 date: 2016-12-27T11:00:00-04:00
-lastmod: 2016-12-27T11:00:00-04:00
+lastmod: 2020-01-23T11:00:00-04:00
 type: wiki
 ---
 
@@ -23,6 +23,7 @@ Flent produces three major types of charts:
 
 ### RRUL Three-Plot Charts
 
+The RRUL test runs for 70 seconds by default: 5 seconds of idle (to give a baseline), 60 seconds of full-rate data transfer, and 5 more seconds of idle.
 A three-plot RRUL Chart shows:
 
 - **Download plot** showing the average download speed (Mbits/sec, in black) of the four diffserv connections (individual colors.) Multiply the average by four to get the actual throughput/link speed.

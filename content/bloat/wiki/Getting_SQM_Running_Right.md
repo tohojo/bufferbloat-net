@@ -1,7 +1,7 @@
 ---
 title: Getting SQM Running Right
 date: 2016-07-04T12:00:00
-lastmod: 2019-07-04T18:10:12
+lastmod: 2020-01-23T18:10:12
 type: wiki
 ---
 
@@ -14,26 +14,46 @@ hardware, so we can control the queue using FQ-CoDel or CAKE. In many cases,
 there is no real ground truth about the right setting, but we can find one by
 trial and error (tuning and doing repeated measurements until things improve).
 
-The below is a (somewhat dated, but still relevant) example of how such a tuning
-session can work.
 
 ## A walk-through of a tuning session
 
 This is a report of Dave Täht's experience tuning Cerowrt's Smart Queue Management (SQM) system for a cable modem at Jim Reisert's home. The SQM system (which works on any Linux-derived system) uses HTB + fq_codel underneath to give low latency to competing streams, and the codel AQM system to keep overall queue lengths short. 
 
+*Note: The following example describes a tuning session for CeroWrt, but it is identical
+to configuring SQM in modern OpenWrt firmware.*
+
 It took 4 tries (and 5 minutes) to get a setting that worked well! When we were done, we watched a videoconference and ran screen sharing session over skype while saturating the network with a RRUL test for 5 minutes.
 
 Download and upload speeds remained high, latency remained low, and there was no observable effect on the video conference. It was *perfect*.
 
-_How to read the plots below. This is the default display of the RRUL test showing download speed (top), upload speed (middle), and latency (msec, bottom). The black line represents the average of four simultaneous upload/downloads: multiply four to get the actual data rates. For example, the top chart shows (0.8 mbps * 4 = 3.3mbps); middle chart shows (5.4mbps * 4 = 21.6 mbps), and average latency of 72-75 msec during the test. NB: These charts were measured from the remote end, and thus the top and middle chart directions are swapped.)_
+**How to read the RRUL plots below**
 
-![](/attachments/sqm-setup-ipv6_withsqm-24-4400-long.svg)
+The [RRUL test](./RRUL_Chart_Explanation.md) normally runs for 70 seconds: 5 seconds of idle (to give a baseline), 60 seconds of full-rate data transfer, and 5 more seconds of idle. There are three graphs:
+
+1. Download speed (top)
+2. Upload speed (middle)
+3. Latency (msec, bottom)
+
+The (four) **colored lines** indicate separate, simultaneous TCP sessions.
+The **black line** represents the average of those four upload/downloads;
+multiply that value by four to get the actual data rates. 
+
+For example, the top chart shows (1.2 mbps * 4 = about 4.8mbps); 
+middle chart shows (7mbps * 4 = about 28 mbps), 
+and latency starting low, 
+but ramping to over 1000 msec (over one second) during the test. 
+
+<!-- ![](/attachments/sqm-setup-ipv6_withsqm-24-4400-long.svg) -->
+
+![](/attachments/sqm-setup-ipv6_withsqm-3.svg)
 
 *Dave picks up the narrative...*
 
-"After installing the latest CeroWrt and leaving SQM *turned off*, Jim allowed me in to run the RRUL test remotely. This was how his cable connection behaved without any latency control. We see the usual 1-2 seconds worth of induced latency common to (and bedeviling!) current cable deployments. _(As noted above, the up and download figures for these tests are reversed as I was running RRUL from a remote server, not from within Jim's network, as is normally done.)_
-
-![](/attachments/sqm-setup-ipv6_withsqm-3.svg)
+"After installing the latest CeroWrt and leaving SQM *turned off*, I ran the RRUL test remotely. 
+This was how his cable connection behaved without any latency control. 
+*(See charts above.)* 
+We see the usual 1-2 seconds worth of induced latency common to (and bedeviling!) current cable deployments. 
+_(Note: the up and download figures for all these charts are reversed since I was running RRUL from a remote server, not from within Jim's network, as is normally done.)_
 
 "While awesome to be able to run this test over native IPv6, 1.2 seconds of latency left something to be desired. (The latency problem has nothing to do with IPv6, or IPv4, but bufferbloat in the modem and CMTS).
 
@@ -50,7 +70,7 @@ _How to read the plots below. This is the default display of the RRUL test showi
 
 ![](/attachments/sqm-setup-ipv6_withsqm-24-6.svg)
 
-"Much better! But given the increase in latency and the average where it was, it was apparent that 6 mbit up was still too much, so we knocked that down to 4400, and got this:
+"Much better! But given the increase in latency and the average where it was, it was apparent that 6 mbit up was still too much, so we knocked that down to 4400 (kbps, or 4.4 mbps), and got this:
 
 ![](/attachments/sqm-setup-ipv6_withsqm-24-4400.svg)
 
