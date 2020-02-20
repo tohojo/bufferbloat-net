@@ -4,6 +4,7 @@ title: "Bufferbloat.net"
 disable404: false
 canonifyURLs: true
 relativeURLs: false
+disableKinds: ["taxonomyTerm", "taxonomy"]
 
 pluralizeListTitles: false
 metadataFormat: yaml
