@@ -1,7 +1,7 @@
 ---
 title: Tests for Bufferbloat
 date: 2013-12-20T14:59:13
-lastmod: 2015-05-16T11:09:17
+lastmod: 2020-02-24T19:35:00
 type: wiki
 aliases:
   - /cerowrt/wiki/Quick_Test_for_Bufferbloat
@@ -83,11 +83,3 @@ behaving while you tune your settings.
 5.  The [**netperf**](http://netperf.org/netperf/) program underlies
     _betterspeedtest.sh_, _netperfrunner.sh_, and Flent, and is built into
     the CeroWrt firmware. netperf drives traffic through a network and measures its performance.
-6.  **[Netalyzr](http://netalyzr.icsi.berkeley.edu/)** from icsi.berkeley.edu is a powerful network
-    measurement and diagnostic tool that contributes its data to a large
-    survey of network conditions. However, we have seen its estimate of bufferbloat
-    can be inaccurate: even though netalyzr reports a 1000 msec
-    "buffer measurement", a concurrent ping test does not show an
-    appreciable change to the responsiveness.
-    
-
