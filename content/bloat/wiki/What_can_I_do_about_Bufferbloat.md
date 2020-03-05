@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2020-01-23T09:07:12
+lastmod: 2020-03-05T14:07:12
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -54,7 +54,7 @@ Here are some resources:
     Here is a list of those we found:
     * [IQrouter](http://evenroute.com) provides a good setup wizard for
     configuring SQM, and automatically tunes its settings. 
-    It's good to about 200-250 mbps.
+    IQrouter v3 is good to about 350 mbps. (Version 2 was good for 200-250 mbps.)
     * [Ubiquiti gear](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings. 
     People say its EdgeRouter will handle over 400 mbps.
     * Many of the "mesh" home router vendors seem to solve bufferbloat.
