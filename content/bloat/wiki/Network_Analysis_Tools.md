@@ -12,3 +12,5 @@ https://launchpad.net/flowgrind
 http://www.wireshark.org/
 
 http://shlang.com/thrulay/
+
+[flent.org](https://flent.org/) on [GitHub](https://github.com/tohojo/flent)
