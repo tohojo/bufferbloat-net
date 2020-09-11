@@ -53,6 +53,6 @@ a sane default
 
 #####Changing settings in real time: #####
 ```
-tc qdisc change dev eth0 hanlde 1: cake bandwidth 1Mbit
+tc qdisc change dev eth0 handle 1: cake bandwidth 1Mbit
 ```   
 This does _not_ cause packet loss

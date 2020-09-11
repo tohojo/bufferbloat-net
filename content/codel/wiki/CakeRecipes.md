@@ -20,14 +20,14 @@ Internet over TV Cable
 ```
 tc qdisc replace dev eth0 root cake docsis ack-filter nat bandwidth 150mbit
 ```   
-* dev is the device, eth0 in this case
-* root means this is the "top" qdisc
-* docsis says tune for a cable-tv uplink: cable TV follows the 
-_docsis_ standards
-* The ack-filter skips sending redundant acknowlegements
-* nat tells cake network address translation is happening on _this_ 
-machine, not a separate router
-* bandwidth is the downbound bandwidth of your link, often taken 
+* _dev_ is the device, eth0 in this case
+* _root_ means this is the "top" qdisc
+* _docsis_ says tune for a cable-tv uplink: cable TV follows the 
+docsis standards
+* _ack-filter_ skips sending redundant acknowlegements
+* _nat_ tells cake network address translation is happening on _this_ 
+machine, not a separate router.
+* _bandwidth_ is the down-bound bandwidth of your link, often taken 
 from DSLReport's speed test
 
 
@@ -36,8 +36,9 @@ Internet over Telephone Lines
 ```
 TBD
 ```   
-* ADSL is one of the two forms of "digital subscriber line", asymmetrical
-* VDSL2 is a newer and faster DSL
+* _adsl_ is one of the two forms of "digital subscriber line", 
+the asymmetrical kind (faster down than up)
+* _vdsl2_ is a newer DSL
 
 
 Internet from a Preexisting Ethernet
@@ -45,8 +46,10 @@ Internet from a Preexisting Ethernet
 ```
 tc qdisc replace dev eth0 root cake ethernet bandwidth 1gbit
 ```   
-* ethernet says to tune for ethernet
-* bandwidth 1Gbit is typical of a small data center network, substantially 
-faster than is commonly seen in offices
+* _ethernet_ says to tune for ethernet
+* _bandwidth 1GBit_ is substantially faster than is commonly seen in 
+offices. The example is from an office 
+connected upstrfeam to a datacenter with a 10Gbit network.
+* _bandwidth unlimited_ would suit an upstream which is equally fast.
 
 
