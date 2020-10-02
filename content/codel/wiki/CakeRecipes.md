@@ -18,27 +18,27 @@ The detailed reference for all the parameters is tc-cake(8)
 Internet over TV Cable
 ----------------------
 ```
-tc qdisc replace dev eth0 root cake docsis ack-filter nat bandwidth 150mbit
+tc qdisc replace dev eth0 root cake docsis ack-filter bandwidth 150mbit
 ```   
 * _dev_ is the device, eth0 in this case
 * _root_ means this is the "top" qdisc
 * _docsis_ says tune for a cable-tv uplink: cable TV follows the 
 docsis standards
-* _ack-filter_ skips sending redundant acknowlegements
-* _nat_ tells cake network address translation is happening on _this_ 
-machine, not a separate router.
+* _ack-filter_ skips sending redundant acknowledgements 
 * _bandwidth_ is the down-bound bandwidth of your link, often taken 
-from DSLReport's speed test
+from speed tests like http://www.dslreports.com/speedtest.
 
 
 Internet over Telephone Lines
 -----------------------------
 ```
-TBD
-```   
-* _adsl_ is one of the two forms of "digital subscriber line", 
-the asymmetrical kind (faster down than up)
-* _vdsl2_ is a newer DSL
+tc qdisc replace dev eth0 root cake pppoe-ptm ack-filter bandwidth 61mbit
+```  
+* _pppoe-ptm_ is one of the DSL (digital subscriber line) variants
+ used by telcos such as British Telecommunications
+ 
+ There are numerous dsl options: if your ISP doesn't publicise which they use, 
+ there is also _conservative_ which sets the expected overhead to a safely high value
 
 
 Internet from a Preexisting Ethernet

@@ -480,5 +480,15 @@ encapsulated IPv6 packets to the encapsulating IPv4 packets and help
 cake classify the contained flows into the correct tin. Enjoy! - Kevin
 D-B
 
+CAKE FAQ
+--------
+Frequently asked questions are answered at the [CAKE FAQ](CakeFAQ.md).
+
+
+CAKE Recipes
+-------------
+A "cookbook" of common settings begins with the [CAKE Recipes](CakeRecipes.md)
+
 ### Attachments
 {{< attachment name="cake-battlemesh-v8.pdf" type="application/pdf" description="Slides shown at Battlemesh v8" filename="150817135028_cake-battlemesh-v8.pdf" >}}
+
