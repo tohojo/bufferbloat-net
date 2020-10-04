@@ -8,7 +8,7 @@ Cake FAQ
 ========
 
 [Cake](Cake.md) is the comprehensive queue management system the bufferbloat
-project has been working on since 2013 and now in general release, circa release 4.19. It is the
+project has been working on since 2013 and which is included in the Linux kernel since v4.19. It is the
 rollup of 3 years of deployment experience using the htb + fq\_codel
 based <link>sqm</link>-scripts.
 

@@ -7,7 +7,7 @@ type: wiki
 Cake Recipes
 ============
 [Cake](Cake.md) is the comprehensive queue management system the bufferbloat
-project has been working on since 2013 and is now in general release. 
+project has been working on since 2013 and has been included in the Linux kernel since v4.19. 
 
 These recipes are annotated combinations of settings that have 
 been used for particular kinds of networks, organized from 
@@ -43,10 +43,11 @@ tc qdisc add dev eth0 handle ffff: ingress
 tc qdisc del dev ifb4eth0 root
 tc qdisc add dev ifb4eth0 root cake bandwidth 170mbit besteffort
 ip link set ifb4eth0 up # important 
-tc filter add dev eth0 parent ffff: protocol all prio 10 u32 match u32 0 0 flowid 1:1 action mirred egress redirect dev ifb4eth0
+tc filter add dev eth0 parent ffff:  matchall action mirred egress redirect dev ifb4eth0
 ```   
 This creates a named link for download/ingress and applies 
 CAKE to it. 
+
 * _bandwidth_ is the download bandwidth of your link, often
 from a speed test.
 
