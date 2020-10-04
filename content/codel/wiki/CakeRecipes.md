@@ -22,17 +22,16 @@ Internet over TV Cable
 Outbound, General Case 
 ---
 ```
-tc qdisc replace dev eth0 root cake docsis ack-filter bandwidth 150mbit
+tc qdisc replace dev eth0 root cake docsis ack-filter bandwidth 17mbit
 ```   
 * _dev_ is the device, eth0 in this case.
 * _root_ means this is the "top" qdisc.
 * _docsis_ says tune for a cable-tv uplink's overheads: 
 cable TV follows the docsis standards.
 * _ack-filter_ skips sending redundant acknowledgements. 
-* _bandwidth_ is the download bandwidth of your link, often 
+* _bandwidth_ is the upload bandwidth of your link, often 
 taken from speed tests like http://www.dslreports.com/speedtest.
-<!-- That actually sounds _wrong_. I'm tuning the out/up 
-direction. Dave C-B-->
+
 
 Inbound, General case
 ---
@@ -42,13 +41,15 @@ ip link add name ifb4eth0 type ifb
 tc qdisc del dev eth0 ingress
 tc qdisc add dev eth0 handle ffff: ingress
 tc qdisc del dev ifb4eth0 root
-tc qdisc add dev ifb4eth0 root cake bandwidth 11000kbit besteffort
+tc qdisc add dev ifb4eth0 root cake bandwidth 170mbit besteffort
 ip link set ifb4eth0 up # important 
 tc filter add dev eth0 parent ffff: protocol all prio 10 u32 match u32 0 0 flowid 1:1 action mirred egress redirect dev ifb4eth0
 ```   
-This creates a named link for download/ingress and applies CAKE to it.
-<!-- should the bandwidth here also be the inbound bandwidth
- from dslreports? Dave C-B -->
+This creates a named link for download/ingress and applies 
+CAKE to it. 
+* _bandwidth_ is the download bandwidth of your link, often
+from a speed test.
+
 
 
 Internet over Telephone Lines
