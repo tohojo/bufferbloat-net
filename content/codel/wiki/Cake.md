@@ -1,7 +1,7 @@
 ---
 title: Cake
 date: 2015-04-11T11:10:42
-lastmod: 2019-12-11T17:49:00
+lastmod: 2020-10-05T15:46:00
 type: wiki
 ---
 Cake - Common Applications Kept Enhanced
@@ -182,8 +182,8 @@ Some of the history
 We have been discussing/working on this for about two years. Work
 stalled out on the first two versions in september 2014 (after we hit
 some major snags also). Jonathan could not work for free anymore
-either... As of April 2015, he is now committed to 2-3 months work (via
-a donation), and we are back to making some serious progress.
+either... As of April 2015, he was committed to 2-3 months work (via
+a donation), and we made some serious progress.
 
 At line (native) rate cake uses more cpu than what fq\_codel does.
 
@@ -192,7 +192,7 @@ are a lot of easy cpu speed up mods left to make, but we prefer to work
 on fixing two problematic bits of codel right now... adding other
 features, and fixing bugs.
 
-Cake is largely Jonathan Morton's work, based on extensive discussions
+CAKE is largely Jonathan Morton's work, based on extensive discussions
 with Dave Taht, Toke, and Eric Dumazet and fragments of the various
 codel and fq\_codel stuff Dave Taht had done over the last 3 years. In
 particular, the set associative hash, shaper, and diffserv code
@@ -264,15 +264,14 @@ do not have intuition here.
       marks          294          86           0         621
     qdisc ingress ffff: parent ffff:fff1 ----------------
      Sent 830112863 bytes 601877 pkt (dropped 0, overlimits 0 requeues 0)
-     backlog 0b 0p requeues 0                      
+     backlog 0b 0p requeues 0
 
-Installing "Cake" out of tree on Linux
+Installing "CAKE" out of tree on Linux
 --------------------------------------
 
-We are attempting to make it easier for people to test cake on
-pre-existing kernels. Please note that cake is under heavy development.
-The API might change. The code might change. If it breaks, you get to
-keep both pieces.
+CAKE is included in upstream Linux as of kernel v4.19. This means it is
+available out of the box on most modern Linux distributions. If you're running
+an older kernel, you can compile the out-of-tree version as follows:
 
 Do a:
 
@@ -284,12 +283,6 @@ easy as**
 
     cd sch_cake
     make; sudo make install
-
-FIXME: How do you install kernel headers on various linuxes?
-
-NOTE: I did not take the time to get the linux version checks exactly
-correct, but did manage to get it to compile on linux 3.13 and linux
-3.18 without error, on x86\_64, in the current git tree.
 
 To use it properly, you will also need to build and install the iproute
 with cake support:
@@ -305,19 +298,14 @@ with cake support:
 
     tc qdisc add dev whatever root cake # and whatever options
 
-Configuring cake
+As with the kernel, odds are this is also available on your distro already.
+
+Configuring CAKE
 ----------------
 
 We had found that a ton of edge cases involving very low (sub 2.5mbit)
 bandwidths, and PPPoe and ATM framing compensation were bothersome in
-fq\_codel, so cake automagically does some of that, although the atm
-compensation is untested at present.
-
-You may need to do a modprobe of sch\_cake and of act\_mirred, and of
-other modules (u32?) for this to work. Also, on many devices, it used to
-be VERY helpful to turn off GRO on ALL ethernet devices, and TSO and GSO
-on the outbound device. We added "peeling" to fix this so you no longer
-have to turn off offloads like thiese.
+fq\_codel, so cake includes built-in modes for this.
 
 There are numerous other traps for the unwary, documented in
 [Best practices for benchmarking Codel and FQ Codel](Best_practices_for_benchmarking_Codel_and_FQ_Codel.md)
@@ -329,12 +317,11 @@ packets rather than superpackets.
 
 While we have published some mods to make cake easy to configure under
 the existing sqm-scripts (cake eliminates many, many lines of code
-there) and gui, they have not quite made it out to openwrt yet.
+there) and GUI, cake is also quite simple to configure manually from the
+command line.
 
 Configuration of outbound is easy, the simplest default setting is:
 
-    modprobe sch_cake
-    modprobe act_mirred
     tc qdisc add dev eth2 root cake bandwidth XXmbit # where XX is your mbit. You can do kbit also. substitute your outbound interface for eth2.
 
 If you are interested in what pure AQM alone accomplishes, try the
@@ -355,7 +342,7 @@ it. A simple configuration (sqm-scripts example below) would be:
     tc qdisc del dev ifb4eth2 root
     tc qdisc add dev ifb4eth2 root cake bandwidth 110000kbit besteffort
     ip link set ifb4eth2 up # if you don't bring the device up your connection will lock up on the next step.
-    tc filter add dev eth2 parent ffff: protocol all prio 10 u32 match u32 0 0 flowid 1:1 action mirred egress redirect dev ifb4eth2
+    tc filter add dev eth2 parent ffff: matchall action mirred egress redirect dev ifb4eth2
 
 We have generally found that most diffserv inbound priorities are wrong,
 so we tend to specify besteffort here, and may add a "squash" option
@@ -411,79 +398,14 @@ anything less than 3ms prior to now.
 Have I mentioned how much I hate offloads? see the backlog relative to
 the number of "packets".
 
-Still, I do think developing this out of tree will help a lot, after we
-get kernel versions straightened out more. Next up is trying to get\
-it to build on openwrt, also out of tree.
+Installing CAKE on OpenWrt
+--------------------------
 
-Installing CAKE out of tree on OpenWrt - rough instructions
------------------------------------------------------------
-
-This is relatively easy and recently became a lot easier due to a couple
-of package handling bugs being fixed. Also as of 13 Jul 2015 Toke pushed
-CAKE aware versions of some required utilities.
-
-First you will need to install the OpenWrt source and build environment,
-fuller details including required dependencies can be found at
-http://wiki.openwrt.org/doc/howto/buildroot.exigence
-
-Briefly to clone the latest version of OpenWrt, known as 'trunk' into a
-subdirectory 'openwrt' of your current directory:
-
-    git clone git://git.openwrt.org/openwrt.git
-
-OpenWrt divides software components into packages and combines groups of
-packages into feeds. For CAKE we'll need to add an extra feed as well as
-add all the packages from the standard feeds. Install the standard
-packages:
-
-    cd openwrt
-    ./scripts/feeds update -a
-    ./scripts/feeds install -a
-
-We're still missing the all important kernel 'cake' algorithm packet
-scheduling module, and whilst we're here we might as well have the 'pie'
-algorithm. Also a 'cake' aware version of tc is needed. There are
-OpenWrt suitable packages in Dave Taht's 'ceropackages' package feed.
-Many packages exist in this feed so we have to be careful to only
-install those required.
-
-    cp feeds.conf.default feeds.conf
-    echo "src-git cero https://github.com/dtaht/ceropackages-3.10.git" >>feeds.conf
-
-Now we need to tell OpenWrt to get this feed and install the required
-packages:
-
-kmod-sched-cake & fq\_pie are the qdisc kernel modules, tc-adv contains
-a patched version of 'tc' that understands the supported options to
-those modules. Suitably up-to-date sqm-scripts packages are already in
-OpenWrt's package feed.
-
-    ./scripts/feeds update -a
-    ./scripts/feeds install -p cero kmod-sched-cake kmod-sched-fq_pie tc-adv
-
-At this point we're building OpenWrt proper so you'll have to take the
-options appropriate for your target hardware. Run 'make menuconfig' and
-select things as required. As an example, for the Archer C7 v2 as I have
-I would select/navigate the following menu/options as a bare minimum:
-
-    Target Profile -> TP-LINK Archer C5/C7
-
-    Luci -> Collections -> Luci (*)
-            Applications -> luci-app-sqm (*)
-    Kernel Modules -> Network Support -> kmod-sched-cake & kmod-sched-fq_pie (*)
-    Network -> Routing & Redirection -> tc-adv (*)
-
-Exit menuconfig, saving your configuration, then run 'make' to build
-OpenWrt. You'll find binary images to flash to your router in the
-bin/'platform' subdirectory.
-
-If you're using some form of ipv6 in ipv4 tunneling then consider adding
-"option tos 'inherit'" to the 'wan6' interface definition in\
-/etc/config/network. This will copy the DSCP classification from the
-encapsulated IPv6 packets to the encapsulating IPv4 packets and help
-cake classify the contained flows into the correct tin. Enjoy! - Kevin
-D-B
-
+CAKE is included in all recent versions of OpenWrt, and is quite simple to
+install. Simple install the 'luci-app-sqm' package, and it will pull in all
+needed dependencies (or just 'sqm-scripts' if you don't want the GUI). After
+this you can edit the sqm config in `/etc/config/sqm`, or find the "SQM QoS"
+menu point under "Network" in the Luci GUI.
 
 ### Attachments
 {{< attachment name="cake-battlemesh-v8.pdf" type="application/pdf" description="Slides shown at Battlemesh v8" filename="150817135028_cake-battlemesh-v8.pdf" >}}
