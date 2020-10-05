@@ -1,13 +1,13 @@
 ---
 title: CakeRecipes
 date: 2020-10-07T14:10:00
-lastmod: 2020-10-07T14:10:00
+lastmod: 2020-10-05T14:10:00
 type: wiki
 ---
 Cake Recipes
 ============
 [Cake](Cake.md) is the comprehensive queue management system the bufferbloat
-project has been working on since 2013 and has been included in the Linux kernel since v4.19. 
+project has been working on since 2013. It has been included in the Linux kernel since v4.19.
 
 These recipes are annotated combinations of settings that have 
 been used for particular kinds of networks, organized from 

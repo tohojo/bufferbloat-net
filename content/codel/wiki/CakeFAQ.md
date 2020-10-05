@@ -1,16 +1,16 @@
 ---
 title: CakeFAQ
 date: 2015-11-19T03:19:20
-lastmod: 2020-10-07T14:10:00
+lastmod: 2020-10-05T14:10:00
 type: wiki
 ---
 Cake FAQ
 ========
 
 [Cake](Cake.md) is the comprehensive queue management system the bufferbloat
-project has been working on since 2013 and which is included in the Linux kernel since v4.19. It is the
+project has been working on since 2013. It is the
 rollup of 3 years of deployment experience using the htb + fq\_codel
-based <link>sqm</link>-scripts.
+based <link>sqm</link>-scripts and is included in the Linux kernel since v4.19.
 
 What was the origin of the name?
 --------------------------------
