@@ -19,7 +19,11 @@ and implementation, please join the [cake mailing
 list](https://lists.bufferbloat.net/listinfo/cake) . For an alternative
 approach to inbound traffic management, see [Bobbie](Bobbie.md).
 
-Slides from a recent talk on Cake, at Battlemesh v8:
+[CAKE FAQ](CakeFAQ.md) - Frequently Asked Questions.
+
+[CAKE Recipes](CakeRecipes.md) - Example settings.
+
+Slides from a talk on Cake, at Battlemesh v8:
 attachment:cake-battlemesh-v8.pdf
 
 Features and enhancements of cake over htb + fq\_codel
@@ -480,5 +484,7 @@ encapsulated IPv6 packets to the encapsulating IPv4 packets and help
 cake classify the contained flows into the correct tin. Enjoy! - Kevin
 D-B
 
+
 ### Attachments
 {{< attachment name="cake-battlemesh-v8.pdf" type="application/pdf" description="Slides shown at Battlemesh v8" filename="150817135028_cake-battlemesh-v8.pdf" >}}
+

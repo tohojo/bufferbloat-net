@@ -1,14 +1,14 @@
 ---
 title: CakeFAQ
 date: 2015-11-19T03:19:20
-lastmod: 2015-11-19T03:19:21
+lastmod: 2020-10-07T14:10:00
 type: wiki
 ---
 Cake FAQ
 ========
 
 [Cake](Cake.md) is the comprehensive queue management system the bufferbloat
-project has been working on since 2013 and is nearing release. It is the
+project has been working on since 2013 and which is included in the Linux kernel since v4.19. It is the
 rollup of 3 years of deployment experience using the htb + fq\_codel
 based <link>sqm</link>-scripts.
 
@@ -36,8 +36,27 @@ Despite our affection for the name there is still time to change it to
 something else - googling for "cake shaper" does not result in anything
 useful. CQM, SQM would seem to have more useful google-fu, but...
 
+<!-- not yet answered
 When should I use cake?
 -----------------------
 
 cake vs fq\_codel
 -----------------
+
+-->
+
+enabling cake
+-------------
+### Changing to the cake qdisc: ###
+```
+tc qdisc replace dev eth0 root cake ethernet bandwidth 1gbit
+```  
+Any unmentioned parameter will be set to 
+a sane default.
+It assumes you have cake available in your kernel.
+
+### Changing settings in real time: ###
+```
+tc qdisc change dev eth0 handle 1: cake bandwidth 1Mbit
+```   
+This does _not_ cause packet loss.
