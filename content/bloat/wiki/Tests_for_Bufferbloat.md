@@ -1,7 +1,7 @@
 ---
 title: Tests for Bufferbloat
 date: 2013-12-20T14:59:13
-lastmod: 2020-02-24T19:35:00
+lastmod: 2020-12-30T19:23:00
 type: wiki
 aliases:
   - /cerowrt/wiki/Quick_Test_for_Bufferbloat
@@ -63,17 +63,17 @@ behaving while you tune your settings.
     the effects of Powerboost or other special cases implemented by
     ISPs, it can definitely point out situations where
     you're "bufferbloated".
-2.  **[betterspeedtest.sh](https://github.com/richb-hanover/CeroWrtScripts/blob/master/betterspeedtest.sh)** from [CeroWrtScripts bundle](/cerowrt/wiki/CeroWrtScripts.md)
+2.  **[betterspeedtest.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/betterspeedtest.sh)** from [OpenWrtScripts bundle](https://github.com/richb-hanover/OpenWrtScripts/blob/master/README.md)
     is a script you can run on Linux/OSX or on CeroWrt to get
     concrete, repeatable tests of your network. It performs the same
     kind of download/upload test that is available from speedtest.net.
     It is better, though, because it continually measures your ping
     latency, and thus lets you know the performance and latency of each
-    direction of data transfer. 
-3.  The **[netperfrunner.sh](https://github.com/richb-hanover/CeroWrtScripts/blob/master/netperfrunner.sh)** script (also part of the CeroWrtScripts bundle) 
+    direction of data transfer. (originally from [CeroWrtScripts bundle](/cerowrt/wiki/CeroWrtScripts.md))
+3.  The **[netperfrunner.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/netperfrunner.sh)** script (part of the OpenWrtScripts bundle) 
     simulates the [RRUL test](https://www.bufferbloat.net/projects/codel/wiki/RRUL_test_suite)
     by creating four simultaneous upload and download streams. This
-    measures latency during heavy load.
+    measures latency during heavy load. (also originally part of the CeroWrtScripts bundle)
 4.  [**Flent**](https://flent.org) is a tool designed to make
     consistent and repeatable network measurements. Its suite of tests, 
     including RRUL, log the data, and produce attractive
