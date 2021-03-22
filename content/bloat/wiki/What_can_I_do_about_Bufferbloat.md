@@ -66,11 +66,12 @@ Here are some resources:
     stable and include the luci-app-sqm package.
     There's a guide at the OpenWrt web site:
     [https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm.](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm) 
-    Or install suitable DD-WRT (www.dd-wrt.com) or
-    Gargoyle (www.gargoyle-router.com) firmware. We understand that
-    current builds of both products support fq_codel.
+    Or install suitable [DD-WRT](https://www.dd-wrt.com),
+    [Gargoyle](https://www.gargoyle-router.com) or
+    [Tomato](https://freshtomato.org) firmware, all of which support some kind
+    of queue management based on FQ-CoDel and/or Cake.
 5.  Finally, if none of these seem to be options, call your router
-    vendor's support line. 
+    vendor's support line.
     With the information from the DSLReports Speed Test in hand, you can
     mention that the ping times get really high when up/downloading
     files, and that it really hurts your network performance. Ask if
