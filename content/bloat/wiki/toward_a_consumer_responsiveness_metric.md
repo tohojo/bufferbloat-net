@@ -115,4 +115,6 @@ off-the-shelf equipment already incorporated well-known, best practice solutions
 [https://github.com/network-quality/draft-cpaasch-ippm-responsiveness/blob/master/draft-cpaasch-ippm-responsiveness.md](https://github.com/network-quality/draft-cpaasch-ippm-responsiveness/blob/master/draft-cpaasch-ippm-responsiveness.md)
 *Full disclosure: I am one of the editors of the "Responsiveness Under Working Conditions I-D"*
 
-[5] This note was first published at [https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/](https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/)
+[5] **draft-cpaasch-ippm-responsiveness-00** PDF of current internet draft. [https://randomneuronsfiring.com/internet-draft-responsiveness-under-working-conditions/](https://randomneuronsfiring.com/internet-draft-responsiveness-under-working-conditions/)
+
+[6] This note was first published at [https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/](https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/)
