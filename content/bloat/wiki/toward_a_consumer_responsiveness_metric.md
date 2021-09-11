@@ -7,6 +7,8 @@ aliases:
     - /bloat/wiki/Toward_A_Consumer_Responsiveness_Metric/
     - /cerowrt/wiki/Toward_A_Consumer_Responsiveness_Metric/
 ---
+# Toward a Consumer Responsiveness Metric
+
 *At a recent videoconference, I advocated strongly for a consumer-facing measurement of latency/responsiveness.
 I had not planned to speak, so I gave off-the-cuff comments.
 This is an organized explanation of my position.
