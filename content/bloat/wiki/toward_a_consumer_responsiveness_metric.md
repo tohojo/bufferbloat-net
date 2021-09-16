@@ -1,7 +1,7 @@
 ---
 title: Toward a Consumer Responsiveness Metric
 date: 2021-09-10T09:10:12
-lastmod: 2021-09-10T09:10:12
+lastmod: 2021-09-16T09:10:12
 type: wiki
 aliases:
     - /bloat/wiki/Toward_A_Consumer_Responsiveness_Metric/
@@ -114,9 +114,7 @@ off-the-shelf equipment already incorporated well-known, best practice solutions
 [3] **Best Bufferbloat Analogy - Ever** [https://randomneuronsfiring.com/best-bufferbloat-analogy-ever/](https://randomneuronsfiring.com/best-bufferbloat-analogy-ever/)
 
 [4] **Responsiveness under Working Conditions** - Internet-Draft at:
-[https://github.com/network-quality/draft-cpaasch-ippm-responsiveness/blob/master/draft-cpaasch-ippm-responsiveness.md](https://github.com/network-quality/draft-cpaasch-ippm-responsiveness/blob/master/draft-cpaasch-ippm-responsiveness.md)
+[https://datatracker.ietf.org/doc/draft-cpaasch-ippm-responsiveness/](https://datatracker.ietf.org/doc/draft-cpaasch-ippm-responsiveness/)
 *Full disclosure: I am one of the editors of the "Responsiveness Under Working Conditions I-D"*
 
-[5] **draft-cpaasch-ippm-responsiveness-00** PDF of current internet draft. [https://randomneuronsfiring.com/internet-draft-responsiveness-under-working-conditions/](https://randomneuronsfiring.com/internet-draft-responsiveness-under-working-conditions/)
-
-[6] This note was first published at [https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/](https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/)
+[5] This note was first published at [https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/](https://randomneuronsfiring.com/toward-a-consumer-responsiveness-metric/)
