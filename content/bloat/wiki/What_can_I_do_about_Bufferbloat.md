@@ -73,6 +73,7 @@ Their third generation devices
     Check their spec's or ask them about latency.
     * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.
     * [ipfire.org](https://wiki.ipfire.org/configuration/services/qos) has fq_codel settings.
+    * pfsense(https://www.pfsense.org/) and OPNsense(https://opnsense.org/) have - courtesy of FreeBSD and ipf/dummynet(https://www.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8&apropos=0&manpath=FreeBSD+13.0-RELEASE+and+Ports) - fq_codel and fq_PIE settings.
     * If you're a [Comcast/Xfinity](https://comcast.net) customer, see if you can get the XB6 / CGM4140COM cable modem that has PIE enabled.
 Read p13 of [Improving Latency with Active Queue Management (AQM) During COVID-19.](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf) for details.
 
