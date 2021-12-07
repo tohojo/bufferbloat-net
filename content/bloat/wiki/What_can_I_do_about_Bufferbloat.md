@@ -22,10 +22,9 @@ to measure the latency under load (this is a good measure of responsiveness).
 If the test shows a letter grade worse than a B, you probably have bufferbloat.
 Most likely, the device at your bottleneck link
 (usually your router) is letting bulk traffic (uploads/downloads) interfere with
-(and delay) your time-sensitive traffic (gaming, Skype, Facetime, etc.)
-For more details, read the [Tests for Bufferbloat](./Tests_for_Bufferbloat.md) page.
-
-Keep the results of the test handy as a baseline for your experiments. 
+(and delay) your time-sensitive traffic (gaming, video calls, Facetime, etc.)
+For more details about testing,
+read the [Tests for Bufferbloat](./Tests_for_Bufferbloat.md) page.
 
 **2. Possible Solutions:** There are lots of ways to throw time or money at this problem.
 Most won't work.
@@ -38,27 +37,29 @@ since most commercial, off-the-shelf router manufacturers are clueless about Buf
 [but it's a hassle, and only helps a bit.](More_about_Bufferbloat#what-s-wrong-with-simply-configuring-qos)
 * Instead...
 
-**3. Eliminate Bufferbloat in *Your* Network:**
-You need to take charge: no one else (not your ISP, not your router manufacturer) will fix it.
-Once you have taken control, the network will stay fixed for all time, 
-and you won't be subject to changing practices at your ISP or other vendors.
+**3. Take Control of Your Network:**
+You need to take charge: no one else (certainly not your ISP,
+nor your router manufacturer) has any incentive to fix it.
+Once you do, the network will stay fixed for all time, 
+and you can adapt to changing practices at your ISP or other vendors.
 
-To do this, you need to find a router whose manufacturer understands the principles of
-bufferbloat, and has updated the firmware to use one of the
+You need to find a router vendor that "understands"
+latency/responsiveness/bufferbloat,
+and has updated the firmware to use one of the
 Smart Queue Management algorithms such as
 cake, fq_codel, PIE, or others. 
-Here are some options:
+Here are some options, from easy to harder:
 
-1. **Enable SQM settings** if your router already has them.
-Measure latency under load 
-(say, with [DSLReports](http://dslreports.com/speedtest) or
+- **Enable SQM settings** if your router already has them.
+First, measure the link speed _without_ SQM 
+(say, using [DSLReports](http://dslreports.com/speedtest) or
 [Waveform](https://www.waveform.com/tools/bufferbloat))
-without SQM, then turn on SQM and measure again. 
-Keep adjusting the up and down speed settings and measuring
-until the latency gets as low as possible while retaining good speeds.
+then turn on SQM and measure again while observing the latency measurements. 
+Start with the no-SQM up and down speed settings keep adjusting and measuring
+until the latency remains low while achieving good speeds.
 See, for example, this description of a [tuning session.](Getting_SQM_Running_Right)
 
-2.  **Install an off-the-shelf router with SQM** Several commercial router vendors have a clue. 
+- **Install an off-the-shelf router with SQM** Several commercial router vendors have a clue. 
     Here is a list of those we have found:
     * [IQrouter](http://evenroute.com) provides a good setup wizard for
     configuring SQM, and automatically tunes its settings. 
@@ -66,17 +67,20 @@ See, for example, this description of a [tuning session.](Getting_SQM_Running_Ri
     * [Ubiquiti gear](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings. 
     People say its EdgeRouter will handle over 400 mbps.
     * The [eero mesh routers](https://support.eero.com/hc/en-us/articles/360000709886-What-is-eero-Labs-)
-list SQM as a feature. 
+"optimize for conferencing and gaming" (their term for SQM.)
 Their third generation devices
-[support SQM at speeds up to a gigabit/second as of November 2021.](https://www.reddit.com/r/eero/comments/qxbkcl/66_is_out/hl9nw1m/)
+[support SQM at speeds up to a gigabit/second.](https://www.reddit.com/r/eero/comments/qxbkcl/66_is_out/hl9nw1m/)
     * Many other mesh router vendors claim to solve bufferbloat.
     Check their spec's or ask them about latency.
     * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.
     * [ipfire.org](https://wiki.ipfire.org/configuration/services/qos) has fq_codel settings.
-    * If you're a [Comcast/Xfinity](https://comcast.net) customer, see if you can get the XB6 / CGM4140COM cable modem that has PIE enabled.
-Read p13 of [Improving Latency with Active Queue Management (AQM) During COVID-19.](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf) for details.
+    * All [Comcast/Xfinity](https://comcast.net)
+DOCSIS 3.1 RDK-B-based gateway models have now been updated
+with DOCSIS-PIE AQM and all are achieving dramatically
+improved working latency.
+(Read p13 of [_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf) for details.)
 
-3.  **Upgrade your current router.**
+-  **Upgrade your current router.**
 Install [OpenWrt firmware](https://OpenWrt.org) (version 21.02, 19.07, or 18.06).
 The [Smart Queue Management guide](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm)
 tells how to configure the *luci-app-sqm* package.
@@ -84,7 +88,8 @@ Or install suitable [DD-WRT](https://www.dd-wrt.com),
 [Gargoyle](https://www.gargoyle-router.com) or
 [Tomato](https://freshtomato.org) firmware, all of which support some kind
 of queue management based on FQ-CoDel and/or Cake.
-4.  **Call your router vendor's support line**
+
+-  **Call your router vendor's support line**
 if none of the above are possible.
 You have the information from the latency tests.
 Mention that the ping times get really high when someone is up/downloading

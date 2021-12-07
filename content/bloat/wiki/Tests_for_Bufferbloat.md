@@ -8,50 +8,55 @@ aliases:
 ---
 # Tests for Bufferbloat
 
-Does the quality of your web browsing, voice call, or gaming degrade
-when someone's downloading or uploading files? It may be that your
-router has "bufferbloat" - unnecessary latency/lag created by your
+Does the quality of your web conference, voice call, or gaming
+get bad from time to time?
+Do you ever tell others "Don't use the internet!"
+because it might affect what you're doing?
+If so, your router may have "bufferbloat" -
+unnecessary latency/lag created by your
 router buffering too much data.
 
-If the tests below show high latency (say, above 50 msec), 
+The tests below check for the presence of bufferbloat.
+If any show high latency (say, above 50 msec,
+or a grade lower than "B"),
 read our recommendations at
-[What can I do about Bufferbloat](What_can_I_do_about_Bufferbloat.md)
+[What can I do about Bufferbloat?](What_can_I_do_about_Bufferbloat.md)
 
 ## Easy: Web-based Tests
 
-The web-based tests [DSL Reports Speed Test](http://DSLReports.com/speedtest) and
-[Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat) 
-make accurate measurements of the download and upload speeds 
-along with the latency *during* the test. 
+The web-based tests
+[DSL Reports Speed Test](http://DSLReports.com/speedtest) and
+[Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat) and
+[Fast.com](https:/fast.com) (click the "Show more info" button)
+make accurate measurements of the latency *during*
+the download and upload parts of the test.
+This demonstrates the responsiveness of your network. 
 Share the "letter grade" with your friends. Watch the
-    [Bloat](https://youtu.be/EMkhKrXbjxQ) / [No
-    Bloat](https://youtu.be/Fq9nQf1yEm4) videos at
-    [Youtube](https://youtu.be/EMkhKrXbjxQ) to see how the test works.
+[Bloat](https://youtu.be/EMkhKrXbjxQ) /
+[No Bloat](https://youtu.be/Fq9nQf1yEm4) videos at
+[Youtube](https://youtu.be/EMkhKrXbjxQ) to see the test in action.
 
-## A Quick Test for Bufferbloat
+## Quick: Test for Bufferbloat
 
-Other speed test sites only measure latency when the link is idle - and
-that only tells part of the story. You **can** get numeric latency measurements with
-those other speed test sites if you run a ping test simultaneously. To do this:
+If you want to observe latency under load ("bufferbloat") for yourself,
+try this:
 
 1.  Start a ping to google.com. You'll see a series of lines, one per
     ping, typically with times in the 20-100 msec range.
-2.  Run a speed test simultaneously. To do this, start one of the speed
-    test services below:
-    -   http://fast.com 
-    -   http://speedtest.net
-    -   http://testmy.net
-    -   http://speedof.me
+2.  Start a speed test from one of the speed test services below
+while the pings continue:
+    -   [http://fast.com](http://fast.com) 
+    -   [http://speedtest.net](http://speedtest.net)
 3.  Watch the ping times while the speed test is running. If the times jump
     up when uploading or downloading, then your router is probably bloated.
 
-## The Best Tests for Bufferbloat
+## Best: Bufferbloat Tests
 
 The suite of tests we developed to diagnose bufferbloat and other
 connectivity problems are good to 40GigE, but require the
-[Flent RRUL test suite](https://flent.org) 
-Using the Flent tools, it is possible to get a good feel for how the connection is
-behaving while you tune your settings. 
+[Flent RRUL test suite.](https://flent.org) 
+Using the Flent tools, it is possible to get a good feel
+for how the connection behaves while you tune your settings. 
 
 ## Other network performance and latency tools
 
@@ -59,35 +64,36 @@ behaving while you tune your settings.
 measures responsiveness directly by
 fully loading the network and measuring the number of responses
 received in a fixed time.
-"Responsiveness" is the inverse of latency, and is more intuitive
-since a large value indicates good responsiveness.
-(As opposed to large _latency_ values that indicate _poor_ responsiveness.)
-2.  The **[Quick Test](#a-quick-test-for-bufferbloat)** (described above) does a rudimentary job of
-    measuring performance. Although it may not run long enough to avoid
-    the effects of Powerboost or other special cases implemented by
-    ISPs, it can definitely point out situations where
-    you're "bufferbloated".
-3.  **[betterspeedtest.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/betterspeedtest.sh)** from [OpenWrtScripts bundle](https://github.com/richb-hanover/OpenWrtScripts/blob/master/README.md)
+"Responsiveness" (measured in round-trips per minute - "RPM")
+is a value ranging from around one hundred (poor) to a few thousand (good).
+2.  [**Flent**](https://flent.org) is a tool designed to make
+consistent and repeatable network measurements.
+Its suite of tests 
+log the data, and produce attractive graphs of the results.
+Flent's [RRUL test](https://www.bufferbloat.net/projects/codel/wiki/RRUL_test_suite)
+runs multiple netperf sessions simultaneously to heavily load 
+the network in both directions.
+3. [**netperf**](https://hewlettpackard.github.io/netperf/)
+creates traffic through a network and measures its performance.
+Various tools, such as _betterspeedtest.sh_, _netperfrunner.sh_, and Flent,
+rely on netperf, which can be installed in the the OpenWrt firmware.
+4.  **[betterspeedtest.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/betterspeedtest.sh)**
+from [OpenWrtScripts bundle](https://github.com/richb-hanover/OpenWrtScripts/blob/master/README.md)
     is a script you can run on Linux/OSX or on OpenWrt to get
     concrete, repeatable tests of your network. It performs the same
     kind of download/upload test that is available from speedtest.net.
     It is better, though, because it continually measures your ping
     latency, and thus lets you know the performance and latency of each
     direction of data transfer. 
-4.  The **[netperfrunner.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/netperfrunner.sh)** script (part of the OpenWrtScripts bundle) 
-    simulates the [RRUL test](https://www.bufferbloat.net/projects/codel/wiki/RRUL_test_suite)
-    by creating four simultaneous upload and download streams. This
-    measures latency during heavy load. (also originally part of the CeroWrtScripts bundle)
-5.  [**Flent**](https://flent.org) is a tool designed to make
-    consistent and repeatable network measurements. Its suite of tests, 
-    including RRUL, log the data, and produce attractive
-    graphs of the results. (RRUL specifies that multiple netperf
-    sessions run simultaneously to heavily load the network in
-    both directions.)
-6. [**netperf**](https://hewlettpackard.github.io/netperf/)
-creates traffic through a network and measures its performance.
-netperf underlies _betterspeedtest.sh_, _netperfrunner.sh_, and Flent,
-and can be installed in the the OpenWrt firmware.
+5.  The **[netperfrunner.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/netperfrunner.sh)**
+script (part of the OpenWrtScripts bundle) simulates the
+RRUL Test by creating four simultaneous upload and download streams.
+This measures latency during heavy load in both directions.
+6.  The **[Quick Test](#a-quick-test-for-bufferbloat)** (described above) does a rudimentary job of
+    measuring performance. Although it may not run long enough to avoid
+    the effects of Powerboost or other special cases implemented by
+    ISPs, it can definitely point out situations where
+    you're "bufferbloated".
 7. [**iperf2**](https://sourceforge.net/projects/iperf2/) and
 [**iperf3**](https://github.com/esnet/iperf#iperf3--a-tcp-udp-and-sctp-network-bandwidth-measurement-tool)
 measure network performance.
