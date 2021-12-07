@@ -70,15 +70,19 @@ See, for example, this description of a [tuning session.](Getting_SQM_Running_Ri
 "optimize for conferencing and gaming" (their term for SQM.)
 Their third generation devices
 [support SQM at speeds up to a gigabit/second.](https://www.reddit.com/r/eero/comments/qxbkcl/66_is_out/hl9nw1m/)
-    * Many other mesh router vendors claim to solve bufferbloat.
-    Check their spec's or ask them about latency.
-    * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.
-    * [ipfire.org](https://wiki.ipfire.org/configuration/services/qos) has fq_codel settings.
     * All [Comcast/Xfinity](https://comcast.net)
 DOCSIS 3.1 RDK-B-based gateway models have now been updated
 with DOCSIS-PIE AQM and all are achieving dramatically
 improved working latency.
-(Read p13 of [_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf) for details.)
+(See p13 of [_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf) for details.)
+    * Many other mesh router vendors claim to solve bufferbloat.
+    Check their spec's or ask them about latency.
+    * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.
+    * [ipfire.org](https://wiki.ipfire.org/configuration/services/qos) has fq_codel settings.
+    * [pfsense](https://www.pfsense.org/) and [OPNsense](https://opnsense.org/)
+have fq\_codel and fq\_PIE settings, courtesy of FreeBSD and
+[ipfw/dummynet](https://www.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8&apropos=0&manpath=FreeBSD+13.0-RELEASE+and+Ports)
+    
 
 -  **Upgrade your current router.**
 Install [OpenWrt firmware](https://OpenWrt.org) (version 21.02, 19.07, or 18.06).
