@@ -38,8 +38,8 @@ since most commercial, off-the-shelf router manufacturers are clueless about Buf
 * Instead...
 
 **3. Take Control of Your Network:**
-You need to take charge: no one else (certainly not your ISP,
-nor your router manufacturer) has any incentive to fix it.
+No one else (not your router manufacturer,
+nor most ISPs) have as strong an incentive to fix it.
 Once you do, the network will stay fixed for all time, 
 and you can adapt to changing practices at your ISP or other vendors.
 
@@ -55,8 +55,6 @@ First, measure the link speed _without_ SQM
 (say, using [DSLReports](http://dslreports.com/speedtest) or
 [Waveform](https://www.waveform.com/tools/bufferbloat))
 then turn on SQM and measure again while observing the latency measurements. 
-Start with the no-SQM up and down speed settings keep adjusting and measuring
-until the latency remains low while achieving good speeds.
 See, for example, this description of a [tuning session.](Getting_SQM_Running_Right)
 
 - **Install an off-the-shelf router with SQM** Several commercial router vendors have a clue. 
@@ -74,7 +72,9 @@ Their third generation devices
 DOCSIS 3.1 RDK-B-based gateway models have now been updated
 with DOCSIS-PIE AQM and all are achieving dramatically
 improved working latency.
-(See p13 of [_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf) for details.)
+(See Footnote 59 of
+[_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf)
+for model numbers.)
     * Many other mesh router vendors claim to solve bufferbloat.
     Check their spec's or ask them about latency.
     * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.

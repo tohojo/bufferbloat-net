@@ -70,7 +70,7 @@ is a value ranging from around one hundred (poor) to a few thousand (good).
 consistent and repeatable network measurements.
 Its suite of tests 
 log the data, and produce attractive graphs of the results.
-Flent's [RRUL test](https://www.bufferbloat.net/projects/codel/wiki/RRUL_test_suite)
+Flent's [RRUL test](https://www.bufferbloat.net/projects/bloat/wiki/RRUL_Chart_Explanation/)
 runs multiple netperf sessions simultaneously to heavily load 
 the network in both directions.
 3. [**netperf**](https://hewlettpackard.github.io/netperf/)
