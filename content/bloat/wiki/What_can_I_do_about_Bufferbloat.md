@@ -16,8 +16,7 @@ It's wasting your time.
 Here's what you can do:
 
 **1. Measure the Bufferbloat:**
-Use the [DSLReports Speed Test](http://dslreports.com/speedtest) or
-[Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
+Use the [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
 to measure the latency under load (this is a good measure of responsiveness).
 If the test shows a letter grade worse than a B, you probably have bufferbloat.
 Most likely, the device at your bottleneck link
