@@ -50,7 +50,7 @@ ready for prime time yet.
 Is your internet connection bloated? 
 ------------------------------------
 You can find out right now using
-one of the [Tests for Bufferbloat](/bloat/wiki/Tests_for_Bufferbloat.md) - or just use [DSLReports Speed Test.](http://dslreports.com/speedtest)
+one of the [Tests for Bufferbloat](/bloat/wiki/Tests_for_Bufferbloat.md) - or just use [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat).
 
 If you find bufferbloat is present, read [What Can I do about Bufferbloat.](/bloat/wiki/What_can_I_do_about_Bufferbloat.md)
 

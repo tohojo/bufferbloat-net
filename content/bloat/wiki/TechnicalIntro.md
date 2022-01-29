@@ -90,8 +90,9 @@ in many different parts of network systems.
 You see manifestations of bufferbloat today in your operating systems,
 your home network, your broadband connections, possibly your ISP’s and
 corporate networks, at busy conference wireless networks, and on 3G
-networks. You can use the [DSLReports Speed
-Test](http://dslreports.com/speedtest) to measure bufferbloat directly.
+networks. You can use the
+[Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
+to measure bufferbloat directly.
 
 Bufferbloat is a mistake we’ve all made together. What's the solution?
 We have had extremely good results with the
