@@ -50,10 +50,9 @@ cake, fq_codel, PIE, or others.
 Here are some options, from easy to harder:
 
 - **Enable SQM settings** if your router already has them.
-First, measure the link speed _without_ SQM 
-(say, using [DSLReports](http://dslreports.com/speedtest) or
-[Waveform](https://www.waveform.com/tools/bufferbloat))
-then turn on SQM and measure again while observing the latency measurements. 
+First, measure the link speed _without_ SQM
+(say, using [Waveform](https://www.waveform.com/tools/bufferbloat))
+then turn on SQM and measure again while observing the latency measurements.
 Start with the no-SQM up and down speed settings keep adjusting and measuring
 until the latency remains low while achieving good speeds.
 See, for example, this description of a [tuning session.](Getting_SQM_Running_Right)

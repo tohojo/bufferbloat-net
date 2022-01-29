@@ -28,9 +28,9 @@ tc qdisc replace dev eth0 root cake docsis ack-filter bandwidth 17mbit
 * _root_ means this is the "top" qdisc.
 * _docsis_ says tune for a cable-tv uplink's overheads: 
 cable TV follows the docsis standards.
-* _ack-filter_ skips sending redundant acknowledgements. 
-* _bandwidth_ is the upload bandwidth of your link, often 
-taken from speed tests like http://www.dslreports.com/speedtest.
+* _ack-filter_ skips sending redundant acknowledgements.
+* _bandwidth_ is the upload bandwidth of your link, often
+taken from speed tests like [Waveform](https://www.waveform.com/tools/bufferbloat).
 
 
 Inbound, General case

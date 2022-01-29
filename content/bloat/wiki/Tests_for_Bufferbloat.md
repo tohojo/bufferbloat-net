@@ -25,7 +25,6 @@ read our recommendations at
 ## Easy: Web-based Tests
 
 The web-based tests
-[DSL Reports Speed Test](http://DSLReports.com/speedtest) and
 [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat) and
 [Fast.com](https:/fast.com) (click the "Show more info" button)
 make accurate measurements of the latency *during*
