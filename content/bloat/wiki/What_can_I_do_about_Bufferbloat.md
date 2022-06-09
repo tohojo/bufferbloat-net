@@ -16,8 +16,7 @@ It's wasting your time.
 Here's what you can do:
 
 **1. Measure the Bufferbloat:**
-Use the [DSLReports Speed Test](http://dslreports.com/speedtest) or
-[Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
+Use the [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
 to measure the latency under load (this is a good measure of responsiveness).
 If the test shows a letter grade worse than a B, you probably have bufferbloat.
 Most likely, the device at your bottleneck link
@@ -51,10 +50,12 @@ cake, fq_codel, PIE, or others.
 Here are some options, from easy to harder:
 
 - **Enable SQM settings** if your router already has them.
-First, measure the link speed _without_ SQM 
-(say, using [DSLReports](http://dslreports.com/speedtest) or
-[Waveform](https://www.waveform.com/tools/bufferbloat))
-then turn on SQM and measure again while observing the latency measurements. 
+
+First, measure the link speed _without_ SQM
+(say, using [Waveform](https://www.waveform.com/tools/bufferbloat))
+then turn on SQM and measure again while observing the latency measurements.
+Start with the no-SQM up and down speed settings keep adjusting and measuring
+until the latency remains low while achieving good speeds.
 See, for example, this description of a [tuning session.](Getting_SQM_Running_Right)
 
 - **Install an off-the-shelf router with SQM** Several commercial router vendors have a clue. 
