@@ -22,8 +22,8 @@ allow congestion avoidance to kick in for that flow. (The various queue
 management algorithms use different metrics to make these transmit/drop
 decisions, avoid starvation, etc.)
 
-For a simple description of fq_codel, read [Bufferbloat and the Ski
-Shop](http://richb-hanover.com/bufferbloat-and-the-ski-shop/)
+For a simple description of bufferbloat, read
+[Best Bufferbloat Analogy - Ever.](https://randomneuronsfiring.com/best-bufferbloat-analogy-ever/)
 
 For lots more details about the CoDel (and fq_codel) algorithm, see the
 Codel wiki at: http://www.bufferbloat.net/projects/codel/wiki/Wiki
