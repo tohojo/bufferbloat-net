@@ -1,7 +1,7 @@
 ---
 title: More about Bufferbloat
 date: 2017-02-10T09:16:12
-lastmod: 2017-02-10T11:26:12
+lastmod: 2022-06-09T11:26:12
 type: wiki
 ---
 # More about Bufferbloat
