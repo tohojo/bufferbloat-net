@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2022-06-09T08:29:01
+lastmod: 2022-06-11T08:29:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -31,7 +31,7 @@ Most won't work.
 * Your ISP would love to sell you a faster connection, but link speed isn't the problem -
 it's your router buffering more data than necessary.
 * Buying an expensive router (even one for "gaming") won't necessarily help,
-since most commercial, off-the-shelf router manufacturers are clueless about Bufferbloat.
+since many commercial, off-the-shelf router manufacturers are clueless about Bufferbloat.
 * Twiddling the router's QoS might make a difference,
 [but it's a hassle, and only helps a bit.](More_about_Bufferbloat#what-s-wrong-with-simply-configuring-qos)
 * Instead...

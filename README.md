@@ -121,3 +121,6 @@ alias hugo-server='docker run --rm -it \
     --port=8080 \
     -w'
 ```
+
+Follow the link to localhost:8080/projects, and you'll see the blog as it appears.
+As you edit the underlying pages, the web display will update live.
