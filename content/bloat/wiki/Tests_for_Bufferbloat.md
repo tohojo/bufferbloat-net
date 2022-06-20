@@ -1,7 +1,7 @@
 ---
 title: Tests for Bufferbloat
 date: 2013-12-20T14:59:13
-lastmod: 2021-12-07T08:03:00
+lastmod: 2022-06-11T08:03:00
 type: wiki
 aliases:
   - /cerowrt/wiki/Quick_Test_for_Bufferbloat
@@ -35,6 +35,9 @@ Share the "letter grade" with your friends. Watch the
 [No Bloat](https://youtu.be/Fq9nQf1yEm4) videos at
 [Youtube](https://youtu.be/EMkhKrXbjxQ) to see the test in action.
 
+**New:** The Ookla speed test app for iOS and Android now shows loaded latency
+in the _Detailed Results_ section. (May 2022)
+
 ## Quick: Test for Bufferbloat
 
 If you want to observe latency under load ("bufferbloat") for yourself,
@@ -51,15 +54,16 @@ while the pings continue:
 
 ## Best: Bufferbloat Tests
 
-The suite of tests we developed to diagnose bufferbloat and other
-connectivity problems are good to 40GigE, but require the
-[Flent RRUL test suite.](https://flent.org) 
-Using the Flent tools, it is possible to get a good feel
-for how the connection behaves while you tune your settings. 
+[Flent](https://flent.org) is a suite of tests we developed to diagnose bufferbloat and other
+connectivity problems.
+Because Flent has been tested to 40GigE, you can get a good feel
+for how the connection behaves while you tune your settings.
+In particular, Flent's [RRUL test](https://www.bufferbloat.net/projects/bloat/wiki/RRUL_Chart_Explanation/)
+shows download and upload speeds and latency in one set of charts.
 
 ## Other network performance and latency tools
 
-1. Apple's [**RPM Tool**](https://www.ietf.org/id/draft-cpaasch-ippm-responsiveness-01.html)
+1. Apple's [**RPM Test**](https://github.com/network-quality/draft-ietf-ippm-responsiveness/blob/master/draft-ietf-ippm-responsiveness.pdf)
 measures responsiveness directly by
 fully loading the network and measuring the number of responses
 received in a fixed time.
@@ -69,7 +73,7 @@ is a value ranging from around one hundred (poor) to a few thousand (good).
 consistent and repeatable network measurements.
 Its suite of tests 
 log the data, and produce attractive graphs of the results.
-Flent's [RRUL test](https://www.bufferbloat.net/projects/codel/wiki/RRUL_test_suite)
+Flent's [RRUL test](https://www.bufferbloat.net/projects/bloat/wiki/RRUL_Chart_Explanation/)
 runs multiple netperf sessions simultaneously to heavily load 
 the network in both directions.
 3. [**netperf**](https://hewlettpackard.github.io/netperf/)

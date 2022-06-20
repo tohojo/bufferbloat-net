@@ -1,12 +1,18 @@
 ---
 title: More about Bufferbloat
 date: 2017-02-10T09:16:12
-lastmod: 2017-02-10T11:26:12
+lastmod: 2022-06-11T11:26:12
 type: wiki
 ---
 # More about Bufferbloat
 
-Read more about various details of Smart Queue Management here:
+## What _is_ Bufferbloat?
+Bufferbloat is the undesirable latency that comes from a router or other network equipment buffering too much data.
+For a simple description of bufferbloat, read
+[Best Bufferbloat Analogy - Ever.](https://randomneuronsfiring.com/best-bufferbloat-analogy-ever/)
+
+For lots more details about the CoDel (and fq_codel) algorithm, see the
+Codel wiki at: http://www.bufferbloat.net/projects/codel/wiki/Wiki
 
 ## Why does SQM work so well?
 
@@ -21,12 +27,6 @@ mark traffic with ECN, or drop a certain percentage of those packets to
 allow congestion avoidance to kick in for that flow. (The various queue
 management algorithms use different metrics to make these transmit/drop
 decisions, avoid starvation, etc.)
-
-For a simple description of fq_codel, read [Bufferbloat and the Ski
-Shop](http://richb-hanover.com/bufferbloat-and-the-ski-shop/)
-
-For lots more details about the CoDel (and fq_codel) algorithm, see the
-Codel wiki at: http://www.bufferbloat.net/projects/codel/wiki/Wiki
 
 ## What's wrong with simply configuring QoS?
 

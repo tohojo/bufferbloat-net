@@ -1,7 +1,7 @@
 ---
 title: Getting SQM Running Right
 date: 2016-07-04T12:00:00
-lastmod: 2020-01-23T18:10:12
+lastmod: 2021-12-07T08:10:12
 type: wiki
 ---
 
@@ -17,10 +17,20 @@ trial and error (tuning and doing repeated measurements until things improve).
 
 ## A walk-through of a tuning session
 
-This is a report of Dave Täht's experience tuning Cerowrt's Smart Queue Management (SQM) system for a cable modem at Jim Reisert's home. The SQM system (which works on any Linux-derived system) uses HTB + fq_codel underneath to give low latency to competing streams, and the codel AQM system to keep overall queue lengths short. 
+This is a report of Dave Täht's experience tuning the 
+Smart Queue Management (SQM) system on CeroWrt
+(predecessor to OpenWrt)
+for a cable modem at Jim Reisert's home.
+The SQM system (which works on any Linux-derived system) uses
+HTB + fq_codel underneath to give low latency to competing streams,
+and the codel AQM system to keep overall queue lengths short. 
 
-*Note: The following example describes a tuning session for CeroWrt, but it is identical
-to configuring SQM in modern OpenWrt firmware.*
+*Note: You can use the 
+[DSLReports](http://dslreports.com/speedtest) or
+[Waveform](https://www.waveform.com/tools/bufferbloat)
+speed tests as a good alternative to the
+[RRUL test](https://www.bufferbloat.net/projects/codel/wiki/RRUL_test_suite).*
+
 
 It took 4 tries (and 5 minutes) to get a setting that worked well! When we were done, we watched a videoconference and ran screen sharing session over skype while saturating the network with a RRUL test for 5 minutes.
 
@@ -49,7 +59,9 @@ but ramping to over 1000 msec (over one second) during the test.
 
 *Dave picks up the narrative...*
 
-"After installing the latest CeroWrt and leaving SQM *turned off*, I ran the RRUL test remotely. 
+"After installing the latest OpenWrt and the `luci-app-sqm` package,
+we left SQM *turned off*.
+I ran the RRUL test (or DSL Reports or Waveform) remotely. 
 This was how his cable connection behaved without any latency control. 
 *(See charts above.)* 
 We see the usual 1-2 seconds worth of induced latency common to (and bedeviling!) current cable deployments. 
@@ -59,7 +71,9 @@ _(Note: the up and download figures for all these charts are reversed since I wa
 
 "The early spike here of extra bandwidth is due to speedboost kicking in for 10 seconds and providing some extra bandwidth, but even as it begins to kick in latencies are already skyrocketing.
 
-"So taking a guess at the bandwidth from the averages (the black line * 4) on the up/down graphs, we tried setting setting CeroWrt's Smart Queue Management system (SQM) to 38mbits down and 8 up. 
+"So taking a guess at the bandwidth from the averages (the black line * 4)
+on the up/down graphs, we tried setting setting
+the Smart Queue Management system (SQM) to 38mbits down and 8 up. 
 (Well, actually I goofed when I looked at the graphs: 7*4 = 28, not 38). Note also that the black lines do not correctly add in the bandwidth used up by the tcp acks in the opposite direction. On some systems you need to factor in ~1/40th the bandwidth used in the opposite direction for a more correct estimate.
 
 ![](/attachments/sqm-setup-ipv6.svg)
@@ -78,9 +92,16 @@ _(Note: the up and download figures for all these charts are reversed since I wa
 
 **Final Notes:**
 
-These tests were on CeroWrt against a Comcast connection with IPv6 enabled, taken with a Motorola SB6141 cablemodem running firmware SB_KOMODO-1.0.6.10-SCM00-NOSH. OpenWrt's Qos-scripts use similar techniques to CeroWrt's SQM system, but are not IPv6 compatible, neither are most versions of wondershaper. It is unknown to what extent other smart queue management systems (gentoo, ipfire, streamboost, gargoyle) handle IPv6 at present. (and CeroWrt gets the same good results with any combination of IPv4 and IPv6)
+These tests were made against a Comcast connection with IPv6 enabled,
+taken with a Motorola SB6141 cablemodem running firmware
+SB_KOMODO-1.0.6.10-SCM00-NOSH.
+OpenWrt's Qos-scripts use similar techniques to OpenWrt's SQM system,
+but are not IPv6 compatible, neither are most versions of wondershaper.
+It is unknown to what extent other smart queue management systems
+(gentoo, ipfire, streamboost, gargoyle) handle IPv6 at present.
+(And OpenWrt gets the same good results with any combination of IPv4 and IPv6.)
 
-_Update 2014-5-17:_
+_Update: May 2014_
 
 I reran the plots to clean up the plotting bug that we'd had in an earlier version. Since this test series was first run the netperf-wrapper tool (now called ["Flent"](http://flent.org)) has gained the ability to compare multiple test runs. Previously, we were well aware that disabling powerboost (as we currently do) gives consistent latency, but leaves some bandwidth on the floor. How much was kind of an unknown.
 
@@ -88,3 +109,17 @@ Now we know. The speedboost algorithm is fairly well documented, and we do think
 (But we have no funding, and we're focused on fixing wireless next.)
 
 Losing that initial bit of bandwidth, in light of always getting good latency, seems like the bigger win, for the time being. 
+
+_Update: December 2021_
+
+- The use of the "CeroWrt" name was updated to talk about
+the modern "OpenWrt" firmware that works the same way.
+
+- Also, all [Comcast/Xfinity](https://comcast.net)
+DOCSIS 3.1 RDK-B-based gateway models have now been updated
+with DOCSIS-PIE AQM and all are achieving dramatically
+improved working latency.
+(See Footnote 59 of
+[_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf)
+for model numbers.)
+

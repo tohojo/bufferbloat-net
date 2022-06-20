@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2021-12-07T08:29:01
+lastmod: 2022-06-11T08:29:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -31,14 +31,14 @@ Most won't work.
 * Your ISP would love to sell you a faster connection, but link speed isn't the problem -
 it's your router buffering more data than necessary.
 * Buying an expensive router (even one for "gaming") won't necessarily help,
-since most commercial, off-the-shelf router manufacturers are clueless about Bufferbloat.
+since many commercial, off-the-shelf router manufacturers are clueless about Bufferbloat.
 * Twiddling the router's QoS might make a difference,
 [but it's a hassle, and only helps a bit.](More_about_Bufferbloat#what-s-wrong-with-simply-configuring-qos)
 * Instead...
 
 **3. Take Control of Your Network:**
-You need to take charge: no one else (certainly not your ISP,
-nor your router manufacturer) has any incentive to fix it.
+No one else (not your router manufacturer,
+nor most ISPs) have as strong an incentive to fix it.
 Once you do, the network will stay fixed for all time, 
 and you can adapt to changing practices at your ISP or other vendors.
 
@@ -50,6 +50,7 @@ cake, fq_codel, PIE, or others.
 Here are some options, from easy to harder:
 
 - **Enable SQM settings** if your router already has them.
+
 First, measure the link speed _without_ SQM
 (say, using [Waveform](https://www.waveform.com/tools/bufferbloat))
 then turn on SQM and measure again while observing the latency measurements.
@@ -72,7 +73,9 @@ Their third generation devices
 DOCSIS 3.1 RDK-B-based gateway models have now been updated
 with DOCSIS-PIE AQM and all are achieving dramatically
 improved working latency.
-(See p13 of [_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf) for details.)
+(See Footnote 59 of
+[_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf)
+for model numbers.)
     * Many other mesh router vendors claim to solve bufferbloat.
     Check their spec's or ask them about latency.
     * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.
