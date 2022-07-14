@@ -24,19 +24,18 @@ read our recommendations at
 
 ## Easy: Web-based Tests
 
-The web-based tests
-[Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat) and
-[Fast.com](https:/fast.com) (click the "Show more info" button)
-make accurate measurements of the latency *during*
+These web-based tests demonstrate the responsiveness of your network
+by making accurate measurements of the latency *during*
 the download and upload parts of the test.
-This demonstrates the responsiveness of your network. 
-Share the "letter grade" with your friends. Watch the
-[Bloat](https://youtu.be/EMkhKrXbjxQ) /
-[No Bloat](https://youtu.be/Fq9nQf1yEm4) videos at
-[Youtube](https://youtu.be/EMkhKrXbjxQ) to see the test in action.
 
-**New:** The Ookla speed test app for iOS and Android now shows loaded latency
-in the _Detailed Results_ section. (May 2022)
+* [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
+Gives a letter grade for your performance
+* [Fast.com](https:/fast.com) Click the "Show more info" button to
+see the latency measurements
+* [speedtest.net (Ookla)](https://speedtest.net)
+The web-based test is now augmented by
+iOS and Android apps that also show loaded latency
+in their _Detailed Results_ section. 
 
 ## Quick: Test for Bufferbloat
 

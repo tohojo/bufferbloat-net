@@ -79,39 +79,21 @@ for the hundreds of internal links in the repo.)
 
 Docker provides an easy way to run Hugo 0.16 reliably on any OS.
 The [codycraven/docker-hugo](https://github.com/codycraven/docker-hugo)
-repo gives commands for creating and running a Hugo server in Docker.
+repo has a container for creating and running a Hugo server in Docker.
 
 The Docker instance operates on the current directory,
 so normal editing, `git` commands, etc. work as desired.
-
-The `hugo-server` command starts the Hugo server process
-that watches all the folders, regenerates any changed files,
-and refreshes the browser with new content.
-
-### Create the Docker image
-
-This command creates the Docker image for Hugo 0.16.
-It has been renamed to `hugo-docker` to avoid conflict with
-any native `hugo` binary that might be present.
-Run this once for any new Hugo binary.
-
-```
-alias hugo-docker='docker run --rm -it \
-    -v /tmp:/tmp:Z \
-    -v $(pwd):/site:Z \
-    -w /site \
-    codycraven/hugo:0.16'
-```
 
 ### Run the Hugo server in Docker
 
 This command runs the Hugo server, listening on port 8080.
 To use it, `cd <directory-containing-your-Hugo-files>` 
-then issue this command.
-Run this each time you want to start development.
+then issue the `docker run...` command each time you edit the site.
 
 ```
-alias hugo-server='docker run --rm -it \
+cd <directory-containing-your-Hugo-files>
+
+docker run --rm -it \
     -v /tmp:/tmp:Z \
     -v $(pwd):/site:Z -w /site \
     -p 8080:8080 \
@@ -119,8 +101,9 @@ alias hugo-server='docker run --rm -it \
     server \
     --bind=0.0.0.0 \
     --port=8080 \
-    -w'
+    -w
 ```
 
-Follow the link to localhost:8080/projects, and you'll see the blog as it appears.
+Follow the link to [localhost:8080/projects](localhost:8080/projects),
+and you'll see the blog as it appears.
 As you edit the underlying pages, the web display will update live.
