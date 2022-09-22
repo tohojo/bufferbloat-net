@@ -86,7 +86,7 @@ have fq\_codel and fq\_PIE settings, courtesy of FreeBSD and
     
 
 -  **Upgrade your current router.**
-Install [OpenWrt firmware](https://OpenWrt.org) (version 21.02, 19.07, or 18.06).
+Install [OpenWrt firmware](https://OpenWrt.org) (version 22.03, 21.02, 19.07, or 18.06).
 The [Smart Queue Management guide](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm)
 tells how to configure the *luci-app-sqm* package.
 Or install suitable [DD-WRT](https://www.dd-wrt.com),
