@@ -1,7 +1,7 @@
 ---
 title: Codel Wiki
 date: 2012-05-06T18:52:34
-lastmod: 2015-10-14T10:26:53
+lastmod: 2022-12-03T10:26:53
 type: wiki
 aliases:
     - /codel/wiki/Wiki
@@ -21,55 +21,36 @@ and RTT”, and simple AQM algorithm.
 -   It adapts to dynamically changing link rates with no negative impact
     on utilization.
 
-CoDel (the name comes from "controlled delay") is the first fundamental
-advance in the state of the art of network Active Queue Management in
-many, many years.
+CoDel (the name comes from "controlled delay") was a fundamental
+advance in the state of the art of network of Active Queue Management in
+2012.
 
 It is pronounced "coddle", because it handles network streams in a
 gentle way.
 
-With the "fq\_codel" variant (Fair/Flow Queueing + Codel) it is possible
-to reduce bottleneck delays by several orders of magnitude, and provide
-accurate RTT estimates to elephant TCP flows, while allowing shorter
-(sparser) flows like DNS, ARP, SYN, routing, etc packets priority
-access.
+Immediately after codel, came "fq\_codel" (Fair/Flow Queueing + Codel), invented by Eric Dumazet. The combination made it possible to reduce bottleneck delays by several orders of magnitude, and provide accurate RTT estimates to elephant TCP flows, while allowing shorter (sparser) flows like DNS, ARP, SYN, routing, etc packets priority access. And indeed it did. And from our small research project it then became the default queuing mechanism for all the world of Linux, and IoS and OSX.
 
-We don't say **several orders of magnitude** lightly. We have [the
-benchmarks](RRUL_Rogues_Gallery.md)
-to back it up. Some more recent benchmarks on cable systems are here:
-http://burntchrome.blogspot.com/2014/05/fixing-bufferbloat-on-comcasts-blast.html
-- and there are multiple papers on the subject now of widely varying
-quality.
+We didn't say then, **several orders of magnitude** lightly. We had [the benchmarks](RRUL_Rogues_Gallery.md) to back it up. Benchmarks, from 2014, showed enormous improvements on [cable systems](http://burntchrome.blogspot.com/2014/05/fixing-bufferbloat-on-comcasts-blast.html), dsl, fiber and wireless technologies.
 
 Deployments
 -----------
 
-OpenWrt Barrier Breaker, Chaos calmer and later, CeroWrt, dd-wrt, IPfire
-and many others now use fq\_codel in their main QoS system.\
-Free.fr's revolution V6 router uses it by default. It is also available
-in ubnt's edgerouter series of products.\
-It is a component of Qualcomm's "streamboost" QoS system. It is in
-Netgear's "Dynamic Qos" feature for their X4 product.\
-And in many places elsewhere. Linux version 3.6 and greater has support
-for it (not turned on by default). The sysctl\
-knob landed in 3.12, and systems that use systemd, like fedora 22, now
-default to fq\_codel.
+All Linux systems that use systemd, now default to fq\_codel. That includes
+but is not limited to, debian, Ubuntu, redhat, fedora, and arch.
 
-We are nearly done creating a successor to fq\_codel and the "sqm"
-system, called
-[cake](/codel/wiki/CakeTechnical.md)
-which we addresses a few edge cases fq\_codel had, is faster code, and
-better all across the board.
+fq\_codel is the default queuing mechanism in most third party router firmwares today, like OpenWrt, dd-wrt, and asus-wrt. IPfire, Firewalla, evenroute, ubnt, eero, Mikrotik and many others now use fq\_codel heavily.  Free.fr's revolution V6 router used it by default.  It is a component of Qualcomm's "streamboost" QoS system. It is in Netgear's "Dynamic Qos" feature for their X4 product.\ And now in many places elsewhere. 
 
+We finished creating a successor to fq\_codel and the "sqm" system, called [cake](/codel/wiki/CakeTechnical.md) in 2018, which we addresses a few edge cases fq\_codel had, and is better all across the board. 
+ 
 Papers and Publications
 -----------------------
 
 The most up to date descriptions of codel and fq\_codel are now the
-subject of IETF internet drafts.
+following IETF internet standards:
 
-[Codel](https://tools.ietf.org/html/draft-ietf-aqm-codel)
+[Codel - RFC8289](https://www.rfc-editor.org/rfc/rfc8289.html)
 
-[FlowQueueCodel](https://tools.ietf.org/html/draft-ietf-aqm-fq-codel)
+[FlowQueueCodel - RFC8290](https://www.rfc-editor.org/rfc/rfc8289.html)
 
 Older Papers
 ------------
@@ -150,12 +131,13 @@ Linux systems shipped today.
 -----------------------------------------
 
 The CeroWrt research router project was started, specifically, to test
-new AQM technologies, and has been tracking codel closely.
+new AQM technologies. It was completed in 2014, and most of the innovations
+landed upstream in OpenWrt, Linux and BSD.
 
-A pretty solid build [is now available](/cerowrt/wiki/CeroWrt_310_Release_Notes.md)
+A pretty solid build [is still available](/cerowrt/wiki/CeroWrt_310_Release_Notes.md)
 
 The fq\_codel code has already migrated into the OpenWrt mainline (upon
-which Cerowrt is based), so the research has paid off! - there is more
+which Cerowrt is based), so the research paid off! - there is more
 to come...
 
 Binary code and kernels for Linux based operating systems:
@@ -163,14 +145,13 @@ Binary code and kernels for Linux based operating systems:
 
 All modern linux distros now ship with fq\_codel.
 
-For servers with tcp-heavy workloads, particularly at 10GigE speeds, for
-queue management, we recomend sch\_fq instead of fq\_codel as of linux
-3.12.
+For servers with tcp-only workloads, particularly at 10GigE speeds, for
+queue management, we recomend sch\_fq instead of fq\_codel.
 
 Either qdisc can be enabled by default via a single sysctl option in
 `/etc/sysctl.conf`:
 
-`net.core.default_qdisc = fq_codel`  - best general purpose qdisc
+`net.core.default_qdisc = fq\_codel`  - best general purpose qdisc
 
 `net.core.default_qdisc = fq` - for fat servers, fq_codel for routers.
 
