@@ -50,7 +50,7 @@ following IETF internet standards:
 
 [Codel - RFC8289](https://www.rfc-editor.org/rfc/rfc8289.html)
 
-[FlowQueueCodel - RFC8290](https://www.rfc-editor.org/rfc/rfc8289.html)
+[FlowQueueCodel - RFC8290](https://www.rfc-editor.org/rfc/rfc8290.html)
 
 Older Papers
 ------------
