@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2024-03-21T08:29:01
+lastmod: 2023-10-20T08:29:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -100,20 +100,14 @@ have fq\_codel and fq\_PIE settings, courtesy of FreeBSD and
 [ipfw/dummynet](https://www.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8&apropos=0&manpath=FreeBSD+13.0-RELEASE+and+Ports)
     
 
--  **Upgrade your current router with a custom firmware.**
-    * [OpenWrt](https://OpenWrt.org) ([supported devices list](https://openwrt.org/toh/start), version 22.03 or newer).
-
-      The [Smart Queue Management guide](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm)
-      tells how to configure the *luci-app-sqm* package.
-    * [Asuswrt-Merlin](https://www.asuswrt-merlin.net) (ASUS routers only).
-
-      In Web GUI follow to **Adaptive QoS → QoS**.
-
-      More customizations via Web GUI is available with [CakeQOS-Merlin](https://github.com/ttgapers/cakeqos-merlin).
-    * [DD-WRT](https://www.dd-wrt.com).
-    * [Gargoyle](https://www.gargoyle-router.com).
-    * [Tomato](https://freshtomato.org) firmware, all of which support some kind
-      of queue management based on FQ-CoDel and/or Cake.
+-  **Upgrade your current router.**
+Install [OpenWrt firmware](https://OpenWrt.org) (version 22.03 or newer).
+The [Smart Queue Management guide](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm)
+tells how to configure the *luci-app-sqm* package.
+Or install suitable [DD-WRT](https://www.dd-wrt.com),
+[Gargoyle](https://www.gargoyle-router.com) or
+[Tomato](https://freshtomato.org) firmware, all of which support some kind
+of queue management based on FQ-CoDel and/or Cake.
 
 -  **Call your router vendor's support line**
 if none of the above are possible.
