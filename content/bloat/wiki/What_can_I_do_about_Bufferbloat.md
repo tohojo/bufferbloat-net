@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2023-10-20T08:29:01
+lastmod: 2024-04-12T20:29:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -88,9 +88,6 @@ improved working latency.
 (See Footnote 59 of
 [_Improving Latency with Active Queue Management (AQM) During COVID-19_](https://arxiv.org/ftp/arxiv/papers/2107/2107.13968.pdf)
 for model numbers.)
-    * If you can find one, the [IQrouter](http://evenroute.com) provides a good setup wizard for
-    configuring SQM, and automatically tunes its settings. 
-    IQrouter v3 is good to about 350 mbps. (Version 2 was good for 200-250 mbps.)
     * Many other mesh router vendors claim to solve bufferbloat.
     Check their spec's or ask them about latency.
     * [Untangle NG Firewall](https://wiki.untangle.com/index.php/Bufferbloat) has fq_codel settings.
@@ -98,16 +95,19 @@ for model numbers.)
     * [pfsense](https://www.pfsense.org/) and [OPNsense](https://opnsense.org/)
 have fq\_codel and fq\_PIE settings, courtesy of FreeBSD and
 [ipfw/dummynet](https://www.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8&apropos=0&manpath=FreeBSD+13.0-RELEASE+and+Ports)
-    
 
--  **Upgrade your current router.**
-Install [OpenWrt firmware](https://OpenWrt.org) (version 22.03 or newer).
+- **Upgrade your current router with custom firmware.** All the projects below support some kind
+of queue management based on FQ-CoDel and/or Cake.
+
+    - [OpenWrt](https://OpenWrt.org) ([supported devices list](https://openwrt.org/toh/start), version 22.03 or newer).
 The [Smart Queue Management guide](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm)
 tells how to configure the *luci-app-sqm* package.
-Or install suitable [DD-WRT](https://www.dd-wrt.com),
-[Gargoyle](https://www.gargoyle-router.com) or
-[Tomato](https://freshtomato.org) firmware, all of which support some kind
-of queue management based on FQ-CoDel and/or Cake.
+    - [Asuswrt-Merlin](https://www.asuswrt-merlin.net) (ASUS routers only).
+In Web GUI follow to **Adaptive QoS → QoS**.
+More customizations via Web GUI is available with [CakeQOS-Merlin](https://github.com/ttgapers/cakeqos-merlin).
+    - [DD-WRT](https://www.dd-wrt.com)
+    - [Gargoyle](https://www.gargoyle-router.com)
+    - [Tomato](https://freshtomato.org)  
 
 -  **Call your router vendor's support line**
 if none of the above are possible.
