@@ -30,7 +30,7 @@ the download and upload parts of the test.
 
 * [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
 Gives a letter grade for your performance
-* [Fast.com](https:/fast.com) Click the "Show more info" button to
+* [Fast.com](https://fast.com) Click the "Show more info" button to
 see the latency measurements
 * [speedtest.net (Ookla)](https://speedtest.net)
 The web-based test is now augmented by
