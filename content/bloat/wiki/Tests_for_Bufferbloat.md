@@ -62,7 +62,7 @@ shows download and upload speeds and latency in one set of charts.
 
 ## Other network performance and latency tools
 
-1. Apple's [**RPM Test**](https://github.com/network-quality/draft-ietf-ippm-responsiveness/blob/master/draft-ietf-ippm-responsiveness.pdf)
+1. Apple's [**RPM Test**](https://github.com/network-quality/draft-ietf-ippm-responsiveness/blob/main/draft-ietf-ippm-responsiveness.md)
 measures responsiveness directly by
 fully loading the network and measuring the number of responses
 received in a fixed time.
