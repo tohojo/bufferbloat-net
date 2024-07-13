@@ -33,14 +33,14 @@ netsh int tcp set global ecncapability=enabled
 ### Windows 8
 
 The use of `netsh int tcp set global congestionprovider=ctcp` has been
-depreciated. In order to set or change the congestionprovider the
+deprecated. In order to set or change the congestionprovider the
 following command must be used:
 
 ```
 set-nettcpsetting -CongestionProvider CTCP
 ```
 
-However, CTCP is the default on windows 8 and later. Changing the setting does
+However, CTCP is the default on Windows 8 and later. Changing the setting does
 not seem to work on Windows 10.
 
 Type `get-nettcpsetting` to view other settings that used to be part of
