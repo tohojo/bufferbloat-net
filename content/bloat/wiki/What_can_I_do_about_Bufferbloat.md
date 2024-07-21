@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2024-04-12T20:29:01
+lastmod: 2024-07-21T20:29:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -11,29 +11,33 @@ aliases:
 
 Bufferbloat is high latency (or lag) that occurs when there's other
 traffic on your network.
-This means that your network isn't responsive under normal working conditions.
-It's wasting your time.
+This means that your network isn't always responsive - 
+it's wasting your time.
 
 **How does bufferbloat apply to me?**
 
-Watch the [Bufferbloat Video](https://www.youtube.com/watch?v=UICh3ScfNWI) 
-which presents an intuitive description of of Bufferbloat.
-Or read the somewhat more detailed
+Watch the [Home Internet Connections Are Unfair! (Bufferbloat)](https://www.youtube.com/watch?v=UICh3ScfNWI) 
+video which gives an intuitive description of Bufferbloat.
+Or read the more detailed
 [Best Bufferbloat Analogy - Ever](https://randomneuronsfiring.com/best-bufferbloat-analogy-ever/)
 blog post.
 
-**Most important - How do I get rid of Bufferbloat?**
+**OK - How do I get rid of Bufferbloat?**
 
 **1. Measure the Bufferbloat:**
-Use the [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
-or [Speedtest.net](https://speedtest.net))
-to measure the latency under load.
-If Waveform shows a letter grade worse than a B,
-or if Speedtest.net shows more than 75 msec in either download or upload,
-you probably have bufferbloat.
-Some device at your bottleneck link
-(usually your router) is letting bulk traffic (uploads/downloads) interfere with
-(and delay) your time-sensitive traffic (gaming, video calls, Facetime, etc.)
+Use any of the tests below.
+They all are good because they display latency both when
+the line is idle _and_ during upload or download traffic.
+
+* [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
+* [Speedtest.net Test](https://speedtest.net)
+* [Cloudflare Speed Test](https://speed.cloudflare.com)
+
+If the latency increases when there's traffic,
+you have bufferbloat.
+If the increase is small
+(less than 20-30 msec),
+bufferbloat is well under control.
 For more details about testing,
 read the [Tests for Bufferbloat](./Tests_for_Bufferbloat.md) page. 
 
@@ -42,32 +46,32 @@ Most won't work.
 
 * Your ISP would love to sell you a faster connection, but link speed isn't the problem -
 it's your router buffering more data than necessary.
+This adds _delay_ that can never be cured by faster transmission rates.
 * Buying an expensive router (even one for "gaming") won't necessarily help,
-since many commercial, off-the-shelf router manufacturers are clueless about Bufferbloat.
+since many commercial, off-the-shelf router manufacturers are clueless about excess buffering in their routers.
 * Twiddling the router's QoS might make a difference,
 [but it's a hassle, and only helps a bit.](More_about_Bufferbloat#what-s-wrong-with-simply-configuring-qos)
-* Instead...
+
+Instead...
 
 **3. Take Control of Your Network:**
 No one else (not your router manufacturer,
-nor your ISP) has a strong incentive to fix Bufferbloat.
+not your ISP) has a strong incentive to fix Bufferbloat.
 But once you take control, the network will stay fixed for all time, 
 and you can adapt to changing practices at your ISP or other vendors.
 
-You need to find a router vendor that "understands"
-latency/responsiveness/bufferbloat,
+You need to find a router vendor that understands
+the relationship between 
+latency/responsiveness and bufferbloat,
 and has firmware that uses one of the
 Smart Queue Management algorithms such as 
-cake, fq_codel, PIE, or others. 
+cake, fq_codel, PIE, or others to eliminate it. 
 Here are some options, from easy to harder:
 
 - **Enable SQM settings** if your router already has them.
 
     First, measure the link speed _without_ SQM
-using [Waveform](https://www.waveform.com/tools/bufferbloat)
-or [Speedtest.net](https://speedtest.net).
-Each of these is good because they display latency when the line is idle
-_and_ when there's upload or download traffic.
+using one of the speed tests above.
 Then turn on SQM, setting the up and down speed to the measured values above.
 Keep running your speed test and adjusting the SQM speed settings
 until the latency remains low while achieving good speeds.
@@ -95,6 +99,7 @@ for model numbers.)
     * [pfsense](https://www.pfsense.org/) and [OPNsense](https://opnsense.org/)
 have fq\_codel and fq\_PIE settings, courtesy of FreeBSD and
 [ipfw/dummynet](https://www.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8&apropos=0&manpath=FreeBSD+13.0-RELEASE+and+Ports)
+    * _(Regrettably, the IQrouter from Evenroute.com is no longer on the market.)_
 
 - **Upgrade your current router with custom firmware.** All the projects below support some kind
 of queue management based on FQ-CoDel and/or Cake.
