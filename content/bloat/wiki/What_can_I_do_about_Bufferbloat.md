@@ -99,7 +99,8 @@ have fq\_codel and fq\_PIE settings, courtesy of FreeBSD and
 - **Upgrade your current router with custom firmware.** All the projects below support some kind
 of queue management based on FQ-CoDel and/or Cake.
 
-    - [OpenWrt](https://OpenWrt.org) ([supported devices list](https://openwrt.org/toh/start), version 22.03 or newer).
+    - [OpenWrt](https://OpenWrt.org) (version 22.03 or newer,
+[supported device list](https://openwrt.org/toh/start)).
 The [Smart Queue Management guide](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm)
 tells how to configure the *luci-app-sqm* package.
     - [Asuswrt-Merlin](https://www.asuswrt-merlin.net) (ASUS routers only).
