@@ -1,7 +1,7 @@
 ---
 title: Tests for Bufferbloat
 date: 2013-12-20T14:59:13
-lastmod: 2022-06-11T08:03:00
+lastmod: 2024-07-21T08:03:00
 type: wiki
 aliases:
   - /cerowrt/wiki/Quick_Test_for_Bufferbloat
@@ -30,26 +30,24 @@ the download and upload parts of the test.
 
 * [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
 Gives a letter grade for your performance
-* [Fast.com](https://fast.com) Click the "Show more info" button to
-see the latency measurements
-* [speedtest.net (Ookla)](https://speedtest.net)
-The web-based test is now augmented by
-iOS and Android apps that also show loaded latency
-in their _Detailed Results_ section. 
+* [speedtest.net Test](https://speedtest.net)
+Web, iOS, and Android apps that measure latency
+* [Cloudflare Speed Test](https://speed.cloudflare.com)
+Provides very detailed statistics of data rates and latency
 
 ## Quick: Test for Bufferbloat
 
 If you want to observe latency under load ("bufferbloat") for yourself,
 try this:
 
-1.  Start a ping to google.com. You'll see a series of lines, one per
-    ping, typically with times in the 20-100 msec range.
-2.  Start a speed test from one of the speed test services below
-while the pings continue:
-    -   [http://fast.com](http://fast.com) 
-    -   [http://speedtest.net](http://speedtest.net)
-3.  Watch the ping times while the speed test is running. If the times jump
-    up when uploading or downloading, then your router is probably bloated.
+1.  In a terminal window, start a ping to google.com.
+    You'll see a series of lines,
+    one per ping, typically with times in the 20-100 msec range.
+2.  Start a speed test from the list above.
+    They all send/receive traffic to add load to your network.
+3.  Watch the ping times. If the times jump
+    up when uploading or downloading,
+    then your router is probably bloated.
 
 ## Best: Bufferbloat Tests
 
@@ -82,10 +80,9 @@ rely on netperf, which can be installed in the the OpenWrt firmware.
 4.  **[betterspeedtest.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/betterspeedtest.sh)**
 from [OpenWrtScripts bundle](https://github.com/richb-hanover/OpenWrtScripts/blob/master/README.md)
     is a script you can run on Linux/OSX or on OpenWrt to get
-    concrete, repeatable tests of your network. It performs the same
-    kind of download/upload test that is available from speedtest.net.
-    It is better, though, because it continually measures your ping
-    latency, and thus lets you know the performance and latency of each
+    concrete, repeatable tests of your network. 
+    It is "better" because it continually measures your ping
+    latency, and thus lets you know the performance and latency for each
     direction of data transfer. 
 5.  The **[netperfrunner.sh](https://github.com/richb-hanover/OpenWrtScripts/blob/master/netperfrunner.sh)**
 script (part of the OpenWrtScripts bundle) simulates the
