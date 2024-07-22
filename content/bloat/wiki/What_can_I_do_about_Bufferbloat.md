@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2024-07-21T20:29:01
+lastmod: 2024-07-21T08:29:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -25,8 +25,7 @@ blog post.
 **OK - How do I get rid of Bufferbloat?**
 
 **1. Measure the Bufferbloat:**
-Use any of the tests below.
-They all are good because they display latency both when
+Use any of the tests below that measure latency both when
 the line is idle _and_ during upload or download traffic.
 
 * [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
@@ -122,6 +121,13 @@ Mention that the ping times get really high when someone is up/downloading
 files, and that it really hurts your network performance.
 Ask if they're working on the problem.
 Ask when they're going to release a firmware update that solves it.
+
+-  **Consider cake-autorate for variable-rate ISP links.**
+    LTE, cable modems, and Starlink can all change rate
+    from morning to evening, or even from minute to minute.
+    The [cake-autorate](cake-autorate)
+    algorithm adapts to the current conditions to 
+    minimize latency.
 
 Your network's responsiveness is in _your_ hands...
 

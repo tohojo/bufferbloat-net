@@ -63,6 +63,15 @@ figure img {
     max-width: 100%;
 }
 
+code {
+    color: #000000;
+    background: lightgrey;
+}
+
+blockquote {
+    font-size: 15px; 
+}
+
 code.has-jax {font: inherit;
               font-size: 100%;
               background: inherit;
