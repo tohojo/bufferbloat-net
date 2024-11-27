@@ -80,6 +80,7 @@ See, for example, this description of a [tuning session.](Getting_SQM_Running_Ri
     Here is a list of those we have found:
     * [Ubiquiti gear](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings. 
     People say its EdgeRouter will handle over 400 mbps.
+    * [Mikrotik's RouterOS supports fq_codel](https://help.mikrotik.com/docs/spaces/ROS/pages/328088/Queues) 
     * The [eero mesh routers](https://support.eero.com/hc/en-us/articles/360000709886-What-is-eero-Labs-)
 "optimize for conferencing and gaming" (their term for SQM.)
 Their third generation devices
