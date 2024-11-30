@@ -32,11 +32,9 @@ the line is idle _and_ during upload or download traffic.
 * [Speedtest.net Test](https://speedtest.net)
 * [Cloudflare Speed Test](https://speed.cloudflare.com)
 
-If the latency increases when there's traffic,
-you have bufferbloat.
-If the increase is small
-(less than 20-30 msec),
-bufferbloat is well under control.
+If the test shows latency below 15-25 msec, it means that
+bufferbloat is under control.
+If a test shows higher latency, you likely have bufferbloat.
 For more details about testing,
 read the [Tests for Bufferbloat](./Tests_for_Bufferbloat.md) page. 
 
@@ -46,6 +44,7 @@ Most won't work.
 * Your ISP would love to sell you a faster connection, but link speed isn't the problem -
 it's your router buffering more data than necessary.
 This adds _delay_ that can never be cured by faster transmission rates.
+
 * Buying an expensive router (even one for "gaming") won't necessarily help,
 since many commercial, off-the-shelf router manufacturers are clueless about excess buffering in their routers.
 * Twiddling the router's QoS might make a difference,
@@ -100,7 +99,7 @@ have fq\_codel and fq\_PIE settings, courtesy of FreeBSD and
 [ipfw/dummynet](https://www.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8&apropos=0&manpath=FreeBSD+13.0-RELEASE+and+Ports)
     * _(Regrettably, the IQrouter from Evenroute.com is no longer on the market.)_
 
-- **Upgrade your current router with custom firmware.** All the projects below support some kind
+- **Install custom firmware.** All the projects below support some kind
 of queue management based on FQ-CoDel and/or Cake.
 
     - [OpenWrt](https://OpenWrt.org) (version 22.03 or newer,
@@ -110,9 +109,14 @@ tells how to configure the *luci-app-sqm* package.
     - [Asuswrt-Merlin](https://www.asuswrt-merlin.net) (ASUS routers only).
 In Web GUI follow to **Adaptive QoS → QoS**.
 More customizations via Web GUI is available with [CakeQOS-Merlin](https://github.com/ttgapers/cakeqos-merlin).
-    - [DD-WRT](https://www.dd-wrt.com)
-    - [Gargoyle](https://www.gargoyle-router.com)
-    - [Tomato](https://freshtomato.org)  
+    * [DD-WRT](https://www.dd-wrt.com)
+    * [Gargoyle](https://www.gargoyle-router.com)
+    * [Tomato](https://freshtomato.org)  
+    * [Raspberry Pi 4](https://www.reddit.com/r/openwrt/comments/l1m801/rpi4_openwrt_tips/) -
+      This link provides "some assembly required" instructions
+      for installing OpenWrt on a RPi4 and connecting it
+      between your ISP modem and your existing router to
+      control latency.
 
 -  **Call your router vendor's support line**
 if none of the above are possible.
@@ -123,10 +127,11 @@ Ask if they're working on the problem.
 Ask when they're going to release a firmware update that solves it.
 
 -  **Consider cake-autorate for variable-rate ISP links.**
-    LTE, cable modems, and Starlink can all change rate
+    LTE, cable modems, and Starlink can all change throughput rates
     from morning to evening, or even from minute to minute.
-    The [cake-autorate](cake-autorate)
-    algorithm adapts to the current conditions to 
+    The
+    [cake-autorate](https://github.com/lynxthecat/cake-autorate-autorate)
+    algorithm adapts to the current network conditions to 
     minimize latency.
 
 Your network's responsiveness is in _your_ hands...

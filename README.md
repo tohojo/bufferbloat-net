@@ -94,8 +94,9 @@ then issue the `docker run...` command each time you edit the site.
 cd <directory-containing-your-Hugo-files>
 
 docker run --rm -it \
-    -v /tmp:/tmp:Z \
-    -v $(pwd):/site:Z -w /site \
+    -v /tmp:/tmp \
+    -v $(pwd):/site \
+    -w /site \
     -p 8080:8080 \
     codycraven/hugo:0.16 \
     server \

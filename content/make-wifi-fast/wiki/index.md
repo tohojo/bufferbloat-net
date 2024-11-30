@@ -21,12 +21,12 @@ performance improvements of an order of magnitude or more in Wi-Fi.
 
 ## Current Status
 
-As of early 2018, we have achieved many of these improvements,
-specifically a decrease of latency by at least an order of magnitude,
+In late 2024, we have decreased Wi-Fi
+latency by at least an order of magnitude,
 with fair sharing of airtime across fast and slow devices.
 
-* Working software is available in the Linux kernel, as well as the <a
-  href="https://openwrt.org" target="blank">OpenWrt firmware</a>
+* Working software is available in the Linux kernel,
+  as well as the [OpenWrt firmware](https://openwrt.org)
   that runs on off-the-shelf routers, x86 boxes, and embedded systems.
 
 * An academic paper describing the mechanism has been published at the
