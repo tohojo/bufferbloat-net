@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2024-07-21T08:29:01
+lastmod: 2024-12-02T08:29:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -75,8 +75,16 @@ Keep running your speed test and adjusting the SQM speed settings
 until the latency remains low while achieving good speeds.
 See, for example, this description of a [tuning session.](Getting_SQM_Running_Right)
 
-- **Install an off-the-shelf router with SQM** Several commercial router vendors have a clue. 
+- **Install an off-the-shelf router with SQM**
+  Several router vendors have a clue. 
     Here is a list of those we have found:
+    * [OpenWrt One](https://openwrt.org/#openwrt_one_router_officially_launched)
+    The OpenWrt project has just released
+    (November 2024) its own router. It incorporates the fq_codel/CAKE
+    algorithms as well those to minimize latency in Wifi.
+    It is now available from
+    [AliExpress](https://www.aliexpress.us/item/3256807609464530.html)
+    in many countries.
     * [Ubiquiti gear](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings. 
     People say its EdgeRouter will handle over 400 mbps.
     * The [eero mesh routers](https://support.eero.com/hc/en-us/articles/360000709886-What-is-eero-Labs-)
@@ -138,6 +146,7 @@ Your network's responsiveness is in _your_ hands...
 
 **Read More...**
 
+* [Bufferbloat FAQs](./Bufferbloat_FAQs)
 * [Why does SQM work so well?](More_about_Bufferbloat#why-does-sqm-work-so-well)
 * [What's wrong with simply configuring QoS?](More_about_Bufferbloat#what-s-wrong-with-simply-configuring-qos)
 * [Setting up SQM on a Router Manually](More_about_Bufferbloat#setting-up-a-router-manually)
