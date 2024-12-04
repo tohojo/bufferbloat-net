@@ -1,4 +1,10 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div id="search"></div>
+       <script>
+          window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+          });
+        </script>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
