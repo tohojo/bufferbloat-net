@@ -3,3 +3,5 @@
   <link rel="icon" type="image/png" href="{{ "/images/favicon-16x16.png" |  relURL }}" sizes="16x16" />
   {{ range .Site.Params.stylesheets }}
   <link href="{{ printf "/css/%s" . | relURL}}" rel="stylesheet" type="text/css" />{{ end }}
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
