@@ -1,7 +1,7 @@
 ---
 title: Bufferbloat FAQs
 date: 2024-12-01T09:10:12
-lastmod: 2024-12-01T09:10:12
+lastmod: 2024-12-31T09:10:12
 type: wiki
 ---
 # Bufferbloat FAQs
