@@ -83,7 +83,7 @@ See, for example, this description of a [tuning session.](Getting_SQM_Running_Ri
     (November 2024) its own router. It incorporates the fq_codel/CAKE
     algorithms as well those to minimize latency in Wifi.
     It is now available from
-    [AliExpress](https://www.aliexpress.us/item/3256807609464530.html)
+    [AliExpress](https://www.aliexpress.us/w/wholesale-openwrt-one.html)
     in many countries.
     * [Ubiquiti gear](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings. 
     People say its EdgeRouter will handle over 400 mbps.
