@@ -240,6 +240,29 @@ See
 [What’s wrong with simply configuring QoS?](https://www.bufferbloat.net/projects/bloat/wiki/More_about_Bufferbloat/#why-not-simply configure-qos)
 for more information.
 
+### Question #3.10: How do I put a router "in front of" my ISP's router?
+
+In a normal setting, your ISP's router is connected by
+cable/phone/fiber to their equipment in their offices.
+Your local devices connect either through
+Ethernet or WiFi to the ISP router.
+
+But since the ISP gear doesn't solve the problem with Bufferbloat,
+you need to take control of your network.
+A very common solution is to make another router the primary
+connection to the ISP gear.
+To do this:
+
+1. Turn off WiFi in the ISP router
+2. Connect the WAN/Internet port of the new router to one of the 
+   LAN ports of the ISP router
+3. Configure the new router's SQM or other latency control options
+4. Connect _all_ your equipment to the new router.
+   (Do not leave any equipment connected to the old device - it will
+   throw off the anti-bufferbloat algorithms.)
+5. As always, 
+   [test the new connection](https://www.bufferbloat.net/projects/bloat/wiki/Tests_for_Bufferbloat/) to ensure that it's working.
+
 ## Objections We Hear
 
 ### Question #4.1: But, that's not "bufferbloat" - it's just ordinary behavior. Of course things will get slower when there’s more traffic...
@@ -468,3 +491,37 @@ consider these options:
 * You'll see the latency drop without much
   difference in your perceived speed
 * ... and save a bunch of money per month on your ISP bill
+
+### Question #5.6: I don't need SQM...
+
+> @WWicketW writes:
+> 
+>  I'm on Flint2 also ...
+>
+> With SQM mine max speed was 1,2 ÷ 1,3 Gbps in download (and A+ on waveform), with HO+PS (Hardware offloading and Packet steer on all CPU) I've reach 2,2Gbps on download and A on waveform.
+>
+> I definitely can survive without SQM 😅
+> [(Original post on Reddit)](https://www.reddit.com/r/openwrt/comments/1hts21t/comment/m5p3q6q/)
+
+That sounds like a terrific solution.
+No one asserts you _need_ SQM.
+It's only useful if lag/latency is affecting you.
+(In other words, "If you're happy, I'm happy.")
+
+It's also valuable to know that Flint 2
+(less than US$150 with coupon on Amazon)
+can feed a 2Gbps+ link and keep up with the rated speed. Congratulations!
+
+### Question #5.7: My ISP's router gives terrible bufferbloat...
+
+> I have been struggling with an incredible sluggish and inconsistent video game experience on my computer. I have payed for a pc, I've paid to have it tweaked professionally, I've bought the best peripherals. I have done everything to fix this issue and none of it has worked, this has been going on for months... [(Original post on Reddit)](https://www.reddit.com/r/HomeNetworking/comments/1id9mm5/bufferbloat_needs_fixing_please_help)
+
+You are going to need to take control of your network. See
+[What Can I Do About Bufferbloat?](https://www.bufferbloat.net/projects/bloat/wiki/What_can_I_do_about_Bufferbloat/)
+for more information.
+
+TL;DR - you'll probably need to put another, smarter, router
+in front of their router that can control the queueing/latency.
+Consider the OpenWrt One - it's reasonably prices,
+can handle your data rate, and it's the platform where
+all these anti-bufferbloat algorithms were developed.
