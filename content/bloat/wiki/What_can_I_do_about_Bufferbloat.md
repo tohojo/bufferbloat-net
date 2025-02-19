@@ -138,7 +138,7 @@ Ask when they're going to release a firmware update that solves it.
     LTE, cable modems, and Starlink can all change throughput rates
     from morning to evening, or even from minute to minute.
     The
-    [cake-autorate](https://github.com/lynxthecat/cake-autorate-autorate)
+    [cake-autorate](https://github.com/lynxthecat/cake-autorate)
     algorithm adapts to the current network conditions to 
     minimize latency.
 
