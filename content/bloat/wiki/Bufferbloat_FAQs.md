@@ -1,7 +1,7 @@
 ---
 title: Bufferbloat FAQs
 date: 2024-12-01T09:10:12
-lastmod: 2025-01-03T09:10:12
+lastmod: 2025-06-07T09:10:12
 type: wiki
 ---
 # Bufferbloat FAQs
@@ -30,9 +30,12 @@ Routers generally employ
 algorithms for ISP connections and
 [Tx Queue limits, AQL, and ATF](https://www.usenix.org/system/files/conference/atc17/atc17-hoiland-jorgensen.pdf)
 algorithms to address bufferbloat in Wi-Fi.
-The [cake-autorate](https://github.com/lynxthecat/cake-autorate#cake-with-adaptive-bandwidth---cake-autorate)
+The [cake-autorate](https://github.com/lynxthecat/cake-autorate)
 algorithm handles links with varying rates, such as
 4G/5G cell phones, cable modems, etc.
+
+The OpenWrt Project - where all these algorithms were developed -
+gives them the umbrella term "Smart Queue Management" (SQM).
 
 ### Question #1.2: Are there any commercial solutions I can just buy?
 
@@ -44,10 +47,12 @@ how to include these algorithms into their products.
 ### Question #1.3: Are there other solutions?
 
 There are a number of open-source projects
-listed on the page above.
-The [OpenWrt](https://openwrt.org)
-project is notable because that is where
-these algorithms were first developed.
+listed on the
+[What Can I Do...](https://www.bufferbloat.net/projects/bloat/wiki/What_can_I_do_about_Bufferbloat/)
+page above.
+As noted above, the [OpenWrt Project](https://openwrt.org)
+developed and tested all these algorithms
+over the last decade.
 
 ### Question #1.4: Where can I read more?
 
@@ -72,7 +77,7 @@ of a single FIFO queue
 waiting to be sent to your ISP.
 
 If packets arrive at the router faster than they can
-be transmitted to the ISP, the queue builds up.
+be transmitted to the ISP, a queue builds up.
 From time to time, the queue might hold dozens
 (or hundreds) of packets,
 potentially causing multiple seconds of latency or lag.
@@ -134,11 +139,13 @@ run the Crusader Client from a second computer on Wi-Fi.
 
 ### Question #3.1: How do those algorithms minimize latency?
 
-A router can control queueing using one of several algorithms.
-In general, the algorithms use a variation on this mechanism:
+A router can control latency using one
+or more of the SQM algorithms.
+In general, these algorithms use a variation of this technique:
 
-1. Separate the arriving packets for each traffic flow
-   (each individual connection) into its own queue.
+1. Place the arriving packets of each traffic flow
+   (each individual connection from each computer
+   on the local network) into their own queue.
 2. In a round-robin fashion, remove a
    small batch of packets from a queue
    and transmit those packets through the (slow) bottleneck link.
@@ -170,7 +177,7 @@ can also build up significant queues.
 
 ### Question #3.4: How do the bufferbloat algorithms work for the download direction?
 
-The router creates a new "download interface" _within the router_
+The SQM algorithm creates a new "download interface" _within the router_
 to act as the bottleneck.
 As with the upload direction, this internal download interface
 is configured to be slightly slower than the ISP link
@@ -224,12 +231,12 @@ to signal that there is congestion, or that the sender is
 Anytime a TCP sender detects that signal,
 they must decrease their rate of sending.
 
-When a _router_ using a bufferbloat algorithm
+When a _router_ using SQM
 notices that a significant queue is building for one of its flows,
 it implies that the sender
 is sending too fast for current conditions.
-If it were not limited, the sender would be using more
-than its share of the limited bandwidth.
+If the router didn't control it, the sender would attempt
+to use more than its share of the limited bandwidth.
 Consequently, the router occasionally drops a packet
 from the head of that queue to signal the sender to slow down.
 
@@ -247,10 +254,10 @@ cable/phone/fiber to their equipment in their offices.
 Your local devices connect either through
 Ethernet or WiFi to the ISP router.
 
-But since the ISP gear doesn't solve the problem with Bufferbloat,
-you need to take control of your network.
-A very common solution is to make another router the primary
-connection to the ISP gear.
+But if the ISP gear doesn't control Bufferbloat,
+_you_ need to take control of your network.
+A very common solution is to put a router with SQM "in front of"
+the ISP gear, making it the primary router.
 To do this:
 
 1. Turn off WiFi in the ISP router
@@ -320,8 +327,8 @@ to show how surprising it was that routers would queue far more
 data than they could send in a reasonable time.
 
 In 2012, CoDel was invented in response the newly-named "bufferbloat".
-In the decade since, we've seen fq_codel, CAKE, and cake-autorate -
-all open-source algorithms for minimizing latency.
+In the decade since, the fq_codel, CAKE, and cake-autorate
+open-source algorithms have been proven to minimize latency.
 
 Today, there's no excuse for router vendors not to
 incorporate this technology.
@@ -343,13 +350,13 @@ that might change the game.
 Maybe. We have reached out to lots of vendors.
 But remember they profit if you decide to upgrade to a higher capacity device/plan.
 
-### Question #4.11: Besides, I just spent $300 on a “gaming router”. It was the most expensive solution on the market...
+### Question #4.11: Besides, I just spent \$300 on a “gaming router”. It was the most expensive solution on the market...
 
 Maybe that router's not as good as their advertising says...
 
-### Question #4.12: I can't believe you’re telling me that a bunch of academics have come up with a better algorithm than commercial router developers - that company who sold me that $300 router?
+### Question #4.12: I can't believe you’re telling me that a bunch of academics have come up with a better algorithm than commercial router developers - that company who sold me that \$300 router?
 
-Well, the fq_codel/CAKE algorithms seem to solve the problem
+Well, the SQM algorithms seem to solve the problem
 when they are used in place of vendor firmware…
 
 ### Question #4.13: And then you say that I should just install some “open source firmware”? What the heck is that? And why should I believe you?
@@ -378,7 +385,7 @@ their bursts of traffic can momentarily load the network to 100%.
 Could that be enough to make you miss your shot?
 
 2. You're right - bufferbloat tests "artificially load the network".
-They do this to see how your network performs under those moments of 100% load.
+They do this to see how your network performs during those moments of 100% load.
 
 3. You didn't say, but at ISP speeds above 300-500mbps,
   the bufferbloat in the Wi-Fi system can become important.
@@ -484,7 +491,7 @@ If you don't actually need such high-speed service,
 consider these options:
 
 * Get a lower tier plan from your ISP
-* Get a router that understands modern algorithms
+* Get a router with the SQM algorithms
   for minimizing latency/bufferbloat. See
   [What can I do about Bufferbloat?](https://www.bufferbloat.net/projects/bloat/wiki/What_can_I_do_about_Bufferbloat/)
   for a list of suitable routers
@@ -522,6 +529,6 @@ for more information.
 
 TL;DR - you'll probably need to put another, smarter, router
 in front of their router that can control the queueing/latency.
-Consider the OpenWrt One - it's reasonably prices,
+Consider the OpenWrt One - it's reasonably priced,
 can handle your data rate, and it's the platform where
-all these anti-bufferbloat algorithms were developed.
+all these SQM algorithms were developed.
