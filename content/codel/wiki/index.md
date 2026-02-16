@@ -24,23 +24,22 @@ and RTT”, and simple AQM algorithm.
 CoDel (the name comes from "controlled delay") was a fundamental
 advance in the state of the art of network of Active Queue Management in
 2012.
-
 It is pronounced "coddle", because it handles network streams in a
 gentle way.
 
-Immediately after codel, came "fq\_codel" (Fair/Flow Queueing + Codel), invented by Eric Dumazet. The combination made it possible to reduce bottleneck delays by several orders of magnitude, and provide accurate RTT estimates to elephant TCP flows, while allowing shorter (sparser) flows like DNS, ARP, SYN, routing, etc packets priority access. And indeed it did. And from our small research project it then became the default queuing mechanism for all the world of Linux, and IoS and OSX.
+Immediately after codel came "fq\_codel" (Fair/Flow Queueing + Codel), invented by Eric Dumazet. The combination made it possible to reduce bottleneck delays by several orders of magnitude, and provide accurate RTT estimates to elephant TCP flows, while allowing shorter (sparser) flows like DNS, ARP, SYN, routing, etc packets priority access. And indeed it did. And from our small research project it then became the default queuing mechanism for all the world of Linux, and iOS and OSX.
 
-We didn't say then, **several orders of magnitude** lightly. We had [the benchmarks](RRUL_Rogues_Gallery.md) to back it up. Benchmarks, from 2014, showed enormous improvements on [cable systems](http://burntchrome.blogspot.com/2014/05/fixing-bufferbloat-on-comcasts-blast.html), dsl, fiber and wireless technologies.
+We don't say **several orders of magnitude** lightly. We have [the benchmarks](RRUL_Rogues_Gallery.md) to back it up. Benchmarks from 2014 showed enormous improvements on [cable systems](http://burntchrome.blogspot.com/2014/05/fixing-bufferbloat-on-comcasts-blast.html), dsl, fiber and wireless technologies.
 
 Deployments
 -----------
 
-All Linux systems that use systemd, now default to fq\_codel. That includes
+All Linux systems that use systemd now default to fq\_codel. That includes
 but is not limited to, debian, Ubuntu, redhat, fedora, and arch.
 
-fq\_codel is the default queuing mechanism in most third party router firmwares today, like OpenWrt, dd-wrt, and asus-wrt. IPfire, Firewalla, evenroute, ubnt, eero, Mikrotik and many others now use fq\_codel heavily.  Free.fr's revolution V6 router used it by default.  It is a component of Qualcomm's "streamboost" QoS system. It is in Netgear's "Dynamic Qos" feature for their X4 product.\ And now in many places elsewhere. 
+fq\_codel is the default queuing mechanism in most third party router firmware today, like OpenWrt, dd-wrt, and asus-wrt. IPfire, Firewalla, evenroute, ubnt, eero, Mikrotik and many others now use fq\_codel heavily.  Free.fr's revolution V6 router used it by default.  It is a component of Qualcomm's "streamboost" QoS system. It is in Netgear's "Dynamic Qos" feature for their X4 product. And now in many places elsewhere. 
 
-We finished creating a successor to fq\_codel and the "sqm" system, called [cake](/codel/wiki/CakeTechnical.md) in 2018, which we addresses a few edge cases fq\_codel had, and is better all across the board. 
+We finished creating a successor to fq\_codel and the SQM system called [cake](/codel/wiki/CakeTechnical.md) in 2018, which addresses a few edge cases of fq\_codel, and is better all across the board. 
  
 Papers and Publications
 -----------------------
@@ -48,20 +47,17 @@ Papers and Publications
 The most up to date descriptions of codel and fq\_codel are now the
 following IETF internet standards:
 
-[Codel - RFC8289](https://www.rfc-editor.org/rfc/rfc8289.html)
+* [Codel - RFC8289](https://www.rfc-editor.org/rfc/rfc8289.html)
 
-[FlowQueueCodel - RFC8290](https://www.rfc-editor.org/rfc/rfc8290.html)
+* [FlowQueueCodel - RFC8290](https://www.rfc-editor.org/rfc/rfc8290.html)
 
-Older Papers
-------------
-
-[Controlling Queue Delay](http://queue.acm.org/detail.cfm?id=2209336)
-ACM Queue, Kathleen Nichols, Van Jacobson, May, 2012\
-[Codel](http://www.pollere.net/Codel.html) page at
-[Pollere](http://www.pollere.net) . Pollere does research on and
+* [Controlling Queue Delay](http://queue.acm.org/detail.cfm?id=2209336)
+ACM Queue, Kathleen Nichols, Van Jacobson, May, 2012
+* [Codel](http://www.pollere.net/Codel.html) page at
+[Pollere](http://www.pollere.net). Pollere does research on and
 analysis of network performance via modeling and simulation,
-measurement,and laboratory prototypes.\
-[Kathie Nichol's
+measurement,and laboratory prototypes.
+* [Kathie Nichol's
 CoDel](http://recordings.conf.meetecho.com/Recordings/watch.jsp?recording=IETF84_TSVAREA&chapter=part_3)
 at the IETF-84 Transport Area Open Meeting, 30 July, 2012, Vancouver,
 Canada, by Van Jacobson.
@@ -70,7 +66,7 @@ Simulations
 -----------
 
 Kathie Nichols' and Van Jacobson's original [ns2 simulation of
-codel](http://www.pollere.net/Codel.html)\
+codel](http://www.pollere.net/Codel.html)
 Their most current ns2 code is now available [via
 git](https://github.com/dtaht/ns2)
 
@@ -90,14 +86,14 @@ Mailing list and chat room
 
 There is a [CoDel mailing
 list](https://lists.bufferbloat.net/listinfo/codel), and discussions
-that take place on irc.freenode.net in the \#bufferbloat chat room.\
+that take place on irc.freenode.net in the `#bufferbloat` chat room.
 Please go to the codel mailing list if you have questions.
 
 Linux Code
 ----------
 
 CoDel - in order to run well at line rate - requires the Linux 3.3 [Byte
-Queue Limits](http://lwn.net/Articles/454390/) . It has proven too hard
+Queue Limits](http://lwn.net/Articles/454390/) (which shipped in 2012). It has proven too hard
 to backport BQL to Linux 3.2 or earlier (an attempt for 3.2 exists, but
 no driver support), so you will need to upgrade to Linux 3.5 or later,
 and have a driver that supports BQL (only about 24 as of the present
@@ -115,7 +111,7 @@ repository](https://github.com/dtaht/deBloat) on github. It tunes up
 BQL, turns off various forms off tcp offloads, and offers both a
 fq\_codel and codel + qfq model to play with. Turning off BQL is not
 really needed since linux 3.8 and later, the autotuning works well. TCP
-small queues has evolved to\
+small queues has evolved to
 where it does the right thing with TCP offloads as of linux 3.12.
 
 So most of the debloat script is no longer needed.
@@ -130,11 +126,9 @@ Linux systems shipped today.
 [CeroWrt](/cerowrt/wiki/index.md) Version
 -----------------------------------------
 
-The CeroWrt research router project was started, specifically, to test
+The CeroWrt research router project was started specifically to test
 new AQM technologies. It was completed in 2014, and most of the innovations
 landed upstream in OpenWrt, Linux and BSD.
-
-A pretty solid build [is still available](/cerowrt/wiki/CeroWrt_310_Release_Notes.md)
 
 The fq\_codel code has already migrated into the OpenWrt mainline (upon
 which Cerowrt is based), so the research paid off! - there is more
@@ -173,7 +167,7 @@ Known issues
 
 At very low bandwidths (e.g. .5Mbps) on ADSL, we're having to play with
 the target; Kathie did not have to in her simulations. This is due to
-inevitable buffering\
+inevitable buffering
 in htb or in the device driver. We have a version under development that
 does bandwidth limiting without buffering an extra packet, called cake.
 It's looking good so far.

@@ -1,7 +1,7 @@
 ---
 title: What Can I Do About Bufferbloat?
 date: 2017-03-10T09:10:12
-lastmod: 2026-01-26T21:15:01
+lastmod: 2026-02-16T21:15:01
 type: wiki
 aliases:
     - /bloat/wiki/What_to_do_about_Bufferbloat/
@@ -80,8 +80,8 @@ See, for example, this description of a [tuning session.](Getting_SQM_Running_Ri
   Several router vendors have a clue. 
     Here is a list of those we have found:
     * [OpenWrt One](https://openwrt.org/#openwrt_one_router_officially_launched)
-    The OpenWrt project has just released
-    (November 2024) its own router. It incorporates the fq_codel/CAKE
+    In November 2024, the OpenWrt project released its own router.
+    It incorporates the fq_codel/CAKE
     algorithms as well those to minimize latency in Wifi.
     It is now available from
     [AliExpress](https://www.aliexpress.us/w/wholesale-openwrt-one.html)
@@ -89,9 +89,13 @@ See, for example, this description of a [tuning session.](Getting_SQM_Running_Ri
     * [Ubiquiti gear](https://help.ubnt.com/hc/en-us/articles/220716608-EdgeRouter-Advanced-queue-CLI-examples) has fq_codel settings. 
     People say its EdgeRouter will handle over 400 mbps.
     * The [eero mesh routers](https://support.eero.com/hc/en-us/articles/360000709886-What-is-eero-Labs-)
+have a setting to
 "optimize for conferencing and gaming" (their term for SQM.)
 Their third generation devices
 [support SQM at speeds up to a gigabit/second.](https://www.reddit.com/r/eero/comments/qxbkcl/66_is_out/hl9nw1m/)
+    * All the [GL.iNet](https://www.gl-inet.com/) routers
+      run a modified version of OpenWrt that contains SQM.
+      (Available at [Amazon](https://www.amazon.com/s?k=gl.inet).)
     * All [Comcast/Xfinity](https://comcast.net)
 DOCSIS 3.1 RDK-B-based gateway models have now been updated
 with DOCSIS-PIE AQM and all are achieving dramatically
