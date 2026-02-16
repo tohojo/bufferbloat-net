@@ -3,7 +3,6 @@ title: Bufferbloat FAQs
 date: 2024-12-01T09:10:12
 lastmod: 2026-02-16T09:10:12
 type: wiki
-toc: false
 ---
 # Bufferbloat FAQs
 
@@ -327,13 +326,9 @@ with other network experts (see
 to show how surprising it was that routers would queue far more
 data than they could send in a reasonable time.
 
-In 2012, 
-CoDel (for "controlled delay",
-pronounced "coddle", because it treats network streams gently)
-was invented in response the newly-named "bufferbloat".
-In the decade since, the CoDel algorithm was enhanced to produce
-the fq_codel, CAKE, and cake-autorate open-source algorithms
-that have been proven to minimize latency.
+In 2012, CoDel was invented in response the newly-named "bufferbloat".
+In the decade since, the fq_codel, CAKE, and cake-autorate
+open-source algorithms have been proven to minimize latency.
 
 Today, there's no excuse for router vendors not to
 incorporate this technology.
@@ -346,20 +341,25 @@ They’re selling plenty of routers using their decade-old software.
 The Boss asks, “Would we sell more routers if we make those changes?"
 (Probably not, so the vendors don't change.)
 
-But if everyone started writing reviews saying _Vendor X has bufferbloat
-and games are unplayable, but Vendor Y doesn't..._
-that might change the game.
+More to the point, if you complain that "It's too slow"
+to your router vendor (or your ISP),
+they have an incentive to encourage you to buy a faster device or ISP plan.
+It may not solve the problem, but they're happy to take your money.
+
+But a round of reviews saying _Vendor X has bufferbloat
+(and games are unplayable), but Vendor Y works great!_
+might change the game.
 
 ### Question #4.10: Why would they sell me a router that gave crappy service? They’re a big company - they must know about this stuff.
 
 Maybe. We have reached out to lots of vendors.
 But remember they profit if you decide to upgrade to a higher capacity device/plan.
 
-### Question #4.11: Besides, I just spent \$300 on a “gaming router”. It was the most expensive solution on the market...
+### Question #4.11: Besides, I just spent $300 on a “gaming router”. It was the most expensive solution on the market...
 
 Maybe that router's not as good as their advertising says...
 
-### Question #4.12: I can't believe you’re telling me that a bunch of academics have come up with a better algorithm than commercial router developers - that company who sold me that \$300 router?
+### Question #4.12: I can't believe you’re telling me that a bunch of academics have come up with a better algorithm than commercial router developers - that company who sold me that $300 router?
 
 Well, the SQM algorithms seem to solve the problem
 when they replace the vendor firmware…
