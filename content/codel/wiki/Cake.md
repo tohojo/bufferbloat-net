@@ -407,6 +407,23 @@ needed dependencies (or just 'sqm-scripts' if you don't want the GUI). After
 this you can edit the sqm config in `/etc/config/sqm`, or find the "SQM QoS"
 menu point under "Network" in the Luci GUI.
 
+CAKE_MQ: The multi-queue variant of CAKE
+--------------------------
+Since Linux 7.0 and OpenWRT 25.12, a multi-queue variant of CAKE, is available.
+CAKE_MQ allows multiple CAKE instances to run in parallel while still enforcing
+a global bandwidth limit. Whenever a single CAKE instance cannot keep up with
+the networks speeds, its worth trying CAKE_MQ. To be able to use CAKE_MQ, the
+hardware needs to support multiple transmission queues:
+
+    ethtool -l <device> #or
+    ls  /sys/class/net/<device>/queues
+
+To install CAKE_MQ you can simply replace `cake` with `cake_mq` in your command.
+Please note that CAKE_MQ is only synchronizing the shaper's state. This means,
+when running multiple CAKE instances in parallel, that features like flow/host
+fairness or diffserv handling might not be perfectly enforced.
+For more details have a look at the paper from [netdevconf0x19](https://netdevconf.info/0x19/sessions/talk/mq-cake-scaling-software-rate-limiting-across-cpu-cores.html).
+
 ### Attachments
 {{< attachment name="cake-battlemesh-v8.pdf" type="application/pdf" description="Slides shown at Battlemesh v8" filename="150817135028_cake-battlemesh-v8.pdf" >}}
 
