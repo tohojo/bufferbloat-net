@@ -124,7 +124,8 @@ In Web GUI follow to **Adaptive QoS → QoS**.
 More customizations via Web GUI is available with [CakeQOS-Merlin](https://github.com/ttgapers/cakeqos-merlin).
     * [DD-WRT](https://www.dd-wrt.com)
     * [Gargoyle](https://www.gargoyle-router.com)
-    * [Tomato](https://freshtomato.org)  
+    * [Tomato](https://freshtomato.org)
+    * [Padavan (TW641's CAKE Port)](https://tw641.github.io/) (142 legacy MediaTek/Ralink models). Brings CAKE to Padavan firmware (Linux 3.4/4.4) while maintaining HWNAT and SFE acceleration.
     * [Raspberry Pi 4](https://www.reddit.com/r/openwrt/comments/l1m801/rpi4_openwrt_tips/) -
       This link provides "some assembly required" instructions
       for installing OpenWrt on a RPi4 and connecting it
