@@ -92,6 +92,8 @@ your home network, your broadband connections, possibly your ISP’s and
 corporate networks, at busy conference wireless networks, and on 3G
 networks. You can use the
 [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
+or the
+[Bufferbloat.org Internet Reliability Test](https://bufferbloat.org/test)
 to measure bufferbloat directly.
 
 Bufferbloat is a mistake we’ve all made together. What's the solution?

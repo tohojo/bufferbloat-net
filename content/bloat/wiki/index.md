@@ -15,6 +15,7 @@ Bufferbloat is the undesirable latency that comes from a router or other network
 
 1. To measure bufferbloat, go to
 [Waveform](https://www.waveform.com/tools/bufferbloat),
+[Bufferbloat.org](https://bufferbloat.org/test),
 [Speedtest.net](https://speedtest.net/), or 
 [Cloudflare](https://speed.cloudflare.com/),
  or read more at the [Tests for Bufferbloat](./Tests_for_Bufferbloat.md) page.

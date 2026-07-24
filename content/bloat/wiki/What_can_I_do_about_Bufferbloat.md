@@ -29,6 +29,7 @@ Use any of the tests below that measure latency both when
 the line is idle _and_ during upload or download traffic.
 
 * [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
+* [Bufferbloat.org Internet Reliability Test](https://bufferbloat.org/test)
 * [Speedtest.net Test](https://speedtest.net)
 * [Cloudflare Speed Test](https://speed.cloudflare.com)
 * [LibreQoS Bufferbloat Test](https://bufferbloat.libreqos.com/)
