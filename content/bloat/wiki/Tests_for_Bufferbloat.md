@@ -30,6 +30,8 @@ the download and upload parts of the test.
 
 * [Waveform Bufferbloat Test](https://www.waveform.com/tools/bufferbloat)
 Gives a letter grade for your performance
+* [Bufferbloat.org Internet Reliability Test](https://bufferbloat.org/test)
+Browser-based test of latency during download and upload load, with open-source implementation and published methodology
 * [speedtest.net Test](https://speedtest.net)
 Web, iOS, and Android apps that measure latency
 * [Cloudflare Speed Test](https://speed.cloudflare.com)

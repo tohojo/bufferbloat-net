@@ -110,6 +110,7 @@ _during_ the download and upload:
 
 * [Speedtest.net](https://www.speedtest.net/)
 * [Waveform Bufferbloat and Internet Speed Test](https://www.waveform.com/tools/bufferbloat)
+* [Bufferbloat.org Internet Reliability Test](https://bufferbloat.org/test)
 * [Cloudflare Speed Test](https://speed.cloudflare.com/)
 
 If the test shows an increase of latency under load
