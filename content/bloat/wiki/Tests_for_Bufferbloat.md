@@ -36,6 +36,8 @@ Web, iOS, and Android apps that measure latency
 Provides very detailed statistics of data rates and latency
 * [LibreQoS Bufferbloat Test](https://bufferbloat.libreqos.com/)
 Multi-phase test with Bufferbloat grade and Quality of Outcome scores
+* [SpeedFibre Bufferbloat Test](https://speedfibre.net/bufferbloat-test/)
+Shows idle and loaded latency for download and upload, with an A to F grade
 
 ## Quick: Test for Bufferbloat
 
